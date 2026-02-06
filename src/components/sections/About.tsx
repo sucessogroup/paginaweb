@@ -9,63 +9,60 @@ export const About = () => {
   return (
     <section id="nosotros" className="py-24 lg:py-32 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="relative">
-            {/* Logo 2 Sello placement */}
-            <div className="absolute -top-12 -left-12 w-32 h-32 md:w-48 md:h-48 border border-brand-canary/30 rounded-full flex items-center justify-center animate-pulse overflow-hidden p-4">
-              {sealLogo ? (
-                <div className="relative w-full h-full opacity-30 grayscale hover:grayscale-0 transition-all duration-500">
-                  <Image src={sealLogo.imageUrl} alt="Sello de Calidad" fill className="object-contain" data-ai-hint="quality seal" />
-                </div>
-              ) : (
-                <div className="text-brand-ocean font-headline font-bold text-lg text-center opacity-30 select-none">
-                    SUCESSO<br/>SELLO
-                </div>
-              )}
+        {/* Secondary Logo as Section Header */}
+        <div className="flex flex-col items-center justify-center mb-24">
+          {sealLogo ? (
+            <div className="relative w-72 h-72 md:w-96 md:h-96">
+              <Image 
+                src={sealLogo.imageUrl} 
+                alt="Sello SUCESSO" 
+                fill 
+                className="object-contain" 
+                data-ai-hint="quality seal" 
+              />
             </div>
-            
-            <div className="relative z-10 space-y-8">
-              <h2 className="text-4xl md:text-5xl font-headline font-bold text-brand-ocean">
-                Diseñamos eventos <br />
-                <span className="text-brand-paradise">con alma.</span>
-              </h2>
-              <div className="w-20 h-1 bg-brand-canary" />
-              <p className="text-xl md:text-2xl font-light text-brand-darkGray leading-relaxed italic">
-                “En SUCESSO diseñamos y producimos eventos corporativos con alma. Creemos que los detalles —cuando se hacen con intención— transforman un evento en una experiencia que deja huella.”
-              </p>
-              <div className="grid grid-cols-2 gap-8 pt-6">
-                <div>
-                  <h4 className="font-headline font-bold text-brand-ocean text-lg mb-2">Hospitalidad</h4>
-                  <p className="text-sm text-gray-600">Cada invitado es el centro de nuestra atención estratégica.</p>
-                </div>
-                <div>
-                  <h4 className="font-headline font-bold text-brand-ocean text-lg mb-2">Impecabilidad</h4>
-                  <p className="text-sm text-gray-600">Ejecución perfecta cuidando hasta el milímetro del proceso.</p>
-                </div>
+          ) : (
+            <div className="w-48 h-48 border-4 border-brand-canary rounded-full flex items-center justify-center text-brand-ocean font-headline font-bold text-2xl text-center">
+              CALIDAD<br/>SUCESSO
+            </div>
+          )}
+          <div className="mt-8 text-center">
+            <h2 className="text-sm uppercase tracking-[0.5em] text-brand-ocean font-bold">Sello de Excelencia</h2>
+          </div>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="relative z-10 space-y-8">
+            <h2 className="text-4xl md:text-6xl font-headline font-bold text-brand-ocean leading-tight">
+              Diseñamos eventos <br />
+              <span className="text-brand-paradise">con alma.</span>
+            </h2>
+            <div className="w-24 h-1 bg-brand-canary" />
+            <p className="text-xl md:text-3xl font-light text-brand-darkGray leading-relaxed italic">
+              “En SUCESSO diseñamos y producimos eventos corporativos con alma. Creemos que los detalles —cuando se hacen con intención— transforman un evento en una experiencia que deja huella.”
+            </p>
+            <div className="grid grid-cols-2 gap-10 pt-8">
+              <div>
+                <h4 className="font-headline font-bold text-brand-ocean text-xl mb-3">Hospitalidad</h4>
+                <p className="text-base text-gray-600 font-light">Cada invitado es el centro de nuestra atención estratégica y cuidado personal.</p>
+              </div>
+              <div>
+                <h4 className="font-headline font-bold text-brand-ocean text-xl mb-3">Impecabilidad</h4>
+                <p className="text-base text-gray-600 font-light">Ejecución perfecta cuidando hasta el último milímetro de cada proceso operativo.</p>
               </div>
             </div>
           </div>
 
           <div className="relative group">
-            <div className="absolute -inset-4 bg-brand-ocean/5 rounded-2xl transform rotate-2 transition-transform group-hover:rotate-1" />
-            <div className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl">
+            <div className="absolute -inset-6 bg-brand-ocean/5 rounded-[2rem] transform rotate-3 transition-transform group-hover:rotate-1" />
+            <div className="relative h-[600px] w-full rounded-[2rem] overflow-hidden shadow-2xl">
               <Image 
                 src="https://picsum.photos/seed/sucesso-team/800/1000"
-                alt="Our essence"
+                alt="Nuestra esencia"
                 fill
                 className="object-cover"
                 data-ai-hint="elegant event setup"
               />
-            </div>
-            {/* Logo 2 small sticker/stamp style */}
-            <div className="absolute bottom-8 right-8 bg-brand-canary p-4 rounded-full shadow-lg transform rotate-12 flex items-center justify-center">
-              {sealLogo ? (
-                <div className="relative w-12 h-12">
-                   <Image src={sealLogo.imageUrl} alt="Sello" fill className="object-contain" data-ai-hint="quality seal" />
-                </div>
-              ) : (
-                <span className="text-brand-darkGray font-headline font-bold text-xs">CALIDAD SUCESSO</span>
-              )}
             </div>
           </div>
         </div>

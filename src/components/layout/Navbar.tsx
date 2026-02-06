@@ -35,13 +35,16 @@ export const Navbar = () => {
     <nav 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 lg:px-12",
-        isScrolled ? "py-3 bg-white/95 backdrop-blur-md shadow-sm border-b" : "py-6 bg-transparent"
+        isScrolled ? "py-4 bg-white/95 backdrop-blur-md shadow-sm border-b" : "py-8 bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="relative flex items-center gap-4">
           {logoData ? (
-            <div className="relative w-32 h-10 lg:w-40 lg:h-12">
+            <div className={cn(
+              "relative transition-all duration-300",
+              isScrolled ? "w-48 h-16" : "w-64 h-24 lg:w-80 lg:h-32"
+            )}>
               <Image 
                 src={logoData.imageUrl} 
                 alt="SUCESSO Logo" 
@@ -56,7 +59,7 @@ export const Navbar = () => {
             </div>
           ) : (
             <div className={cn(
-              "text-2xl font-headline font-bold tracking-widest transition-colors",
+              "text-3xl font-headline font-bold tracking-widest transition-colors",
               isScrolled ? "text-brand-ocean" : "text-white"
             )}>
               SUCESSO
@@ -65,13 +68,13 @@ export const Navbar = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-10">
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
               href={link.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-brand-canary",
+                "text-sm font-semibold uppercase tracking-widest transition-colors hover:text-brand-canary",
                 isScrolled ? "text-brand-darkGray" : "text-white"
               )}
             >
@@ -80,7 +83,7 @@ export const Navbar = () => {
           ))}
           <Button 
             className={cn(
-              "font-semibold px-6 transition-all rounded-full",
+              "font-bold px-8 py-6 transition-all rounded-full",
               isScrolled 
                 ? "bg-brand-ocean text-white hover:bg-brand-darkGray" 
                 : "bg-brand-canary text-brand-darkGray hover:bg-white"
@@ -98,28 +101,31 @@ export const Navbar = () => {
           )}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       <div className={cn(
-        "lg:hidden fixed inset-0 top-[60px] bg-white transition-transform duration-300 ease-in-out transform",
+        "lg:hidden fixed inset-0 top-0 bg-white transition-transform duration-300 ease-in-out transform z-[60]",
         isMenuOpen ? "translate-x-0" : "translate-x-full"
       )}>
         <div className="flex flex-col items-center justify-center h-full gap-8 p-6 text-center">
+          <button className="absolute top-8 right-8 text-brand-darkGray" onClick={() => setIsMenuOpen(false)}>
+            <X size={40} />
+          </button>
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
               href={link.href}
-              className="text-2xl font-headline text-brand-darkGray hover:text-brand-ocean"
+              className="text-3xl font-headline text-brand-darkGray hover:text-brand-ocean"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.name}
             </Link>
           ))}
           <Button 
-            className="bg-brand-canary hover:bg-brand-tangerine text-brand-darkGray w-full max-w-xs text-lg py-6 rounded-full"
+            className="bg-brand-canary hover:bg-brand-tangerine text-brand-darkGray w-full max-w-xs text-xl py-8 rounded-full"
             onClick={() => setIsMenuOpen(false)}
           >
             Agendar Reunión
