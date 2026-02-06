@@ -3,13 +3,13 @@
   "placeholderImages": [
     {
       "id": "logo-main",
-      "description": "SUCESSO Main Logo",
+      "description": "SUCESSO Logo Principal",
       "imageUrl": "/logo1.png",
       "imageHint": "company logo"
     },
     {
       "id": "logo-seal",
-      "description": "SUCESSO Quality Seal",
+      "description": "SUCESSO Sello de Calidad",
       "imageUrl": "/logo2.png",
       "imageHint": "quality seal"
     },

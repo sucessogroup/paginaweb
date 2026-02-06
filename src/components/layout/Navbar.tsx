@@ -35,7 +35,7 @@ export const Navbar = () => {
     <nav 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 lg:px-12",
-        isScrolled ? "py-3 bg-white/95 backdrop-blur-md shadow-sm" : "py-6 bg-transparent"
+        isScrolled ? "py-3 bg-white/95 backdrop-blur-md shadow-sm border-b" : "py-6 bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -80,10 +80,10 @@ export const Navbar = () => {
           ))}
           <Button 
             className={cn(
-              "font-semibold px-6 transition-all",
+              "font-semibold px-6 transition-all rounded-full",
               isScrolled 
                 ? "bg-brand-ocean text-white hover:bg-brand-darkGray" 
-                : "bg-brand-canary text-brand-darkGray hover:bg-brand-tangerine"
+                : "bg-brand-canary text-brand-darkGray hover:bg-white"
             )}
           >
             Agendar Reunión
@@ -119,7 +119,7 @@ export const Navbar = () => {
             </Link>
           ))}
           <Button 
-            className="bg-brand-canary hover:bg-brand-tangerine text-brand-darkGray w-full max-w-xs text-lg py-6"
+            className="bg-brand-canary hover:bg-brand-tangerine text-brand-darkGray w-full max-w-xs text-lg py-6 rounded-full"
             onClick={() => setIsMenuOpen(false)}
           >
             Agendar Reunión
