@@ -4,13 +4,13 @@
     {
       "id": "logo-main",
       "description": "SUCESSO Main Logo",
-      "imageUrl": "https://picsum.photos/seed/sucesso-logo/400/200",
+      "imageUrl": "/logo1.png",
       "imageHint": "company logo"
     },
     {
       "id": "logo-seal",
       "description": "SUCESSO Quality Seal",
-      "imageUrl": "https://picsum.photos/seed/sucesso-seal/200/200",
+      "imageUrl": "/logo2.png",
       "imageHint": "quality seal"
     },
     {
