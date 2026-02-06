@@ -4,16 +4,24 @@ import Image from 'next/image'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
 
 export const About = () => {
+  const sealLogo = PlaceHolderImages.find(img => img.id === 'logo-seal')
+
   return (
     <section id="nosotros" className="py-24 lg:py-32 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             {/* Logo 2 Sello placement */}
-            <div className="absolute -top-12 -left-12 w-32 h-32 md:w-48 md:h-48 border border-brand-canary/30 rounded-full flex items-center justify-center animate-pulse">
-               <div className="text-brand-ocean font-headline font-bold text-lg text-center opacity-30 select-none">
-                  SUCESSO<br/>SELLO
-               </div>
+            <div className="absolute -top-12 -left-12 w-32 h-32 md:w-48 md:h-48 border border-brand-canary/30 rounded-full flex items-center justify-center animate-pulse overflow-hidden p-4">
+              {sealLogo ? (
+                <div className="relative w-full h-full opacity-30 grayscale hover:grayscale-0 transition-all duration-500">
+                  <Image src={sealLogo.imageUrl} alt="Sello de Calidad" fill className="object-contain" data-ai-hint="quality seal" />
+                </div>
+              ) : (
+                <div className="text-brand-ocean font-headline font-bold text-lg text-center opacity-30 select-none">
+                    SUCESSO<br/>SELLO
+                </div>
+              )}
             </div>
             
             <div className="relative z-10 space-y-8">
@@ -50,8 +58,14 @@ export const About = () => {
               />
             </div>
             {/* Logo 2 small sticker/stamp style */}
-            <div className="absolute bottom-8 right-8 bg-brand-canary p-4 rounded-full shadow-lg transform rotate-12">
-               <span className="text-brand-darkGray font-headline font-bold text-xs">CALIDAD SUCESSO</span>
+            <div className="absolute bottom-8 right-8 bg-brand-canary p-4 rounded-full shadow-lg transform rotate-12 flex items-center justify-center">
+              {sealLogo ? (
+                <div className="relative w-12 h-12">
+                   <Image src={sealLogo.imageUrl} alt="Sello" fill className="object-contain" data-ai-hint="quality seal" />
+                </div>
+              ) : (
+                <span className="text-brand-darkGray font-headline font-bold text-xs">CALIDAD SUCESSO</span>
+              )}
             </div>
           </div>
         </div>

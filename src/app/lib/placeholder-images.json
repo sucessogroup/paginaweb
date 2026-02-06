@@ -2,6 +2,18 @@
 {
   "placeholderImages": [
     {
+      "id": "logo-main",
+      "description": "SUCESSO Main Logo",
+      "imageUrl": "https://picsum.photos/seed/sucesso-logo/400/200",
+      "imageHint": "company logo"
+    },
+    {
+      "id": "logo-seal",
+      "description": "SUCESSO Quality Seal",
+      "imageUrl": "https://picsum.photos/seed/sucesso-seal/200/200",
+      "imageHint": "quality seal"
+    },
+    {
       "id": "hero-event",
       "description": "Elegant corporate conference room",
       "imageUrl": "https://picsum.photos/seed/sucesso1/1920/1080",

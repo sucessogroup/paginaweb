@@ -1,16 +1,32 @@
 
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+import { PlaceHolderImages } from '@/lib/placeholder-images'
 
 export const Footer = () => {
+  const logoData = PlaceHolderImages.find(img => img.id === 'logo-main')
+
   return (
     <footer className="bg-brand-wine text-white py-20 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col items-center text-center">
-          {/* logo1.png placeholder */}
-          <div className="text-4xl font-headline font-bold tracking-[0.2em] mb-6">
-            SUCESSO
-          </div>
+          {logoData ? (
+            <div className="relative w-48 h-16 mb-6">
+              <Image 
+                src={logoData.imageUrl} 
+                alt="SUCESSO Logo" 
+                fill 
+                className="object-contain brightness-0 invert"
+                data-ai-hint="company logo"
+              />
+            </div>
+          ) : (
+            <div className="text-4xl font-headline font-bold tracking-[0.2em] mb-6">
+              SUCESSO
+            </div>
+          )}
+          
           <p className="text-brand-canary font-light text-xl italic mb-12">
             “Cada detalle, un sucesso.”
           </p>

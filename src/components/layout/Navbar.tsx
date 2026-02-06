@@ -3,13 +3,17 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
+import { PlaceHolderImages } from '@/lib/placeholder-images'
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const logoData = PlaceHolderImages.find(img => img.id === 'logo-main')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,14 +39,25 @@ export const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="relative flex items-center gap-2">
-          {/* logo1.png placeholder */}
-          <div className={cn(
-            "text-2xl font-headline font-bold tracking-widest transition-colors",
-            isScrolled ? "text-brand-ocean" : "text-white lg:text-brand-ocean"
-          )}>
-            SUCESSO
-          </div>
+        <Link href="/" className="relative flex items-center gap-4">
+          {logoData ? (
+            <div className="relative w-32 h-10 lg:w-40 lg:h-12">
+              <Image 
+                src={logoData.imageUrl} 
+                alt="SUCESSO Logo" 
+                fill 
+                className={cn("object-contain transition-all", isScrolled ? "brightness-100" : "brightness-0 invert lg:brightness-100 lg:invert-0")}
+                data-ai-hint="company logo"
+              />
+            </div>
+          ) : (
+            <div className={cn(
+              "text-2xl font-headline font-bold tracking-widest transition-colors",
+              isScrolled ? "text-brand-ocean" : "text-white lg:text-brand-ocean"
+            )}>
+              SUCESSO
+            </div>
+          )}
         </Link>
 
         {/* Desktop Menu */}
