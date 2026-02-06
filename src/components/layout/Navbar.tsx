@@ -1,0 +1,107 @@
+
+"use client"
+
+import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { Menu, X } from 'lucide-react'
+import { cn } from '@/lib/utils'
+import { Button } from '@/components/ui/button'
+
+export const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const navLinks = [
+    { name: 'Nosotros', href: '#nosotros' },
+    { name: 'Servicios', href: '#servicios' },
+    { name: 'Proceso', href: '#proceso' },
+    { name: 'Experiencias', href: '#experiencias' },
+    { name: 'Contacto', href: '#contacto' },
+  ]
+
+  return (
+    <nav 
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 lg:px-12",
+        isScrolled ? "py-3 bg-white/95 backdrop-blur-md shadow-sm" : "py-6 bg-transparent"
+      )}
+    >
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <Link href="/" className="relative flex items-center gap-2">
+          {/* logo1.png placeholder */}
+          <div className={cn(
+            "text-2xl font-headline font-bold tracking-widest transition-colors",
+            isScrolled ? "text-brand-ocean" : "text-white lg:text-brand-ocean"
+          )}>
+            SUCESSO
+          </div>
+        </Link>
+
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <Link 
+              key={link.name} 
+              href={link.href}
+              className={cn(
+                "text-sm font-medium transition-colors hover:text-brand-canary",
+                isScrolled ? "text-brand-darkGray" : "text-white lg:text-brand-darkGray"
+              )}
+            >
+              {link.name}
+            </Link>
+          ))}
+          <Button 
+            className="bg-brand-canary hover:bg-brand-tangerine text-brand-darkGray font-semibold px-6"
+          >
+            Agendar Reunión
+          </Button>
+        </div>
+
+        {/* Mobile Menu Trigger */}
+        <button 
+          className={cn(
+            "lg:hidden p-2 rounded-md",
+            isScrolled ? "text-brand-ocean" : "text-white"
+          )}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={cn(
+        "lg:hidden fixed inset-0 top-[60px] bg-white transition-transform duration-300 ease-in-out transform",
+        isMenuOpen ? "translate-x-0" : "translate-x-full"
+      )}>
+        <div className="flex flex-col items-center justify-center h-full gap-8 p-6 text-center">
+          {navLinks.map((link) => (
+            <Link 
+              key={link.name} 
+              href={link.href}
+              className="text-2xl font-headline text-brand-darkGray hover:text-brand-ocean"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
+          <Button 
+            className="bg-brand-canary hover:bg-brand-tangerine text-brand-darkGray w-full max-w-xs text-lg py-6"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Agendar Reunión
+          </Button>
+        </div>
+      </div>
+    </nav>
+  )
+}

@@ -1,0 +1,77 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-event",
+      "description": "Elegant corporate conference room",
+      "imageUrl": "https://picsum.photos/seed/sucesso1/1920/1080",
+      "imageHint": "corporate conference"
+    },
+    {
+      "id": "service-internal",
+      "description": "Team building and internal event",
+      "imageUrl": "https://picsum.photos/seed/sucesso2/800/600",
+      "imageHint": "team meeting"
+    },
+    {
+      "id": "service-external",
+      "description": "Networking event with clients",
+      "imageUrl": "https://picsum.photos/seed/sucesso3/800/600",
+      "imageHint": "networking cocktail"
+    },
+    {
+      "id": "service-congress",
+      "description": "Large scale professional congress",
+      "imageUrl": "https://picsum.photos/seed/sucesso4/800/600",
+      "imageHint": "auditorium event"
+    },
+    {
+      "id": "service-institutional",
+      "description": "Institutional gala event",
+      "imageUrl": "https://picsum.photos/seed/sucesso5/800/600",
+      "imageHint": "gala dinner"
+    },
+    {
+      "id": "service-virtual",
+      "description": "Hybrid and virtual event setup",
+      "imageUrl": "https://picsum.photos/seed/sucesso6/800/600",
+      "imageHint": "virtual studio"
+    },
+    {
+      "id": "service-custom",
+      "description": "Personalized corporate experience",
+      "imageUrl": "https://picsum.photos/seed/sucesso7/800/600",
+      "imageHint": "luxury lounge"
+    },
+    {
+      "id": "gallery-1",
+      "description": "Corporate branding details",
+      "imageUrl": "https://picsum.photos/seed/sucesso8/600/800",
+      "imageHint": "event branding"
+    },
+    {
+      "id": "gallery-2",
+      "description": "Catering and hospitality",
+      "imageUrl": "https://picsum.photos/seed/sucesso9/600/800",
+      "imageHint": "event catering"
+    },
+    {
+      "id": "gallery-3",
+      "description": "Speaker on stage",
+      "imageUrl": "https://picsum.photos/seed/sucesso10/800/600",
+      "imageHint": "conference speaker"
+    },
+    {
+      "id": "gallery-4",
+      "description": "Event decoration",
+      "imageUrl": "https://picsum.photos/seed/sucesso11/600/800",
+      "imageHint": "event decor"
+    },
+    {
+      "id": "gallery-5",
+      "description": "Attendee networking",
+      "imageUrl": "https://picsum.photos/seed/sucesso12/800/600",
+      "imageHint": "corporate social"
+    }
+  ]
+}
