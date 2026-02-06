@@ -48,8 +48,9 @@ export const Navbar = () => {
                 fill 
                 className={cn(
                   "object-contain transition-all duration-300", 
-                  isScrolled ? "brightness-100 contrast-100" : "brightness-0 invert"
+                  !isScrolled && "brightness-0 invert"
                 )}
+                priority
                 data-ai-hint="company logo"
               />
             </div>
