@@ -14,76 +14,40 @@
       "imageHint": "quality seal"
     },
     {
-      "id": "hero-event",
-      "description": "Elegant corporate conference room",
-      "imageUrl": "https://picsum.photos/seed/sucesso1/1920/1080",
-      "imageHint": "corporate conference"
+      "id": "wedding-hero",
+      "description": "Paisaje suave de Zihuatanejo al atardecer",
+      "imageUrl": "https://picsum.photos/seed/cs-hero/1200/1600",
+      "imageHint": "tropical beach"
     },
     {
-      "id": "service-internal",
-      "description": "Team building and internal event",
-      "imageUrl": "https://picsum.photos/seed/sucesso2/800/600",
-      "imageHint": "team meeting"
+      "id": "wedding-couple",
+      "description": "Foto editorial de Carla & Said",
+      "imageUrl": "https://picsum.photos/seed/cs-couple/800/1200",
+      "imageHint": "couple portrait"
     },
     {
-      "id": "service-external",
-      "description": "Networking event with clients",
-      "imageUrl": "https://picsum.photos/seed/sucesso3/800/600",
-      "imageHint": "networking cocktail"
+      "id": "wedding-details-1",
+      "description": "Detalles de flores y mar",
+      "imageUrl": "https://picsum.photos/seed/cs-det1/600/800",
+      "imageHint": "white flowers"
     },
     {
-      "id": "service-congress",
-      "description": "Large scale professional congress",
-      "imageUrl": "https://picsum.photos/seed/sucesso4/800/600",
-      "imageHint": "auditorium event"
+      "id": "wedding-details-2",
+      "description": "Textura de arena y arquitectura minimalista",
+      "imageUrl": "https://picsum.photos/seed/cs-det2/600/800",
+      "imageHint": "abstract architecture"
     },
     {
-      "id": "service-institutional",
-      "description": "Institutional gala event",
-      "imageUrl": "https://picsum.photos/seed/sucesso5/800/600",
-      "imageHint": "gala dinner"
+      "id": "hotel-1",
+      "description": "Boutique Hotel Zihuatanejo",
+      "imageUrl": "https://picsum.photos/seed/hotel1/800/600",
+      "imageHint": "luxury hotel"
     },
     {
-      "id": "service-virtual",
-      "description": "Hybrid and virtual event setup",
-      "imageUrl": "https://picsum.photos/seed/sucesso6/800/600",
-      "imageHint": "virtual studio"
-    },
-    {
-      "id": "service-custom",
-      "description": "Personalized corporate experience",
-      "imageUrl": "https://picsum.photos/seed/sucesso7/800/600",
-      "imageHint": "luxury lounge"
-    },
-    {
-      "id": "gallery-1",
-      "description": "Corporate branding details",
-      "imageUrl": "https://picsum.photos/seed/sucesso8/600/800",
-      "imageHint": "event branding"
-    },
-    {
-      "id": "gallery-2",
-      "description": "Catering and hospitality",
-      "imageUrl": "https://picsum.photos/seed/sucesso9/600/800",
-      "imageHint": "event catering"
-    },
-    {
-      "id": "gallery-3",
-      "description": "Speaker on stage",
-      "imageUrl": "https://picsum.photos/seed/sucesso10/800/600",
-      "imageHint": "conference speaker"
-    },
-    {
-      "id": "gallery-4",
-      "description": "Event decoration",
-      "imageUrl": "https://picsum.photos/seed/sucesso11/600/800",
-      "imageHint": "event decor"
-    },
-    {
-      "id": "gallery-5",
-      "description": "Attendee networking",
-      "imageUrl": "https://picsum.photos/seed/sucesso12/800/600",
-      "imageHint": "corporate social"
+      "id": "hotel-2",
+      "description": "Casa del Mar Zihua",
+      "imageUrl": "https://picsum.photos/seed/hotel2/800/600",
+      "imageHint": "beach villa"
     }
   ]
 }
