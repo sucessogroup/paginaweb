@@ -46,14 +46,17 @@ export const Navbar = () => {
                 src={logoData.imageUrl} 
                 alt="SUCESSO Logo" 
                 fill 
-                className={cn("object-contain transition-all", isScrolled ? "brightness-100" : "brightness-0 invert lg:brightness-100 lg:invert-0")}
+                className={cn(
+                  "object-contain transition-all duration-300", 
+                  isScrolled ? "brightness-100 contrast-100" : "brightness-0 invert"
+                )}
                 data-ai-hint="company logo"
               />
             </div>
           ) : (
             <div className={cn(
               "text-2xl font-headline font-bold tracking-widest transition-colors",
-              isScrolled ? "text-brand-ocean" : "text-white lg:text-brand-ocean"
+              isScrolled ? "text-brand-ocean" : "text-white"
             )}>
               SUCESSO
             </div>
@@ -68,14 +71,19 @@ export const Navbar = () => {
               href={link.href}
               className={cn(
                 "text-sm font-medium transition-colors hover:text-brand-canary",
-                isScrolled ? "text-brand-darkGray" : "text-white lg:text-brand-darkGray"
+                isScrolled ? "text-brand-darkGray" : "text-white"
               )}
             >
               {link.name}
             </Link>
           ))}
           <Button 
-            className="bg-brand-canary hover:bg-brand-tangerine text-brand-darkGray font-semibold px-6"
+            className={cn(
+              "font-semibold px-6 transition-all",
+              isScrolled 
+                ? "bg-brand-ocean text-white hover:bg-brand-darkGray" 
+                : "bg-brand-canary text-brand-darkGray hover:bg-brand-tangerine"
+            )}
           >
             Agendar Reunión
           </Button>
@@ -84,7 +92,7 @@ export const Navbar = () => {
         {/* Mobile Menu Trigger */}
         <button 
           className={cn(
-            "lg:hidden p-2 rounded-md",
+            "lg:hidden p-2 rounded-md transition-colors",
             isScrolled ? "text-brand-ocean" : "text-white"
           )}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
