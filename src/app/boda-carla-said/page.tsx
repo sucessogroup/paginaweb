@@ -50,7 +50,7 @@ const translations = {
     coctel: "Cocktail di Benvenuto",
     recepcion: "Ricevimento e Cena",
     ubicacion: "Posizione",
-    verMapa: "Visualizza posizione",
+    verMapa: "Visualizza posición",
     hospedaje: "Alloggio",
     reservar: "Prenota ora",
     regalos: "Lista Nozze",
@@ -136,9 +136,11 @@ export default function WeddingPage() {
             <h1 className={cn(script.className, "text-7xl md:text-[9.5rem] text-[#5c6b5c] leading-none tracking-tight drop-shadow-sm")}>
               Carla & Said
             </h1>
-            <div className="space-y-1">
-              <p className={cn(serif.className, "text-lg md:text-xl tracking-widest uppercase italic text-[#c5a059] font-medium")}>{t.domingo}</p>
-              <p className="text-[9px] tracking-[0.4em] uppercase font-light opacity-60 text-[#5c6b5c]">{t.zihua}</p>
+            <div className="space-y-2">
+              <p className={cn(serif.className, "text-lg md:text-xl tracking-widest uppercase italic text-[#c5a059] font-medium drop-shadow-sm")}>{t.domingo}</p>
+              <p className="text-[10px] md:text-xs tracking-[0.5em] uppercase font-bold text-[#5c6b5c] drop-shadow-sm bg-white/10 backdrop-blur-[2px] px-4 py-1 rounded-full inline-block">
+                {t.zihua}
+              </p>
             </div>
           </div>
         </div>
