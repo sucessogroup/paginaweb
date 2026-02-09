@@ -75,6 +75,38 @@ const translations = {
   }
 }
 
+function RevealSection({ children, className, delay = 0 }: { children: React.ReactNode, className?: string, delay?: number }) {
+  const [isVisible, setIsVisible] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <div 
+      ref={ref} 
+      className={cn(
+        "transition-all duration-[1200ms] ease-out",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12",
+        className
+      )}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      {children}
+    </div>
+  )
+}
+
 function ItineraryItem({ step, t }: { step: any, t: any }) {
   const [isVisible, setIsVisible] = useState(false)
   const itemRef = useRef<HTMLDivElement>(null)
@@ -119,37 +151,6 @@ function ItineraryItem({ step, t }: { step: any, t: any }) {
         <h3 className="text-xl md:text-2xl uppercase tracking-[0.4em] font-light text-[#5c6b5c]">{step.label}</h3>
         <p className="text-[10px] md:text-xs uppercase tracking-widest opacity-40 mb-4 italic">{step.location}</p>
       </div>
-    </div>
-  )
-}
-
-function RevealSection({ children, className }: { children: React.ReactNode, className?: string }) {
-  const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
-    )
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [])
-
-  return (
-    <div 
-      ref={ref} 
-      className={cn(
-        "transition-all duration-[800ms] ease-out",
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
-        className
-      )}
-    >
-      {children}
     </div>
   )
 }
@@ -262,7 +263,7 @@ export default function WeddingPage() {
         <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/5 via-transparent to-[#F4F0EA]/10 pointer-events-none" />
         
         <div className="relative z-10 h-full w-full flex flex-col items-center justify-start pt-32 px-6 text-center">
-          <div className="space-y-6">
+          <RevealSection delay={300} className="space-y-6">
             <h1 className={cn(script.className, "text-7xl md:text-[9.5rem] text-[#5c6b5c] leading-none tracking-tight drop-shadow-sm")}>
               Carla & Said
             </h1>
@@ -272,23 +273,23 @@ export default function WeddingPage() {
                 {t.zihua}
               </p>
             </div>
-          </div>
+          </RevealSection>
         </div>
       </section>
 
       {/* Countdown */}
       <section className="py-24 md:py-32 bg-[#F4F0EA] border-b border-[#c5a059]/10">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
-          <div className="space-y-4">
+          <RevealSection className="space-y-4">
             <h2 className={cn(serif.className, "text-3xl md:text-5xl font-light text-[#5c6b5c] italic")}>
               {t.faltaPoco}
             </h2>
             <p className={cn(script.className, "text-xl md:text-3xl text-[#c5a059] opacity-80")}>
               {t.acompananos}
             </p>
-          </div>
+          </RevealSection>
 
-          <div className="min-h-[120px] flex items-center justify-center">
+          <RevealSection delay={200} className="min-h-[120px] flex items-center justify-center">
             {isFinished ? (
               <h2 className={cn(serif.className, "text-4xl md:text-6xl italic text-[#c5a059] drop-shadow-sm")}>
                 {t.seAcabo}
@@ -310,10 +311,10 @@ export default function WeddingPage() {
                 ))}
               </div>
             )}
-          </div>
+          </RevealSection>
 
           {!isFinished && (
-            <div className="pt-8">
+            <RevealSection delay={400} className="pt-8">
               <Button 
                 onClick={handleAddToCalendar}
                 variant="outline"
@@ -322,7 +323,7 @@ export default function WeddingPage() {
                 <CalendarPlus size={16} />
                 {t.calendario}
               </Button>
-            </div>
+            </RevealSection>
           )}
         </div>
       </section>
@@ -340,7 +341,7 @@ export default function WeddingPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <div className="flex justify-center gap-4 md:gap-2 mb-12 md:mb-16">
+          <RevealSection className="flex justify-center gap-4 md:gap-2 mb-12 md:mb-16">
             <div className="relative w-48 h-36 md:w-64 md:h-48 transition-transform hover:scale-105 duration-500">
               <Image 
                 src={flagMx?.imageUrl || "/banderamx.png"} 
@@ -357,9 +358,9 @@ export default function WeddingPage() {
                 className="object-contain"
               />
             </div>
-          </div>
+          </RevealSection>
 
-          <div className="space-y-12">
+          <RevealSection delay={300} className="space-y-12">
             <p className={cn(script.className, "text-3xl md:text-6xl text-[#5c6b5c] font-medium leading-relaxed italic")}>
               “{t.fraseFinal}”
             </p>
@@ -372,7 +373,7 @@ export default function WeddingPage() {
                 {t.confirmar}
               </Button>
             </div>
-          </div>
+          </RevealSection>
         </div>
       </section>
 
@@ -389,12 +390,12 @@ export default function WeddingPage() {
         </div>
 
         <div className="max-w-4xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-16 md:mb-32">
+          <RevealSection className="text-center mb-16 md:mb-32">
             <h2 className={cn(serif.className, "text-5xl md:text-8xl italic text-[#5c6b5c]")}>
               {t.itinerario}
             </h2>
             <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
-          </div>
+          </RevealSection>
 
           <div className="space-y-20 md:space-y-32">
             {[
@@ -411,13 +412,13 @@ export default function WeddingPage() {
       {/* Hotel Recomendado - foto4.png */}
       <section id="hotel" className="py-24 md:py-40 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16 md:mb-24">
+          <RevealSection className="text-center mb-16 md:mb-24">
             <h3 className={cn(serif.className, "text-5xl md:text-8xl italic text-[#5c6b5c]")}>{t.hospedaje}</h3>
             <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
-          </div>
+          </RevealSection>
 
           <div className="max-w-4xl mx-auto flex flex-col items-center">
-            <div className="aspect-video w-full relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden mb-8 md:mb-12 shadow-sm">
+            <RevealSection className="aspect-video w-full relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden mb-8 md:mb-12 shadow-sm">
               <Image 
                 src={hotelImage?.imageUrl || "/foto4.png"} 
                 alt="Villa Mexicana Hotel" 
@@ -426,16 +427,16 @@ export default function WeddingPage() {
                 priority
                 data-ai-hint="hotel architecture"
               />
-            </div>
+            </RevealSection>
 
-            <div className="text-center space-y-4 md:space-y-6">
+            <RevealSection delay={200} className="text-center space-y-4 md:space-y-6">
               <h4 className={cn(serif.className, "text-3xl md:text-5xl italic text-[#5c6b5c]")}>Villa Mexicana Hotel</h4>
               <p className="text-xs md:text-base italic opacity-50 tracking-wide font-light max-w-md mx-auto px-4">
                 {t.tarifaPreferencial}
               </p>
-            </div>
+            </RevealSection>
 
-            <div className="flex flex-col sm:flex-row gap-6 md:gap-8 mt-12 md:mt-16 w-full justify-center items-center">
+            <RevealSection delay={400} className="flex flex-col sm:flex-row gap-6 md:gap-8 mt-12 md:mt-16 w-full justify-center items-center">
               <Button 
                 onClick={() => window.open('https://hotelvillamexicana.com.mx/zihuatanejo/en/', '_blank')}
                 variant="outline"
@@ -454,7 +455,7 @@ export default function WeddingPage() {
                 </Button>
                 <p className="text-[9px] uppercase tracking-widest opacity-30">{t.reservaMasAdelante}</p>
               </div>
-            </div>
+            </RevealSection>
           </div>
         </div>
       </section>
