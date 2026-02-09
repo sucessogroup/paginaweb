@@ -16,19 +16,19 @@
     {
       "id": "wedding-hero",
       "description": "Hero principal de la boda",
-      "imageUrl": "https://picsum.photos/seed/cs-hero/1200/1600",
+      "imageUrl": "/foto1.png",
       "imageHint": "tropical beach"
     },
     {
       "id": "wedding-bg-quote",
       "description": "Fondo sutil para la sección de frase",
-      "imageUrl": "https://picsum.photos/seed/cs-quote/1200/800",
+      "imageUrl": "/foto2.png",
       "imageHint": "soft textures"
     },
     {
       "id": "wedding-bg-itinerary",
       "description": "Fondo elegante para el itinerario",
-      "imageUrl": "https://picsum.photos/seed/cs-itinerary/1200/1200",
+      "imageUrl": "/foto3.png",
       "imageHint": "elegant decoration"
     },
     {

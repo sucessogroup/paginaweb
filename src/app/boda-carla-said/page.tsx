@@ -208,16 +208,16 @@ export default function WeddingPage() {
         ))}
       </div>
 
-      {/* Hero Premium Full-Screen */}
+      {/* Hero Portada - foto1.png */}
       <section className="relative h-screen w-full overflow-hidden bg-[#B7CCE0]">
         <div className="absolute inset-0 z-0">
           <Image 
-            src={heroImage?.imageUrl || "https://picsum.photos/seed/cs-hero/1200/1600"} 
+            src={heroImage?.imageUrl || "/foto1.png"} 
             alt="Carla & Said Wedding" 
             fill
             className="object-cover object-center pointer-events-none"
             priority
-            data-ai-hint={heroImage?.imageHint || "tropical beach"}
+            data-ai-hint="wedding couple beach"
           />
         </div>
 
@@ -289,19 +289,20 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Sección Quote con Banderas (Postales) */}
+      {/* Sección Quote/Confirmación - foto2.png */}
       <section className="py-40 relative overflow-hidden bg-[#fcfaf7]">
         <div className="absolute inset-0 z-0 opacity-15">
           <Image 
-            src={quoteBgImage?.imageUrl || "https://picsum.photos/seed/cs-quote/1200/800"} 
-            alt="Background Decor" 
+            src={quoteBgImage?.imageUrl || "/foto2.png"} 
+            alt="Background Confirmación" 
             fill 
             className="object-cover object-center pointer-events-none"
-            data-ai-hint={quoteBgImage?.imageHint || "soft textures"}
+            data-ai-hint="elegant wedding background"
           />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+          {/* Postales/Banderas */}
           <div className="flex justify-center gap-6 mb-16">
             <div className="relative group">
               <div className="bg-white p-2 shadow-2xl -rotate-6 transform transition-transform group-hover:rotate-0 duration-500 border border-black/5">
@@ -311,7 +312,8 @@ export default function WeddingPage() {
                     <rect width="326.66" height="560" x="326.66" fill="#FFFFFF"/>
                     <rect width="326.66" height="560" x="653.33" fill="#CE1126"/>
                     <g transform="translate(490, 280)">
-                      <circle cx="0" cy="0" r="50" fill="#c5a059" />
+                      <circle cx="0" cy="0" r="16" fill="#c5a059" />
+                      <circle cx="0" cy="0" r="8" fill="#8b7346" />
                     </g>
                   </svg>
                 </div>
@@ -337,7 +339,7 @@ export default function WeddingPage() {
               “{t.fraseFinal}”
             </p>
             
-            <div className="pt-8">
+            <div className="pt-8 flex flex-col items-center gap-4">
               <Button 
                 onClick={handleWhatsAppConfirm}
                 className="rounded-full px-12 py-8 bg-[#8a9a5b] hover:bg-[#5c6b5c] text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] shadow-lg shadow-[#8a9a5b]/20"
@@ -349,15 +351,15 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Itinerario */}
+      {/* Itinerario - foto3.png */}
       <section className="py-40 relative overflow-hidden bg-[#f5f0e6]/40">
         <div className="absolute inset-0 z-0 opacity-10">
           <Image 
-            src={itineraryBgImage?.imageUrl || "https://picsum.photos/seed/cs-itinerary/1200/1200"} 
+            src={itineraryBgImage?.imageUrl || "/foto3.png"} 
             alt="Itinerary Decor" 
             fill 
             className="object-cover object-center pointer-events-none"
-            data-ai-hint={itineraryBgImage?.imageHint || "elegant decoration"}
+            data-ai-hint="elegant decoration detail"
           />
         </div>
 
@@ -381,7 +383,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Ubicación y Hotel */}
+      {/* Hotel */}
       <section id="hotel" className="py-40 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-32">
@@ -403,7 +405,7 @@ export default function WeddingPage() {
                       alt={hotel.title} 
                       fill 
                       className="object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" 
-                      data-ai-hint={img?.imageHint || "luxury hotel"}
+                      data-ai-hint="luxury hotel"
                     />
                     <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors" />
                   </div>
@@ -424,7 +426,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* RSVP */}
+      {/* RSVP Final */}
       <section className="py-48 bg-white relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#f5f0e6]/30 rounded-full blur-[100px] -z-10" />
         
