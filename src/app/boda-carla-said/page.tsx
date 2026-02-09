@@ -57,7 +57,7 @@ const translations = {
     verMapa: "Visualizza posizione",
     hospedaje: "Hotel",
     reservar: "Prenotazioni a breve",
-    reservaMasAdelante: "La prenotazione sarà disponibile più avanti.",
+    reservaMasAdelante: "La prenotazione será disponible más adelante.",
     verWeb: "Sito web",
     tarifaPreferencial: "Abbiamo una tariffa preferenziale per i nostri ospiti.",
     confirmar: "Conferma participación",

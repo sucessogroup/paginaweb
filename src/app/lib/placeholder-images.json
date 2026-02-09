@@ -17,37 +17,25 @@
       "id": "wedding-hero",
       "description": "Hero principal de la boda",
       "imageUrl": "/foto1.png",
-      "imageHint": "tropical beach"
+      "imageHint": "wedding couple"
     },
     {
       "id": "wedding-bg-quote",
       "description": "Fondo sutil para la sección de frase",
       "imageUrl": "/foto2.png",
-      "imageHint": "soft textures"
+      "imageHint": "elegant background"
     },
     {
       "id": "wedding-bg-itinerary",
       "description": "Fondo elegante para el itinerario",
       "imageUrl": "/foto3.png",
-      "imageHint": "elegant decoration"
+      "imageHint": "wedding decoration"
     },
     {
       "id": "hotel-villa-mexicana",
       "description": "Villa Mexicana Hotel",
       "imageUrl": "/foto4.png",
       "imageHint": "hotel architecture"
-    },
-    {
-      "id": "hotel-1",
-      "description": "Boutique Hotel Zihuatanejo",
-      "imageUrl": "https://picsum.photos/seed/hotel1/800/600",
-      "imageHint": "luxury hotel"
-    },
-    {
-      "id": "hotel-2",
-      "description": "Casa del Mar Zihua",
-      "imageUrl": "https://picsum.photos/seed/hotel2/800/600",
-      "imageHint": "beach villa"
     }
   ]
 }
