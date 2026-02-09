@@ -302,8 +302,8 @@ export default function WeddingPage() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           {/* Banderas PNG */}
-          <div className="flex justify-center gap-12 mb-16">
-            <div className="relative w-24 h-16 transform -rotate-6 transition-transform hover:rotate-0 duration-500">
+          <div className="flex justify-center gap-6 mb-16">
+            <div className="relative w-48 h-32 transform -rotate-6 transition-transform hover:rotate-0 duration-500">
               <Image 
                 src={flagMx?.imageUrl || "/banderamx.png"} 
                 alt="México" 
@@ -311,7 +311,7 @@ export default function WeddingPage() {
                 className="object-contain"
               />
             </div>
-            <div className="relative w-24 h-16 transform rotate-6 transition-transform hover:rotate-0 duration-500">
+            <div className="relative w-48 h-32 transform rotate-6 transition-transform hover:rotate-0 duration-500">
               <Image 
                 src={flagIt?.imageUrl || "/banderaita.png"} 
                 alt="Italia" 
@@ -322,7 +322,7 @@ export default function WeddingPage() {
           </div>
 
           <div className="space-y-12">
-            <p className={cn(script.className, "text-3xl md:text-6xl text-[#5c6b5c] leading-relaxed italic")}>
+            <p className={cn(script.className, "text-3xl md:text-6xl text-[#5c6b5c] font-medium leading-relaxed italic")}>
               “{t.fraseFinal}”
             </p>
             
