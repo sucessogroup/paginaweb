@@ -65,7 +65,7 @@ const translations = {
     transferencia: "Dati per il bonifico",
     confirmar: "Conferma participación",
     rsvpTexto: "Si prega di confermare entro il 1 novembre",
-    fraseFinal: "Il tempo è finito",
+    fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
     zihua: "Zihuatanejo, Guerrero, Messico",
     domingo: "Domenica, 20 dicembre 2026",
     loading: "Caricamento...",
@@ -178,7 +178,7 @@ export default function WeddingPage() {
             </h1>
             <div className="space-y-3">
               <p className={cn(serif.className, "text-lg md:text-xl tracking-widest uppercase italic text-[#c5a059] font-medium drop-shadow-sm")}>{t.domingo}</p>
-              <p className="text-[10px] md:text-xs tracking-[0.5em] uppercase font-bold text-[#5c6b5c] drop-shadow-sm inline-block">
+              <p className="text-[12px] md:text-sm tracking-[0.6em] uppercase font-bold text-[#5c6b5c] drop-shadow-md inline-block">
                 {t.zihua}
               </p>
             </div>
@@ -298,13 +298,13 @@ export default function WeddingPage() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row min-h-screen">
           {/* Columna del Título Sticky */}
           <div className="md:w-1/3 p-6 md:p-32 flex flex-col justify-start">
-            <h2 className={cn(serif.className, "text-6xl md:text-[10rem] sticky top-40 text-[#5c6b5c] opacity-[0.08] md:opacity-[0.05] italic leading-none select-none")}>
+            <h2 className={cn(serif.className, "text-6xl md:text-[10rem] sticky top-40 text-[#5c6b5c] opacity-20 italic leading-none select-none z-0")}>
               {t.itinerario}
             </h2>
           </div>
 
           {/* Columna de Eventos */}
-          <div className="md:w-2/3 p-6 md:p-32 space-y-32">
+          <div className="md:w-2/3 p-6 md:p-32 space-y-32 relative z-10">
             {[
               { time: "17:00", label: t.ceremonia, location: "Lugar por confirmar", icon: Globe },
               { time: "18:30", label: t.coctel, location: "Lugar por confirmar", icon: Navigation },
