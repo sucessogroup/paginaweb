@@ -61,7 +61,7 @@ const translations = {
     reservar: "Prenotazioni a breve",
     reservaMasAdelante: "La prenotazione sarà disponible più avanti.",
     verWeb: "Sito web",
-    tarifaPreferencial: "Abbiamo una tariffa preferenziale per i nostri ospiti.",
+    tarifaPreferencial: "Abbiamo una tarifa preferenziale per i nostri ospiti.",
     confirmar: "Conferma participación",
     rsvpTexto: "Si prega di confermare entro il 1 novembre",
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
@@ -407,9 +407,9 @@ export default function WeddingPage() {
       </section>
 
       {/* Sección de Vestimenta */}
-      <section className="py-40 bg-white overflow-hidden">
+      <section className="py-40 bg-[#fbf9f4] overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <RevealSection className="space-y-12">
+          <RevealSection className="space-y-6">
             <div className="space-y-4">
               <h2 className={cn(serif.className, "text-5xl md:text-7xl italic text-[#5c6b5c]")}>
                 {t.vestimenta}
