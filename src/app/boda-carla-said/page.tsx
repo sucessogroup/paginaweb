@@ -1,7 +1,7 @@
 
 "use client"
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Literata, Dancing_Script } from 'next/font/google'
 import { MapPin, Calendar, Clock, Hotel as HotelIcon, Gift, Globe, Navigation, CalendarPlus } from 'lucide-react'
@@ -71,6 +71,53 @@ const translations = {
     loading: "Caricamento...",
     waMessage: "Ciao! Sono molto entusiasta per il matrimonio di Carla e Said. Vorrei confermare la mia participación per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!"
   }
+}
+
+function ItineraryItem({ step, index, t }: { step: any, index: number, t: any }) {
+  const [isVisible, setIsVisible] = useState(false)
+  const itemRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.3 }
+    )
+
+    if (itemRef.current) {
+      observer.observe(itemRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <div 
+      ref={itemRef}
+      className={cn(
+        "flex flex-col gap-6 transition-all duration-1000 ease-out",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      )}
+    >
+      <div className="flex items-center gap-8">
+        <div className={cn(
+          "h-[1px] bg-[#c5a059] transition-all duration-1000 ease-in-out",
+          isVisible ? "w-24 opacity-100" : "w-0 opacity-0"
+        )} />
+        <p className={cn(serif.className, "text-4xl md:text-6xl tracking-widest text-[#c5a059]")}>{step.time}</p>
+      </div>
+      <div className="pl-32 space-y-4">
+        <h3 className="text-xl md:text-2xl uppercase tracking-[0.4em] font-light text-[#5c6b5c]">{step.label}</h3>
+        <p className="text-xs uppercase tracking-widest opacity-40 mb-4">{step.location}</p>
+        <Button variant="link" className="text-[10px] uppercase tracking-[0.3em] text-[#8a9a5b] p-0 h-auto border-b border-[#8a9a5b]/20">
+          {t.verMapa}
+        </Button>
+      </div>
+    </div>
+  )
 }
 
 export default function WeddingPage() {
@@ -169,7 +216,7 @@ export default function WeddingPage() {
           />
         </div>
 
-        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#B7CCE0]/40 via-transparent to-[#F4F0EA]/10 pointer-events-none" />
+        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/5 via-transparent to-[#F4F0EA]/10 pointer-events-none" />
         
         <div className="relative z-10 h-full w-full flex flex-col items-center justify-start pt-32 px-6 text-center">
           <div className="space-y-6">
@@ -178,7 +225,7 @@ export default function WeddingPage() {
             </h1>
             <div className="space-y-3">
               <p className={cn(serif.className, "text-lg md:text-xl tracking-widest uppercase italic text-[#c5a059] font-medium drop-shadow-sm")}>{t.domingo}</p>
-              <p className="text-[12px] md:text-sm tracking-[0.6em] uppercase font-bold text-[#5c6b5c] drop-shadow-md inline-block">
+              <p className="text-[12px] md:text-sm tracking-[0.6em] uppercase font-bold text-[#5c6b5c] drop-shadow-sm inline-block">
                 {t.zihua}
               </p>
             </div>
@@ -305,23 +352,11 @@ export default function WeddingPage() {
 
           <div className="space-y-32">
             {[
-              { time: "17:00", label: t.ceremonia, location: "Lugar por confirmar", icon: Globe },
-              { time: "18:30", label: t.coctel, location: "Lugar por confirmar", icon: Navigation },
-              { time: "20:00", label: t.recepcion, location: "Lugar por confirmar", icon: Calendar }
+              { time: "17:00", label: t.ceremonia, location: "Lugar por confirmar" },
+              { time: "18:30", label: t.coctel, location: "Lugar por confirmar" },
+              { time: "20:00", label: t.recepcion, location: "Lugar por confirmar" }
             ].map((step, idx) => (
-              <div key={idx} className="flex flex-col gap-6 group">
-                <div className="flex items-center gap-8">
-                  <div className="w-16 h-[1px] bg-[#c5a059]/40 group-hover:w-24 transition-all duration-700" />
-                  <p className={cn(serif.className, "text-4xl md:text-6xl tracking-widest text-[#c5a059]")}>{step.time}</p>
-                </div>
-                <div className="pl-24 space-y-4">
-                  <h3 className="text-xl md:text-2xl uppercase tracking-[0.4em] font-light text-[#5c6b5c]">{step.label}</h3>
-                  <p className="text-xs uppercase tracking-widest opacity-40 mb-4">{step.location}</p>
-                  <Button variant="link" className="text-[10px] uppercase tracking-[0.3em] text-[#8a9a5b] p-0 h-auto border-b border-[#8a9a5b]/20">
-                    {t.verMapa}
-                  </Button>
-                </div>
-              </div>
+              <ItineraryItem key={idx} step={step} index={idx} t={t} />
             ))}
           </div>
         </div>
@@ -366,29 +401,6 @@ export default function WeddingPage() {
               )
             })}
           </div>
-        </div>
-      </section>
-
-      {/* Regalos */}
-      <section className="py-40 bg-[#9dbce3]/5 border-y border-[#9dbce3]/10">
-        <div className="max-w-2xl mx-auto px-6 text-center space-y-12">
-           <div className="flex justify-center">
-             <div className="w-20 h-20 rounded-full border border-[#c5a059]/20 flex items-center justify-center">
-               <Gift size={32} strokeWidth={0.5} className="text-[#c5a059]" />
-             </div>
-           </div>
-           <h2 className={cn(serif.className, "text-5xl italic text-[#5c6b5c]")}>{t.regalos}</h2>
-           <p className="text-lg font-light leading-relaxed opacity-70">
-             {t.textoRegalos}
-           </p>
-           <div className="flex flex-col sm:flex-row gap-6 justify-center pt-6">
-             <Button className="rounded-none h-16 px-10 border border-[#c5a059] bg-white text-[#c5a059] hover:bg-[#c5a059] hover:text-white transition-all uppercase tracking-[0.3em] text-[10px]">
-               Mesa de Regalos Provisional
-             </Button>
-             <Button className="rounded-none h-16 px-10 border border-[#5c6b5c] bg-[#5c6b5c] text-white hover:bg-black transition-all uppercase tracking-[0.3em] text-[10px]">
-               {t.transferencia}
-             </Button>
-           </div>
         </div>
       </section>
 
