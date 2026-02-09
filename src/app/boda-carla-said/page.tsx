@@ -98,18 +98,22 @@ function ItineraryItem({ step, t }: { step: any, t: any }) {
     <div 
       ref={itemRef}
       className={cn(
-        "flex flex-col gap-6 transition-all duration-1000 ease-out",
+        "flex flex-col items-center text-center gap-6 transition-all duration-1000 ease-out",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       )}
     >
-      <div className="flex items-center gap-4 md:gap-8">
+      <div className="flex items-center justify-center gap-4 md:gap-8 w-full max-w-xl">
         <div className={cn(
-          "h-[1px] bg-[#c5a059] transition-all duration-1000 ease-in-out",
-          isVisible ? "w-12 md:w-24 opacity-100" : "w-0 opacity-0"
+          "h-[1px] bg-[#c5a059] transition-all duration-1000 ease-in-out flex-1",
+          isVisible ? "opacity-30" : "opacity-0"
         )} />
-        <p className={cn(serif.className, "text-4xl md:text-6xl tracking-widest text-[#c5a059]")}>{step.time}</p>
+        <p className={cn(serif.className, "text-4xl md:text-6xl tracking-widest text-[#c5a059] whitespace-nowrap")}>{step.time}</p>
+        <div className={cn(
+          "h-[1px] bg-[#c5a059] transition-all duration-1000 ease-in-out flex-1",
+          isVisible ? "opacity-30" : "opacity-0"
+        )} />
       </div>
-      <div className="pl-8 md:pl-32 space-y-4">
+      <div className="space-y-4">
         <h3 className="text-xl md:text-2xl uppercase tracking-[0.4em] font-light text-[#5c6b5c]">{step.label}</h3>
         <p className="text-[10px] md:text-xs uppercase tracking-widest opacity-40 mb-4">{step.location}</p>
         <Button variant="link" className="text-[10px] uppercase tracking-[0.3em] text-[#8a9a5b] p-0 h-auto border-b border-[#8a9a5b]/20">
