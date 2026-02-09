@@ -47,7 +47,7 @@ const translations = {
     horas: "Ore",
     minutos: "Minuti",
     segundos: "Secondi",
-    faltaPoco: "Manca poco al nostro per sempre",
+    faltaPoco: "Manca poco al nostro per siempre",
     acompananos: "Accompagnaci in questo momento",
     calendario: "Aggiungi al calendario",
     invitacion: "Con immensa gioia vi invitiamo a celebrare il nostro matrimonio.",
@@ -60,9 +60,9 @@ const translations = {
     hospedaje: "Alloggio",
     reservar: "Prenota ora",
     regalos: "Lista Nozze",
-    textoRegalos: "La vostra presenza è il nostro regalo più bello, ma se desiderate farci un pensiero, ecco le nostre opzioni.",
+    textoRegalos: "La vostra presencia è il nuestro regalo più bello, ma se desiderate farci un pensiero, ecco le nostre opzioni.",
     transferencia: "Dati per il bonifico",
-    confirmar: "Conferma partecipazione",
+    confirmar: "Conferma participación",
     rsvpTexto: "Si prega di confermare entro il 1 novembre",
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
     zihua: "Zihuatanejo, Guerrero, Messico",
@@ -146,7 +146,7 @@ export default function WeddingPage() {
             </h1>
             <div className="space-y-3">
               <p className={cn(serif.className, "text-lg md:text-xl tracking-widest uppercase italic text-[#c5a059] font-medium drop-shadow-sm")}>{t.domingo}</p>
-              <p className="text-[10px] md:text-xs tracking-[0.5em] uppercase font-bold text-[#5c6b5c] drop-shadow-sm bg-white/40 backdrop-blur-[4px] px-6 py-2 rounded-full inline-block border border-white/20">
+              <p className="text-[10px] md:text-xs tracking-[0.5em] uppercase font-bold text-[#5c6b5c] drop-shadow-sm inline-block">
                 {t.zihua}
               </p>
             </div>
