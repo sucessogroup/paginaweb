@@ -301,9 +301,13 @@ export default function WeddingPage() {
               <div className="bg-white p-2 shadow-2xl -rotate-6 transform transition-transform group-hover:rotate-0 duration-500 border border-black/5">
                 <div className="w-20 h-14 relative overflow-hidden">
                   <svg viewBox="0 0 980 560" className="w-full h-full object-cover">
-                    <rect width="980" height="560" fill="#006847"/>
-                    <rect width="653.33" height="560" x="326.66" fill="#FFFFFF"/>
+                    <rect width="326.66" height="560" fill="#006847"/>
+                    <rect width="326.66" height="560" x="326.66" fill="#FFFFFF"/>
                     <rect width="326.66" height="560" x="653.33" fill="#CE1126"/>
+                    <g transform="translate(490, 280) scale(0.6)">
+                      <circle cx="0" cy="0" r="45" fill="#a67c00" opacity="0.8" />
+                      <path d="M-20 10 Q0 30 20 10 L10 -20 Q0 -30 -10 -20 Z" fill="#5c4033" />
+                    </g>
                   </svg>
                 </div>
                 <div className="text-[6px] uppercase tracking-widest mt-1 opacity-40 text-center font-bold">México</div>
