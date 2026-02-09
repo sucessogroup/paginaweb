@@ -130,6 +130,12 @@ export default function WeddingPage() {
     document.body.removeChild(link);
   }
 
+  const handleWhatsAppConfirm = () => {
+    const phoneNumber = "529982418679";
+    const message = encodeURIComponent("Quiero confirmar");
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
+
   const weddingCouple = PlaceHolderImages.find(img => img.id === 'wedding-couple')
   const details1 = PlaceHolderImages.find(img => img.id === 'wedding-details-1')
   const details2 = PlaceHolderImages.find(img => img.id === 'wedding-details-2')
@@ -246,7 +252,7 @@ export default function WeddingPage() {
                     <rect width="980" height="560" fill="#006847"/>
                     <rect width="653.33" height="560" x="326.66" fill="#FFFFFF"/>
                     <rect width="326.66" height="560" x="653.33" fill="#CE1126"/>
-                    <circle cx="490" cy="280" r="60" fill="#663300" opacity="0.3" /> {/* Simplificado */}
+                    <circle cx="490" cy="280" r="60" fill="#663300" opacity="0.3" /> 
                   </svg>
                 </div>
                 <div className="text-[6px] uppercase tracking-widest mt-1 opacity-40 text-center font-bold">México</div>
@@ -267,10 +273,23 @@ export default function WeddingPage() {
             </div>
           </div>
 
-          <p className={cn(script.className, "text-3xl md:text-6xl text-[#5c6b5c] leading-relaxed italic animate-in fade-in duration-1000")}>
-            “{t.fraseFinal}”
-          </p>
-          <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-16 opacity-30" />
+          <div className="space-y-12">
+            <p className={cn(script.className, "text-3xl md:text-6xl text-[#5c6b5c] leading-relaxed italic animate-in fade-in duration-1000")}>
+              “{t.fraseFinal}”
+            </p>
+            
+            <div className="pt-8">
+              <Button 
+                onClick={handleWhatsAppConfirm}
+                className="rounded-full px-12 py-8 bg-[#8a9a5b] hover:bg-[#5c6b5c] text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3 shadow-lg shadow-[#8a9a5b]/20"
+              >
+                <MessageCircle size={16} />
+                {t.confirmar}
+              </Button>
+            </div>
+          </div>
+          
+          <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-24 opacity-30" />
         </div>
       </section>
 
@@ -458,7 +477,10 @@ export default function WeddingPage() {
              <div className="w-20 h-[1px] bg-[#c5a059] mx-auto" />
            </div>
            <p className="text-[10px] tracking-[0.5em] uppercase opacity-50 font-bold">{t.rsvpTexto}</p>
-           <Button className="rounded-full px-16 py-10 bg-[#8a9a5b] hover:bg-[#5c6b5c] text-white flex items-center gap-6 mx-auto group transition-all duration-700 shadow-xl shadow-[#8a9a5b]/20">
+           <Button 
+             onClick={handleWhatsAppConfirm}
+             className="rounded-full px-16 py-10 bg-[#8a9a5b] hover:bg-[#5c6b5c] text-white flex items-center gap-6 mx-auto group transition-all duration-700 shadow-xl shadow-[#8a9a5b]/20"
+           >
              <MessageCircle className="group-hover:rotate-12 transition-transform" />
              <span className="uppercase tracking-[0.3em] text-xs font-bold">{t.confirmar}</span>
            </Button>
