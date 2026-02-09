@@ -17,7 +17,7 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
+      setIsScrolled(window.scrollY > 50)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
@@ -34,41 +34,54 @@ export const Navbar = () => {
   return (
     <nav 
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 lg:px-12",
-        isScrolled ? "py-4 bg-white/95 backdrop-blur-md shadow-sm border-b" : "py-8 bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-700 px-6 lg:px-12",
+        isScrolled ? "py-4 bg-white/95 backdrop-blur-md shadow-sm border-b" : "py-12 bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="relative flex items-center gap-4">
-          {logoData ? (
-            <div className={cn(
-              "relative transition-all duration-300",
-              isScrolled ? "w-48 h-16" : "w-64 h-24 lg:w-80 lg:h-32"
-            )}>
-              <Image 
-                src={logoData.imageUrl} 
-                alt="SUCESSO Logo" 
-                fill 
-                className={cn(
-                  "object-contain transition-all duration-300", 
-                  !isScrolled && "brightness-0 invert"
-                )}
-                priority
-                data-ai-hint="company logo"
-              />
-            </div>
-          ) : (
-            <div className={cn(
-              "text-3xl font-headline font-bold tracking-widest transition-colors",
-              isScrolled ? "text-brand-ocean" : "text-white"
-            )}>
-              SUCESSO
-            </div>
-          )}
-        </Link>
+        <div className="flex items-center gap-4">
+          <Link 
+            href="/" 
+            className={cn(
+              "transition-all duration-1000 ease-in-out z-[60]",
+              !isScrolled 
+                ? "fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-[3] md:scale-[4] lg:scale-[5]" 
+                : "relative left-0 top-0 translate-x-0 translate-y-0 scale-100"
+            )}
+          >
+            {logoData ? (
+              <div className={cn(
+                "relative transition-all duration-700",
+                isScrolled ? "w-40 h-12" : "w-48 h-16"
+              )}>
+                <Image 
+                  src={logoData.imageUrl} 
+                  alt="SUCESSO Logo" 
+                  fill 
+                  className={cn(
+                    "object-contain transition-all duration-700", 
+                    !isScrolled && "brightness-0 invert"
+                  )}
+                  priority
+                  data-ai-hint="company logo"
+                />
+              </div>
+            ) : (
+              <div className={cn(
+                "text-3xl font-headline font-bold tracking-widest transition-colors",
+                isScrolled ? "text-brand-ocean" : "text-white"
+              )}>
+                SUCESSO
+              </div>
+            )}
+          </Link>
+        </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-10">
+        <div className={cn(
+          "hidden lg:flex items-center gap-10 transition-opacity duration-500",
+          !isScrolled && "opacity-0 pointer-events-none"
+        )}>
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
@@ -96,8 +109,8 @@ export const Navbar = () => {
         {/* Mobile Menu Trigger */}
         <button 
           className={cn(
-            "lg:hidden p-2 rounded-md transition-colors",
-            isScrolled ? "text-brand-ocean" : "text-white"
+            "lg:hidden p-2 rounded-md transition-all duration-500",
+            isScrolled ? "text-brand-ocean" : "text-white opacity-0 pointer-events-none"
           )}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
