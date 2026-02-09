@@ -60,7 +60,7 @@ const translations = {
     hospedaje: "Alloggio",
     reservar: "Prenota ora",
     regalos: "Lista Nozze",
-    textoRegalos: "La vostra presencia è il nuestro regalo más bello, ma se desiderate farci un pensiero, ecco le nostre opzioni.",
+    textoRegalos: "La vostra presencia è il nuestro regalo más bello, ma se desiderate farci un pensamiento, ecco le nostre opzioni.",
     transferencia: "Dati per il bonifico",
     confirmar: "Conferma participación",
     rsvpTexto: "Si prega di confermare entro il 1 novembre",
@@ -107,7 +107,6 @@ export default function WeddingPage() {
       endTime: '20261221T020000',
     };
 
-    // Formato ICS (Universal para Apple, Outlook, etc.)
     const icsContent = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
@@ -182,10 +181,9 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Sección Countdown + Mensaje Falta Poco */}
+      {/* Sección Countdown */}
       <section className="py-32 bg-[#F4F0EA] border-b border-[#c5a059]/10">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
-          {/* Mensajes de Bienvenida */}
           <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">
             <h2 className={cn(serif.className, "text-3xl md:text-5xl font-light text-[#5c6b5c] italic")}>
               {t.faltaPoco}
@@ -195,7 +193,6 @@ export default function WeddingPage() {
             </p>
           </div>
 
-          {/* El Countdown Minimalista */}
           <div className="min-h-[120px] flex items-center justify-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
             {isFinished ? (
               <h2 className={cn(serif.className, "text-4xl md:text-6xl italic animate-bounce text-[#c5a059] drop-shadow-sm")}>
@@ -220,7 +217,6 @@ export default function WeddingPage() {
             )}
           </div>
 
-          {/* Botón Calendario */}
           {!isFinished && (
             <div className="pt-8 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-500">
               <Button 
@@ -236,10 +232,41 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Sección Quote (La frase de la distancia) */}
+      {/* Sección Quote con Banderas (Postales) */}
       <section className="py-40 bg-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-[#B7CCE0]/5 -z-10" />
         <div className="max-w-4xl mx-auto px-6 text-center">
+          {/* Postales de Banderas */}
+          <div className="flex justify-center gap-6 mb-16 animate-in fade-in zoom-in duration-1000">
+            {/* Postal México */}
+            <div className="relative group">
+              <div className="bg-white p-2 shadow-2xl -rotate-6 transform transition-transform group-hover:rotate-0 duration-500 border border-black/5">
+                <div className="w-20 h-14 relative overflow-hidden">
+                  <svg viewBox="0 0 980 560" className="w-full h-full object-cover">
+                    <rect width="980" height="560" fill="#006847"/>
+                    <rect width="653.33" height="560" x="326.66" fill="#FFFFFF"/>
+                    <rect width="326.66" height="560" x="653.33" fill="#CE1126"/>
+                    <circle cx="490" cy="280" r="60" fill="#663300" opacity="0.3" /> {/* Simplificado */}
+                  </svg>
+                </div>
+                <div className="text-[6px] uppercase tracking-widest mt-1 opacity-40 text-center font-bold">México</div>
+              </div>
+            </div>
+            {/* Postal Italia */}
+            <div className="relative group">
+              <div className="bg-white p-2 shadow-2xl rotate-6 transform transition-transform group-hover:rotate-0 duration-500 border border-black/5">
+                <div className="w-20 h-14 relative overflow-hidden">
+                  <svg viewBox="0 0 1500 1000" className="w-full h-full object-cover">
+                    <rect width="500" height="1000" fill="#009246"/>
+                    <rect width="500" height="1000" x="500" fill="#FFFFFF"/>
+                    <rect width="500" height="1000" x="1000" fill="#CE2B37"/>
+                  </svg>
+                </div>
+                <div className="text-[6px] uppercase tracking-widest mt-1 opacity-40 text-center font-bold">Italia</div>
+              </div>
+            </div>
+          </div>
+
           <p className={cn(script.className, "text-3xl md:text-6xl text-[#5c6b5c] leading-relaxed italic animate-in fade-in duration-1000")}>
             “{t.fraseFinal}”
           </p>
@@ -327,7 +354,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Ubicación / Mapa */}
+      {/* Ubicación */}
       <section className="py-40 bg-white">
         <div className="max-w-6xl mx-auto px-6">
            <div className="grid md:grid-cols-2 gap-24 items-center">
