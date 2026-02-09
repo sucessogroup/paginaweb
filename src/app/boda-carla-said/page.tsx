@@ -39,7 +39,8 @@ const translations = {
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
     zihua: "Zihuatanejo, Guerrero, México",
     domingo: "Domingo, 20 de diciembre de 2026",
-    loading: "Cargando..."
+    loading: "Cargando...",
+    waMessage: "¡Hola! Estoy muy emocionado por la boda de Carla y Said. Me gustaría confirmar mi asistencia para celebrar con ustedes el 20 de diciembre de 2026 en Zihuatanejo. ¡Nos vemos pronto!"
   },
   it: {
     seAcabo: "Il tempo è finito",
@@ -67,7 +68,8 @@ const translations = {
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
     zihua: "Zihuatanejo, Guerrero, Messico",
     domingo: "Domenica, 20 dicembre 2026",
-    loading: "Caricamento..."
+    loading: "Caricamento...",
+    waMessage: "Ciao! Sono molto entusiasta per il matrimonio di Carla e Said. Vorrei confermare la mia partecipazione per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!"
   }
 }
 
@@ -101,7 +103,7 @@ export default function WeddingPage() {
   const handleAddToCalendar = () => {
     const event = {
       title: 'Boda Carla & Said',
-      description: '¡Los esperamos!',
+      description: '¡Los esperamos para celebrar nuestro amor!',
       location: 'Zihuatanejo, Guerrero, México',
       startTime: '20261220T170000',
       endTime: '20261221T020000',
@@ -110,6 +112,7 @@ export default function WeddingPage() {
     const icsContent = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
+      'PRODID:-//Wedding//Carla and Said//ES',
       'BEGIN:VEVENT',
       `DTSTART:${event.startTime}`,
       `DTEND:${event.endTime}`,
@@ -132,7 +135,7 @@ export default function WeddingPage() {
 
   const handleWhatsAppConfirm = () => {
     const phoneNumber = "529982418679";
-    const message = encodeURIComponent("Quiero confirmar");
+    const message = encodeURIComponent(t.waMessage);
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
