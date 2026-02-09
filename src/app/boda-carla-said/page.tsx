@@ -4,7 +4,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Literata, Dancing_Script } from 'next/font/google'
-import { MapPin, Calendar, Clock, Hotel as HotelIcon, Gift, Globe, Navigation, CalendarPlus } from 'lucide-react'
+import { CalendarPlus } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
@@ -22,7 +22,6 @@ const translations = {
     faltaPoco: "Falta poco para nuestro para siempre",
     acompananos: "Acompáñanos en este momento",
     calendario: "Añadir al calendario",
-    invitacion: "Con enorme alegría los invitamos a celebrar nuestro matrimonio.",
     itinerario: "Itinerario",
     ceremonia: "Ceremonia",
     coctel: "Cóctel de Bienvenida",
@@ -31,16 +30,12 @@ const translations = {
     verMapa: "Ver ubicación en mapa",
     hospedaje: "Hotel",
     reservar: "Reservar ahora",
-    regalos: "Mesa de Regalos",
-    textoRegalos: "Vuestra presencia es nuestro mejor regalo, pero si desean tener un detalle con nosotros, aquí tienen nuestras opciones.",
-    transferencia: "Datos para transferencia",
     confirmar: "Confirmar asistencia",
     rsvpTexto: "Favor de confirmar antes del 1 de Noviembre",
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
     zihua: "Zihuatanejo, Guerrero, México",
     domingo: "Domingo, 20 de diciembre de 2026",
-    loading: "Cargando...",
-    waMessage: "¡Hola! Estoy muy emocionado por la boda de Carla y Said. Me gustaría confirmar mi asistencia para celebrar con ustedes el 20 de diciembre de 2026 en Zihuatanejo. ¡Nos vemos pronto!"
+    waMessage: "¡Hola Carla y Said! Estoy muy emocionado por su boda. Me encantaría confirmar mi asistencia para celebrar con ustedes el 20 de diciembre de 2026 en Zihuatanejo. ¡Nos vemos pronto!"
   },
   it: {
     seAcabo: "Il tempo è finito",
@@ -51,7 +46,6 @@ const translations = {
     faltaPoco: "Manca poco al nostro per siempre",
     acompananos: "Accompagnaci in questo momento",
     calendario: "Aggiungi al calendario",
-    invitacion: "Con immensa gioia vi invitiamo a celebrare il matrimonio.",
     itinerario: "Itinerario",
     ceremonia: "Cerimonia",
     coctel: "Cocktail di Benvenuto",
@@ -60,20 +54,16 @@ const translations = {
     verMapa: "Visualizza posizione",
     hospedaje: "Hotel",
     reservar: "Prenota ora",
-    regalos: "Lista Nozze",
-    textoRegalos: "La vostra presencia è il nuestro regalo más bello, ma se desiderate farci un pensamiento, ecco le nostre opzioni.",
-    transferencia: "Dati per il bonifico",
     confirmar: "Conferma participación",
     rsvpTexto: "Si prega di confermare entro il 1 novembre",
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
     zihua: "Zihuatanejo, Guerrero, Messico",
     domingo: "Domenica, 20 dicembre 2026",
-    loading: "Caricamento...",
-    waMessage: "Ciao! Sono molto entusiasta per il matrimonio di Carla e Said. Vorrei confermare la mia participación per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!"
+    waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia participación per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!"
   }
 }
 
-function ItineraryItem({ step, index, t }: { step: any, index: number, t: any }) {
+function ItineraryItem({ step, t }: { step: any, t: any }) {
   const [isVisible, setIsVisible] = useState(false)
   const itemRef = useRef<HTMLDivElement>(null)
 
@@ -192,7 +182,7 @@ export default function WeddingPage() {
 
   return (
     <div className="bg-[#fcfaf7] text-[#5c6b5c] font-body overflow-x-hidden">
-      {/* Selector de Idioma Sticky */}
+      {/* Selector de Idioma */}
       <div className="fixed top-8 right-8 z-[100] flex gap-4">
         {['es', 'it'].map((l) => (
           <button
@@ -208,7 +198,7 @@ export default function WeddingPage() {
         ))}
       </div>
 
-      {/* Hero Portada - foto1.png */}
+      {/* Portada - foto1.png */}
       <section className="relative h-screen w-full overflow-hidden bg-[#B7CCE0]">
         <div className="absolute inset-0 z-0">
           <Image 
@@ -238,7 +228,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Sección Countdown */}
+      {/* Countdown */}
       <section className="py-32 bg-[#F4F0EA] border-b border-[#c5a059]/10">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
           <div className="space-y-4">
@@ -289,7 +279,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Sección Quote/Confirmación - foto2.png */}
+      {/* Frase y Confirmación - foto2.png */}
       <section className="py-40 relative overflow-hidden bg-[#fcfaf7]">
         <div className="absolute inset-0 z-0 opacity-15">
           <Image 
@@ -302,7 +292,6 @@ export default function WeddingPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          {/* Postales/Banderas */}
           <div className="flex justify-center gap-6 mb-16">
             <div className="relative group">
               <div className="bg-white p-2 shadow-2xl -rotate-6 transform transition-transform group-hover:rotate-0 duration-500 border border-black/5">
@@ -312,8 +301,8 @@ export default function WeddingPage() {
                     <rect width="326.66" height="560" x="326.66" fill="#FFFFFF"/>
                     <rect width="326.66" height="560" x="653.33" fill="#CE1126"/>
                     <g transform="translate(490, 280)">
-                      <circle cx="0" cy="0" r="16" fill="#c5a059" />
-                      <circle cx="0" cy="0" r="8" fill="#8b7346" />
+                      <circle cx="0" cy="0" r="24" fill="#8b7346" opacity="0.4" />
+                      <circle cx="0" cy="0" r="14" fill="#8b7346" />
                     </g>
                   </svg>
                 </div>
@@ -339,7 +328,7 @@ export default function WeddingPage() {
               “{t.fraseFinal}”
             </p>
             
-            <div className="pt-8 flex flex-col items-center gap-4">
+            <div className="pt-8">
               <Button 
                 onClick={handleWhatsAppConfirm}
                 className="rounded-full px-12 py-8 bg-[#8a9a5b] hover:bg-[#5c6b5c] text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] shadow-lg shadow-[#8a9a5b]/20"
@@ -373,11 +362,11 @@ export default function WeddingPage() {
 
           <div className="space-y-32">
             {[
-              { time: "17:00", label: t.ceremonia, location: "Lugar por confirmar" },
-              { time: "18:30", label: t.coctel, location: "Lugar por confirmar" },
-              { time: "20:00", label: t.recepcion, location: "Lugar por confirmar" }
+              { time: "17:00", label: t.ceremonia, location: "Capilla del Mar" },
+              { time: "18:30", label: t.coctel, location: "Terraza Atardecer" },
+              { time: "20:00", label: t.recepcion, location: "Salón Brisa" }
             ].map((step, idx) => (
-              <ItineraryItem key={idx} step={step} index={idx} t={t} />
+              <ItineraryItem key={idx} step={step} t={t} />
             ))}
           </div>
         </div>
@@ -393,8 +382,8 @@ export default function WeddingPage() {
 
           <div className="grid md:grid-cols-2 gap-12">
             {[
-              { id: 'hotel-1', title: 'Hotel Boutique 1', price: '$$$' },
-              { id: 'hotel-2', title: 'Resort 2', price: '$$$$' }
+              { id: 'hotel-1', title: 'La Casa que Canta', price: 'Premium' },
+              { id: 'hotel-2', title: 'Thompson Zihuatanejo', price: 'Luxury' }
             ].map((hotel, idx) => {
               const img = PlaceHolderImages.find(p => p.id === hotel.id)
               return (
@@ -416,7 +405,6 @@ export default function WeddingPage() {
                     </div>
                     <div className="flex gap-8">
                       <Button variant="link" className="text-[10px] uppercase tracking-widest p-0 text-[#8a9a5b] h-auto hover:text-[#5c6b5c]">{t.reservar}</Button>
-                      <Button variant="link" className="text-[10px] uppercase tracking-widest p-0 text-[#5c6b5c] h-auto opacity-40 hover:opacity-100">Maps</Button>
                     </div>
                   </div>
                 </div>
