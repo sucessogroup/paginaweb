@@ -126,6 +126,10 @@ export default function WeddingPage() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
   const t = translations[lang]
 
+  const heroImage = PlaceHolderImages.find(img => img.id === 'wedding-hero')
+  const quoteBgImage = PlaceHolderImages.find(img => img.id === 'wedding-bg-quote')
+  const itineraryBgImage = PlaceHolderImages.find(img => img.id === 'wedding-bg-itinerary')
+
   useEffect(() => {
     const targetDate = new Date('2026-12-20T17:00:00').getTime()
     const timer = setInterval(() => {
@@ -208,11 +212,12 @@ export default function WeddingPage() {
       <section className="relative h-screen w-full overflow-hidden bg-[#B7CCE0]">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/foto1.png" 
+            src={heroImage?.imageUrl || "/foto1.png"} 
             alt="Carla & Said Wedding" 
             fill
             className="object-cover object-center pointer-events-none"
             priority
+            data-ai-hint={heroImage?.imageHint || "tropical beach"}
           />
         </div>
 
@@ -284,14 +289,15 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Sección Quote con Banderas (Postales) y Fondo foto2.png */}
+      {/* Sección Quote con Banderas (Postales) */}
       <section className="py-40 relative overflow-hidden bg-[#fcfaf7]">
         <div className="absolute inset-0 z-0 opacity-15">
           <Image 
-            src="/foto2.png" 
+            src={quoteBgImage?.imageUrl || "/foto2.png"} 
             alt="Background Decor" 
             fill 
             className="object-cover object-center pointer-events-none"
+            data-ai-hint={quoteBgImage?.imageHint || "soft textures"}
           />
         </div>
 
@@ -347,10 +353,11 @@ export default function WeddingPage() {
       <section className="py-40 relative overflow-hidden bg-[#f5f0e6]/40">
         <div className="absolute inset-0 z-0 opacity-10">
           <Image 
-            src="/foto3.png" 
+            src={itineraryBgImage?.imageUrl || "/foto3.png"} 
             alt="Itinerary Decor" 
             fill 
             className="object-cover object-center pointer-events-none"
+            data-ai-hint={itineraryBgImage?.imageHint || "elegant decoration"}
           />
         </div>
 
@@ -396,6 +403,7 @@ export default function WeddingPage() {
                       alt={hotel.title} 
                       fill 
                       className="object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" 
+                      data-ai-hint={img?.imageHint || "luxury hotel"}
                     />
                     <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors" />
                   </div>

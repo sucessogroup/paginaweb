@@ -15,27 +15,21 @@
     },
     {
       "id": "wedding-hero",
-      "description": "Paisaje suave de Zihuatanejo al atardecer",
+      "description": "Hero principal de la boda",
       "imageUrl": "https://picsum.photos/seed/cs-hero/1200/1600",
       "imageHint": "tropical beach"
     },
     {
-      "id": "wedding-couple",
-      "description": "Foto editorial de Carla & Said",
-      "imageUrl": "https://picsum.photos/seed/cs-couple/800/1200",
-      "imageHint": "couple portrait"
+      "id": "wedding-bg-quote",
+      "description": "Fondo sutil para la sección de frase",
+      "imageUrl": "https://picsum.photos/seed/cs-quote/1200/800",
+      "imageHint": "soft textures"
     },
     {
-      "id": "wedding-details-1",
-      "description": "Detalles de flores y mar",
-      "imageUrl": "https://picsum.photos/seed/cs-det1/600/800",
-      "imageHint": "white flowers"
-    },
-    {
-      "id": "wedding-details-2",
-      "description": "Textura de arena y arquitectura minimalista",
-      "imageUrl": "https://picsum.photos/seed/cs-det2/600/800",
-      "imageHint": "abstract architecture"
+      "id": "wedding-bg-itinerary",
+      "description": "Fondo elegante para el itinerario",
+      "imageUrl": "https://picsum.photos/seed/cs-itinerary/1200/1200",
+      "imageHint": "elegant decoration"
     },
     {
       "id": "hotel-1",
