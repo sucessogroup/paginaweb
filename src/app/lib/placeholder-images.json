@@ -32,6 +32,12 @@
       "imageHint": "elegant decoration"
     },
     {
+      "id": "hotel-villa-mexicana",
+      "description": "Villa Mexicana Hotel",
+      "imageUrl": "/foto4.png",
+      "imageHint": "hotel architecture"
+    },
+    {
       "id": "hotel-1",
       "description": "Boutique Hotel Zihuatanejo",
       "imageUrl": "https://picsum.photos/seed/hotel1/800/600",

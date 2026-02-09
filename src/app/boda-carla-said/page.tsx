@@ -4,7 +4,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Literata, Dancing_Script } from 'next/font/google'
-import { CalendarPlus } from 'lucide-react'
+import { CalendarPlus, ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
@@ -29,7 +29,10 @@ const translations = {
     ubicacion: "Ubicación",
     verMapa: "Ver ubicación en mapa",
     hospedaje: "Hotel",
-    reservar: "Reservar ahora",
+    reservar: "Reservas próximamente",
+    reservaMasAdelante: "La reserva estará disponible más adelante.",
+    verWeb: "Ver página web",
+    tarifaPreferencial: "Contamos con una tarifa preferencial para nuestros invitados.",
     confirmar: "Confirmar asistencia",
     rsvpTexto: "Favor de confirmar antes del 1 de Noviembre",
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
@@ -53,7 +56,10 @@ const translations = {
     ubicacion: "Posizione",
     verMapa: "Visualizza posizione",
     hospedaje: "Hotel",
-    reservar: "Prenota ora",
+    reservar: "Prenotazioni a breve",
+    reservaMasAdelante: "La prenotazione sarà disponibile più avanti.",
+    verWeb: "Sito web",
+    tarifaPreferencial: "Abbiamo una tariffa preferenziale per i nostri ospiti.",
     confirmar: "Conferma participación",
     rsvpTexto: "Si prega di confermare entro il 1 novembre",
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
@@ -119,6 +125,7 @@ export default function WeddingPage() {
   const heroImage = PlaceHolderImages.find(img => img.id === 'wedding-hero')
   const quoteBgImage = PlaceHolderImages.find(img => img.id === 'wedding-bg-quote')
   const itineraryBgImage = PlaceHolderImages.find(img => img.id === 'wedding-bg-itinerary')
+  const hotelImage = PlaceHolderImages.find(img => img.id === 'hotel-villa-mexicana')
 
   useEffect(() => {
     const targetDate = new Date('2026-12-20T17:00:00').getTime()
@@ -199,7 +206,7 @@ export default function WeddingPage() {
       </div>
 
       {/* Portada - foto1.png */}
-      <section className="relative h-screen w-full overflow-hidden bg-[#B7CCE0]">
+      <section className="relative h-screen w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
             src={heroImage?.imageUrl || "/foto1.png"} 
@@ -372,44 +379,56 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Hotel */}
+      {/* Hotel Recomendado - foto4.png */}
       <section id="hotel" className="py-40 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-32">
+          <div className="text-center mb-24">
             <h3 className={cn(serif.className, "text-6xl md:text-8xl italic text-[#5c6b5c]")}>{t.hospedaje}</h3>
             <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-8 opacity-30" />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            {[
-              { id: 'hotel-1', title: 'La Casa que Canta', price: 'Premium' },
-              { id: 'hotel-2', title: 'Thompson Zihuatanejo', price: 'Luxury' }
-            ].map((hotel, idx) => {
-              const img = PlaceHolderImages.find(p => p.id === hotel.id)
-              return (
-                <div key={idx} className="group cursor-pointer">
-                  <div className="aspect-[4/3] relative rounded-[2rem] overflow-hidden mb-8 shadow-sm">
-                    <Image 
-                      src={img?.imageUrl || "https://picsum.photos/seed/h/1000/750"} 
-                      alt={hotel.title} 
-                      fill 
-                      className="object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" 
-                      data-ai-hint="luxury hotel"
-                    />
-                    <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors" />
-                  </div>
-                  <div className="space-y-4 px-4">
-                    <div className="flex justify-between items-end">
-                      <h4 className={cn(serif.className, "text-3xl italic")}>{hotel.title}</h4>
-                      <span className="text-[10px] tracking-widest opacity-40">{hotel.price}</span>
-                    </div>
-                    <div className="flex gap-8">
-                      <Button variant="link" className="text-[10px] uppercase tracking-widest p-0 text-[#8a9a5b] h-auto hover:text-[#5c6b5c]">{t.reservar}</Button>
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
+          <div className="max-w-4xl mx-auto flex flex-col items-center">
+            {/* Imagen Limpia */}
+            <div className="aspect-video w-full relative rounded-[2rem] overflow-hidden mb-12 shadow-sm">
+              <Image 
+                src={hotelImage?.imageUrl || "/foto4.png"} 
+                alt="Villa Mexicana Hotel" 
+                fill 
+                className="object-cover"
+                priority
+                data-ai-hint="hotel architecture"
+              />
+            </div>
+
+            {/* Texto Hotel */}
+            <div className="text-center space-y-6">
+              <h4 className={cn(serif.className, "text-4xl md:text-5xl italic text-[#5c6b5c]")}>Villa Mexicana Hotel</h4>
+              <p className="text-sm md:text-base italic opacity-50 tracking-wide font-light max-w-md mx-auto">
+                {t.tarifaPreferencial}
+              </p>
+            </div>
+
+            {/* Botones */}
+            <div className="flex flex-col sm:flex-row gap-8 mt-16 w-full justify-center items-center">
+              <Button 
+                onClick={() => window.open('https://hotelvillamexicana.com.mx/zihuatanejo/en/', '_blank')}
+                variant="outline"
+                className="rounded-full px-12 py-8 border-[#5c6b5c]/20 text-[#5c6b5c] hover:bg-[#5c6b5c] hover:text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3"
+              >
+                {t.verWeb}
+                <ExternalLink size={14} />
+              </Button>
+
+              <div className="flex flex-col items-center gap-3">
+                <Button 
+                  disabled
+                  className="rounded-full px-12 py-8 bg-[#c5a059]/40 text-white cursor-not-allowed uppercase tracking-[0.2em] text-[10px]"
+                >
+                  {t.reservar}
+                </Button>
+                <p className="text-[9px] uppercase tracking-widest opacity-30">{t.reservaMasAdelante}</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
