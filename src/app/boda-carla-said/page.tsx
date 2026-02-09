@@ -254,7 +254,7 @@ export default function WeddingPage() {
             src={heroImage?.imageUrl || "/foto1.png"} 
             alt="Carla & Said Wedding" 
             fill
-            className="object-cover object-left md:object-center pointer-events-none"
+            className="object-cover object-[75%_center] md:object-center pointer-events-none"
             priority
             data-ai-hint="wedding couple beach"
           />
@@ -341,8 +341,8 @@ export default function WeddingPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <div className="flex justify-center gap-4 md:gap-8 mb-12 md:mb-16">
-            <div className="relative w-32 h-24 md:w-72 md:h-48 transition-transform hover:scale-105 duration-500">
+          <div className="flex justify-center gap-4 md:gap-6 mb-12 md:mb-16">
+            <div className="relative w-32 h-24 md:w-64 md:h-48 transition-transform hover:scale-105 duration-500">
               <Image 
                 src={flagMx?.imageUrl || "/banderamx.png"} 
                 alt="México" 
@@ -350,7 +350,7 @@ export default function WeddingPage() {
                 className="object-contain"
               />
             </div>
-            <div className="relative w-32 h-24 md:w-72 md:h-48 transition-transform hover:scale-105 duration-500">
+            <div className="relative w-32 h-24 md:w-64 md:h-48 transition-transform hover:scale-105 duration-500">
               <Image 
                 src={flagIt?.imageUrl || "/banderaita.png"} 
                 alt="Italia" 
@@ -384,7 +384,7 @@ export default function WeddingPage() {
             src={itineraryBgImage?.imageUrl || "/foto3.png"} 
             alt="Itinerary Decor" 
             fill 
-            className="object-cover object-center pointer-events-none"
+            className="object-cover pointer-events-none"
             data-ai-hint="elegant decoration detail"
           />
         </div>
