@@ -337,7 +337,6 @@ export default function WeddingPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          {/* Banderas PNG */}
           <div className="flex justify-center gap-4 md:gap-8 mb-12 md:mb-16">
             <div className="relative w-32 h-24 md:w-72 md:h-48 transition-transform hover:scale-105 duration-500">
               <Image 
@@ -415,7 +414,6 @@ export default function WeddingPage() {
           </div>
 
           <div className="max-w-4xl mx-auto flex flex-col items-center">
-            {/* Imagen Limpia */}
             <div className="aspect-video w-full relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden mb-8 md:mb-12 shadow-sm">
               <Image 
                 src={hotelImage?.imageUrl || "/foto4.png"} 
@@ -427,7 +425,6 @@ export default function WeddingPage() {
               />
             </div>
 
-            {/* Texto Hotel */}
             <div className="text-center space-y-4 md:space-y-6">
               <h4 className={cn(serif.className, "text-3xl md:text-5xl italic text-[#5c6b5c]")}>Villa Mexicana Hotel</h4>
               <p className="text-xs md:text-base italic opacity-50 tracking-wide font-light max-w-md mx-auto px-4">
@@ -435,7 +432,6 @@ export default function WeddingPage() {
               </p>
             </div>
 
-            {/* Botones */}
             <div className="flex flex-col sm:flex-row gap-6 md:gap-8 mt-12 md:mt-16 w-full justify-center items-center">
               <Button 
                 onClick={() => window.open('https://hotelvillamexicana.com.mx/zihuatanejo/en/', '_blank')}
@@ -485,43 +481,6 @@ export default function WeddingPage() {
           </RevealSection>
         </div>
       </section>
-
-      {/* RSVP Final */}
-      <section className="py-32 md:py-48 bg-white relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[800px] h-[300px] md:h-[800px] bg-[#f5f0e6]/30 rounded-full blur-[60px] md:blur-[100px] -z-10" />
-        
-        <div className="max-w-xl mx-auto px-6 text-center space-y-12 md:space-y-16">
-           <div className="space-y-6">
-             <h2 className={cn(script.className, "text-7xl md:text-[12rem] text-[#5c6b5c] leading-none")}>RSVP</h2>
-             <div className="w-20 h-[1px] bg-[#c5a059] mx-auto" />
-           </div>
-           <p className="text-[10px] tracking-[0.4em] md:tracking-[0.5em] uppercase opacity-50 font-bold">{t.rsvpTexto}</p>
-           <Button 
-             onClick={handleWhatsAppConfirm}
-             className="rounded-full px-16 py-10 bg-[#8a9a5b] hover:bg-[#5c6b5c] text-white flex items-center gap-6 mx-auto group transition-all duration-700 shadow-xl shadow-[#8a9a5b]/20"
-           >
-             <span className="uppercase tracking-[0.3em] text-xs font-bold">{t.confirmar}</span>
-           </Button>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-24 md:py-32 border-t border-[#5c6b5c]/5">
-        <div className="max-w-7xl mx-auto px-6 text-center space-y-12">
-           <div className={cn(script.className, "text-5xl text-[#5c6b5c]")}>Carla & Said</div>
-           <div className="flex flex-col gap-2">
-             <p className="text-[10px] tracking-[0.8em] uppercase opacity-40">20.12.2026</p>
-             <p className="text-[9px] tracking-[0.4em] uppercase opacity-30 italic">{t.zihua}</p>
-           </div>
-           <p className={cn(serif.className, "text-xl md:text-2xl italic text-[#c5a059] max-w-md mx-auto")}>“{t.fraseFinal}”</p>
-           
-           <div className="pt-16 flex justify-center gap-8 md:gap-12 text-[9px] tracking-[0.4em] uppercase opacity-30">
-             <button onClick={() => setLang('es')} className={cn(lang === 'es' && "text-[#c5a059] font-bold")}>ESP</button>
-             <span className="w-1 h-1 rounded-full bg-[#c5a059]" />
-             <button onClick={() => setLang('it')} className={cn(lang === 'it' && "text-[#c5a059] font-bold")}>ITA</button>
-           </div>
-        </div>
-      </footer>
     </div>
   )
 }
