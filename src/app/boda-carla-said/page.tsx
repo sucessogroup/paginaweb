@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -5,7 +6,6 @@ import Image from 'next/image'
 import { Literata, Dancing_Script } from 'next/font/google'
 import { MapPin, Calendar, Clock, Hotel, Gift, MessageCircle, Globe, Navigation } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
 
@@ -54,7 +54,7 @@ const translations = {
     hospedaje: "Alloggio",
     reservar: "Prenota ora",
     regalos: "Lista Nozze",
-    textoRegalos: "La vostra presencia è il nostro regalo più bello, ma se desiderate farci un pensiero, ecco le nostre opzioni.",
+    textoRegalos: "La vostra presencia è il nostro regalo más bello, ma se desiderate farci un pensiero, ecco le nostre opzioni.",
     transferencia: "Dati per il bonifico",
     confirmar: "Conferma participación",
     rsvpTexto: "Si prega de confermare entro il 1 novembre",
@@ -114,45 +114,45 @@ export default function WeddingPage() {
         ))}
       </div>
 
-      {/* Hero Section - Background set to match foto1.png sky */}
-      <section className="relative min-h-[80vh] flex flex-col items-center justify-center p-6 text-center bg-[#d9e8f6]">
-        <div className="space-y-12 animate-in fade-in zoom-in duration-1000">
+      {/* Hero Content Section - Names & Date */}
+      <section className="relative min-h-[50vh] flex flex-col items-center justify-center p-6 text-center bg-[#B7CCE0]">
+        <div className="space-y-10 animate-in fade-in zoom-in duration-1000">
           <div className="space-y-4">
-            <h1 className={cn(script.className, "text-7xl md:text-[10rem] text-[#5c6b5c] leading-none")}>
+            <h1 className={cn(script.className, "text-7xl md:text-[8rem] text-[#5c6b5c] leading-none")}>
               Carla & Said
             </h1>
           </div>
 
           <div className="space-y-2">
-            <p className={cn(serif.className, "text-xl md:text-3xl tracking-widest uppercase italic text-[#c5a059]")}>{t.domingo}</p>
-            <p className="text-xs tracking-[0.5em] uppercase font-light">{t.zihua}</p>
+            <p className={cn(serif.className, "text-xl md:text-2xl tracking-widest uppercase italic text-[#c5a059]")}>{t.domingo}</p>
+            <p className="text-[10px] tracking-[0.5em] uppercase font-light opacity-60">{t.zihua}</p>
           </div>
 
-          <div className="max-w-xl mx-auto pt-8">
-            <p className={cn(script.className, "text-2xl md:text-4xl text-[#8a9a5b] leading-relaxed italic")}>
+          <div className="max-w-xl mx-auto pt-4">
+            <p className={cn(script.className, "text-xl md:text-3xl text-[#5c6b5c] opacity-80 leading-relaxed italic")}>
               “{t.fraseFinal}”
             </p>
           </div>
 
           {/* Countdown Logic */}
-          <div className="pt-16 min-h-[120px] flex items-center justify-center">
+          <div className="pt-8 min-h-[100px] flex items-center justify-center">
             {isFinished ? (
               <h2 className={cn(serif.className, "text-4xl md:text-6xl italic animate-bounce text-[#c5a059]")}>
                 {t.seAcabo}
               </h2>
             ) : (
-              <div className="flex justify-center gap-8 md:gap-16">
+              <div className="flex justify-center gap-6 md:gap-12">
                 {[
                   { val: timeLeft.days, label: t.dias },
                   { val: timeLeft.hours, label: t.horas },
                   { val: timeLeft.minutes, label: t.minutos },
                   { val: timeLeft.seconds, label: t.segundos }
                 ].map((unit, i) => (
-                  <div key={i} className="flex flex-col items-center group">
-                    <span className={cn(serif.className, "text-4xl md:text-6xl font-light mb-2 transition-transform group-hover:scale-110 duration-500")}>
+                  <div key={i} className="flex flex-col items-center">
+                    <span className={cn(serif.className, "text-3xl md:text-5xl font-light mb-1")}>
                       {unit.val.toString().padStart(2, '0')}
                     </span>
-                    <span className="text-[9px] uppercase tracking-[0.4em] opacity-40">{unit.label}</span>
+                    <span className="text-[8px] uppercase tracking-[0.4em] opacity-40">{unit.label}</span>
                   </div>
                 ))}
               </div>
@@ -161,15 +161,17 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Full Width Hero Image */}
-      <section className="relative w-full aspect-[21/9] md:aspect-[3/1] min-h-[400px] overflow-hidden">
-        <Image 
-          src="/foto1.png" 
-          alt="Editorial Story" 
-          fill 
-          className="object-cover transition-transform duration-[3000ms] hover:scale-105"
-          priority
-        />
+      {/* Main Illustration Section (Hero Illustration) */}
+      <section className="relative w-full h-[80vh] md:h-[65vh] lg:h-[70vh] flex items-center justify-center bg-[#B7CCE0] py-4">
+        <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+          <Image 
+            src="/foto1.png" 
+            alt="Wedding Illustration" 
+            fill
+            className="object-contain object-center pointer-events-none"
+            priority
+          />
+        </div>
       </section>
 
       {/* Narrative Section */}
@@ -184,12 +186,12 @@ export default function WeddingPage() {
                Contenido provisional para la historia romántica. Este texto será reemplazado por la narrativa final de la pareja.
              </p>
           </div>
-          <div className="relative aspect-[3/4] w-full rounded-[2rem] overflow-hidden order-1 md:order-2 shadow-lg">
+          <div className="relative aspect-[3/4] w-full rounded-[2rem] overflow-hidden order-1 md:order-2 shadow-lg bg-white/50">
             <Image 
               src={weddingCouple?.imageUrl || "https://picsum.photos/seed/cs-couple/800/1200"} 
               alt="The Couple" 
               fill 
-              className="object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-1000"
+              className="object-cover grayscale-[30%]"
               data-ai-hint="romantic couple"
             />
           </div>
@@ -375,9 +377,9 @@ export default function WeddingPage() {
            <p className={cn(serif.className, "text-2xl italic text-[#c5a059] max-w-md mx-auto")}>“{t.fraseFinal}”</p>
            
            <div className="pt-16 flex justify-center gap-12 text-[9px] tracking-[0.4em] uppercase opacity-30">
-             <span>ESP</span>
+             <button onClick={() => setLang('es')} className={cn(lang === 'es' && "text-[#c5a059] font-bold")}>ESP</button>
              <span className="w-1 h-1 rounded-full bg-[#c5a059]" />
-             <span>ITA</span>
+             <button onClick={() => setLang('it')} className={cn(lang === 'it' && "text-[#c5a059] font-bold")}>ITA</button>
            </div>
         </div>
       </footer>
