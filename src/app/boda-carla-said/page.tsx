@@ -54,7 +54,7 @@ const translations = {
     hospedaje: "Alloggio",
     reservar: "Prenota ora",
     regalos: "Lista Nozze",
-    textoRegalos: "La vostra presencia è il nuestro regalo más bello, ma se desiderate farci un pensiero, ecco le nostre opzioni.",
+    textoRegalos: "La vostra presencia è il nuestro regalo más bello, ma se desiderate farci un pensamiento, ecco le nostre opzioni.",
     transferencia: "Dati per il bonifico",
     confirmar: "Conferma participación",
     rsvpTexto: "Si prega de confermare entro il 1 novembre",
@@ -114,26 +114,25 @@ export default function WeddingPage() {
         ))}
       </div>
 
-      {/* Hero Premium Full-Screen */}
-      <section className="relative h-screen w-full overflow-hidden bg-gradient-to-b from-[#B7CCE0] via-[#B7CCE0] to-[#F4F0EA]">
+      {/* Hero Premium Full-Screen (Portada Limpia) */}
+      <section className="relative h-screen w-full overflow-hidden">
         {/* Foto de fondo principal */}
         <div className="absolute inset-0 z-0">
           <Image 
             src="/foto1.png" 
-            alt="Carla & Said Wedding Illustration" 
+            alt="Carla & Said Wedding" 
             fill
             className="object-cover object-center pointer-events-none"
             priority
           />
         </div>
 
-        {/* Overlay sutil para unificar colores */}
-        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#B7CCE0]/14 via-transparent to-transparent pointer-events-none" />
+        {/* Overlay sutil para unificar colores y dar profundidad al texto */}
+        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#B7CCE0]/20 via-transparent to-black/10 pointer-events-none" />
         
-        {/* Contenido del Hero */}
-        <div className="relative z-10 h-full w-full flex flex-col items-center justify-between py-24 px-6 text-center animate-in fade-in duration-1000">
-          {/* Info Superior */}
-          <div className="space-y-6 pt-12">
+        {/* Contenido del Hero (Solo Nombres e Info Básica) */}
+        <div className="relative z-10 h-full w-full flex flex-col items-center justify-start pt-32 px-6 text-center animate-in fade-in duration-1000">
+          <div className="space-y-6">
             <h1 className={cn(script.className, "text-7xl md:text-[9.5rem] text-[#5c6b5c] leading-none tracking-tight drop-shadow-sm")}>
               Carla & Said
             </h1>
@@ -142,39 +141,40 @@ export default function WeddingPage() {
               <p className="text-[9px] tracking-[0.4em] uppercase font-light opacity-60 text-[#5c6b5c]">{t.zihua}</p>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Cita y Contador Inferior */}
-          <div className="space-y-12 pb-12">
-            <div className="max-w-2xl mx-auto px-4">
-              <p className={cn(script.className, "text-xl md:text-3xl text-[#5c6b5c] opacity-80 leading-relaxed italic")}>
-                “{t.fraseFinal}”
-              </p>
-            </div>
+      {/* Sección Quote + Countdown (Debajo de la Imagen) */}
+      <section className="py-24 bg-[#F4F0EA] border-b border-[#c5a059]/10">
+        <div className="max-w-4xl mx-auto px-6 text-center space-y-16">
+          {/* La Frase */}
+          <p className={cn(script.className, "text-2xl md:text-4xl text-[#5c6b5c] opacity-90 leading-relaxed italic animate-in fade-in slide-in-from-bottom-4 duration-1000")}>
+            “{t.fraseFinal}”
+          </p>
 
-            {/* Contador Minimalista */}
-            <div className="min-h-[80px] flex items-center justify-center">
-              {isFinished ? (
-                <h2 className={cn(serif.className, "text-4xl md:text-6xl italic animate-bounce text-[#c5a059] drop-shadow-sm")}>
-                  {t.seAcabo}
-                </h2>
-              ) : (
-                <div className="flex justify-center gap-8 md:gap-16">
-                  {[
-                    { val: timeLeft.days, label: t.dias },
-                    { val: timeLeft.hours, label: t.horas },
-                    { val: timeLeft.minutes, label: t.minutos },
-                    { val: timeLeft.seconds, label: t.segundos }
-                  ].map((unit, i) => (
-                    <div key={i} className="flex flex-col items-center">
-                      <span className={cn(serif.className, "text-3xl md:text-5xl font-light text-[#5c6b5c]")}>
-                        {unit.val.toString().padStart(2, '0')}
-                      </span>
-                      <span className="text-[8px] uppercase tracking-[0.4em] opacity-40 text-[#5c6b5c] mt-2">{unit.label}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
+          {/* El Countdown Minimalista */}
+          <div className="min-h-[80px] flex items-center justify-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
+            {isFinished ? (
+              <h2 className={cn(serif.className, "text-4xl md:text-6xl italic animate-bounce text-[#c5a059] drop-shadow-sm")}>
+                {t.seAcabo}
+              </h2>
+            ) : (
+              <div className="flex justify-center gap-8 md:gap-16">
+                {[
+                  { val: timeLeft.days, label: t.dias },
+                  { val: timeLeft.hours, label: t.horas },
+                  { val: timeLeft.minutes, label: t.minutos },
+                  { val: timeLeft.seconds, label: t.segundos }
+                ].map((unit, i) => (
+                  <div key={i} className="flex flex-col items-center">
+                    <span className={cn(serif.className, "text-3xl md:text-5xl font-light text-[#5c6b5c]")}>
+                      {unit.val.toString().padStart(2, '0')}
+                    </span>
+                    <span className="text-[8px] uppercase tracking-[0.4em] opacity-40 text-[#5c6b5c] mt-2">{unit.label}</span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </section>
