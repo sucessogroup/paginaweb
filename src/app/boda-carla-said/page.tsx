@@ -102,16 +102,16 @@ function ItineraryItem({ step, t }: { step: any, t: any }) {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       )}
     >
-      <div className="flex items-center gap-8">
+      <div className="flex items-center gap-4 md:gap-8">
         <div className={cn(
           "h-[1px] bg-[#c5a059] transition-all duration-1000 ease-in-out",
-          isVisible ? "w-24 opacity-100" : "w-0 opacity-0"
+          isVisible ? "w-12 md:w-24 opacity-100" : "w-0 opacity-0"
         )} />
         <p className={cn(serif.className, "text-4xl md:text-6xl tracking-widest text-[#c5a059]")}>{step.time}</p>
       </div>
-      <div className="pl-32 space-y-4">
+      <div className="pl-16 md:pl-32 space-y-4">
         <h3 className="text-xl md:text-2xl uppercase tracking-[0.4em] font-light text-[#5c6b5c]">{step.label}</h3>
-        <p className="text-xs uppercase tracking-widest opacity-40 mb-4">{step.location}</p>
+        <p className="text-[10px] md:text-xs uppercase tracking-widest opacity-40 mb-4">{step.location}</p>
         <Button variant="link" className="text-[10px] uppercase tracking-[0.3em] text-[#8a9a5b] p-0 h-auto border-b border-[#8a9a5b]/20">
           {t.verMapa}
         </Button>
@@ -274,7 +274,7 @@ export default function WeddingPage() {
       </section>
 
       {/* Countdown */}
-      <section className="py-32 bg-[#F4F0EA] border-b border-[#c5a059]/10">
+      <section className="py-24 md:py-32 bg-[#F4F0EA] border-b border-[#c5a059]/10">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
           <div className="space-y-4">
             <h2 className={cn(serif.className, "text-3xl md:text-5xl font-light text-[#5c6b5c] italic")}>
@@ -291,7 +291,7 @@ export default function WeddingPage() {
                 {t.seAcabo}
               </h2>
             ) : (
-              <div className="flex justify-center gap-8 md:gap-16">
+              <div className="flex justify-center gap-6 md:gap-16">
                 {[
                   { val: timeLeft.days, label: t.dias },
                   { val: timeLeft.hours, label: t.horas },
@@ -299,10 +299,10 @@ export default function WeddingPage() {
                   { val: timeLeft.seconds, label: t.segundos }
                 ].map((unit, i) => (
                   <div key={i} className="flex flex-col items-center">
-                    <span className={cn(serif.className, "text-4xl md:text-6xl font-light text-[#5c6b5c]")}>
+                    <span className={cn(serif.className, "text-3xl md:text-6xl font-light text-[#5c6b5c]")}>
                       {unit.val.toString().padStart(2, '0')}
                     </span>
-                    <span className="text-[9px] uppercase tracking-[0.4em] opacity-40 text-[#5c6b5c] mt-4">{unit.label}</span>
+                    <span className="text-[8px] md:text-[9px] uppercase tracking-[0.3em] md:tracking-[0.4em] opacity-40 text-[#5c6b5c] mt-2 md:mt-4">{unit.label}</span>
                   </div>
                 ))}
               </div>
@@ -325,7 +325,7 @@ export default function WeddingPage() {
       </section>
 
       {/* Frase y Confirmación - foto2.png */}
-      <section className="py-40 relative overflow-hidden bg-[#fcfaf7]">
+      <section className="py-24 md:py-40 relative overflow-hidden bg-[#fcfaf7]">
         <div className="absolute inset-0 z-0 opacity-15">
           <Image 
             src={quoteBgImage?.imageUrl || "/foto2.png"} 
@@ -338,8 +338,8 @@ export default function WeddingPage() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           {/* Banderas PNG */}
-          <div className="flex justify-center gap-4 mb-16">
-            <div className="relative w-72 h-48 transition-transform hover:scale-105 duration-500">
+          <div className="flex justify-center gap-4 md:gap-8 mb-12 md:mb-16">
+            <div className="relative w-32 h-24 md:w-72 md:h-48 transition-transform hover:scale-105 duration-500">
               <Image 
                 src={flagMx?.imageUrl || "/banderamx.png"} 
                 alt="México" 
@@ -347,7 +347,7 @@ export default function WeddingPage() {
                 className="object-contain"
               />
             </div>
-            <div className="relative w-72 h-48 transition-transform hover:scale-105 duration-500">
+            <div className="relative w-32 h-24 md:w-72 md:h-48 transition-transform hover:scale-105 duration-500">
               <Image 
                 src={flagIt?.imageUrl || "/banderaita.png"} 
                 alt="Italia" 
@@ -375,7 +375,7 @@ export default function WeddingPage() {
       </section>
 
       {/* Itinerario - foto3.png */}
-      <section className="py-40 relative overflow-hidden bg-[#f5f0e6]/40">
+      <section className="py-24 md:py-40 relative overflow-hidden bg-[#f5f0e6]/40">
         <div className="absolute inset-0 z-0 opacity-10">
           <Image 
             src={itineraryBgImage?.imageUrl || "/foto3.png"} 
@@ -387,14 +387,14 @@ export default function WeddingPage() {
         </div>
 
         <div className="max-w-4xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-32">
-            <h2 className={cn(serif.className, "text-6xl md:text-8xl italic text-[#5c6b5c]")}>
+          <div className="text-center mb-16 md:mb-32">
+            <h2 className={cn(serif.className, "text-5xl md:text-8xl italic text-[#5c6b5c]")}>
               {t.itinerario}
             </h2>
-            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-8 opacity-30" />
+            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
           </div>
 
-          <div className="space-y-32">
+          <div className="space-y-20 md:space-y-32">
             {[
               { time: "17:00", label: t.ceremonia, location: "Capilla del Mar" },
               { time: "18:30", label: t.coctel, location: "Terraza Atardecer" },
@@ -407,16 +407,16 @@ export default function WeddingPage() {
       </section>
 
       {/* Hotel Recomendado - foto4.png */}
-      <section id="hotel" className="py-40 bg-white">
+      <section id="hotel" className="py-24 md:py-40 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-24">
-            <h3 className={cn(serif.className, "text-6xl md:text-8xl italic text-[#5c6b5c]")}>{t.hospedaje}</h3>
-            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-8 opacity-30" />
+          <div className="text-center mb-16 md:mb-24">
+            <h3 className={cn(serif.className, "text-5xl md:text-8xl italic text-[#5c6b5c]")}>{t.hospedaje}</h3>
+            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
           </div>
 
           <div className="max-w-4xl mx-auto flex flex-col items-center">
             {/* Imagen Limpia */}
-            <div className="aspect-video w-full relative rounded-[2rem] overflow-hidden mb-12 shadow-sm">
+            <div className="aspect-video w-full relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden mb-8 md:mb-12 shadow-sm">
               <Image 
                 src={hotelImage?.imageUrl || "/foto4.png"} 
                 alt="Villa Mexicana Hotel" 
@@ -428,28 +428,28 @@ export default function WeddingPage() {
             </div>
 
             {/* Texto Hotel */}
-            <div className="text-center space-y-6">
-              <h4 className={cn(serif.className, "text-4xl md:text-5xl italic text-[#5c6b5c]")}>Villa Mexicana Hotel</h4>
-              <p className="text-sm md:text-base italic opacity-50 tracking-wide font-light max-w-md mx-auto">
+            <div className="text-center space-y-4 md:space-y-6">
+              <h4 className={cn(serif.className, "text-3xl md:text-5xl italic text-[#5c6b5c]")}>Villa Mexicana Hotel</h4>
+              <p className="text-xs md:text-base italic opacity-50 tracking-wide font-light max-w-md mx-auto px-4">
                 {t.tarifaPreferencial}
               </p>
             </div>
 
             {/* Botones */}
-            <div className="flex flex-col sm:flex-row gap-8 mt-16 w-full justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-6 md:gap-8 mt-12 md:mt-16 w-full justify-center items-center">
               <Button 
                 onClick={() => window.open('https://hotelvillamexicana.com.mx/zihuatanejo/en/', '_blank')}
                 variant="outline"
-                className="rounded-full px-12 py-8 border-[#5c6b5c]/20 text-[#5c6b5c] hover:bg-[#5c6b5c] hover:text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3"
+                className="rounded-full px-12 py-8 border-[#5c6b5c]/20 text-[#5c6b5c] hover:bg-[#5c6b5c] hover:text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3 w-full sm:w-auto"
               >
                 {t.verWeb}
                 <ExternalLink size={14} />
               </Button>
 
-              <div className="flex flex-col items-center gap-3">
+              <div className="flex flex-col items-center gap-3 w-full sm:w-auto">
                 <Button 
                   disabled
-                  className="rounded-full px-12 py-8 bg-[#c5a059]/40 text-white cursor-not-allowed uppercase tracking-[0.2em] text-[10px]"
+                  className="rounded-full px-12 py-8 bg-[#c5a059]/40 text-white cursor-not-allowed uppercase tracking-[0.2em] text-[10px] w-full sm:w-auto"
                 >
                   {t.reservar}
                 </Button>
@@ -461,7 +461,7 @@ export default function WeddingPage() {
       </section>
 
       {/* Sección de Vestimenta */}
-      <section className="py-40 bg-[#fbf9f4] overflow-hidden">
+      <section className="py-24 md:py-40 bg-[#fbf9f4] overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <RevealSection className="flex flex-col items-center">
             <div className="space-y-4 mb-4">
@@ -473,7 +473,7 @@ export default function WeddingPage() {
               </p>
             </div>
 
-            <div className="relative w-full max-w-[480px] md:max-w-[780px] aspect-[4/5] -mt-12">
+            <div className="relative w-full max-w-[320px] md:max-w-[780px] aspect-[4/5] -mt-6 md:-mt-12">
               <Image 
                 src={dresscodeImg?.imageUrl || "/dresscode.png"} 
                 alt="Dress Code" 
@@ -487,15 +487,15 @@ export default function WeddingPage() {
       </section>
 
       {/* RSVP Final */}
-      <section className="py-48 bg-white relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#f5f0e6]/30 rounded-full blur-[100px] -z-10" />
+      <section className="py-32 md:py-48 bg-white relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[800px] h-[300px] md:h-[800px] bg-[#f5f0e6]/30 rounded-full blur-[60px] md:blur-[100px] -z-10" />
         
-        <div className="max-w-xl mx-auto px-6 text-center space-y-16">
+        <div className="max-w-xl mx-auto px-6 text-center space-y-12 md:space-y-16">
            <div className="space-y-6">
-             <h2 className={cn(script.className, "text-8xl md:text-[12rem] text-[#5c6b5c] leading-none")}>RSVP</h2>
+             <h2 className={cn(script.className, "text-7xl md:text-[12rem] text-[#5c6b5c] leading-none")}>RSVP</h2>
              <div className="w-20 h-[1px] bg-[#c5a059] mx-auto" />
            </div>
-           <p className="text-[10px] tracking-[0.5em] uppercase opacity-50 font-bold">{t.rsvpTexto}</p>
+           <p className="text-[10px] tracking-[0.4em] md:tracking-[0.5em] uppercase opacity-50 font-bold">{t.rsvpTexto}</p>
            <Button 
              onClick={handleWhatsAppConfirm}
              className="rounded-full px-16 py-10 bg-[#8a9a5b] hover:bg-[#5c6b5c] text-white flex items-center gap-6 mx-auto group transition-all duration-700 shadow-xl shadow-[#8a9a5b]/20"
@@ -506,16 +506,16 @@ export default function WeddingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-32 border-t border-[#5c6b5c]/5">
+      <footer className="py-24 md:py-32 border-t border-[#5c6b5c]/5">
         <div className="max-w-7xl mx-auto px-6 text-center space-y-12">
            <div className={cn(script.className, "text-5xl text-[#5c6b5c]")}>Carla & Said</div>
            <div className="flex flex-col gap-2">
              <p className="text-[10px] tracking-[0.8em] uppercase opacity-40">20.12.2026</p>
              <p className="text-[9px] tracking-[0.4em] uppercase opacity-30 italic">{t.zihua}</p>
            </div>
-           <p className={cn(serif.className, "text-2xl italic text-[#c5a059] max-w-md mx-auto")}>“{t.fraseFinal}”</p>
+           <p className={cn(serif.className, "text-xl md:text-2xl italic text-[#c5a059] max-w-md mx-auto")}>“{t.fraseFinal}”</p>
            
-           <div className="pt-16 flex justify-center gap-12 text-[9px] tracking-[0.4em] uppercase opacity-30">
+           <div className="pt-16 flex justify-center gap-8 md:gap-12 text-[9px] tracking-[0.4em] uppercase opacity-30">
              <button onClick={() => setLang('es')} className={cn(lang === 'es' && "text-[#c5a059] font-bold")}>ESP</button>
              <span className="w-1 h-1 rounded-full bg-[#c5a059]" />
              <button onClick={() => setLang('it')} className={cn(lang === 'it' && "text-[#c5a059] font-bold")}>ITA</button>
