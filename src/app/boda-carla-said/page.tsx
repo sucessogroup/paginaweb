@@ -98,8 +98,8 @@ export default function WeddingPage() {
 
   return (
     <div className="bg-[#fcfaf7] text-[#5c6b5c] font-body overflow-x-hidden">
-      {/* Sticky Language Selector */}
-      <div className="fixed top-8 right-8 z-[100] flex gap-3">
+      {/* Selector de Idioma Sticky */}
+      <div className="fixed top-8 right-8 z-[100] flex gap-4">
         {['es', 'it'].map((l) => (
           <button
             key={l}
@@ -114,27 +114,27 @@ export default function WeddingPage() {
         ))}
       </div>
 
-      {/* Premium Full-Screen Hero */}
+      {/* Hero Premium Full-Screen */}
       <section className="relative h-screen w-full overflow-hidden bg-gradient-to-b from-[#B7CCE0] via-[#B7CCE0] to-[#F4F0EA]">
-        {/* Background Image */}
+        {/* Foto de fondo principal */}
         <div className="absolute inset-0 z-0">
           <Image 
             src="/foto1.png" 
-            alt="Wedding Illustration" 
+            alt="Carla & Said Wedding Illustration" 
             fill
             className="object-cover object-center pointer-events-none"
             priority
           />
         </div>
 
-        {/* Blending Overlay - Unifies the top sky and adds depth */}
-        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#B7CCE0]/14 to-transparent pointer-events-none" />
+        {/* Overlay sutil para unificar colores */}
+        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#B7CCE0]/14 via-transparent to-transparent pointer-events-none" />
         
-        {/* Content Overlay */}
+        {/* Contenido del Hero */}
         <div className="relative z-10 h-full w-full flex flex-col items-center justify-between py-24 px-6 text-center animate-in fade-in duration-1000">
-          {/* Top Info */}
+          {/* Info Superior */}
           <div className="space-y-6 pt-12">
-            <h1 className={cn(script.className, "text-7xl md:text-[9rem] text-[#5c6b5c] leading-none tracking-tight drop-shadow-sm")}>
+            <h1 className={cn(script.className, "text-7xl md:text-[9.5rem] text-[#5c6b5c] leading-none tracking-tight drop-shadow-sm")}>
               Carla & Said
             </h1>
             <div className="space-y-1">
@@ -143,7 +143,7 @@ export default function WeddingPage() {
             </div>
           </div>
 
-          {/* Bottom Quote & Countdown */}
+          {/* Cita y Contador Inferior */}
           <div className="space-y-12 pb-12">
             <div className="max-w-2xl mx-auto px-4">
               <p className={cn(script.className, "text-xl md:text-3xl text-[#5c6b5c] opacity-80 leading-relaxed italic")}>
@@ -151,14 +151,14 @@ export default function WeddingPage() {
               </p>
             </div>
 
-            {/* Countdown Logic */}
-            <div className="min-h-[100px] flex items-center justify-center">
+            {/* Contador Minimalista */}
+            <div className="min-h-[80px] flex items-center justify-center">
               {isFinished ? (
                 <h2 className={cn(serif.className, "text-4xl md:text-6xl italic animate-bounce text-[#c5a059] drop-shadow-sm")}>
                   {t.seAcabo}
                 </h2>
               ) : (
-                <div className="flex justify-center gap-6 md:gap-12 bg-white/10 backdrop-blur-[2px] p-8 rounded-full border border-white/5">
+                <div className="flex justify-center gap-8 md:gap-16">
                   {[
                     { val: timeLeft.days, label: t.dias },
                     { val: timeLeft.hours, label: t.horas },
@@ -169,7 +169,7 @@ export default function WeddingPage() {
                       <span className={cn(serif.className, "text-3xl md:text-5xl font-light text-[#5c6b5c]")}>
                         {unit.val.toString().padStart(2, '0')}
                       </span>
-                      <span className="text-[8px] uppercase tracking-[0.4em] opacity-40 text-[#5c6b5c]">{unit.label}</span>
+                      <span className="text-[8px] uppercase tracking-[0.4em] opacity-40 text-[#5c6b5c] mt-2">{unit.label}</span>
                     </div>
                   ))}
                 </div>
@@ -179,7 +179,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Narrative Section */}
+      {/* Sección Narrativa */}
       <section className="py-32 max-w-6xl mx-auto px-6 space-y-32">
         <div className="grid md:grid-cols-2 gap-24 items-center">
           <div className="space-y-12 order-2 md:order-1 px-4">
@@ -217,7 +217,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Itinerary */}
+      {/* Itinerario */}
       <section className="py-40 bg-[#f5f0e6]/40">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <span className="text-[10px] tracking-[1em] uppercase mb-16 block opacity-40">{t.itinerario}</span>
@@ -259,7 +259,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Map / Location */}
+      {/* Ubicación / Mapa */}
       <section className="py-40 bg-white">
         <div className="max-w-6xl mx-auto px-6">
            <div className="grid md:grid-cols-2 gap-24 items-center">
@@ -288,7 +288,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Lodging */}
+      {/* Hospedaje */}
       <section className="py-40 bg-[#fcfaf7]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-24">
@@ -330,7 +330,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Gifts */}
+      {/* Regalos */}
       <section className="py-40 bg-[#9dbce3]/5 border-y border-[#9dbce3]/10">
         <div className="max-w-2xl mx-auto px-6 text-center space-y-12">
            <div className="flex justify-center">
@@ -355,7 +355,6 @@ export default function WeddingPage() {
 
       {/* RSVP */}
       <section className="py-48 bg-white relative overflow-hidden">
-        {/* Background abstract shape */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#f5f0e6]/30 rounded-full blur-[100px] -z-10" />
         
         <div className="max-w-xl mx-auto px-6 text-center space-y-16">
