@@ -344,8 +344,17 @@ export default function WeddingPage() {
       </section>
 
       {/* Itinerario */}
-      <section className="py-40 bg-[#f5f0e6]/40">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="py-40 relative overflow-hidden bg-[#f5f0e6]/40">
+        <div className="absolute inset-0 z-0 opacity-10">
+          <Image 
+            src="/foto3.png" 
+            alt="Itinerary Decor" 
+            fill 
+            className="object-cover object-center pointer-events-none"
+          />
+        </div>
+
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
           <div className="text-center mb-32">
             <h2 className={cn(serif.className, "text-6xl md:text-8xl italic text-[#5c6b5c]")}>
               {t.itinerario}
