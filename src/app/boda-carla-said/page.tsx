@@ -406,32 +406,6 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Sección de Vestimenta */}
-      <section className="py-40 bg-[#fbf9f4] overflow-hidden">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <RevealSection className="space-y-6">
-            <div className="space-y-4">
-              <h2 className={cn(serif.className, "text-5xl md:text-7xl italic text-[#5c6b5c]")}>
-                {t.vestimenta}
-              </h2>
-              <p className="text-[10px] uppercase tracking-[0.4em] opacity-50 font-bold">
-                {t.formalLino}
-              </p>
-            </div>
-
-            <div className="relative w-full max-w-[320px] md:max-w-[450px] aspect-[4/5] mx-auto">
-              <Image 
-                src={dresscodeImg?.imageUrl || "/dresscode.png"} 
-                alt="Dress Code" 
-                fill 
-                className="object-contain"
-                data-ai-hint="formal attire illustration"
-              />
-            </div>
-          </RevealSection>
-        </div>
-      </section>
-
       {/* Hotel Recomendado - foto4.png */}
       <section id="hotel" className="py-40 bg-white">
         <div className="max-w-6xl mx-auto px-6">
@@ -483,6 +457,32 @@ export default function WeddingPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Sección de Vestimenta */}
+      <section className="py-40 bg-[#fbf9f4] overflow-hidden">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <RevealSection className="space-y-6">
+            <div className="space-y-4">
+              <h2 className={cn(serif.className, "text-5xl md:text-7xl italic text-[#5c6b5c]")}>
+                {t.vestimenta}
+              </h2>
+              <p className="text-[10px] uppercase tracking-[0.4em] opacity-50 font-bold">
+                {t.formalLino}
+              </p>
+            </div>
+
+            <div className="relative w-full max-w-[320px] md:max-w-[450px] aspect-[4/5] mx-auto">
+              <Image 
+                src={dresscodeImg?.imageUrl || "/dresscode.png"} 
+                alt="Dress Code" 
+                fill 
+                className="object-contain"
+                data-ai-hint="formal attire illustration"
+              />
+            </div>
+          </RevealSection>
         </div>
       </section>
 
