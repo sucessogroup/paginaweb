@@ -57,7 +57,7 @@ const translations = {
     verMapa: "Visualizza posizione",
     hospedaje: "Hotel",
     reservar: "Prenotazioni a breve",
-    reservaMasAdelante: "La prenotazione sarà disponibile più avanti.",
+    reservaMasAdelante: "La prenotazione sarà disponible più avanti.",
     verWeb: "Sito web",
     tarifaPreferencial: "Abbiamo una tariffa preferenziale per i nostri ospiti.",
     confirmar: "Conferma participación",
@@ -126,6 +126,8 @@ export default function WeddingPage() {
   const quoteBgImage = PlaceHolderImages.find(img => img.id === 'wedding-bg-quote')
   const itineraryBgImage = PlaceHolderImages.find(img => img.id === 'wedding-bg-itinerary')
   const hotelImage = PlaceHolderImages.find(img => img.id === 'hotel-villa-mexicana')
+  const flagMx = PlaceHolderImages.find(img => img.id === 'flag-mx')
+  const flagIt = PlaceHolderImages.find(img => img.id === 'flag-it')
 
   useEffect(() => {
     const targetDate = new Date('2026-12-20T17:00:00').getTime()
@@ -299,34 +301,23 @@ export default function WeddingPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <div className="flex justify-center gap-6 mb-16">
-            <div className="relative group">
-              <div className="bg-white p-2 shadow-2xl -rotate-6 transform transition-transform group-hover:rotate-0 duration-500 border border-black/5">
-                <div className="w-20 h-14 relative overflow-hidden">
-                  <svg viewBox="0 0 980 560" className="w-full h-full object-cover">
-                    <rect width="326.66" height="560" fill="#006847"/>
-                    <rect width="326.66" height="560" x="326.66" fill="#FFFFFF"/>
-                    <rect width="326.66" height="560" x="653.33" fill="#CE1126"/>
-                    <g transform="translate(490, 280)">
-                      <circle cx="0" cy="0" r="24" fill="#8b7346" opacity="0.4" />
-                      <circle cx="0" cy="0" r="14" fill="#8b7346" />
-                    </g>
-                  </svg>
-                </div>
-                <div className="text-[6px] uppercase tracking-widest mt-1 opacity-40 text-center font-bold">México</div>
-              </div>
+          {/* Banderas PNG */}
+          <div className="flex justify-center gap-12 mb-16">
+            <div className="relative w-24 h-16 transform -rotate-6 transition-transform hover:rotate-0 duration-500">
+              <Image 
+                src={flagMx?.imageUrl || "/banderamx.png"} 
+                alt="México" 
+                fill 
+                className="object-contain"
+              />
             </div>
-            <div className="relative group">
-              <div className="bg-white p-2 shadow-2xl rotate-6 transform transition-transform group-hover:rotate-0 duration-500 border border-black/5">
-                <div className="w-20 h-14 relative overflow-hidden">
-                  <svg viewBox="0 0 1500 1000" className="w-full h-full object-cover">
-                    <rect width="500" height="1000" fill="#009246"/>
-                    <rect width="500" height="1000" x="500" fill="#FFFFFF"/>
-                    <rect width="500" height="1000" x="1000" fill="#CE2B37"/>
-                  </svg>
-                </div>
-                <div className="text-[6px] uppercase tracking-widest mt-1 opacity-40 text-center font-bold">Italia</div>
-              </div>
+            <div className="relative w-24 h-16 transform rotate-6 transition-transform hover:rotate-0 duration-500">
+              <Image 
+                src={flagIt?.imageUrl || "/banderaita.png"} 
+                alt="Italia" 
+                fill 
+                className="object-contain"
+              />
             </div>
           </div>
 

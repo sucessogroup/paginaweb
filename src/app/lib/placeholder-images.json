@@ -36,6 +36,18 @@
       "description": "Villa Mexicana Hotel",
       "imageUrl": "/foto4.png",
       "imageHint": "hotel architecture"
+    },
+    {
+      "id": "flag-mx",
+      "description": "Bandera México PNG",
+      "imageUrl": "/banderamx.png",
+      "imageHint": "mexico flag"
+    },
+    {
+      "id": "flag-it",
+      "description": "Bandera Italia PNG",
+      "imageUrl": "/banderaita.png",
+      "imageHint": "italy flag"
     }
   ]
 }
