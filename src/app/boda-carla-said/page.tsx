@@ -293,18 +293,17 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Itinerario con Título Sticky */}
-      <section className="relative bg-[#f5f0e6]/40 overflow-visible">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row min-h-screen">
-          {/* Columna del Título Sticky */}
-          <div className="md:w-1/3 p-6 md:p-32 flex flex-col justify-start">
-            <h2 className={cn(serif.className, "text-6xl md:text-[10rem] sticky top-40 text-[#5c6b5c] opacity-20 italic leading-none select-none z-0")}>
+      {/* Itinerario */}
+      <section className="py-40 bg-[#f5f0e6]/40">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-32">
+            <h2 className={cn(serif.className, "text-6xl md:text-8xl italic text-[#5c6b5c]")}>
               {t.itinerario}
             </h2>
+            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-8 opacity-30" />
           </div>
 
-          {/* Columna de Eventos */}
-          <div className="md:w-2/3 p-6 md:p-32 space-y-32 relative z-10">
+          <div className="space-y-32">
             {[
               { time: "17:00", label: t.ceremonia, location: "Lugar por confirmar", icon: Globe },
               { time: "18:30", label: t.coctel, location: "Lugar por confirmar", icon: Navigation },
