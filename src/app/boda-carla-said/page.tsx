@@ -109,7 +109,7 @@ function ItineraryItem({ step, t }: { step: any, t: any }) {
         )} />
         <p className={cn(serif.className, "text-4xl md:text-6xl tracking-widest text-[#c5a059]")}>{step.time}</p>
       </div>
-      <div className="pl-16 md:pl-32 space-y-4">
+      <div className="pl-8 md:pl-32 space-y-4">
         <h3 className="text-xl md:text-2xl uppercase tracking-[0.4em] font-light text-[#5c6b5c]">{step.label}</h3>
         <p className="text-[10px] md:text-xs uppercase tracking-widest opacity-40 mb-4">{step.location}</p>
         <Button variant="link" className="text-[10px] uppercase tracking-[0.3em] text-[#8a9a5b] p-0 h-auto border-b border-[#8a9a5b]/20">
@@ -380,7 +380,7 @@ export default function WeddingPage() {
             src={itineraryBgImage?.imageUrl || "/foto3.png"} 
             alt="Itinerary Decor" 
             fill 
-            className="object-contain object-center pointer-events-none"
+            className="object-cover object-center pointer-events-none"
             data-ai-hint="elegant decoration detail"
           />
         </div>
