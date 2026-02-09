@@ -56,11 +56,11 @@ const translations = {
     regalos: "Lista Nozze",
     textoRegalos: "La vostra presencia è il nostro regalo più bello, ma se desiderate farci un pensiero, ecco le nostre opzioni.",
     transferencia: "Dati per il bonifico",
-    confirmar: "Conferma partecipazione",
+    confirmar: "Conferma participación",
     rsvpTexto: "Si prega de confermare entro il 1 novembre",
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
     zihua: "Zihuatanejo, Guerrero, Messico",
-    domingo: "Domenica, 20 dicembre 2026",
+    domingo: "Domenica, 20 de diciembre de 2026",
     loading: "Caricamento..."
   }
 }
@@ -115,7 +115,7 @@ export default function WeddingPage() {
       </div>
 
       {/* Hero Section - Background set to match foto1.png sky */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center p-6 text-center bg-[#d9e8f6]">
+      <section className="relative min-h-[80vh] flex flex-col items-center justify-center p-6 text-center bg-[#d9e8f6]">
         <div className="space-y-12 animate-in fade-in zoom-in duration-1000">
           <div className="space-y-4">
             <h1 className={cn(script.className, "text-7xl md:text-[10rem] text-[#5c6b5c] leading-none")}>
@@ -159,25 +159,21 @@ export default function WeddingPage() {
             )}
           </div>
         </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 opacity-20">
-          <div className="w-[1px] h-20 bg-[#5c6b5c] animate-pulse" />
-        </div>
       </section>
 
-      {/* Editorial Gallery */}
-      <section className="py-32 max-w-6xl mx-auto px-6 space-y-32">
-        <div className="relative aspect-[16/9] w-full rounded-[2rem] overflow-hidden shadow-sm animate-in fade-in duration-1000">
-          <Image 
-            src="/foto1.png" 
-            alt="Editorial Story" 
-            fill 
-            className="object-cover transition-transform duration-[3000ms] hover:scale-105"
-            priority
-          />
-        </div>
+      {/* Full Width Hero Image */}
+      <section className="relative w-full aspect-[21/9] md:aspect-[3/1] min-h-[400px] overflow-hidden">
+        <Image 
+          src="/foto1.png" 
+          alt="Editorial Story" 
+          fill 
+          className="object-cover transition-transform duration-[3000ms] hover:scale-105"
+          priority
+        />
+      </section>
 
+      {/* Narrative Section */}
+      <section className="py-32 max-w-6xl mx-auto px-6 space-y-32">
         <div className="grid md:grid-cols-2 gap-24 items-center">
           <div className="space-y-12 order-2 md:order-1 px-4">
              <div className="w-16 h-[1px] bg-[#c5a059]" />
@@ -190,7 +186,7 @@ export default function WeddingPage() {
           </div>
           <div className="relative aspect-[3/4] w-full rounded-[2rem] overflow-hidden order-1 md:order-2 shadow-lg">
             <Image 
-              src={weddingCouple?.imageUrl || "https://picsum.photos/seed/editorial2/900/1200"} 
+              src={weddingCouple?.imageUrl || "https://picsum.photos/seed/cs-couple/800/1200"} 
               alt="The Couple" 
               fill 
               className="object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-1000"
