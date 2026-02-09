@@ -463,8 +463,8 @@ export default function WeddingPage() {
       {/* Sección de Vestimenta */}
       <section className="py-40 bg-[#fbf9f4] overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <RevealSection className="space-y-6">
-            <div className="space-y-4">
+          <RevealSection className="flex flex-col items-center">
+            <div className="space-y-4 mb-4">
               <h2 className={cn(serif.className, "text-5xl md:text-7xl italic text-[#5c6b5c]")}>
                 {t.vestimenta}
               </h2>
@@ -473,7 +473,7 @@ export default function WeddingPage() {
               </p>
             </div>
 
-            <div className="relative w-full max-w-[320px] md:max-w-[450px] aspect-[4/5] mx-auto">
+            <div className="relative w-full max-w-[480px] md:max-w-[675px] aspect-[4/5] -mt-4">
               <Image 
                 src={dresscodeImg?.imageUrl || "/dresscode.png"} 
                 alt="Dress Code" 
