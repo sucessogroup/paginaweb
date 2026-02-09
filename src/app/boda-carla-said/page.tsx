@@ -254,7 +254,7 @@ export default function WeddingPage() {
             src={heroImage?.imageUrl || "/foto1.png"} 
             alt="Carla & Said Wedding" 
             fill
-            className="object-cover object-right md:object-center pointer-events-none"
+            className="object-cover object-left md:object-center pointer-events-none"
             priority
             data-ai-hint="wedding couple beach"
           />
