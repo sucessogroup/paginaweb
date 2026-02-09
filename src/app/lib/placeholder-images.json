@@ -48,6 +48,12 @@
       "description": "Bandera Italia PNG",
       "imageUrl": "/banderaita.png",
       "imageHint": "italy flag"
+    },
+    {
+      "id": "dresscode-image",
+      "description": "Imagen de código de vestimenta",
+      "imageUrl": "/dresscode.png",
+      "imageHint": "dress code"
     }
   ]
 }

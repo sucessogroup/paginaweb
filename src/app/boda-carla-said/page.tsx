@@ -38,6 +38,8 @@ const translations = {
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
     zihua: "Zihuatanejo, Guerrero, México",
     domingo: "Domingo, 20 de diciembre de 2026",
+    vestimenta: "Vestimenta",
+    formalLino: "Formal de lino",
     waMessage: "¡Hola Carla y Said! Estoy muy emocionado por su boda. Me encantaría confirmar mi asistencia para celebrar con ustedes el 20 de diciembre de 2026 en Zihuatanejo. ¡Nos vemos pronto!"
   },
   it: {
@@ -65,6 +67,8 @@ const translations = {
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
     zihua: "Zihuatanejo, Guerrero, Messico",
     domingo: "Domenica, 20 dicembre 2026",
+    vestimenta: "Abbigliamento",
+    formalLino: "Formale in lino",
     waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia participación per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!"
   }
 }
@@ -116,6 +120,37 @@ function ItineraryItem({ step, t }: { step: any, t: any }) {
   )
 }
 
+function RevealSection({ children, className }: { children: React.ReactNode, className?: string }) {
+  const [isVisible, setIsVisible] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <div 
+      ref={ref} 
+      className={cn(
+        "transition-all duration-[800ms] ease-out",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
+        className
+      )}
+    >
+      {children}
+    </div>
+  )
+}
+
 export default function WeddingPage() {
   const [lang, setLang] = useState<'es' | 'it'>('es')
   const [isFinished, setIsFinished] = useState(false)
@@ -128,6 +163,7 @@ export default function WeddingPage() {
   const hotelImage = PlaceHolderImages.find(img => img.id === 'hotel-villa-mexicana')
   const flagMx = PlaceHolderImages.find(img => img.id === 'flag-mx')
   const flagIt = PlaceHolderImages.find(img => img.id === 'flag-it')
+  const dresscodeImg = PlaceHolderImages.find(img => img.id === 'dresscode-image')
 
   useEffect(() => {
     const targetDate = new Date('2026-12-20T17:00:00').getTime()
@@ -302,8 +338,8 @@ export default function WeddingPage() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           {/* Banderas PNG */}
-          <div className="flex justify-center gap-6 mb-16">
-            <div className="relative w-48 h-32 transform -rotate-6 transition-transform hover:rotate-0 duration-500">
+          <div className="flex justify-center gap-4 mb-16">
+            <div className="relative w-72 h-48 transition-transform hover:scale-105 duration-500">
               <Image 
                 src={flagMx?.imageUrl || "/banderamx.png"} 
                 alt="México" 
@@ -311,7 +347,7 @@ export default function WeddingPage() {
                 className="object-contain"
               />
             </div>
-            <div className="relative w-48 h-32 transform rotate-6 transition-transform hover:rotate-0 duration-500">
+            <div className="relative w-72 h-48 transition-transform hover:scale-105 duration-500">
               <Image 
                 src={flagIt?.imageUrl || "/banderaita.png"} 
                 alt="Italia" 
@@ -367,6 +403,32 @@ export default function WeddingPage() {
               <ItineraryItem key={idx} step={step} t={t} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Sección de Vestimenta */}
+      <section className="py-40 bg-white overflow-hidden">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <RevealSection className="space-y-12">
+            <div className="space-y-4">
+              <h2 className={cn(serif.className, "text-5xl md:text-7xl italic text-[#5c6b5c]")}>
+                {t.vestimenta}
+              </h2>
+              <p className="text-[10px] uppercase tracking-[0.4em] opacity-50 font-bold">
+                {t.formalLino}
+              </p>
+            </div>
+
+            <div className="relative w-full max-w-[320px] md:max-w-[450px] aspect-[4/5] mx-auto">
+              <Image 
+                src={dresscodeImg?.imageUrl || "/dresscode.png"} 
+                alt="Dress Code" 
+                fill 
+                className="object-contain"
+                data-ai-hint="formal attire illustration"
+              />
+            </div>
+          </RevealSection>
         </div>
       </section>
 
