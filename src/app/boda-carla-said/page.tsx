@@ -250,7 +250,7 @@ export default function WeddingPage() {
             src={heroImage?.imageUrl || "/foto1.png"} 
             alt="Carla & Said Wedding" 
             fill
-            className="object-cover object-center pointer-events-none"
+            className="object-cover object-right md:object-center pointer-events-none"
             priority
             data-ai-hint="wedding couple beach"
           />
@@ -381,7 +381,7 @@ export default function WeddingPage() {
             src={itineraryBgImage?.imageUrl || "/foto3.png"} 
             alt="Itinerary Decor" 
             fill 
-            className="object-cover object-center pointer-events-none"
+            className="object-contain object-center pointer-events-none"
             data-ai-hint="elegant decoration detail"
           />
         </div>
