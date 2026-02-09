@@ -161,7 +161,7 @@ export default function WeddingPage() {
       </div>
 
       {/* Hero Premium Full-Screen */}
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="relative h-screen w-full overflow-hidden bg-[#B7CCE0]">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/foto1.png" 
@@ -172,7 +172,7 @@ export default function WeddingPage() {
           />
         </div>
 
-        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#B7CCE0]/20 via-transparent to-black/10 pointer-events-none" />
+        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#B7CCE0]/40 via-transparent to-[#F4F0EA]/10 pointer-events-none" />
         
         <div className="relative z-10 h-full w-full flex flex-col items-center justify-start pt-32 px-6 text-center">
           <div className="space-y-6">
@@ -240,10 +240,19 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Sección Quote con Banderas (Postales) */}
-      <section className="py-40 bg-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-[#B7CCE0]/5 -z-10" />
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      {/* Sección Quote con Banderas (Postales) y Fondo foto2.png */}
+      <section className="py-40 relative overflow-hidden bg-[#fcfaf7]">
+        {/* Background Image foto2.png con transparencia */}
+        <div className="absolute inset-0 z-0 opacity-15">
+          <Image 
+            src="/foto2.png" 
+            alt="Background Decor" 
+            fill 
+            className="object-cover object-center pointer-events-none"
+          />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           {/* Postales de Banderas */}
           <div className="flex justify-center gap-6 mb-16 animate-in fade-in zoom-in duration-1000">
             {/* Postal México */}
@@ -283,7 +292,7 @@ export default function WeddingPage() {
             <div className="pt-8">
               <Button 
                 onClick={handleWhatsAppConfirm}
-                className="rounded-full px-12 py-8 bg-[#8a9a5b] hover:bg-[#5c6b5c] text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3 shadow-lg shadow-[#8a9a5b]/20"
+                className="rounded-full px-12 py-8 bg-[#8a9a5b] hover:bg-[#5c6b5c] text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] shadow-lg shadow-[#8a9a5b]/20"
               >
                 {t.confirmar}
               </Button>
