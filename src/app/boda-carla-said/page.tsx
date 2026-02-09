@@ -60,7 +60,7 @@ const translations = {
     hospedaje: "Alloggio",
     reservar: "Prenota ora",
     regalos: "Lista Nozze",
-    textoRegalos: "La vostra presencia è il nuestro regalo più bello, ma se desiderate farci un pensiero, ecco le nostre opzioni.",
+    textoRegalos: "La vostra presencia è il nuestro regalo más bello, ma se desiderate farci un pensiero, ecco le nostre opzioni.",
     transferencia: "Dati per il bonifico",
     confirmar: "Conferma participación",
     rsvpTexto: "Si prega di confermare entro il 1 novembre",
@@ -99,8 +99,36 @@ export default function WeddingPage() {
   }, [])
 
   const handleAddToCalendar = () => {
-    const calendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=Boda+Carla+%26+Said&dates=20261220T170000Z/20261221T020000Z&details=¡Los+esperamos!&location=Zihuatanejo,+Guerrero,+México`
-    window.open(calendarUrl, '_blank')
+    const event = {
+      title: 'Boda Carla & Said',
+      description: '¡Los esperamos!',
+      location: 'Zihuatanejo, Guerrero, México',
+      startTime: '20261220T170000',
+      endTime: '20261221T020000',
+    };
+
+    // Formato ICS (Universal para Apple, Outlook, etc.)
+    const icsContent = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'BEGIN:VEVENT',
+      `DTSTART:${event.startTime}`,
+      `DTEND:${event.endTime}`,
+      `SUMMARY:${event.title}`,
+      `DESCRIPTION:${event.description}`,
+      `LOCATION:${event.location}`,
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ].join('\n');
+
+    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', 'boda-carla-said.ics');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 
   const weddingCouple = PlaceHolderImages.find(img => img.id === 'wedding-couple')
@@ -139,7 +167,7 @@ export default function WeddingPage() {
 
         <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#B7CCE0]/20 via-transparent to-black/10 pointer-events-none" />
         
-        <div className="relative z-10 h-full w-full flex flex-col items-center justify-start pt-32 px-6 text-center animate-in fade-in duration-1000">
+        <div className="relative z-10 h-full w-full flex flex-col items-center justify-start pt-32 px-6 text-center">
           <div className="space-y-6">
             <h1 className={cn(script.className, "text-7xl md:text-[9.5rem] text-[#5c6b5c] leading-none tracking-tight drop-shadow-sm")}>
               Carla & Said
