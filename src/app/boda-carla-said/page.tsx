@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Literata, Dancing_Script } from 'next/font/google'
-import { MapPin, Calendar, Clock, Hotel, Gift, MessageCircle, Globe, Navigation } from 'lucide-react'
+import { MapPin, Calendar, Clock, Hotel, Gift, MessageCircle, Globe, Navigation, CalendarPlus } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
@@ -19,6 +19,9 @@ const translations = {
     horas: "Horas",
     minutos: "Minutos",
     segundos: "Segundos",
+    faltaPoco: "Falta poco para nuestro para siempre",
+    acompananos: "Acompáñanos en este momento",
+    calendario: "Añadir al calendario",
     invitacion: "Con enorme alegría los invitamos a celebrar nuestro matrimonio.",
     itinerario: "Itinerario del Evento",
     ceremonia: "Ceremonia",
@@ -44,23 +47,26 @@ const translations = {
     horas: "Ore",
     minutos: "Minuti",
     segundos: "Secondi",
+    faltaPoco: "Manca poco al nostro per sempre",
+    acompananos: "Accompagnaci in questo momento",
+    calendario: "Aggiungi al calendario",
     invitacion: "Con immensa gioia vi invitiamo a celebrare il nostro matrimonio.",
     itinerario: "Itinerario dell'Evento",
     ceremonia: "Cerimonia",
     coctel: "Cocktail di Benvenuto",
     recepcion: "Ricevimento e Cena",
     ubicacion: "Posizione",
-    verMapa: "Visualizza posición",
+    verMapa: "Visualizza posizione",
     hospedaje: "Alloggio",
     reservar: "Prenota ora",
     regalos: "Lista Nozze",
-    textoRegalos: "La vostra presencia è il nuestro regalo más bello, ma se desiderate farci un pensamiento, ecco le nostre opzioni.",
+    textoRegalos: "La vostra presenza è il nostro regalo più bello, ma se desiderate farci un pensiero, ecco le nostre opzioni.",
     transferencia: "Dati per il bonifico",
-    confirmar: "Conferma participación",
-    rsvpTexto: "Si prega de confermare entro il 1 novembre",
+    confirmar: "Conferma partecipazione",
+    rsvpTexto: "Si prega di confermare entro il 1 novembre",
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
     zihua: "Zihuatanejo, Guerrero, Messico",
-    domingo: "Domenica, 20 de diciembre de 2026",
+    domingo: "Domenica, 20 dicembre 2026",
     loading: "Caricamento..."
   }
 }
@@ -92,6 +98,11 @@ export default function WeddingPage() {
     return () => clearInterval(timer)
   }, [])
 
+  const handleAddToCalendar = () => {
+    const calendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=Boda+Carla+%26+Said&dates=20261220T170000Z/20261221T020000Z&details=¡Los+esperamos!&location=Zihuatanejo,+Guerrero,+México`
+    window.open(calendarUrl, '_blank')
+  }
+
   const weddingCouple = PlaceHolderImages.find(img => img.id === 'wedding-couple')
   const details1 = PlaceHolderImages.find(img => img.id === 'wedding-details-1')
   const details2 = PlaceHolderImages.find(img => img.id === 'wedding-details-2')
@@ -114,9 +125,8 @@ export default function WeddingPage() {
         ))}
       </div>
 
-      {/* Hero Premium Full-Screen (Portada Limpia) */}
+      {/* Hero Premium Full-Screen */}
       <section className="relative h-screen w-full overflow-hidden">
-        {/* Foto de fondo principal */}
         <div className="absolute inset-0 z-0">
           <Image 
             src="/foto1.png" 
@@ -127,18 +137,16 @@ export default function WeddingPage() {
           />
         </div>
 
-        {/* Overlay sutil para unificar colores y dar profundidad al texto */}
         <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#B7CCE0]/20 via-transparent to-black/10 pointer-events-none" />
         
-        {/* Contenido del Hero (Solo Nombres e Info Básica) */}
         <div className="relative z-10 h-full w-full flex flex-col items-center justify-start pt-32 px-6 text-center animate-in fade-in duration-1000">
           <div className="space-y-6">
             <h1 className={cn(script.className, "text-7xl md:text-[9.5rem] text-[#5c6b5c] leading-none tracking-tight drop-shadow-sm")}>
               Carla & Said
             </h1>
-            <div className="space-y-2">
+            <div className="space-y-3">
               <p className={cn(serif.className, "text-lg md:text-xl tracking-widest uppercase italic text-[#c5a059] font-medium drop-shadow-sm")}>{t.domingo}</p>
-              <p className="text-[10px] md:text-xs tracking-[0.5em] uppercase font-bold text-[#5c6b5c] drop-shadow-sm bg-white/10 backdrop-blur-[2px] px-4 py-1 rounded-full inline-block">
+              <p className="text-[10px] md:text-xs tracking-[0.5em] uppercase font-bold text-[#5c6b5c] drop-shadow-sm bg-white/40 backdrop-blur-[4px] px-6 py-2 rounded-full inline-block border border-white/20">
                 {t.zihua}
               </p>
             </div>
@@ -146,16 +154,21 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Sección Quote + Countdown (Debajo de la Imagen) */}
-      <section className="py-24 bg-[#F4F0EA] border-b border-[#c5a059]/10">
-        <div className="max-w-4xl mx-auto px-6 text-center space-y-16">
-          {/* La Frase */}
-          <p className={cn(script.className, "text-2xl md:text-4xl text-[#5c6b5c] opacity-90 leading-relaxed italic animate-in fade-in slide-in-from-bottom-4 duration-1000")}>
-            “{t.fraseFinal}”
-          </p>
+      {/* Sección Countdown + Mensaje Falta Poco */}
+      <section className="py-32 bg-[#F4F0EA] border-b border-[#c5a059]/10">
+        <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
+          {/* Mensajes de Bienvenida */}
+          <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <h2 className={cn(serif.className, "text-3xl md:text-5xl font-light text-[#5c6b5c] italic")}>
+              {t.faltaPoco}
+            </h2>
+            <p className={cn(script.className, "text-xl md:text-3xl text-[#c5a059] opacity-80")}>
+              {t.acompananos}
+            </p>
+          </div>
 
           {/* El Countdown Minimalista */}
-          <div className="min-h-[80px] flex items-center justify-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
+          <div className="min-h-[120px] flex items-center justify-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
             {isFinished ? (
               <h2 className={cn(serif.className, "text-4xl md:text-6xl italic animate-bounce text-[#c5a059] drop-shadow-sm")}>
                 {t.seAcabo}
@@ -169,15 +182,40 @@ export default function WeddingPage() {
                   { val: timeLeft.seconds, label: t.segundos }
                 ].map((unit, i) => (
                   <div key={i} className="flex flex-col items-center">
-                    <span className={cn(serif.className, "text-3xl md:text-5xl font-light text-[#5c6b5c]")}>
+                    <span className={cn(serif.className, "text-4xl md:text-6xl font-light text-[#5c6b5c]")}>
                       {unit.val.toString().padStart(2, '0')}
                     </span>
-                    <span className="text-[8px] uppercase tracking-[0.4em] opacity-40 text-[#5c6b5c] mt-2">{unit.label}</span>
+                    <span className="text-[9px] uppercase tracking-[0.4em] opacity-40 text-[#5c6b5c] mt-4">{unit.label}</span>
                   </div>
                 ))}
               </div>
             )}
           </div>
+
+          {/* Botón Calendario */}
+          {!isFinished && (
+            <div className="pt-8 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-500">
+              <Button 
+                onClick={handleAddToCalendar}
+                variant="outline"
+                className="rounded-full px-8 py-6 border-[#c5a059] text-[#c5a059] hover:bg-[#c5a059] hover:text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3"
+              >
+                <CalendarPlus size={16} />
+                {t.calendario}
+              </Button>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Sección Quote (La frase de la distancia) */}
+      <section className="py-40 bg-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-[#B7CCE0]/5 -z-10" />
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className={cn(script.className, "text-3xl md:text-6xl text-[#5c6b5c] leading-relaxed italic animate-in fade-in duration-1000")}>
+            “{t.fraseFinal}”
+          </p>
+          <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-16 opacity-30" />
         </div>
       </section>
 
