@@ -51,7 +51,7 @@ const translations = {
     faltaPoco: "Manca poco al nostro per siempre",
     acompananos: "Accompagnaci in questo momento",
     calendario: "Aggiungi al calendario",
-    invitacion: "Con immensa gioia vi invitiamo a celebrare il nostro matrimonio.",
+    invitacion: "Con immensa gioia vi invitiamo a celebrare il matrimonio.",
     itinerario: "Itinerario",
     ceremonia: "Cerimonia",
     coctel: "Cocktail di Benvenuto",
@@ -212,7 +212,7 @@ export default function WeddingPage() {
       <section className="relative h-screen w-full overflow-hidden bg-[#B7CCE0]">
         <div className="absolute inset-0 z-0">
           <Image 
-            src={heroImage?.imageUrl || "/foto1.png"} 
+            src={heroImage?.imageUrl || "https://picsum.photos/seed/cs-hero/1200/1600"} 
             alt="Carla & Said Wedding" 
             fill
             className="object-cover object-center pointer-events-none"
@@ -293,7 +293,7 @@ export default function WeddingPage() {
       <section className="py-40 relative overflow-hidden bg-[#fcfaf7]">
         <div className="absolute inset-0 z-0 opacity-15">
           <Image 
-            src={quoteBgImage?.imageUrl || "/foto2.png"} 
+            src={quoteBgImage?.imageUrl || "https://picsum.photos/seed/cs-quote/1200/800"} 
             alt="Background Decor" 
             fill 
             className="object-cover object-center pointer-events-none"
@@ -353,7 +353,7 @@ export default function WeddingPage() {
       <section className="py-40 relative overflow-hidden bg-[#f5f0e6]/40">
         <div className="absolute inset-0 z-0 opacity-10">
           <Image 
-            src={itineraryBgImage?.imageUrl || "/foto3.png"} 
+            src={itineraryBgImage?.imageUrl || "https://picsum.photos/seed/cs-itinerary/1200/1200"} 
             alt="Itinerary Decor" 
             fill 
             className="object-cover object-center pointer-events-none"
