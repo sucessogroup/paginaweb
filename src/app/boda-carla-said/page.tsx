@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Literata, Dancing_Script } from 'next/font/google'
-import { MapPin, Calendar, Clock, Hotel, Gift, Globe, Navigation, CalendarPlus } from 'lucide-react'
+import { MapPin, Calendar, Clock, Hotel as HotelIcon, Gift, Globe, Navigation, CalendarPlus } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
@@ -23,13 +23,13 @@ const translations = {
     acompananos: "Acompáñanos en este momento",
     calendario: "Añadir al calendario",
     invitacion: "Con enorme alegría los invitamos a celebrar nuestro matrimonio.",
-    itinerario: "Itinerario del Evento",
+    itinerario: "Itinerario",
     ceremonia: "Ceremonia",
     coctel: "Cóctel de Bienvenida",
     recepcion: "Recepción y Cena",
     ubicacion: "Ubicación",
     verMapa: "Ver ubicación en mapa",
-    hospedaje: "Sugerencias de Hospedaje",
+    hospedaje: "Hotel",
     reservar: "Reservar ahora",
     regalos: "Mesa de Regalos",
     textoRegalos: "Vuestra presencia es nuestro mejor regalo, pero si desean tener un detalle con nosotros, aquí tienen nuestras opciones.",
@@ -52,13 +52,13 @@ const translations = {
     acompananos: "Accompagnaci in questo momento",
     calendario: "Aggiungi al calendario",
     invitacion: "Con immensa gioia vi invitiamo a celebrare il nostro matrimonio.",
-    itinerario: "Itinerario dell'Evento",
+    itinerario: "Itinerario",
     ceremonia: "Cerimonia",
     coctel: "Cocktail di Benvenuto",
     recepcion: "Ricevimento e Cena",
     ubicacion: "Posizione",
     verMapa: "Visualizza posizione",
-    hospedaje: "Alloggio",
+    hospedaje: "Hotel",
     reservar: "Prenota ora",
     regalos: "Lista Nozze",
     textoRegalos: "La vostra presencia è il nuestro regalo más bello, ma se desiderate farci un pensamiento, ecco le nostre opzioni.",
@@ -69,7 +69,7 @@ const translations = {
     zihua: "Zihuatanejo, Guerrero, Messico",
     domingo: "Domenica, 20 dicembre 2026",
     loading: "Caricamento...",
-    waMessage: "Ciao! Sono molto entusiasta per il matrimonio di Carla e Said. Vorrei confermare la mia partecipazione per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!"
+    waMessage: "Ciao! Sono molto entusiasta per il matrimonio di Carla e Said. Vorrei confermare la mia participación per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!"
   }
 }
 
@@ -139,10 +139,6 @@ export default function WeddingPage() {
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
-  const weddingCouple = PlaceHolderImages.find(img => img.id === 'wedding-couple')
-  const details1 = PlaceHolderImages.find(img => img.id === 'wedding-details-1')
-  const details2 = PlaceHolderImages.find(img => img.id === 'wedding-details-2')
-
   return (
     <div className="bg-[#fcfaf7] text-[#5c6b5c] font-body overflow-x-hidden">
       {/* Selector de Idioma Sticky */}
@@ -193,7 +189,7 @@ export default function WeddingPage() {
       {/* Sección Countdown */}
       <section className="py-32 bg-[#F4F0EA] border-b border-[#c5a059]/10">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
-          <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+          <div className="space-y-4">
             <h2 className={cn(serif.className, "text-3xl md:text-5xl font-light text-[#5c6b5c] italic")}>
               {t.faltaPoco}
             </h2>
@@ -202,9 +198,9 @@ export default function WeddingPage() {
             </p>
           </div>
 
-          <div className="min-h-[120px] flex items-center justify-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
+          <div className="min-h-[120px] flex items-center justify-center">
             {isFinished ? (
-              <h2 className={cn(serif.className, "text-4xl md:text-6xl italic animate-bounce text-[#c5a059] drop-shadow-sm")}>
+              <h2 className={cn(serif.className, "text-4xl md:text-6xl italic text-[#c5a059] drop-shadow-sm")}>
                 {t.seAcabo}
               </h2>
             ) : (
@@ -227,7 +223,7 @@ export default function WeddingPage() {
           </div>
 
           {!isFinished && (
-            <div className="pt-8 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-500">
+            <div className="pt-8">
               <Button 
                 onClick={handleAddToCalendar}
                 variant="outline"
@@ -243,7 +239,6 @@ export default function WeddingPage() {
 
       {/* Sección Quote con Banderas (Postales) y Fondo foto2.png */}
       <section className="py-40 relative overflow-hidden bg-[#fcfaf7]">
-        {/* Background Image foto2.png con transparencia */}
         <div className="absolute inset-0 z-0 opacity-15">
           <Image 
             src="/foto2.png" 
@@ -254,9 +249,7 @@ export default function WeddingPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          {/* Postales de Banderas */}
-          <div className="flex justify-center gap-6 mb-16 animate-in fade-in zoom-in duration-1000">
-            {/* Postal México */}
+          <div className="flex justify-center gap-6 mb-16">
             <div className="relative group">
               <div className="bg-white p-2 shadow-2xl -rotate-6 transform transition-transform group-hover:rotate-0 duration-500 border border-black/5">
                 <div className="w-20 h-14 relative overflow-hidden">
@@ -264,13 +257,11 @@ export default function WeddingPage() {
                     <rect width="980" height="560" fill="#006847"/>
                     <rect width="653.33" height="560" x="326.66" fill="#FFFFFF"/>
                     <rect width="326.66" height="560" x="653.33" fill="#CE1126"/>
-                    <circle cx="490" cy="280" r="60" fill="#663300" opacity="0.3" /> 
                   </svg>
                 </div>
                 <div className="text-[6px] uppercase tracking-widest mt-1 opacity-40 text-center font-bold">México</div>
               </div>
             </div>
-            {/* Postal Italia */}
             <div className="relative group">
               <div className="bg-white p-2 shadow-2xl rotate-6 transform transition-transform group-hover:rotate-0 duration-500 border border-black/5">
                 <div className="w-20 h-14 relative overflow-hidden">
@@ -286,7 +277,7 @@ export default function WeddingPage() {
           </div>
 
           <div className="space-y-12">
-            <p className={cn(script.className, "text-3xl md:text-6xl text-[#5c6b5c] leading-relaxed italic animate-in fade-in duration-1000")}>
+            <p className={cn(script.className, "text-3xl md:text-6xl text-[#5c6b5c] leading-relaxed italic")}>
               “{t.fraseFinal}”
             </p>
             
@@ -302,41 +293,34 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Itinerario */}
-      <section className="py-40 bg-[#f5f0e6]/40">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <span className="text-[10px] tracking-[1em] uppercase mb-16 block opacity-40">{t.itinerario}</span>
-          
-          <div className="relative space-y-20">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-[1px] bg-[#c5a059]/20 hidden md:block" />
-            
+      {/* Itinerario con Título Sticky */}
+      <section className="relative bg-[#f5f0e6]/40 overflow-visible">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row min-h-screen">
+          {/* Columna del Título Sticky */}
+          <div className="md:w-1/3 p-6 md:p-32 flex flex-col justify-start">
+            <h2 className={cn(serif.className, "text-6xl md:text-[10rem] sticky top-40 text-[#5c6b5c] opacity-[0.08] md:opacity-[0.05] italic leading-none select-none")}>
+              {t.itinerario}
+            </h2>
+          </div>
+
+          {/* Columna de Eventos */}
+          <div className="md:w-2/3 p-6 md:p-32 space-y-32">
             {[
               { time: "17:00", label: t.ceremonia, location: "Lugar por confirmar", icon: Globe },
               { time: "18:30", label: t.coctel, location: "Lugar por confirmar", icon: Navigation },
               { time: "20:00", label: t.recepcion, location: "Lugar por confirmar", icon: Calendar }
             ].map((step, idx) => (
-              <div key={idx} className={cn(
-                "relative flex flex-col md:flex-row items-center gap-10 md:gap-20",
-                idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              )}>
-                <div className="flex-1 text-center md:text-right w-full">
-                  <div className={cn("md:px-10", idx % 2 !== 0 && "md:text-left")}>
-                    <p className={cn(serif.className, "text-3xl tracking-widest text-[#c5a059] mb-2")}>{step.time}</p>
-                    <h3 className="text-sm uppercase tracking-[0.4em] font-bold text-[#5c6b5c]">{step.label}</h3>
-                  </div>
+              <div key={idx} className="flex flex-col gap-6 group">
+                <div className="flex items-center gap-8">
+                  <div className="w-16 h-[1px] bg-[#c5a059]/40 group-hover:w-24 transition-all duration-700" />
+                  <p className={cn(serif.className, "text-4xl md:text-6xl tracking-widest text-[#c5a059]")}>{step.time}</p>
                 </div>
-
-                <div className="z-10 bg-[#fcfaf7] w-12 h-12 rounded-full border border-[#c5a059]/30 flex items-center justify-center shadow-sm">
-                  <step.icon size={16} className="text-[#8a9a5b]" />
-                </div>
-
-                <div className="flex-1 text-center md:text-left w-full">
-                  <div className={cn("md:px-10", idx % 2 === 0 && "md:text-left")}>
-                    <p className="text-xs uppercase tracking-widest opacity-60 mb-4">{step.location}</p>
-                    <Button variant="link" className="text-[10px] uppercase tracking-[0.3em] text-[#8a9a5b] p-0 h-auto border-b border-[#8a9a5b]/20">
-                      {t.verMapa}
-                    </Button>
-                  </div>
+                <div className="pl-24 space-y-4">
+                  <h3 className="text-xl md:text-2xl uppercase tracking-[0.4em] font-light text-[#5c6b5c]">{step.label}</h3>
+                  <p className="text-xs uppercase tracking-widest opacity-40 mb-4">{step.location}</p>
+                  <Button variant="link" className="text-[10px] uppercase tracking-[0.3em] text-[#8a9a5b] p-0 h-auto border-b border-[#8a9a5b]/20">
+                    {t.verMapa}
+                  </Button>
                 </div>
               </div>
             ))}
@@ -344,41 +328,12 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Ubicación */}
-      <section className="py-40 bg-white">
+      {/* Ubicación y Hotel */}
+      <section id="hotel" className="py-40 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-           <div className="grid md:grid-cols-2 gap-24 items-center">
-             <div className="space-y-10">
-               <h3 className={cn(serif.className, "text-5xl italic text-[#5c6b5c]")}>{t.ubicacion}</h3>
-               <div className="space-y-4">
-                 <p className="text-2xl font-light text-[#8a9a5b]">{t.zihua}</p>
-                 <p className="text-sm opacity-60 leading-relaxed max-w-sm">
-                   Descripción provisional del lugar. Aquí se incluirán detalles específicos para ayudar a los invitados a llegar.
-                 </p>
-               </div>
-               <Button className="rounded-none px-12 py-8 bg-transparent border border-[#5c6b5c] text-[#5c6b5c] hover:bg-[#5c6b5c] hover:text-white transition-all duration-700 uppercase tracking-[0.4em] text-[10px]">
-                 {t.verMapa}
-               </Button>
-             </div>
-             <div className="h-[500px] w-full bg-[#f4f1ea] rounded-[2.5rem] relative overflow-hidden grayscale-[50%] shadow-2xl">
-               <iframe 
-                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15224.471597560863!2d-101.5582967!3d17.6407044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84351639d997233f%3A0x6283b3e21e10695!2sZihuatanejo%2C%20Guerrero!5e0!3m2!1ses!2smx!4v1711234567890!5m2!1ses!2smx" 
-                 width="100%" 
-                 height="100%" 
-                 style={{ border: 0 }} 
-                 loading="lazy"
-               />
-             </div>
-           </div>
-        </div>
-      </section>
-
-      {/* Hospedaje */}
-      <section className="py-40 bg-[#fcfaf7]">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-24">
-            <span className="text-[10px] tracking-[1em] uppercase mb-4 block opacity-40">{t.hospedaje}</span>
-            <div className="w-12 h-[1px] bg-[#c5a059] mx-auto" />
+          <div className="text-center mb-32">
+            <h3 className={cn(serif.className, "text-6xl md:text-8xl italic text-[#5c6b5c]")}>{t.hospedaje}</h3>
+            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-8 opacity-30" />
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
