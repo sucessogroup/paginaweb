@@ -54,7 +54,7 @@ const translations = {
     hospedaje: "Alloggio",
     reservar: "Prenota ora",
     regalos: "Lista Nozze",
-    textoRegalos: "La vostra presenza è il nostro regalo più bello, ma se desiderate farci un pensiero, ecco le nostre opzioni.",
+    textoRegalos: "La vostra presencia è il nostro regalo più bello, ma se desiderate farci un pensiero, ecco le nostre opzioni.",
     transferencia: "Dati per il bonifico",
     confirmar: "Conferma partecipazione",
     rsvpTexto: "Si prega de confermare entro il 1 novembre",
@@ -92,7 +92,6 @@ export default function WeddingPage() {
     return () => clearInterval(timer)
   }, [])
 
-  const weddingHero = PlaceHolderImages.find(img => img.id === 'wedding-hero')
   const weddingCouple = PlaceHolderImages.find(img => img.id === 'wedding-couple')
   const details1 = PlaceHolderImages.find(img => img.id === 'wedding-details-1')
   const details2 = PlaceHolderImages.find(img => img.id === 'wedding-details-2')
@@ -115,8 +114,8 @@ export default function WeddingPage() {
         ))}
       </div>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center p-6 text-center">
+      {/* Hero Section - Background set to match foto1.png sky */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center p-6 text-center bg-[#d9e8f6]">
         <div className="space-y-12 animate-in fade-in zoom-in duration-1000">
           <div className="space-y-4">
             <h1 className={cn(script.className, "text-7xl md:text-[10rem] text-[#5c6b5c] leading-none")}>
@@ -171,11 +170,11 @@ export default function WeddingPage() {
       <section className="py-32 max-w-6xl mx-auto px-6 space-y-32">
         <div className="relative aspect-[16/9] w-full rounded-[2rem] overflow-hidden shadow-sm animate-in fade-in duration-1000">
           <Image 
-            src={weddingHero?.imageUrl || "https://picsum.photos/seed/editorial1/1600/900"} 
+            src="/foto1.png" 
             alt="Editorial Story" 
             fill 
             className="object-cover transition-transform duration-[3000ms] hover:scale-105"
-            data-ai-hint="minimalist landscape"
+            priority
           />
         </div>
 
@@ -186,7 +185,7 @@ export default function WeddingPage() {
                {t.invitacion}
              </p>
              <p className="text-sm font-light leading-relaxed opacity-60 uppercase tracking-widest">
-               Placeholder text for romantic story introduction. Content will be replaced.
+               Contenido provisional para la historia romántica. Este texto será reemplazado por la narrativa final de la pareja.
              </p>
           </div>
           <div className="relative aspect-[3/4] w-full rounded-[2rem] overflow-hidden order-1 md:order-2 shadow-lg">
@@ -224,9 +223,9 @@ export default function WeddingPage() {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-[1px] bg-[#c5a059]/20 hidden md:block" />
             
             {[
-              { time: "17:00", label: t.ceremonia, location: "Parroquia Placeholder", icon: Globe },
-              { time: "18:30", label: t.coctel, location: "Terraza Placeholder", icon: Navigation },
-              { time: "20:00", label: t.recepcion, location: "Salón Placeholder", icon: Calendar }
+              { time: "17:00", label: t.ceremonia, location: "Lugar por confirmar", icon: Globe },
+              { time: "18:30", label: t.coctel, location: "Lugar por confirmar", icon: Navigation },
+              { time: "20:00", label: t.recepcion, location: "Lugar por confirmar", icon: Calendar }
             ].map((step, idx) => (
               <div key={idx} className={cn(
                 "relative flex flex-col md:flex-row items-center gap-10 md:gap-20",
@@ -266,7 +265,7 @@ export default function WeddingPage() {
                <div className="space-y-4">
                  <p className="text-2xl font-light text-[#8a9a5b]">{t.zihua}</p>
                  <p className="text-sm opacity-60 leading-relaxed max-w-sm">
-                   A specific description of the wedding venue will go here. It will be detailed and helpful for guests arriving from afar.
+                   Descripción provisional del lugar. Aquí se incluirán detalles específicos para ayudar a los invitados a llegar.
                  </p>
                </div>
                <Button className="rounded-none px-12 py-8 bg-transparent border border-[#5c6b5c] text-[#5c6b5c] hover:bg-[#5c6b5c] hover:text-white transition-all duration-700 uppercase tracking-[0.4em] text-[10px]">
@@ -296,8 +295,8 @@ export default function WeddingPage() {
 
           <div className="grid md:grid-cols-2 gap-12">
             {[
-              { id: 'hotel-1', title: 'Boutique Placeholder 1', price: '$$$' },
-              { id: 'hotel-2', title: 'Resort Placeholder 2', price: '$$$$' }
+              { id: 'hotel-1', title: 'Hotel Boutique 1', price: '$$$' },
+              { id: 'hotel-2', title: 'Resort 2', price: '$$$$' }
             ].map((hotel, idx) => {
               const img = PlaceHolderImages.find(p => p.id === hotel.id)
               return (
@@ -342,7 +341,7 @@ export default function WeddingPage() {
            </p>
            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-6">
              <Button className="rounded-none h-16 px-10 border border-[#c5a059] bg-white text-[#c5a059] hover:bg-[#c5a059] hover:text-white transition-all uppercase tracking-[0.3em] text-[10px]">
-               Mesa de Regalos Placeholder
+               Mesa de Regalos Provisional
              </Button>
              <Button className="rounded-none h-16 px-10 border border-[#5c6b5c] bg-[#5c6b5c] text-white hover:bg-black transition-all uppercase tracking-[0.3em] text-[10px]">
                {t.transferencia}
