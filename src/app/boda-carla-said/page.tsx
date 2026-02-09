@@ -1,10 +1,9 @@
-
 "use client"
 
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Literata, Dancing_Script } from 'next/font/google'
-import { MapPin, Calendar, Clock, Hotel, Gift, MessageCircle, Globe, Navigation, CalendarPlus } from 'lucide-react'
+import { MapPin, Calendar, Clock, Hotel, Gift, Globe, Navigation, CalendarPlus } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
@@ -286,7 +285,6 @@ export default function WeddingPage() {
                 onClick={handleWhatsAppConfirm}
                 className="rounded-full px-12 py-8 bg-[#8a9a5b] hover:bg-[#5c6b5c] text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3 shadow-lg shadow-[#8a9a5b]/20"
               >
-                <MessageCircle size={16} />
                 {t.confirmar}
               </Button>
             </div>
@@ -484,7 +482,6 @@ export default function WeddingPage() {
              onClick={handleWhatsAppConfirm}
              className="rounded-full px-16 py-10 bg-[#8a9a5b] hover:bg-[#5c6b5c] text-white flex items-center gap-6 mx-auto group transition-all duration-700 shadow-xl shadow-[#8a9a5b]/20"
            >
-             <MessageCircle className="group-hover:rotate-12 transition-transform" />
              <span className="uppercase tracking-[0.3em] text-xs font-bold">{t.confirmar}</span>
            </Button>
         </div>
