@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -58,7 +57,7 @@ const translations = {
     textoRegalos: "La vostra presenza è il nostro regalo più bello, ma se desiderate farci un pensiero, ecco le nostre opzioni.",
     transferencia: "Dati per il bonifico",
     confirmar: "Conferma partecipazione",
-    rsvpTexto: "Si prega di confermare entro il 1 novembre",
+    rsvpTexto: "Si prega de confermare entro il 1 novembre",
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
     zihua: "Zihuatanejo, Guerrero, Messico",
     domingo: "Domenica, 20 dicembre 2026",
@@ -120,7 +119,6 @@ export default function WeddingPage() {
       <section className="relative min-h-screen flex flex-col items-center justify-center p-6 text-center">
         <div className="space-y-12 animate-in fade-in zoom-in duration-1000">
           <div className="space-y-4">
-            <span className="text-[10px] tracking-[0.6em] uppercase text-[#8a9a5b] opacity-80">Save the Date</span>
             <h1 className={cn(script.className, "text-7xl md:text-[10rem] text-[#5c6b5c] leading-none")}>
               Carla & Said
             </h1>
