@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -64,7 +65,7 @@ const translations = {
     transferencia: "Dati per il bonifico",
     confirmar: "Conferma participación",
     rsvpTexto: "Si prega di confermare entro il 1 novembre",
-    fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
+    fraseFinal: "Il tempo è finito",
     zihua: "Zihuatanejo, Guerrero, Messico",
     domingo: "Domenica, 20 dicembre 2026",
     loading: "Caricamento...",
@@ -298,44 +299,6 @@ export default function WeddingPage() {
               </Button>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Sección Narrativa */}
-      <section className="py-32 max-w-6xl mx-auto px-6 space-y-32">
-        <div className="grid md:grid-cols-2 gap-24 items-center">
-          <div className="space-y-12 order-2 md:order-1 px-4">
-             <div className="w-16 h-[1px] bg-[#c5a059]" />
-             <p className={cn(serif.className, "text-3xl md:text-5xl italic leading-[1.4] text-[#5c6b5c]")}>
-               {t.invitacion}
-             </p>
-             <p className="text-sm font-light leading-relaxed opacity-60 uppercase tracking-widest">
-               Contenido provisional para la historia romántica. Este texto será reemplazado por la narrativa final de la pareja.
-             </p>
-          </div>
-          <div className="relative aspect-[3/4] w-full rounded-[2rem] overflow-hidden order-1 md:order-2 shadow-lg bg-white/50">
-            <Image 
-              src={weddingCouple?.imageUrl || "https://picsum.photos/seed/cs-couple/800/1200"} 
-              alt="The Couple" 
-              fill 
-              className="object-cover grayscale-[30%]"
-              data-ai-hint="romantic couple"
-            />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-           <div className="relative aspect-square rounded-2xl overflow-hidden shadow-sm">
-             <Image src={details1?.imageUrl || "https://picsum.photos/seed/det1/600/600"} alt="Detail" fill className="object-cover" />
-           </div>
-           <div className="relative aspect-square rounded-2xl overflow-hidden shadow-sm hidden md:block">
-             <div className="w-full h-full bg-[#f5f0e6] flex items-center justify-center p-8 text-center">
-               <span className={cn(script.className, "text-2xl text-[#8a9a5b]")}>L'amore è un viaggio</span>
-             </div>
-           </div>
-           <div className="relative aspect-square rounded-2xl overflow-hidden shadow-sm">
-             <Image src={details2?.imageUrl || "https://picsum.photos/seed/det2/600/600"} alt="Detail" fill className="object-cover" />
-           </div>
         </div>
       </section>
 
