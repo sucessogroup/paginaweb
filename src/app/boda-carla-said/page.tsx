@@ -40,6 +40,7 @@ const translations = {
     domingo: "Domingo, 20 de diciembre de 2026",
     vestimenta: "Vestimenta",
     formalLino: "Formal de lino",
+    porDefinirse: "Por definirse",
     waMessage: "¡Hola Carla y Said! Estoy muy emocionado por su boda. Me encantaría confirmar mi asistencia para celebrar con ustedes el 20 de diciembre de 2026 en Zihuatanejo. ¡Nos vemos pronto!"
   },
   it: {
@@ -69,6 +70,7 @@ const translations = {
     domingo: "Domenica, 20 dicembre 2026",
     vestimenta: "Abbigliamento",
     formalLino: "Formale in lino",
+    porDefinirse: "A definirsi",
     waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia participación per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!"
   }
 }
@@ -115,10 +117,7 @@ function ItineraryItem({ step, t }: { step: any, t: any }) {
       </div>
       <div className="space-y-4">
         <h3 className="text-xl md:text-2xl uppercase tracking-[0.4em] font-light text-[#5c6b5c]">{step.label}</h3>
-        <p className="text-[10px] md:text-xs uppercase tracking-widest opacity-40 mb-4">{step.location}</p>
-        <Button variant="link" className="text-[10px] uppercase tracking-[0.3em] text-[#8a9a5b] p-0 h-auto border-b border-[#8a9a5b]/20">
-          {t.verMapa}
-        </Button>
+        <p className="text-[10px] md:text-xs uppercase tracking-widest opacity-40 mb-4 italic">{step.location}</p>
       </div>
     </div>
   )
@@ -341,8 +340,8 @@ export default function WeddingPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <div className="flex justify-center gap-4 md:gap-6 mb-12 md:mb-16">
-            <div className="relative w-32 h-24 md:w-64 md:h-48 transition-transform hover:scale-105 duration-500">
+          <div className="flex justify-center gap-4 md:gap-2 mb-12 md:mb-16">
+            <div className="relative w-48 h-36 md:w-64 md:h-48 transition-transform hover:scale-105 duration-500">
               <Image 
                 src={flagMx?.imageUrl || "/banderamx.png"} 
                 alt="México" 
@@ -350,7 +349,7 @@ export default function WeddingPage() {
                 className="object-contain"
               />
             </div>
-            <div className="relative w-32 h-24 md:w-64 md:h-48 transition-transform hover:scale-105 duration-500">
+            <div className="relative w-48 h-36 md:w-64 md:h-48 transition-transform hover:scale-105 duration-500">
               <Image 
                 src={flagIt?.imageUrl || "/banderaita.png"} 
                 alt="Italia" 
@@ -399,9 +398,9 @@ export default function WeddingPage() {
 
           <div className="space-y-20 md:space-y-32">
             {[
-              { time: "17:00", label: t.ceremonia, location: "Capilla del Mar" },
-              { time: "18:30", label: t.coctel, location: "Terraza Atardecer" },
-              { time: "20:00", label: t.recepcion, location: "Salón Brisa" }
+              { time: "17:00", label: t.ceremonia, location: t.porDefinirse },
+              { time: "18:30", label: t.coctel, location: t.porDefinirse },
+              { time: "20:00", label: t.recepcion, location: t.porDefinirse }
             ].map((step, idx) => (
               <ItineraryItem key={idx} step={step} t={t} />
             ))}
