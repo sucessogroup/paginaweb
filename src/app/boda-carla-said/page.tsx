@@ -473,7 +473,7 @@ export default function WeddingPage() {
               </p>
             </div>
 
-            <div className="relative w-full max-w-[480px] md:max-w-[675px] aspect-[4/5] -mt-4">
+            <div className="relative w-full max-w-[480px] md:max-w-[780px] aspect-[4/5] -mt-12">
               <Image 
                 src={dresscodeImg?.imageUrl || "/dresscode.png"} 
                 alt="Dress Code" 
