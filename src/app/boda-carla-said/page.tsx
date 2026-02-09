@@ -298,8 +298,6 @@ export default function WeddingPage() {
               </Button>
             </div>
           </div>
-          
-          <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-24 opacity-30" />
         </div>
       </section>
 
