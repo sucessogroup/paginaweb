@@ -304,9 +304,8 @@ export default function WeddingPage() {
                     <rect width="326.66" height="560" fill="#006847"/>
                     <rect width="326.66" height="560" x="326.66" fill="#FFFFFF"/>
                     <rect width="326.66" height="560" x="653.33" fill="#CE1126"/>
-                    <g transform="translate(490, 280) scale(0.6)">
-                      <circle cx="0" cy="0" r="45" fill="#a67c00" opacity="0.8" />
-                      <path d="M-20 10 Q0 30 20 10 L10 -20 Q0 -30 -10 -20 Z" fill="#5c4033" />
+                    <g transform="translate(490, 280)">
+                      <circle cx="0" cy="0" r="50" fill="#c5a059" />
                     </g>
                   </svg>
                 </div>
