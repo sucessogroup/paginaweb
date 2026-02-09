@@ -54,7 +54,7 @@ const translations = {
     hospedaje: "Alloggio",
     reservar: "Prenota ora",
     regalos: "Lista Nozze",
-    textoRegalos: "La vostra presencia è il nostro regalo más bello, ma se desiderate farci un pensiero, ecco le nostre opzioni.",
+    textoRegalos: "La vostra presencia è il nuestro regalo más bello, ma se desiderate farci un pensiero, ecco le nostre opzioni.",
     transferencia: "Dati per il bonifico",
     confirmar: "Conferma participación",
     rsvpTexto: "Si prega de confermare entro il 1 novembre",
@@ -97,7 +97,7 @@ export default function WeddingPage() {
   const details2 = PlaceHolderImages.find(img => img.id === 'wedding-details-2')
 
   return (
-    <div className="bg-[#fcfaf7] text-[#5c6b5c] font-body">
+    <div className="bg-[#fcfaf7] text-[#5c6b5c] font-body overflow-x-hidden">
       {/* Sticky Language Selector */}
       <div className="fixed top-8 right-8 z-[100] flex gap-3">
         {['es', 'it'].map((l) => (
@@ -114,63 +114,68 @@ export default function WeddingPage() {
         ))}
       </div>
 
-      {/* Hero Content Section - Names & Date */}
-      <section className="relative min-h-[50vh] flex flex-col items-center justify-center p-6 text-center bg-[#B7CCE0]">
-        <div className="space-y-10 animate-in fade-in zoom-in duration-1000">
-          <div className="space-y-4">
-            <h1 className={cn(script.className, "text-7xl md:text-[8rem] text-[#5c6b5c] leading-none")}>
-              Carla & Said
-            </h1>
-          </div>
-
-          <div className="space-y-2">
-            <p className={cn(serif.className, "text-xl md:text-2xl tracking-widest uppercase italic text-[#c5a059]")}>{t.domingo}</p>
-            <p className="text-[10px] tracking-[0.5em] uppercase font-light opacity-60">{t.zihua}</p>
-          </div>
-
-          <div className="max-w-xl mx-auto pt-4">
-            <p className={cn(script.className, "text-xl md:text-3xl text-[#5c6b5c] opacity-80 leading-relaxed italic")}>
-              “{t.fraseFinal}”
-            </p>
-          </div>
-
-          {/* Countdown Logic */}
-          <div className="pt-8 min-h-[100px] flex items-center justify-center">
-            {isFinished ? (
-              <h2 className={cn(serif.className, "text-4xl md:text-6xl italic animate-bounce text-[#c5a059]")}>
-                {t.seAcabo}
-              </h2>
-            ) : (
-              <div className="flex justify-center gap-6 md:gap-12">
-                {[
-                  { val: timeLeft.days, label: t.dias },
-                  { val: timeLeft.hours, label: t.horas },
-                  { val: timeLeft.minutes, label: t.minutos },
-                  { val: timeLeft.seconds, label: t.segundos }
-                ].map((unit, i) => (
-                  <div key={i} className="flex flex-col items-center">
-                    <span className={cn(serif.className, "text-3xl md:text-5xl font-light mb-1")}>
-                      {unit.val.toString().padStart(2, '0')}
-                    </span>
-                    <span className="text-[8px] uppercase tracking-[0.4em] opacity-40">{unit.label}</span>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Main Illustration Section (Hero Illustration) */}
-      <section className="relative w-full h-[80vh] md:h-[65vh] lg:h-[70vh] flex items-center justify-center bg-[#B7CCE0] py-4">
-        <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {/* Premium Full-Screen Hero */}
+      <section className="relative h-screen w-full overflow-hidden bg-gradient-to-b from-[#B7CCE0] via-[#B7CCE0] to-[#F4F0EA]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
           <Image 
             src="/foto1.png" 
             alt="Wedding Illustration" 
             fill
-            className="object-contain object-center pointer-events-none"
+            className="object-cover object-center pointer-events-none"
             priority
           />
+        </div>
+
+        {/* Blending Overlay - Unifies the top sky and adds depth */}
+        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#B7CCE0]/14 to-transparent pointer-events-none" />
+        
+        {/* Content Overlay */}
+        <div className="relative z-10 h-full w-full flex flex-col items-center justify-between py-24 px-6 text-center animate-in fade-in duration-1000">
+          {/* Top Info */}
+          <div className="space-y-6 pt-12">
+            <h1 className={cn(script.className, "text-7xl md:text-[9rem] text-[#5c6b5c] leading-none tracking-tight drop-shadow-sm")}>
+              Carla & Said
+            </h1>
+            <div className="space-y-1">
+              <p className={cn(serif.className, "text-lg md:text-xl tracking-widest uppercase italic text-[#c5a059] font-medium")}>{t.domingo}</p>
+              <p className="text-[9px] tracking-[0.4em] uppercase font-light opacity-60 text-[#5c6b5c]">{t.zihua}</p>
+            </div>
+          </div>
+
+          {/* Bottom Quote & Countdown */}
+          <div className="space-y-12 pb-12">
+            <div className="max-w-2xl mx-auto px-4">
+              <p className={cn(script.className, "text-xl md:text-3xl text-[#5c6b5c] opacity-80 leading-relaxed italic")}>
+                “{t.fraseFinal}”
+              </p>
+            </div>
+
+            {/* Countdown Logic */}
+            <div className="min-h-[100px] flex items-center justify-center">
+              {isFinished ? (
+                <h2 className={cn(serif.className, "text-4xl md:text-6xl italic animate-bounce text-[#c5a059] drop-shadow-sm")}>
+                  {t.seAcabo}
+                </h2>
+              ) : (
+                <div className="flex justify-center gap-6 md:gap-12 bg-white/10 backdrop-blur-[2px] p-8 rounded-full border border-white/5">
+                  {[
+                    { val: timeLeft.days, label: t.dias },
+                    { val: timeLeft.hours, label: t.horas },
+                    { val: timeLeft.minutes, label: t.minutos },
+                    { val: timeLeft.seconds, label: t.segundos }
+                  ].map((unit, i) => (
+                    <div key={i} className="flex flex-col items-center">
+                      <span className={cn(serif.className, "text-3xl md:text-5xl font-light text-[#5c6b5c]")}>
+                        {unit.val.toString().padStart(2, '0')}
+                      </span>
+                      <span className="text-[8px] uppercase tracking-[0.4em] opacity-40 text-[#5c6b5c]">{unit.label}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </section>
 
