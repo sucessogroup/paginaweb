@@ -4,7 +4,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Literata, Dancing_Script } from 'next/font/google'
-import { CalendarPlus, ExternalLink } from 'lucide-react'
+import { CalendarPlus, ExternalLink, MapPin } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
@@ -41,7 +41,8 @@ const translations = {
     vestimenta: "Vestimenta",
     formalLino: "Formal de lino",
     porDefinirse: "Por definirse",
-    waMessage: "¡Hola Carla y Said! Estoy muy emocionado por su boda. Me encantaría confirmar mi asistencia para celebrar con ustedes el 20 de diciembre de 2026 en Zihuatanejo. ¡Nos vemos pronto!"
+    waMessage: "¡Hola Carla y Said! Estoy muy emocionado por su boda. Me encantaría confirmar mi asistencia para celebrar con ustedes el 20 de diciembre de 2026 en Zihuatanejo. ¡Nos vemos pronto!",
+    venue: "Club de Playa Garrobo"
   },
   it: {
     seAcabo: "Il tempo è finito",
@@ -71,7 +72,8 @@ const translations = {
     vestimenta: "Abbigliamento",
     formalLino: "Formale in lino",
     porDefinirse: "A definirsi",
-    waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia participación per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!"
+    waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia participación per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!",
+    venue: "Club de Playa Garrobo"
   }
 }
 
@@ -194,7 +196,7 @@ export default function WeddingPage() {
     const event = {
       title: 'Boda Carla & Said',
       description: '¡Los esperamos para celebrar nuestro amor!',
-      location: 'Zihuatanejo, Guerrero, México',
+      location: 'Club de Playa Garrobo, Zihuatanejo, Guerrero, México',
       startTime: '20261220T170000',
       endTime: '20261221T020000',
     };
@@ -227,6 +229,10 @@ export default function WeddingPage() {
     const phoneNumber = "529982418679";
     const message = encodeURIComponent(t.waMessage);
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
+
+  const openGoogleMaps = () => {
+    window.open('https://www.google.com/maps/search/?api=1&query=JC8W+55+Caleta+de+Chon+40895+Zihuatanejo+Gro+Mexico', '_blank');
   };
 
   return (
@@ -395,13 +401,24 @@ export default function WeddingPage() {
               {t.itinerario}
             </h2>
             <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
+            <div className="mt-8 flex flex-col items-center gap-2">
+              <p className="text-sm uppercase tracking-[0.3em] font-medium opacity-60">Club de Playa Garrobo</p>
+              <Button 
+                variant="link" 
+                onClick={openGoogleMaps}
+                className="text-[10px] uppercase tracking-widest text-[#c5a059] hover:text-[#5c6b5c] gap-2"
+              >
+                <MapPin size={12} />
+                JC8W+55 Caleta de Chon, Zihuatanejo
+              </Button>
+            </div>
           </RevealSection>
 
           <div className="space-y-20 md:space-y-32">
             {[
-              { time: "17:00", label: t.ceremonia, location: t.porDefinirse },
-              { time: "18:30", label: t.coctel, location: t.porDefinirse },
-              { time: "20:00", label: t.recepcion, location: t.porDefinirse }
+              { time: "17:00", label: t.ceremonia, location: t.venue },
+              { time: "18:30", label: t.coctel, location: t.venue },
+              { time: "20:00", label: t.recepcion, location: t.venue }
             ].map((step, idx) => (
               <ItineraryItem key={idx} step={step} t={t} />
             ))}
