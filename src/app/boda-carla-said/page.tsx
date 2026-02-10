@@ -60,7 +60,7 @@ const translations = {
     verMapa: "Visualizza posizione",
     hospedaje: "Hotel",
     reservar: "Prenotazioni a breve",
-    reservaMasAdelante: "La prenotazione sarà disponible più avanti.",
+    reservaMasAdelante: "La prenotación será disponible più avanti.",
     verWeb: "Sito web",
     tarifaPreferencial: "Abbiamo una tarifa preferenziale per i nostri ospiti.",
     confirmar: "Conferma participación",
@@ -149,7 +149,6 @@ function ItineraryItem({ step, t }: { step: any, t: any }) {
       </div>
       <div className="space-y-4">
         <h3 className="text-xl md:text-2xl uppercase tracking-[0.4em] font-light text-[#5c6b5c]">{step.label}</h3>
-        <p className="text-[10px] uppercase tracking-[0.3em] opacity-40 italic">{step.location || "Por definirse"}</p>
       </div>
     </div>
   )
