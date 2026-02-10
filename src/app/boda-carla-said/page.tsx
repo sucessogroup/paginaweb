@@ -40,7 +40,6 @@ const translations = {
     domingo: "Domingo, 20 de diciembre de 2026",
     vestimenta: "Vestimenta",
     formalLino: "Formal de lino",
-    porDefinirse: "Por definirse",
     waMessage: "¡Hola Carla y Said! Estoy muy emocionado por su boda. Me encantaría confirmar mi asistencia para celebrar con ustedes el 20 de diciembre de 2026 en Zihuatanejo. ¡Nos vemos pronto!",
     venue: "Club de Playa Garrobo"
   },
@@ -71,7 +70,6 @@ const translations = {
     domingo: "Domenica, 20 dicembre 2026",
     vestimenta: "Abbigliamento",
     formalLino: "Formale in lino",
-    porDefinirse: "A definirsi",
     waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia participación per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!",
     venue: "Club de Playa Garrobo"
   }
@@ -151,7 +149,6 @@ function ItineraryItem({ step, t }: { step: any, t: any }) {
       </div>
       <div className="space-y-4">
         <h3 className="text-xl md:text-2xl uppercase tracking-[0.4em] font-light text-[#5c6b5c]">{step.label}</h3>
-        <p className="text-[10px] md:text-xs uppercase tracking-widest opacity-40 mb-4 italic">{step.location}</p>
       </div>
     </div>
   )
@@ -253,7 +250,7 @@ export default function WeddingPage() {
         ))}
       </div>
 
-      {/* Portada - foto1.png */}
+      {/* Portada */}
       <section className="relative h-screen w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
@@ -334,7 +331,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Frase y Confirmación - foto2.png */}
+      {/* Frase y Confirmación */}
       <section className="py-24 md:py-40 relative overflow-hidden bg-[#fcfaf7]">
         <div className="absolute inset-0 z-0 opacity-15">
           <Image 
@@ -383,7 +380,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Itinerario - foto3.png */}
+      {/* Itinerario */}
       <section className="py-24 md:py-40 relative overflow-hidden bg-[#f5f0e6]/40">
         <div className="absolute inset-0 z-0 opacity-10">
           <Image 
@@ -416,9 +413,9 @@ export default function WeddingPage() {
 
           <div className="space-y-20 md:space-y-32">
             {[
-              { time: "17:00", label: t.ceremonia, location: t.venue },
-              { time: "18:30", label: t.coctel, location: t.venue },
-              { time: "20:00", label: t.recepcion, location: t.venue }
+              { time: "17:00", label: t.ceremonia },
+              { time: "18:30", label: t.coctel },
+              { time: "20:00", label: t.recepcion }
             ].map((step, idx) => (
               <ItineraryItem key={idx} step={step} t={t} />
             ))}
@@ -426,7 +423,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Hotel Recomendado - foto4.png */}
+      {/* Hotel Recomendado */}
       <section id="hotel" className="py-24 md:py-40 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <RevealSection className="text-center mb-16 md:mb-24">
