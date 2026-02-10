@@ -109,7 +109,7 @@ function RevealSection({ children, className, delay = 0 }: { children: React.Rea
   )
 }
 
-function ItineraryItem({ step, t }: { step: any, t: any }) {
+function ItineraryItem({ step }: { step: any }) {
   const [isVisible, setIsVisible] = useState(false)
   const itemRef = useRef<HTMLDivElement>(null)
 
@@ -122,11 +122,7 @@ function ItineraryItem({ step, t }: { step: any, t: any }) {
       },
       { threshold: 0.3 }
     )
-
-    if (itemRef.current) {
-      observer.observe(itemRef.current)
-    }
-
+    if (itemRef.current) observer.observe(itemRef.current)
     return () => observer.disconnect()
   }, [])
 
@@ -420,13 +416,13 @@ export default function WeddingPage() {
               { time: "19:30", label: t.recepcion },
               { time: "01:00", label: t.fin }
             ].map((step, idx) => (
-              <ItineraryItem key={idx} step={step} t={t} />
+              <ItineraryItem key={idx} step={step} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Hotel Recomendado */}
+      {/* Hotel Sede */}
       <section id="hotel" className="py-24 md:py-40 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <RevealSection className="text-center mb-16 md:mb-24">
