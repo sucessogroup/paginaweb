@@ -4,7 +4,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Literata, Dancing_Script } from 'next/font/google'
-import { CalendarPlus, ExternalLink, MapPin, CreditCard, Globe, Heart, Copy, Check, Plus } from 'lucide-react'
+import { CalendarPlus, ExternalLink, MapPin, CreditCard, Globe, Heart, Copy, Check, Plus, MessageCircle, Instagram } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
@@ -61,6 +61,11 @@ const translations = {
     copiado: "Copiado",
     irPaypal: "Ir a PayPal",
     faqsTitle: "Preguntas frecuentes",
+    maquillajeTitle: "Maquillaje y Peinado",
+    proveedorMaquillaje: "Proveedor de maquillaje y peinado",
+    proximamente: "Información próximamente",
+    wa: "WhatsApp",
+    ig: "Instagram",
     faqs: [
       { q: "¿Qué requisitos necesito para viajar a México desde Italia?", a: "Los ciudadanos italianos no necesitan visa para viajar a México como turistas. Se requiere pasaporte vigente, boleto de regreso y completar el formulario migratorio a la llegada." },
       { q: "¿A qué aeropuerto debo llegar?", a: "El aeropuerto recomendado es el Aeropuerto Internacional de Ixtapa–Zihuatanejo (ZIH), el más cercano al hotel y al lugar del evento. También se puede llegar vía Ciudad de México (CDMX) y tomar un vuelo nacional a Zihuatanejo." },
@@ -115,10 +120,15 @@ const translations = {
     copiado: "Copiato",
     irPaypal: "Vai a PayPal",
     faqsTitle: "Domande frequenti",
+    maquillajeTitle: "Trucco e Acconciatura",
+    proveedorMaquillaje: "Fornitore di trucco e acconciatura",
+    proximamente: "Informazioni in arrivo",
+    wa: "WhatsApp",
+    ig: "Instagram",
     faqs: [
       { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico come turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
       { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
-      { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servizio dell'hotel. I tragitti sono brevi e semplici." },
+      { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servizio dell'hotel. I tragitti son brevi e semplici." },
       { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta può essere consultata sulla mappa disponibile su questa pagina." },
       { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una città piccola e i trasferimenti durano solitamente tra i 15 e i 30 minuti." },
       { q: "Com'è il clima a dicembre?", a: "Dicembre ha un clima caldo e piacevole, con temperature approssimative tra i 22 °C e i 30 °C e una probabilità di pioggia molto bassa." },
@@ -221,6 +231,35 @@ function RegistryCard({ title, icon: Icon, value, buttonLabel, onAction, isCopie
         {isCopied ? <Check size={14} /> : <Copy size={14} />}
         {buttonLabel}
       </Button>
+    </div>
+  )
+}
+
+function VendorCard({ title, subtitle, t }: { title: string, subtitle: string, t: any }) {
+  return (
+    <div className="bg-[#f5f0e6]/50 p-8 rounded-[1.5rem] border border-[#5c6b5c]/10 flex flex-col items-center gap-6 transition-all duration-500 hover:border-[#5c6b5c]/30">
+      <div className="text-center space-y-2">
+        <h4 className={cn(serif.className, "text-xl md:text-2xl italic text-[#5c6b5c]")}>{title}</h4>
+        <p className="text-[10px] uppercase tracking-widest opacity-40">{subtitle}</p>
+      </div>
+      <div className="flex gap-4 w-full">
+        <Button 
+          disabled 
+          variant="outline"
+          className="flex-1 rounded-full border-[#5c6b5c]/20 opacity-40 text-[9px] uppercase tracking-widest gap-2"
+        >
+          <MessageCircle size={14} />
+          {t.wa}
+        </Button>
+        <Button 
+          disabled 
+          variant="outline"
+          className="flex-1 rounded-full border-[#5c6b5c]/20 opacity-40 text-[9px] uppercase tracking-widest gap-2"
+        >
+          <Instagram size={14} />
+          {t.ig}
+        </Button>
+      </div>
     </div>
   )
 }
@@ -644,8 +683,30 @@ export default function WeddingPage() {
         </div>
       </section>
 
+      {/* Maquillaje y Peinado */}
+      <section id="maquillaje" className="py-24 md:py-40 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <RevealSection className="text-center mb-16 md:mb-32">
+            <h3 className={cn(serif.className, "text-4xl md:text-7xl italic text-[#5c6b5c]")}>{t.maquillajeTitle}</h3>
+            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
+          </RevealSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <RevealSection delay={200}>
+              <VendorCard title={t.proveedorMaquillaje} subtitle={t.proximamente} t={t} />
+            </RevealSection>
+            <RevealSection delay={300}>
+              <VendorCard title={t.proveedorMaquillaje} subtitle={t.proximamente} t={t} />
+            </RevealSection>
+            <RevealSection delay={400}>
+              <VendorCard title={t.proveedorMaquillaje} subtitle={t.proximamente} t={t} />
+            </RevealSection>
+          </div>
+        </div>
+      </section>
+
       {/* Preguntas Frecuentes */}
-      <section id="faqs" className="py-24 md:py-40 bg-white">
+      <section id="faqs" className="py-24 md:py-40 bg-[#fcfaf7]">
         <div className="max-w-4xl mx-auto px-6">
           <RevealSection className="text-center mb-16 md:mb-24">
             <h3 className={cn(serif.className, "text-4xl md:text-7xl italic text-[#5c6b5c]")}>{t.faqsTitle}</h3>
