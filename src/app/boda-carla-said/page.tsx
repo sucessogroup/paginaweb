@@ -70,7 +70,7 @@ const translations = {
       { q: "¿Cómo es el clima en diciembre?", a: "Diciembre tiene clima cálido y agradable, con temperaturas aproximadas entre 22 °C y 30 °C y muy baja probabilidad de lluvia." },
       { q: "¿Qué moneda se usa y cómo recomiendan pagar?", a: "La moneda oficial es el peso mexicano (MXN). Se recomienda usar tarjetas y llevar algo de efectivo para gastos pequeños." },
       { q: "¿Es seguro viajar a Zihuatanejo?", a: "Zihuatanejo es un destino turístico tranquilo. Se recomienda seguir precauciones básicas y usar transporte autorizado." },
-      { q: "¿Pueden asistir niños?", a: "Sí, los niños son bienvenidos. El evento tendrá un ambiente familiar y relajado." },
+      { q: "¿Pueden asistir niños?", a: "Amamos a sus pequeños, pero queremos que los únicos berrinches de la noche sean los de los adultos en la pista de baile. El evento es solo para adultos." },
       { q: "¿Qué vestimenta se recomienda?", a: "La vestimenta es formal de lino: traje sin corbata y vestido abajo de la rodilla." }
     ]
   },
@@ -118,13 +118,13 @@ const translations = {
     faqs: [
       { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico come turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
       { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
-      { q: "Come arrivo dall'aeroporto all'hotel o all'evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servizio dell'hotel. I tragitti sono brevi e semplici." },
+      { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servizio dell'hotel. I tragitti sono brevi e semplici." },
       { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta può essere consultata sulla mappa disponibile su questa pagina." },
       { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una città piccola e i trasferimenti durano solitamente tra i 15 e i 30 minuti." },
       { q: "Com'è il clima a dicembre?", a: "Dicembre ha un clima caldo e piacevole, con temperature approssimative tra i 22 °C e i 30 °C e una probabilità di pioggia molto bassa." },
       { q: "Quale valuta si usa e come consigliate di pagare?", a: "La valuta ufficiale è il peso messicano (MXN). Si consiglia di utilizzare le carte e portare con sé dei contanti per le piccole spese." },
       { q: "È sicuro viaggiare a Zihuatanejo?", a: "Zihuatanejo è una destinazione turistica tranquilla. Si consiglia di seguire le precauzioni di base e utilizzare trasporti autorizzati." },
-      { q: "Possono partecipare i bambini?", a: "Sì, i bambini sono i benvenuti. L'evento avrà un'atmosfera familiare e rilassata." },
+      { q: "Possono partecipare i bambini?", a: "Amiamo i bambini, ma vogliamo che gli unici capricci della serata siano quelli degli adulti in pista. L'evento è riservato agli adulti." },
       { q: "Quale abbigliamento è consigliato?", a: "L'abbigliamento è formale in lino: abito senza cravatta e vestito sotto il ginocchio." }
     ]
   }
