@@ -149,6 +149,7 @@ function ItineraryItem({ step, t }: { step: any, t: any }) {
       </div>
       <div className="space-y-4">
         <h3 className="text-xl md:text-2xl uppercase tracking-[0.4em] font-light text-[#5c6b5c]">{step.label}</h3>
+        <p className="text-[10px] uppercase tracking-[0.3em] opacity-40 italic">{step.location || "Por definirse"}</p>
       </div>
     </div>
   )
@@ -344,8 +345,8 @@ export default function WeddingPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <RevealSection className="flex justify-center gap-4 md:gap-2 mb-12 md:mb-16">
-            <div className="relative w-48 h-36 md:w-64 md:h-48 transition-transform hover:scale-105 duration-500">
+          <RevealSection className="flex justify-center gap-4 md:gap-8 mb-12 md:mb-16">
+            <div className="relative w-32 h-24 md:w-64 md:h-48 transition-transform hover:scale-105 duration-500">
               <Image 
                 src={flagMx?.imageUrl || "/banderamx.png"} 
                 alt="México" 
@@ -353,7 +354,7 @@ export default function WeddingPage() {
                 className="object-contain"
               />
             </div>
-            <div className="relative w-48 h-36 md:w-64 md:h-48 transition-transform hover:scale-105 duration-500">
+            <div className="relative w-32 h-24 md:w-64 md:h-48 transition-transform hover:scale-105 duration-500">
               <Image 
                 src={flagIt?.imageUrl || "/banderaita.png"} 
                 alt="Italia" 
@@ -401,12 +402,12 @@ export default function WeddingPage() {
             <div className="mt-8 flex flex-col items-center gap-2">
               <p className="text-sm uppercase tracking-[0.3em] font-medium opacity-60">Club de Playa Garrobo</p>
               <Button 
-                variant="link" 
+                variant="outline" 
                 onClick={openGoogleMaps}
-                className="text-[10px] uppercase tracking-widest text-[#c5a059] hover:text-[#5c6b5c] gap-2"
+                className="rounded-full px-8 py-4 border-[#c5a059]/30 text-[#c5a059] hover:bg-[#c5a059] hover:text-white transition-all duration-700 uppercase tracking-[0.2em] text-[9px] gap-2 mt-4"
               >
-                <MapPin size={12} />
-                JC8W+55 Caleta de Chon, Zihuatanejo
+                <MapPin size={14} />
+                {t.verMapa}
               </Button>
             </div>
           </RevealSection>
