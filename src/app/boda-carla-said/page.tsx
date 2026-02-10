@@ -490,7 +490,7 @@ export default function WeddingPage() {
               </p>
             </div>
 
-            <div className="relative w-full max-w-[320px] md:max-w-[780px] aspect-[4/5] -mt-24 md:-mt-44 transition-all duration-700">
+            <div className="relative w-full max-w-[280px] md:max-w-[550px] aspect-[4/5] -mt-20 md:-mt-36 transition-all duration-700">
               <Image 
                 src={dresscodeImg?.imageUrl || "/dresscode.png"} 
                 alt="Dress Code" 
@@ -500,11 +500,11 @@ export default function WeddingPage() {
               />
             </div>
 
-            <div className="w-full flex justify-center gap-6 md:gap-24 -mt-16 md:-mt-32 px-4 relative z-10">
-              <p className="text-[9px] md:text-[11px] uppercase tracking-[0.2em] opacity-60 font-medium text-center italic max-w-[120px] md:max-w-[200px]">
+            <div className="w-full flex justify-center gap-4 md:gap-16 -mt-12 md:-mt-24 px-4 relative z-10">
+              <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium text-center italic max-w-[100px] md:max-w-[180px] leading-relaxed">
                 {t.trajeSinCorbata}
               </p>
-              <p className="text-[9px] md:text-[11px] uppercase tracking-[0.2em] opacity-60 font-medium text-center italic max-w-[120px] md:max-w-[200px]">
+              <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium text-center italic max-w-[100px] md:max-w-[180px] leading-relaxed">
                 {t.vestidoLargo}
               </p>
             </div>
