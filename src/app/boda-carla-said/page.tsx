@@ -4,10 +4,11 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Literata, Dancing_Script } from 'next/font/google'
-import { CalendarPlus, ExternalLink, MapPin } from 'lucide-react'
+import { CalendarPlus, ExternalLink, MapPin, CreditCard, Globe, Heart, Copy, Check } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
+import { toast } from '@/hooks/use-toast'
 
 const serif = Literata({ subsets: ['latin'], weight: ['300', '400', '600'] })
 const script = Dancing_Script({ subsets: ['latin'], weight: ['400', '700'] })
@@ -44,7 +45,15 @@ const translations = {
     waMessage: "¡Hola Carla y Said! Estoy muy emocionado por su boda. Me encantaría confirmar mi asistencia para celebrar con ustedes el 20 de diciembre de 2026 en Zihuatanejo. ¡Nos vemos pronto!",
     venue: "Club de Playa Garrobo",
     trajeSinCorbata: "Traje sin corbata",
-    vestidoLargo: "Vestido abajo de las rodillas"
+    vestidoLargo: "Vestido abajo de las rodillas",
+    mesaRegalos: "Mesa de Regalos",
+    regalosFrase: "El mejor regalo es su presencia, pero si desean tener un detalle con nosotros, les agradeceríamos que fuera a través de transferencia. Vivir en Italia dificulta llevar regalos físicos, por lo que este gesto nos facilitará mucho comenzar nuestro hogar allá.",
+    paypal: "PayPal",
+    clabe: "CLABE (México)",
+    iban: "IBAN (Europa)",
+    copiar: "Copiar",
+    copiado: "Copiado",
+    irPaypal: "Ir a PayPal"
   },
   it: {
     seAcabo: "Il tempo è finito",
@@ -64,7 +73,7 @@ const translations = {
     verMapa: "Visualizza posizione",
     hospedaje: "Sede dell'Hotel",
     reservar: "Prenotazioni a breve",
-    reservaMasAdelante: "La prenotación será disponible più avanti.",
+    reservaMasAdelante: "La prenotación sarà disponibile più avanti.",
     verWeb: "Sito web",
     tarifaPreferencial: "Abbiamo una tarifa preferenziale per i nostri ospiti.",
     confirmar: "Conferma participación",
@@ -77,7 +86,15 @@ const translations = {
     waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia participación per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!",
     venue: "Club de Playa Garrobo",
     trajeSinCorbata: "Abito senza cravatta",
-    vestidoLargo: "Abito sotto le ginocchia"
+    vestidoLargo: "Abito sotto le ginocchia",
+    mesaRegalos: "Lista Nozze",
+    regalosFrase: "Il regalo più grande è la vostra presenza, ma se desiderate farci un pensiero, apprezzeremmo che sia tramite bonifico. Vivere in Italia rende difficile il trasporto di regali fisici, perciò questo gesto ci aiuterà molto a creare la nostra casa lì.",
+    paypal: "PayPal",
+    clabe: "CLABE (Messico)",
+    iban: "IBAN (Europa)",
+    copiar: "Copia",
+    copiado: "Copiato",
+    irPaypal: "Vai a PayPal"
   }
 }
 
@@ -156,10 +173,31 @@ function ItineraryItem({ step }: { step: any }) {
   )
 }
 
+function RegistryCard({ title, icon: Icon, value, buttonLabel, onAction, isCopied }: { title: string, icon: any, value: string, buttonLabel: string, onAction: () => void, isCopied?: boolean }) {
+  return (
+    <div className="bg-white p-8 rounded-2xl shadow-sm border border-[#c5a059]/10 flex flex-col items-center gap-4 transition-all duration-500 hover:shadow-md hover:border-[#c5a059]/30">
+      <div className="w-12 h-12 rounded-full bg-[#f5f0e6] flex items-center justify-center text-[#c5a059]">
+        <Icon size={24} />
+      </div>
+      <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#5c6b5c]/60">{title}</h4>
+      <p className="font-mono text-sm tracking-tighter text-[#5c6b5c] break-all text-center">{value}</p>
+      <Button 
+        onClick={onAction}
+        variant="ghost"
+        className="mt-2 rounded-full px-6 text-[10px] uppercase tracking-[0.2em] text-[#c5a059] hover:bg-[#c5a059] hover:text-white transition-all duration-500 gap-2"
+      >
+        {isCopied ? <Check size={14} /> : <Copy size={14} />}
+        {buttonLabel}
+      </Button>
+    </div>
+  )
+}
+
 export default function WeddingPage() {
   const [lang, setLang] = useState<'es' | 'it'>('es')
   const [isFinished, setIsFinished] = useState(false)
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+  const [copiedField, setCopiedField] = useState<string | null>(null)
   const t = translations[lang]
 
   const heroImage = PlaceHolderImages.find(img => img.id === 'wedding-hero')
@@ -190,6 +228,12 @@ export default function WeddingPage() {
     }, 1000)
     return () => clearInterval(timer)
   }, [])
+
+  const handleCopy = (text: string, field: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedField(field);
+    setTimeout(() => setCopiedField(null), 2000);
+  }
 
   const handleAddToCalendar = () => {
     const event = {
@@ -477,8 +521,60 @@ export default function WeddingPage() {
         </div>
       </section>
 
+      {/* Mesa de Regalos */}
+      <section id="regalos" className="py-24 md:py-40 bg-[#fbf9f4]">
+        <div className="max-w-6xl mx-auto px-6">
+          <RevealSection className="text-center mb-16 md:mb-24">
+            <h3 className={cn(serif.className, "text-5xl md:text-8xl italic text-[#5c6b5c]")}>{t.mesaRegalos}</h3>
+            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
+          </RevealSection>
+
+          <div className="max-w-4xl mx-auto">
+            <RevealSection delay={200} className="text-center mb-16">
+              <p className="text-sm md:text-lg italic opacity-70 tracking-wide font-light max-w-2xl mx-auto leading-relaxed">
+                “{t.regalosFrase}”
+              </p>
+            </RevealSection>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <RevealSection delay={300}>
+                <RegistryCard 
+                  title={t.paypal}
+                  icon={Globe}
+                  value="paypal.me/carlaandsaid"
+                  buttonLabel={t.irPaypal}
+                  onAction={() => window.open('https://paypal.me/', '_blank')}
+                />
+              </RevealSection>
+
+              <RevealSection delay={400}>
+                <RegistryCard 
+                  title={t.clabe}
+                  icon={CreditCard}
+                  value="0123 4567 8901 2345 67"
+                  buttonLabel={copiedField === 'clabe' ? t.copiado : t.copiar}
+                  isCopied={copiedField === 'clabe'}
+                  onAction={() => handleCopy('012345678901234567', 'clabe')}
+                />
+              </RevealSection>
+
+              <RevealSection delay={500}>
+                <RegistryCard 
+                  title={t.iban}
+                  icon={Heart}
+                  value="IT00 X000 0000 0000 0000 0000 000"
+                  buttonLabel={copiedField === 'iban' ? t.copiado : t.copiar}
+                  isCopied={copiedField === 'iban'}
+                  onAction={() => handleCopy('IT00X00000000000000000000000', 'iban')}
+                />
+              </RevealSection>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Sección de Vestimenta */}
-      <section className="py-8 md:py-16 bg-[#fbf9f4] overflow-hidden">
+      <section className="py-8 md:py-16 bg-[#fcfaf7] overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <RevealSection className="flex flex-col items-center">
             <div className="space-y-1 relative z-10">
@@ -501,12 +597,16 @@ export default function WeddingPage() {
             </div>
 
             <div className="w-full flex justify-center gap-4 md:gap-16 -mt-12 md:-mt-24 px-4 relative z-10">
-              <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium text-center italic max-w-[100px] md:max-w-[180px] leading-relaxed">
-                {t.trajeSinCorbata}
-              </p>
-              <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium text-center italic max-w-[100px] md:max-w-[180px] leading-relaxed">
-                {t.vestidoLargo}
-              </p>
+              <div className="flex flex-col items-center max-w-[100px] md:max-w-[180px]">
+                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium text-center italic leading-relaxed">
+                  {t.trajeSinCorbata}
+                </p>
+              </div>
+              <div className="flex flex-col items-center max-w-[100px] md:max-w-[180px]">
+                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium text-center italic leading-relaxed">
+                  {t.vestidoLargo}
+                </p>
+              </div>
             </div>
           </RevealSection>
         </div>
