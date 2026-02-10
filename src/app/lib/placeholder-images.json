@@ -64,19 +64,19 @@
     {
       "id": "rec-zihua",
       "description": "Recomendaciones Zihuatanejo",
-      "imageUrl": "https://picsum.photos/seed/zihua/800/1000",
+      "imageUrl": "/foto6.png",
       "imageHint": "zihuatanejo beach"
     },
     {
       "id": "rec-guerrero",
       "description": "Recomendaciones Guerrero",
-      "imageUrl": "https://picsum.photos/seed/guerrero/800/1000",
+      "imageUrl": "/foto7.png",
       "imageHint": "mexico landscape"
     },
     {
       "id": "rec-mexico",
       "description": "Recomendaciones México",
-      "imageUrl": "https://picsum.photos/seed/mexico/800/1000",
+      "imageUrl": "/foto8.png",
       "imageHint": "mexico culture"
     }
   ]
