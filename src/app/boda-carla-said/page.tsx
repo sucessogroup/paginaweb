@@ -521,6 +521,45 @@ export default function WeddingPage() {
         </div>
       </section>
 
+      {/* Sección de Vestimenta */}
+      <section className="py-8 md:py-16 bg-[#fcfaf7] overflow-hidden">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <RevealSection className="flex flex-col items-center">
+            <div className="space-y-1 relative z-10">
+              <h2 className={cn(serif.className, "text-5xl md:text-7xl italic text-[#5c6b5c]")}>
+                {t.vestimenta}
+              </h2>
+              <p className="text-[10px] uppercase tracking-[0.4em] opacity-50 font-bold">
+                {t.formalLino}
+              </p>
+            </div>
+
+            <div className="relative w-full max-w-[280px] md:max-w-[550px] aspect-[4/5] -mt-20 md:-mt-36 transition-all duration-700">
+              <Image 
+                src={dresscodeImg?.imageUrl || "/dresscode.png"} 
+                alt="Dress Code" 
+                fill 
+                className="object-contain"
+                data-ai-hint="formal attire illustration"
+              />
+            </div>
+
+            <div className="w-full flex justify-center gap-4 md:gap-16 -mt-12 md:-mt-24 px-4 relative z-10">
+              <div className="flex flex-col items-center max-w-[100px] md:max-w-[180px]">
+                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium text-center italic leading-relaxed">
+                  {t.trajeSinCorbata}
+                </p>
+              </div>
+              <div className="flex flex-col items-center max-w-[100px] md:max-w-[180px]">
+                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium text-center italic leading-relaxed">
+                  {t.vestidoLargo}
+                </p>
+              </div>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
       {/* Mesa de Regalos */}
       <section id="regalos" className="py-24 md:py-40 bg-[#fbf9f4]">
         <div className="max-w-6xl mx-auto px-6">
@@ -570,45 +609,6 @@ export default function WeddingPage() {
               </RevealSection>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Sección de Vestimenta */}
-      <section className="py-8 md:py-16 bg-[#fcfaf7] overflow-hidden">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <RevealSection className="flex flex-col items-center">
-            <div className="space-y-1 relative z-10">
-              <h2 className={cn(serif.className, "text-5xl md:text-7xl italic text-[#5c6b5c]")}>
-                {t.vestimenta}
-              </h2>
-              <p className="text-[10px] uppercase tracking-[0.4em] opacity-50 font-bold">
-                {t.formalLino}
-              </p>
-            </div>
-
-            <div className="relative w-full max-w-[280px] md:max-w-[550px] aspect-[4/5] -mt-20 md:-mt-36 transition-all duration-700">
-              <Image 
-                src={dresscodeImg?.imageUrl || "/dresscode.png"} 
-                alt="Dress Code" 
-                fill 
-                className="object-contain"
-                data-ai-hint="formal attire illustration"
-              />
-            </div>
-
-            <div className="w-full flex justify-center gap-4 md:gap-16 -mt-12 md:-mt-24 px-4 relative z-10">
-              <div className="flex flex-col items-center max-w-[100px] md:max-w-[180px]">
-                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium text-center italic leading-relaxed">
-                  {t.trajeSinCorbata}
-                </p>
-              </div>
-              <div className="flex flex-col items-center max-w-[100px] md:max-w-[180px]">
-                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium text-center italic leading-relaxed">
-                  {t.vestidoLargo}
-                </p>
-              </div>
-            </div>
-          </RevealSection>
         </div>
       </section>
     </div>
