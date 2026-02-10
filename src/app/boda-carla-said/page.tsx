@@ -478,10 +478,10 @@ export default function WeddingPage() {
       </section>
 
       {/* Sección de Vestimenta */}
-      <section className="py-16 md:py-24 bg-[#fbf9f4] overflow-hidden">
+      <section className="py-8 md:py-16 bg-[#fbf9f4] overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <RevealSection className="flex flex-col items-center">
-            <div className="space-y-2">
+            <div className="space-y-1 relative z-10">
               <h2 className={cn(serif.className, "text-5xl md:text-7xl italic text-[#5c6b5c]")}>
                 {t.vestimenta}
               </h2>
@@ -490,7 +490,7 @@ export default function WeddingPage() {
               </p>
             </div>
 
-            <div className="relative w-full max-w-[320px] md:max-w-[780px] aspect-[4/5] -mt-12 md:-mt-20">
+            <div className="relative w-full max-w-[320px] md:max-w-[780px] aspect-[4/5] -mt-24 md:-mt-44 transition-all duration-700">
               <Image 
                 src={dresscodeImg?.imageUrl || "/dresscode.png"} 
                 alt="Dress Code" 
@@ -500,7 +500,7 @@ export default function WeddingPage() {
               />
             </div>
 
-            <div className="w-full max-w-[320px] md:max-w-[780px] flex justify-between mt-0 md:-mt-6 px-2 md:px-8">
+            <div className="w-full max-w-[320px] md:max-w-[780px] flex justify-between -mt-16 md:-mt-32 px-2 md:px-8 relative z-10">
               <p className="text-[9px] md:text-[11px] uppercase tracking-[0.2em] opacity-60 font-medium text-left italic">
                 {t.trajeSinCorbata}
               </p>
