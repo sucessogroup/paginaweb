@@ -561,7 +561,7 @@ export default function WeddingPage() {
       </section>
 
       {/* Mesa de Regalos */}
-      <section id="regalos" className="py-24 md:py-40 bg-[#fbf9f4]">
+      <section id="regalos" className="py-24 md:py-40 bg-[#f4f1ea]">
         <div className="max-w-6xl mx-auto px-6">
           <RevealSection className="text-center mb-16 md:mb-24">
             <h3 className={cn(serif.className, "text-5xl md:text-8xl italic text-[#5c6b5c]")}>{t.mesaRegalos}</h3>
