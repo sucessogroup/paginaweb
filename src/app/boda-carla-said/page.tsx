@@ -68,7 +68,7 @@ const translations = {
     wa: "WhatsApp",
     ig: "Instagram",
     recomendaciones: "Recomendaciones",
-    queHacer: "¿Qué puedo hacer durante el fin de semana?",
+    queHacer: "¿Qué puedo hacer durante el fin de semana o después de la fiesta?",
     verMas: "VER MÁS",
     cosasEn: "COSAS QUE HACER EN",
     zihuaCap: "ZIHUATANEJO",
@@ -119,7 +119,7 @@ const translations = {
     trajeSinCorbata: "Abito senza cravatta",
     vestidoLargo: "Abito sotto le ginocchia",
     mesaRegalos: "Lista Nozze",
-    regalosFrase: "Il regalo più grande è la vostra presenza, ma se desiderate farci un pensiero, apprezzeremmo che sia tramite bonifico. Vivere in Italia rende difficile il trasporto di regali fisici, perciò questo gesto ci aiuterà molto a creare la nostra casa lì.",
+    regalosFrase: "Il regalo più grande è la vostra presencia, ma se desiderate farci un pensiero, apprezzeremmo che sia tramite bonifico. Vivere in Italia rende difficile il trasporto di regali fisici, perciò questo gesto ci aiuterà molto a creare la nostra casa lì.",
     paypal: "PayPal",
     clabe: "CLABE (Messico)",
     iban: "IBAN (Europa)",
@@ -133,7 +133,7 @@ const translations = {
     wa: "WhatsApp",
     ig: "Instagram",
     recomendaciones: "Raccomandazioni",
-    queHacer: "Cosa fare durante il fine settimana?",
+    queHacer: "Cosa fare durante il fine settimana o dopo la festa?",
     verMas: "VEDI DI PIÙ",
     cosasEn: "COSE DA FARE A",
     zihuaCap: "ZIHUATANEJO",
@@ -704,7 +704,7 @@ export default function WeddingPage() {
       <section id="recomendaciones" className="py-24 md:py-40 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <RevealSection className="text-center mb-24 md:mb-32">
-            <h3 className={cn(serif.className, "text-5xl md:text-8xl italic text-[#5c6b5c]")}>{t.recomendaciones}</h3>
+            <h3 className={cn(serif.className, "text-3xl md:text-8xl italic text-[#5c6b5c]")}>{t.recomendaciones}</h3>
             <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] opacity-40 mt-4 md:mt-6 font-bold">{t.queHacer}</p>
             <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-8 opacity-30" />
           </RevealSection>
