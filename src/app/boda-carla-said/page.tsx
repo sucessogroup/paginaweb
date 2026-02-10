@@ -4,11 +4,17 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Literata, Dancing_Script } from 'next/font/google'
-import { CalendarPlus, ExternalLink, MapPin, CreditCard, Globe, Heart, Copy, Check } from 'lucide-react'
+import { CalendarPlus, ExternalLink, MapPin, CreditCard, Globe, Heart, Copy, Check, Plus } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
 import { toast } from '@/hooks/use-toast'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 const serif = Literata({ subsets: ['latin'], weight: ['300', '400', '600'] })
 const script = Dancing_Script({ subsets: ['latin'], weight: ['400', '700'] })
@@ -53,7 +59,20 @@ const translations = {
     iban: "IBAN (Europa)",
     copiar: "Copiar",
     copiado: "Copiado",
-    irPaypal: "Ir a PayPal"
+    irPaypal: "Ir a PayPal",
+    faqsTitle: "Preguntas frecuentes",
+    faqs: [
+      { q: "¿Qué requisitos necesito para viajar a México desde Italia?", a: "Los ciudadanos italianos no necesitan visa para viajar a México como turistas. Se requiere pasaporte vigente, boleto de regreso y completar el formulario migratorio a la llegada." },
+      { q: "¿A qué aeropuerto debo llegar?", a: "El aeropuerto recomendado es el Aeropuerto Internacional de Ixtapa–Zihuatanejo (ZIH), el más cercano al hotel y al lugar del evento. También se puede llegar vía Ciudad de México (CDMX) y tomar un vuelo nacional a Zihuatanejo." },
+      { q: "¿Cómo llego del aeropuerto al hotel o al evento?", a: "Desde el aeropuerto pueden trasladarse en taxi autorizado, transporte privado o servicio del hotel. Los trayectos son cortos y sencillos." },
+      { q: "¿Dónde se llevará a cabo la boda?", a: "La boda se celebrará en Club de Playa Garrobo, en Zihuatanejo, Guerrero, México. La ubicación exacta puede consultarse en el mapa disponible en esta página." },
+      { q: "¿El aeropuerto, el hotel y el lugar del evento están cerca?", a: "Sí. Zihuatanejo es una ciudad pequeña y los traslados suelen ser de entre 15 y 30 minutos." },
+      { q: "¿Cómo es el clima en diciembre?", a: "Diciembre tiene clima cálido y agradable, con temperaturas aproximadas entre 22 °C y 30 °C y muy baja probabilidad de lluvia." },
+      { q: "¿Qué moneda se usa y cómo recomiendan pagar?", a: "La moneda oficial es el peso mexicano (MXN). Se recomienda usar tarjetas y llevar algo de efectivo para gastos pequeños." },
+      { q: "¿Es seguro viajar a Zihuatanejo?", a: "Zihuatanejo es un destino turístico tranquilo. Se recomienda seguir precauciones básicas y usar transporte autorizado." },
+      { q: "¿Pueden asistir niños?", a: "Sí, los niños son bienvenidos. El evento tendrá un ambiente familiar y relajado." },
+      { q: "¿Qué vestimenta se recomienda?", a: "La vestimenta es formal de lino: traje sin corbata y vestido abajo de la rodilla." }
+    ]
   },
   it: {
     seAcabo: "Il tempo è finito",
@@ -94,7 +113,20 @@ const translations = {
     iban: "IBAN (Europa)",
     copiar: "Copia",
     copiado: "Copiato",
-    irPaypal: "Vai a PayPal"
+    irPaypal: "Vai a PayPal",
+    faqsTitle: "Domande frequenti",
+    faqs: [
+      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico come turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
+      { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
+      { q: "Come arrivo dall'aeroporto all'hotel o all'evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servizio dell'hotel. I tragitti sono brevi e semplici." },
+      { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta può essere consultata sulla mappa disponibile su questa pagina." },
+      { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una città piccola e i trasferimenti durano solitamente tra i 15 e i 30 minuti." },
+      { q: "Com'è il clima a dicembre?", a: "Dicembre ha un clima caldo e piacevole, con temperature approssimative tra i 22 °C e i 30 °C e una probabilità di pioggia molto bassa." },
+      { q: "Quale valuta si usa e come consigliate di pagare?", a: "La valuta ufficiale è il peso messicano (MXN). Si consiglia di utilizzare le carte e portare con sé dei contanti per le piccole spese." },
+      { q: "È sicuro viaggiare a Zihuatanejo?", a: "Zihuatanejo è una destinazione turistica tranquilla. Si consiglia di seguire le precauzioni di base e utilizzare trasporti autorizzati." },
+      { q: "Possono partecipare i bambini?", a: "Sì, i bambini sono i benvenuti. L'evento avrà un'atmosfera familiare e rilassata." },
+      { q: "Quale abbigliamento è consigliato?", a: "L'abbigliamento è formale in lino: abito senza cravatta e vestito sotto il ginocchio." }
+    ]
   }
 }
 
@@ -609,6 +641,31 @@ export default function WeddingPage() {
               </RevealSection>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Preguntas Frecuentes */}
+      <section id="faqs" className="py-24 md:py-40 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <RevealSection className="text-center mb-16 md:mb-24">
+            <h3 className={cn(serif.className, "text-4xl md:text-7xl italic text-[#5c6b5c]")}>{t.faqsTitle}</h3>
+            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
+          </RevealSection>
+
+          <RevealSection delay={300}>
+            <Accordion type="single" collapsible className="w-full">
+              {t.faqs.map((faq, idx) => (
+                <AccordionItem key={idx} value={`item-${idx}`} className="border-[#c5a059]/10">
+                  <AccordionTrigger className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-bold text-[#5c6b5c] text-left hover:no-underline hover:text-[#c5a059] py-6 [&[data-state=open]>svg]:rotate-180">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-sm md:text-base font-light italic opacity-70 leading-relaxed text-[#5c6b5c] pb-8">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </RevealSection>
         </div>
       </section>
     </div>
