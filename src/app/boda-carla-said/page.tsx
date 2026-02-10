@@ -23,9 +23,10 @@ const translations = {
     acompananos: "Acompáñanos en este momento",
     calendario: "Añadir al calendario",
     itinerario: "Itinerario",
+    llegada: "Llegada al club de playa",
     ceremonia: "Ceremonia",
-    coctel: "Cóctel de Bienvenida",
-    recepcion: "Recepción y Cena",
+    recepcion: "Recepción y cena",
+    fin: "Fin del evento",
     ubicacion: "Ubicación",
     verMapa: "Ver ubicación en mapa",
     hospedaje: "Hotel",
@@ -53,9 +54,10 @@ const translations = {
     acompananos: "Accompagnaci in questo momento",
     calendario: "Aggiungi al calendario",
     itinerario: "Itinerario",
+    llegada: "Arrivo al club de playa",
     ceremonia: "Cerimonia",
-    coctel: "Cocktail di Benvenuto",
-    recepcion: "Ricevimento e Cena",
+    recepcion: "Ricevimento e cena",
+    fin: "Fine dell'evento",
     ubicacion: "Posizione",
     verMapa: "Visualizza posizione",
     hospedaje: "Hotel",
@@ -257,7 +259,7 @@ export default function WeddingPage() {
             src={heroImage?.imageUrl || "/foto1.png"} 
             alt="Carla & Said Wedding" 
             fill
-            className="object-cover object-[75%_center] md:object-center pointer-events-none"
+            className="object-cover object-[75%_center] pointer-events-none"
             priority
             data-ai-hint="wedding couple beach"
           />
@@ -413,9 +415,10 @@ export default function WeddingPage() {
 
           <div className="space-y-20 md:space-y-32">
             {[
-              { time: "17:00", label: t.ceremonia },
-              { time: "18:30", label: t.coctel },
-              { time: "20:00", label: t.recepcion }
+              { time: "17:00", label: t.llegada },
+              { time: "17:30", label: t.ceremonia },
+              { time: "19:30", label: t.recepcion },
+              { time: "01:00", label: t.fin }
             ].map((step, idx) => (
               <ItineraryItem key={idx} step={step} t={t} />
             ))}
