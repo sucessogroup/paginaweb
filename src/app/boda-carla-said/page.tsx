@@ -143,8 +143,8 @@ const translations = {
       { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico como turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
       { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
       { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servizio dell'hotel. I tragitti son brevi e semplici." },
-      { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta può essere consultata sulla mappa disponibile su questa pagina." },
-      { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una ciudad piccola e i trasferimenti durano solitamente tra i 15 e i 30 minuti." },
+      { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta può essere consultata sulla mappa disponible su questa pagina." },
+      { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una ciudad piccola e i trasferimenti durano solitamente tra i 15 y i 30 minuti." },
       { q: "Com'è il clima a dicembre?", a: "Dicembre ha un clima caldo e piacevole, con temperature approssimative tra i 22 °C e i 30 °C e una probabilità di pioggia molto bassa." },
       { q: "Quale valuta si usa e come consigliate di pagare?", a: "La valuta ufficiale è il peso messicano (MXN). Si consiglia di utilizzare le carte e portare con sé dei contanti per le piccole spese." },
       { q: "È sicuro viaggiare a Zihuatanejo?", a: "Zihuatanejo è una destinazione turistica tranquilla. Si consiglia di seguire le precauzioni di base e utilizzare trasporti autorizzati." },
@@ -700,6 +700,28 @@ export default function WeddingPage() {
         </div>
       </section>
 
+      {/* Maquillaje y Peinado */}
+      <section id="maquillaje" className="py-24 md:py-40 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <RevealSection className="text-center mb-16 md:mb-32">
+            <h3 className={cn(serif.className, "text-4xl md:text-7xl italic text-[#5c6b5c]")}>{t.maquillajeTitle}</h3>
+            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
+          </RevealSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <RevealSection delay={200}>
+              <VendorCard title={t.proveedorMaquillaje} subtitle={t.proximamente} t={t} />
+            </RevealSection>
+            <RevealSection delay={300}>
+              <VendorCard title={t.proveedorMaquillaje} subtitle={t.proximamente} t={t} />
+            </RevealSection>
+            <RevealSection delay={400}>
+              <VendorCard title={t.proveedorMaquillaje} subtitle={t.proximamente} t={t} />
+            </RevealSection>
+          </div>
+        </div>
+      </section>
+
       {/* Recomendaciones */}
       <section id="recomendaciones" className="py-24 md:py-40 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -765,28 +787,6 @@ export default function WeddingPage() {
                   </Link>
                 </Button>
               </div>
-            </RevealSection>
-          </div>
-        </div>
-      </section>
-
-      {/* Maquillaje y Peinado */}
-      <section id="maquillaje" className="py-24 md:py-40 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <RevealSection className="text-center mb-16 md:mb-32">
-            <h3 className={cn(serif.className, "text-4xl md:text-7xl italic text-[#5c6b5c]")}>{t.maquillajeTitle}</h3>
-            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
-          </RevealSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <RevealSection delay={200}>
-              <VendorCard title={t.proveedorMaquillaje} subtitle={t.proximamente} t={t} />
-            </RevealSection>
-            <RevealSection delay={300}>
-              <VendorCard title={t.proveedorMaquillaje} subtitle={t.proximamente} t={t} />
-            </RevealSection>
-            <RevealSection delay={400}>
-              <VendorCard title={t.proveedorMaquillaje} subtitle={t.proximamente} t={t} />
             </RevealSection>
           </div>
         </div>
