@@ -42,7 +42,9 @@ const translations = {
     vestimenta: "Vestimenta",
     formalLino: "Formal de lino",
     waMessage: "¡Hola Carla y Said! Estoy muy emocionado por su boda. Me encantaría confirmar mi asistencia para celebrar con ustedes el 20 de diciembre de 2026 en Zihuatanejo. ¡Nos vemos pronto!",
-    venue: "Club de Playa Garrobo"
+    venue: "Club de Playa Garrobo",
+    trajeSinCorbata: "Traje sin corbata",
+    vestidoLargo: "Vestido abajo de las rodillas"
   },
   it: {
     seAcabo: "Il tempo è finito",
@@ -73,7 +75,9 @@ const translations = {
     vestimenta: "Abbigliamento",
     formalLino: "Formale in lino",
     waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia participación per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!",
-    venue: "Club de Playa Garrobo"
+    venue: "Club de Playa Garrobo",
+    trajeSinCorbata: "Abito senza cravatta",
+    vestidoLargo: "Abito sotto le ginocchia"
   }
 }
 
@@ -494,6 +498,15 @@ export default function WeddingPage() {
                 className="object-contain"
                 data-ai-hint="formal attire illustration"
               />
+            </div>
+
+            <div className="w-full max-w-[320px] md:max-w-[780px] flex justify-between mt-2 md:mt-0 px-2 md:px-8">
+              <p className="text-[9px] md:text-[11px] uppercase tracking-[0.2em] opacity-60 font-medium text-left italic">
+                {t.trajeSinCorbata}
+              </p>
+              <p className="text-[9px] md:text-[11px] uppercase tracking-[0.2em] opacity-60 font-medium text-right italic">
+                {t.vestidoLargo}
+              </p>
             </div>
           </RevealSection>
         </div>
