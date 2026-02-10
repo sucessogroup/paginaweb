@@ -60,6 +60,24 @@
       "description": "Imagen de código de vestimenta",
       "imageUrl": "/dresscode.png",
       "imageHint": "dress code"
+    },
+    {
+      "id": "rec-zihua",
+      "description": "Recomendaciones Zihuatanejo",
+      "imageUrl": "https://picsum.photos/seed/zihua/800/1000",
+      "imageHint": "zihuatanejo beach"
+    },
+    {
+      "id": "rec-guerrero",
+      "description": "Recomendaciones Guerrero",
+      "imageUrl": "https://picsum.photos/seed/guerrero/800/1000",
+      "imageHint": "mexico landscape"
+    },
+    {
+      "id": "rec-mexico",
+      "description": "Recomendaciones México",
+      "imageUrl": "https://picsum.photos/seed/mexico/800/1000",
+      "imageHint": "mexico culture"
     }
   ]
 }

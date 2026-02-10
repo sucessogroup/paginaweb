@@ -3,8 +3,9 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Literata, Dancing_Script } from 'next/font/google'
-import { CalendarPlus, ExternalLink, MapPin, CreditCard, Globe, Heart, Copy, Check, Plus, MessageCircle, Instagram } from 'lucide-react'
+import { CalendarPlus, ExternalLink, MapPin, CreditCard, Globe, Heart, Copy, Check, Plus, MessageCircle, Instagram, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
@@ -66,6 +67,13 @@ const translations = {
     proximamente: "Información próximamente",
     wa: "WhatsApp",
     ig: "Instagram",
+    recomendaciones: "Recomendaciones",
+    queHacer: "¿Qué puedo hacer durante el fin de semana?",
+    verMas: "VER MÁS",
+    cosasEn: "COSAS QUE HACER EN",
+    zihuaCap: "ZIHUATANEJO",
+    guerreroCap: "GUERRERO",
+    mexicoCap: "MÉXICO",
     faqs: [
       { q: "¿Qué requisitos necesito para viajar a México desde Italia?", a: "Los ciudadanos italianos no necesitan visa para viajar a México como turistas. Se requiere pasaporte vigente, boleto de regreso y completar el formulario migratorio a la llegada." },
       { q: "¿A qué aeropuerto debo llegar?", a: "El aeropuerto recomendado es el Aeropuerto Internacional de Ixtapa–Zihuatanejo (ZIH), el más cercano al hotel y al lugar del evento. También se puede llegar vía Ciudad de México (CDMX) y tomar un vuelo nacional a Zihuatanejo." },
@@ -82,7 +90,7 @@ const translations = {
     seAcabo: "Il tempo è finito",
     dias: "Giorni",
     horas: "Ore",
-    minutos: "Minuti",
+    minutos: "Secondi",
     segundos: "Secondi",
     faltaPoco: "Manca poco al nostro per siempre",
     acompananos: "Accompagnaci in questo momento",
@@ -124,6 +132,13 @@ const translations = {
     proximamente: "Informazioni in arrivo",
     wa: "WhatsApp",
     ig: "Instagram",
+    recomendaciones: "Raccomandazioni",
+    queHacer: "Cosa fare durante il fine settimana?",
+    verMas: "VEDI DI PIÙ",
+    cosasEn: "COSE DA FARE A",
+    zihuaCap: "ZIHUATANEJO",
+    guerreroCap: "GUERRERO",
+    mexicoCap: "MESSICO",
     faqs: [
       { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico como turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
       { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
@@ -277,6 +292,9 @@ export default function WeddingPage() {
   const flagMx = PlaceHolderImages.find(img => img.id === 'flag-mx')
   const flagIt = PlaceHolderImages.find(img => img.id === 'flag-it')
   const dresscodeImg = PlaceHolderImages.find(img => img.id === 'dresscode-image')
+  const recZihuaImg = PlaceHolderImages.find(img => img.id === 'rec-zihua')
+  const recGuerreroImg = PlaceHolderImages.find(img => img.id === 'rec-guerrero')
+  const recMexicoImg = PlaceHolderImages.find(img => img.id === 'rec-mexico')
 
   useEffect(() => {
     const targetDate = new Date('2026-12-20T17:00:00').getTime()
@@ -604,7 +622,7 @@ export default function WeddingPage() {
               </p>
             </div>
 
-            <div className="relative w-full max-w-[280px] md:max-w-[320px] aspect-[4/5] -mt-10 md:-mt-16 transition-all duration-700">
+            <div className="relative w-full max-w-[220px] md:max-w-[280px] aspect-[4/5] -mt-6 md:-mt-10 transition-all duration-700 z-[1]">
               <Image 
                 src={dresscodeImg?.imageUrl || "/dresscode.png"} 
                 alt="Dress Code" 
@@ -614,14 +632,14 @@ export default function WeddingPage() {
               />
             </div>
 
-            <div className="w-full flex justify-center gap-6 md:gap-12 -mt-4 md:-mt-8 px-4 relative z-10">
-              <div className="flex flex-col items-center w-[140px] md:w-[180px] text-center">
-                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium italic leading-relaxed text-center">
+            <div className="w-full flex justify-center gap-2 md:gap-4 -mt-2 md:-mt-4 px-2 relative z-10">
+              <div className="flex flex-col items-center w-[120px] md:w-[150px] text-center">
+                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium italic leading-tight text-center">
                   {t.trajeSinCorbata}
                 </p>
               </div>
-              <div className="flex flex-col items-center w-[140px] md:w-[180px] text-center">
-                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium italic leading-relaxed text-center">
+              <div className="flex flex-col items-center w-[120px] md:w-[150px] text-center">
+                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium italic leading-tight text-center">
                   {t.vestidoLargo}
                 </p>
               </div>
@@ -682,6 +700,76 @@ export default function WeddingPage() {
         </div>
       </section>
 
+      {/* Recomendaciones */}
+      <section id="recomendaciones" className="py-24 md:py-40 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <RevealSection className="text-center mb-24 md:mb-32">
+            <h3 className={cn(serif.className, "text-5xl md:text-8xl italic text-[#5c6b5c]")}>{t.recomendaciones}</h3>
+            <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] opacity-40 mt-4 md:mt-6 font-bold">{t.queHacer}</p>
+            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-8 opacity-30" />
+          </RevealSection>
+
+          <div className="space-y-16 md:space-y-24">
+            {/* Zihuatanejo */}
+            <RevealSection className="grid md:grid-cols-2 items-center gap-12 md:gap-24 group">
+              <div className="relative aspect-[4/5] rounded-[1.5rem] overflow-hidden">
+                <Image src={recZihuaImg?.imageUrl || "/foto6.png"} alt="Zihuatanejo" fill className="object-cover" />
+                <div className="absolute inset-0 bg-[#8a9a5b]/10 mix-blend-multiply" />
+              </div>
+              <div className="space-y-6 md:space-y-8">
+                <div>
+                  <p className="text-[9px] uppercase tracking-[0.4em] opacity-40 font-bold mb-2">{t.cosasEn}</p>
+                  <h4 className={cn(serif.className, "text-4xl md:text-7xl italic text-[#5c6b5c]")}>{t.zihuaCap}</h4>
+                </div>
+                <Button asChild variant="link" className="p-0 h-auto text-[10px] uppercase tracking-[0.3em] text-[#c5a059] font-bold gap-2">
+                  <Link href="/recomendaciones-zihuatanejo">
+                    {t.verMas} <ArrowRight size={14} />
+                  </Link>
+                </Button>
+              </div>
+            </RevealSection>
+
+            {/* Guerrero */}
+            <RevealSection className="grid md:grid-cols-2 items-center gap-12 md:gap-24 group" delay={200}>
+              <div className="md:order-2 relative aspect-[4/5] rounded-[1.5rem] overflow-hidden">
+                <Image src={recGuerreroImg?.imageUrl || "/foto7.png"} alt="Guerrero" fill className="object-cover" />
+                <div className="absolute inset-0 bg-[#8a9a5b]/10 mix-blend-multiply" />
+              </div>
+              <div className="md:order-1 space-y-6 md:space-y-8 md:text-right flex flex-col md:items-end">
+                <div>
+                  <p className="text-[9px] uppercase tracking-[0.4em] opacity-40 font-bold mb-2">{t.cosasEn}</p>
+                  <h4 className={cn(serif.className, "text-4xl md:text-7xl italic text-[#5c6b5c]")}>{t.guerreroCap}</h4>
+                </div>
+                <Button asChild variant="link" className="p-0 h-auto text-[10px] uppercase tracking-[0.3em] text-[#c5a059] font-bold gap-2">
+                  <Link href="/recomendaciones-guerrero">
+                    {t.verMas} <ArrowRight size={14} />
+                  </Link>
+                </Button>
+              </div>
+            </RevealSection>
+
+            {/* México */}
+            <RevealSection className="grid md:grid-cols-2 items-center gap-12 md:gap-24 group" delay={400}>
+              <div className="relative aspect-[4/5] rounded-[1.5rem] overflow-hidden">
+                <Image src={recMexicoImg?.imageUrl || "/foto8.png"} alt="México" fill className="object-cover" />
+                <div className="absolute inset-0 bg-[#8a9a5b]/10 mix-blend-multiply" />
+              </div>
+              <div className="space-y-6 md:space-y-8">
+                <div>
+                  <p className="text-[9px] uppercase tracking-[0.4em] opacity-40 font-bold mb-2">{t.cosasEn}</p>
+                  <h4 className={cn(serif.className, "text-4xl md:text-7xl italic text-[#5c6b5c]")}>{t.mexicoCap}</h4>
+                </div>
+                <Button asChild variant="link" className="p-0 h-auto text-[10px] uppercase tracking-[0.3em] text-[#c5a059] font-bold gap-2">
+                  <Link href="/recomendaciones-mexico">
+                    {t.verMas} <ArrowRight size={14} />
+                  </Link>
+                </Button>
+              </div>
+            </RevealSection>
+          </div>
+        </div>
+      </section>
+
       {/* Maquillaje y Peinado */}
       <section id="maquillaje" className="py-24 md:py-40 bg-white">
         <div className="max-w-6xl mx-auto px-6">
@@ -706,16 +794,14 @@ export default function WeddingPage() {
 
       {/* Preguntas Frecuentes con Fondo Solapado */}
       <section id="faqs" className="relative">
-        {/* Foto 5 como fondo solapado */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image 
             src={footerImage?.imageUrl || "/foto5.png"} 
             alt="Wedding Footer" 
             fill 
-            className="object-cover object-center scale-110"
+            className="object-cover object-center scale-100"
             data-ai-hint="wedding couple sea"
           />
-          {/* Overlay para legibilidad del FAQ en el tercio superior */}
           <div className="absolute inset-0 bg-white/80 h-1/3" />
           <div className="absolute inset-x-0 top-[33.33%] bottom-0 bg-gradient-to-b from-white/80 via-transparent to-transparent" />
         </div>
@@ -742,10 +828,9 @@ export default function WeddingPage() {
           </RevealSection>
         </div>
         
-        {/* Espaciador inferior para mostrar el resto de la foto5 */}
         <div className="h-[60vh] md:h-[100vh] flex flex-col items-center justify-end pb-24 relative z-10">
           <RevealSection delay={500}>
-            <p className={cn(script.className, "text-7xl md:text-[11rem] text-white drop-shadow-lg")}>
+            <p className={cn(script.className, "text-7xl md:text-[13rem] text-white drop-shadow-lg")}>
               Carla & Said
             </p>
           </RevealSection>
