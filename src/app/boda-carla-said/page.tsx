@@ -604,7 +604,7 @@ export default function WeddingPage() {
               </p>
             </div>
 
-            <div className="relative w-full max-w-[280px] md:max-w-[450px] aspect-[4/5] -mt-16 md:-mt-24 transition-all duration-700">
+            <div className="relative w-full max-w-[280px] md:max-w-[320px] aspect-[4/5] -mt-10 md:-mt-16 transition-all duration-700">
               <Image 
                 src={dresscodeImg?.imageUrl || "/dresscode.png"} 
                 alt="Dress Code" 
@@ -614,14 +614,14 @@ export default function WeddingPage() {
               />
             </div>
 
-            <div className="w-full flex justify-center gap-12 md:gap-24 -mt-10 md:-mt-16 px-4 relative z-10">
-              <div className="flex flex-col items-center max-w-[120px] md:max-w-[180px] text-center">
-                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium italic leading-relaxed">
+            <div className="w-full flex justify-center gap-6 md:gap-12 -mt-4 md:-mt-8 px-4 relative z-10">
+              <div className="flex flex-col items-center w-[140px] md:w-[180px] text-center">
+                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium italic leading-relaxed text-center">
                   {t.trajeSinCorbata}
                 </p>
               </div>
-              <div className="flex flex-col items-center max-w-[120px] md:max-w-[180px] text-center">
-                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium italic leading-relaxed">
+              <div className="flex flex-col items-center w-[140px] md:w-[180px] text-center">
+                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium italic leading-relaxed text-center">
                   {t.vestidoLargo}
                 </p>
               </div>
@@ -745,7 +745,7 @@ export default function WeddingPage() {
         {/* Espaciador inferior para mostrar el resto de la foto5 */}
         <div className="h-[60vh] md:h-[100vh] flex flex-col items-center justify-end pb-24 relative z-10">
           <RevealSection delay={500}>
-            <p className={cn(script.className, "text-5xl md:text-8xl text-white drop-shadow-lg")}>
+            <p className={cn(script.className, "text-7xl md:text-[11rem] text-white drop-shadow-lg")}>
               Carla & Said
             </p>
           </RevealSection>
