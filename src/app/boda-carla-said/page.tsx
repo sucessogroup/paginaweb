@@ -95,7 +95,7 @@ const translations = {
     fin: "Fine dell'evento",
     ubicacion: "Posizione",
     verMapa: "Visualizza posizione",
-    hospedaje: "Sede dell'Hotel",
+    hospedaje: "Hotel Sede",
     reservar: "Prenotazioni a breve",
     reservaMasAdelante: "La prenotación sarà disponibile più avanti.",
     verWeb: "Sito web",
@@ -130,11 +130,11 @@ const translations = {
       { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
       { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servizio dell'hotel. I tragitti son brevi e semplici." },
       { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta può essere consultata sulla mappa disponibile su questa pagina." },
-      { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una città piccola e i trasferimenti durano solitamente tra i 15 e i 30 minuti." },
+      { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una ciudad piccola e i trasferimenti durano solitamente tra i 15 e i 30 minuti." },
       { q: "Com'è il clima a dicembre?", a: "Dicembre ha un clima caldo e piacevole, con temperature approssimative tra i 22 °C e i 30 °C e una probabilità di pioggia molto bassa." },
       { q: "Quale valuta si usa e come consigliate di pagare?", a: "La valuta ufficiale è il peso messicano (MXN). Si consiglia di utilizzare le carte e portare con sé dei contanti per le piccole spese." },
       { q: "È sicuro viaggiare a Zihuatanejo?", a: "Zihuatanejo è una destinazione turistica tranquilla. Si consiglia di seguire le precauzioni di base e utilizzare trasporti autorizzati." },
-      { q: "Possono partecipare i bambini?", a: "Amiamo i bambini, ma vogliamo che gli unici capricci della serata siano quelli degli adulti in pista. L'evento è riservato agli adulti." },
+      { q: "Possono partecipare i bambini?", a: "Amiamo i bambini, ma vogliamo che gli unici capricci della serata siano quelli degli ospiti in pista. L'evento escluso para adultos." },
       { q: "Quale abbigliamento è consigliato?", a: "L'abbigliamento è formale in lino: abito senza cravatta e vestito sotto il ginocchio." }
     ]
   }
@@ -275,6 +275,7 @@ export default function WeddingPage() {
   const quoteBgImage = PlaceHolderImages.find(img => img.id === 'wedding-bg-quote')
   const itineraryBgImage = PlaceHolderImages.find(img => img.id === 'wedding-bg-itinerary')
   const hotelImage = PlaceHolderImages.find(img => img.id === 'hotel-villa-mexicana')
+  const footerImage = PlaceHolderImages.find(img => img.id === 'wedding-footer')
   const flagMx = PlaceHolderImages.find(img => img.id === 'flag-mx')
   const flagIt = PlaceHolderImages.find(img => img.id === 'flag-it')
   const dresscodeImg = PlaceHolderImages.find(img => img.id === 'dresscode-image')
@@ -605,7 +606,7 @@ export default function WeddingPage() {
               </p>
             </div>
 
-            <div className="relative w-full max-w-[280px] md:max-w-[550px] aspect-[4/5] -mt-20 md:-mt-36 transition-all duration-700">
+            <div className="relative w-full max-w-[280px] md:max-w-[450px] aspect-[4/5] -mt-16 md:-mt-24 transition-all duration-700">
               <Image 
                 src={dresscodeImg?.imageUrl || "/dresscode.png"} 
                 alt="Dress Code" 
@@ -615,14 +616,14 @@ export default function WeddingPage() {
               />
             </div>
 
-            <div className="w-full flex justify-center gap-4 md:gap-16 -mt-12 md:-mt-24 px-4 relative z-10">
-              <div className="flex flex-col items-center max-w-[100px] md:max-w-[180px]">
-                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium text-center italic leading-relaxed">
+            <div className="w-full flex justify-center gap-12 md:gap-24 -mt-10 md:-mt-16 px-4 relative z-10">
+              <div className="flex flex-col items-center max-w-[120px] md:max-w-[180px] text-center">
+                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium italic leading-relaxed">
                   {t.trajeSinCorbata}
                 </p>
               </div>
-              <div className="flex flex-col items-center max-w-[100px] md:max-w-[180px]">
-                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium text-center italic leading-relaxed">
+              <div className="flex flex-col items-center max-w-[120px] md:max-w-[180px] text-center">
+                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium italic leading-relaxed">
                   {t.vestidoLargo}
                 </p>
               </div>
@@ -705,9 +706,23 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Preguntas Frecuentes */}
-      <section id="faqs" className="py-24 md:py-40 bg-[#fcfaf7]">
-        <div className="max-w-4xl mx-auto px-6">
+      {/* Preguntas Frecuentes con Fondo Solapado */}
+      <section id="faqs" className="relative">
+        {/* Foto 5 como fondo solapado */}
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src={footerImage?.imageUrl || "/foto5.png"} 
+            alt="Wedding Footer" 
+            fill 
+            className="object-cover object-top"
+            data-ai-hint="wedding couple sea"
+          />
+          {/* Overlay para legibilidad del FAQ en el tercio superior */}
+          <div className="absolute inset-0 bg-white/80 h-1/3" />
+          <div className="absolute inset-x-0 top-[33.33%] bottom-0 bg-gradient-to-b from-white/80 via-transparent to-transparent" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto px-6 pt-24 pb-32">
           <RevealSection className="text-center mb-16 md:mb-24">
             <h3 className={cn(serif.className, "text-4xl md:text-7xl italic text-[#5c6b5c]")}>{t.faqsTitle}</h3>
             <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
@@ -716,11 +731,11 @@ export default function WeddingPage() {
           <RevealSection delay={300}>
             <Accordion type="single" collapsible className="w-full">
               {t.faqs.map((faq, idx) => (
-                <AccordionItem key={idx} value={`item-${idx}`} className="border-[#c5a059]/10">
+                <AccordionItem key={idx} value={`item-${idx}`} className="border-[#c5a059]/10 bg-white/40 backdrop-blur-sm px-4 rounded-lg mb-2 overflow-hidden">
                   <AccordionTrigger className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-bold text-[#5c6b5c] text-left hover:no-underline hover:text-[#c5a059] py-6 [&[data-state=open]>svg]:rotate-180">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-sm md:text-base font-light italic opacity-70 leading-relaxed text-[#5c6b5c] pb-8">
+                  <AccordionContent className="text-sm md:text-base font-light italic opacity-90 leading-relaxed text-[#5c6b5c] pb-8">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -728,6 +743,9 @@ export default function WeddingPage() {
             </Accordion>
           </RevealSection>
         </div>
+        
+        {/* Espaciador inferior para mostrar el resto de la foto5 */}
+        <div className="h-[60vh] md:h-[100vh]" />
       </section>
     </div>
   )

@@ -38,6 +38,12 @@
       "imageHint": "hotel architecture"
     },
     {
+      "id": "wedding-footer",
+      "description": "Imagen de cierre foto5",
+      "imageUrl": "/foto5.png",
+      "imageHint": "wedding landscape"
+    },
+    {
       "id": "flag-mx",
       "description": "Bandera México PNG",
       "imageUrl": "/banderamx.png",
