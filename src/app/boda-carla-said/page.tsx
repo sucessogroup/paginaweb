@@ -743,7 +743,13 @@ export default function WeddingPage() {
         </div>
         
         {/* Espaciador inferior para mostrar el resto de la foto5 */}
-        <div className="h-[60vh] md:h-[100vh]" />
+        <div className="h-[60vh] md:h-[100vh] flex flex-col items-center justify-end pb-24 relative z-10">
+          <RevealSection delay={500}>
+            <p className={cn(script.className, "text-5xl md:text-8xl text-white drop-shadow-lg")}>
+              Carla & Said
+            </p>
+          </RevealSection>
+        </div>
       </section>
     </div>
   )
