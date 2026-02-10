@@ -500,11 +500,11 @@ export default function WeddingPage() {
               />
             </div>
 
-            <div className="w-full max-w-[320px] md:max-w-[780px] flex justify-between -mt-16 md:-mt-32 px-2 md:px-8 relative z-10">
-              <p className="text-[9px] md:text-[11px] uppercase tracking-[0.2em] opacity-60 font-medium text-left italic">
+            <div className="w-full flex justify-center gap-6 md:gap-24 -mt-16 md:-mt-32 px-4 relative z-10">
+              <p className="text-[9px] md:text-[11px] uppercase tracking-[0.2em] opacity-60 font-medium text-right italic max-w-[120px] md:max-w-[200px]">
                 {t.trajeSinCorbata}
               </p>
-              <p className="text-[9px] md:text-[11px] uppercase tracking-[0.2em] opacity-60 font-medium text-right italic">
+              <p className="text-[9px] md:text-[11px] uppercase tracking-[0.2em] opacity-60 font-medium text-left italic max-w-[120px] md:max-w-[200px]">
                 {t.vestidoLargo}
               </p>
             </div>
