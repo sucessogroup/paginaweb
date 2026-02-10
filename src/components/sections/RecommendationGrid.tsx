@@ -1,10 +1,9 @@
-
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import Image from 'next/image'
 import { Literata } from 'next/font/google'
-import { ExternalLink, Star } from 'lucide-react'
+import { ExternalLink, Star, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
 import { cn } from '@/lib/utils'
@@ -26,21 +25,24 @@ export function RecommendationGrid({ area }: { area: string }) {
   const [data, setData] = useState<Recommendation[]>([])
   const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    async function fetchData() {
-      setLoading(true)
-      try {
-        const res = await fetch(`/api/recommendations?area=${area}`)
-        const json = await res.json()
-        setData(json)
-      } catch (err) {
-        console.error("Error fetching recommendations:", err)
-      } finally {
-        setLoading(false)
-      }
+  const fetchData = useCallback(async () => {
+    setLoading(true)
+    try {
+      const res = await fetch(`/api/recommendations?area=${area}`)
+      if (!res.ok) throw new Error('Failed to fetch')
+      const json = await res.json()
+      setData(json)
+    } catch (err) {
+      console.error("Error fetching recommendations:", err)
+      setData([])
+    } finally {
+      setLoading(false)
     }
-    fetchData()
   }, [area])
+
+  useEffect(() => {
+    fetchData()
+  }, [fetchData])
 
   if (loading) {
     return (
@@ -58,9 +60,19 @@ export function RecommendationGrid({ area }: { area: string }) {
 
   if (data.length === 0) {
     return (
-      <div className="text-center py-24 space-y-4">
-        <p className="text-[10px] uppercase tracking-[0.4em] opacity-40">Información próximamente</p>
-        <p className={cn(serif.className, "text-xl italic opacity-60")}>Estamos curando las mejores experiencias para ti.</p>
+      <div className="text-center py-24 space-y-6">
+        <div className="space-y-2">
+          <p className="text-[10px] uppercase tracking-[0.4em] opacity-40">Información en proceso</p>
+          <p className={cn(serif.className, "text-xl italic opacity-60")}>Estamos sincronizando las mejores experiencias para ti.</p>
+        </div>
+        <Button 
+          onClick={fetchData}
+          variant="outline"
+          className="rounded-full px-8 py-6 border-[#c5a059]/30 text-[#c5a059] hover:bg-[#c5a059] hover:text-white transition-all duration-500 uppercase tracking-widest text-[10px] gap-2"
+        >
+          <RefreshCw size={14} className={cn(loading && "animate-spin")} />
+          Actualizar datos
+        </Button>
       </div>
     )
   }
@@ -71,10 +83,11 @@ export function RecommendationGrid({ area }: { area: string }) {
         <div key={idx} className="group flex flex-col h-full bg-white rounded-[2rem] overflow-hidden border border-[#5c6b5c]/5 hover:shadow-xl hover:shadow-[#5c6b5c]/5 transition-all duration-700">
           <div className="relative aspect-[4/3] overflow-hidden">
             <Image 
-              src={item.image} 
+              src={item.image || 'https://picsum.photos/seed/activity/600/400'} 
               alt={item.title} 
               fill 
               className="object-cover transition-transform duration-1000 group-hover:scale-110"
+              unoptimized={item.image.includes('amadeus')}
             />
             <div className="absolute inset-0 bg-[#8a9a5b]/10 mix-blend-multiply" />
             <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1">
