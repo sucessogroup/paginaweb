@@ -75,8 +75,7 @@ const translations = {
       { q: "¿Cómo es el clima en diciembre?", a: "Diciembre tiene clima cálido y agradable, con temperaturas aproximadas entre 22 °C y 30 °C y muy baja probabilidad de lluvia." },
       { q: "¿Qué moneda se usa y cómo recomiendan pagar?", a: "La moneda oficial es el peso mexicano (MXN). Se recomienda usar tarjetas y llevar algo de efectivo para gastos pequeños." },
       { q: "¿Es seguro viajar a Zihuatanejo?", a: "Zihuatanejo es un destino turístico tranquilo. Se recomienda seguir precauciones básicas y usar transporte autorizado." },
-      { q: "¿Pueden asistir niños?", a: "Amamos a sus pequeños, pero queremos que los únicos berrinches de la noche sean los de los adultos en la pista de baile. El evento es solo para adultos." },
-      { q: "¿Qué vestimenta se recomienda?", a: "La vestimenta es formal de lino: traje sin corbata y vestido abajo de la rodilla." }
+      { q: "¿Pueden asistir niños?", a: "Amamos a sus pequeños, pero queremos que los únicos berrinches de la noche sean los de los adultos en la pista de baile. El evento es solo para adultos." }
     ]
   },
   it: {
@@ -126,7 +125,7 @@ const translations = {
     wa: "WhatsApp",
     ig: "Instagram",
     faqs: [
-      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico come turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
+      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico como turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
       { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
       { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servizio dell'hotel. I tragitti son brevi e semplici." },
       { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta può essere consultata sulla mappa disponibile su questa pagina." },
@@ -134,8 +133,7 @@ const translations = {
       { q: "Com'è il clima a dicembre?", a: "Dicembre ha un clima caldo e piacevole, con temperature approssimative tra i 22 °C e i 30 °C e una probabilità di pioggia molto bassa." },
       { q: "Quale valuta si usa e come consigliate di pagare?", a: "La valuta ufficiale è il peso messicano (MXN). Si consiglia di utilizzare le carte e portare con sé dei contanti per le piccole spese." },
       { q: "È sicuro viaggiare a Zihuatanejo?", a: "Zihuatanejo è una destinazione turistica tranquilla. Si consiglia di seguire le precauzioni di base e utilizzare trasporti autorizzati." },
-      { q: "Possono partecipare i bambini?", a: "Amiamo i bambini, ma vogliamo che gli unici capricci della serata siano quelli degli ospiti in pista. L'evento escluso para adultos." },
-      { q: "Quale abbigliamento è consigliato?", a: "L'abbigliamento è formale in lino: abito senza cravatta e vestito sotto il ginocchio." }
+      { q: "Possono partecipare i bambini?", a: "Amiamo i bambini, ma vogliamo che gli unici capricci della serata siano quelli degli ospiti in pista. L'evento escluso para adultos." }
     ]
   }
 }
@@ -709,12 +707,12 @@ export default function WeddingPage() {
       {/* Preguntas Frecuentes con Fondo Solapado */}
       <section id="faqs" className="relative">
         {/* Foto 5 como fondo solapado */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 overflow-hidden">
           <Image 
             src={footerImage?.imageUrl || "/foto5.png"} 
             alt="Wedding Footer" 
             fill 
-            className="object-cover object-top"
+            className="object-cover object-center scale-110"
             data-ai-hint="wedding couple sea"
           />
           {/* Overlay para legibilidad del FAQ en el tercio superior */}
