@@ -90,7 +90,7 @@ const translations = {
     seAcabo: "Il tempo è finito",
     dias: "Giorni",
     horas: "Ore",
-    minutos: "Secondi",
+    minutos: "Minuti",
     segundos: "Secondi",
     faltaPoco: "Manca sempre meno al nostro per sempre",
     acompananos: "Sii con noi in questo momento",
@@ -132,7 +132,7 @@ const translations = {
     proximamente: "Informazioni in arrivo",
     wa: "WhatsApp",
     ig: "Instagram",
-    recomendaciones: "Raccomandazioni",
+    recomendaciones: "Raccomandaciones",
     queHacer: "Cosa fare durante il fine settimana o dopo la festa?",
     verMas: "VEDI DI PIÙ",
     cosasEn: "COSE DA FARE A",
@@ -140,13 +140,13 @@ const translations = {
     guerreroCap: "GUERRERO",
     mexicoCap: "MESSICO",
     faqs: [
-      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico come turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
+      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italian non hanno bisogno di visto per recarsi in Messico come turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
       { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
       { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servizio dell'hotel. I tragitti son brevi e semplici." },
       { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta può essere consultata sulla mappa disponible su questa pagina." },
       { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una città piccola e i trasferimenti durano solitamente tra i 15 e i 30 minuti." },
       { q: "Com'è il clima a dicembre?", a: "Dicembre ha un clima caldo e piacevole, con temperature approssimative tra i 22 °C e i 30 °C e una probabilità di pioggia molto bassa." },
-      { q: "Quale valuta si usa e come consigliate di pagare?", a: "La valuta ufficiale è il peso messicano (MXN). Si consiglia di utilizzare le carte e portare con sé dei contanti per le piccole spese." },
+      { q: "Quale valuta si usa e como consigliate di pagare?", a: "La valuta ufficiale è el peso messicano (MXN). Si consiglia di utilizzare le carte e portare con sé dei contanti per le festive spese." },
       { q: "È sicuro viaggiare a Zihuatanejo?", a: "Zihuatanejo è una destinazione turistica tranquilla. Si consiglia di seguire le precauzioni di base e utilizzare trasporti autorizzati." },
       { q: "Possono partecipare i bambini?", a: "Amiamo i bambini, ma vogliamo che gli unici capricci della serata siano quelli degli ospiti in pista. L'evento escluso para adultos." }
     ]
@@ -391,7 +391,7 @@ export default function WeddingPage() {
             src={heroImage?.imageUrl || "/foto1.png"} 
             alt="Carla & Said Wedding" 
             fill
-            className="object-cover object-[75%_center] pointer-events-none"
+            className="object-cover object-center pointer-events-none"
             priority
             data-ai-hint="wedding couple beach"
           />
@@ -467,7 +467,7 @@ export default function WeddingPage() {
 
       {/* Frase y Confirmación */}
       <section className="py-24 md:py-40 relative overflow-hidden bg-[#fcfaf7]">
-        <div className="absolute inset-0 z-0 opacity-30">
+        <div className="absolute inset-0 z-0 opacity-40">
           <Image 
             src={quoteBgImage?.imageUrl || "/foto2.png"} 
             alt="Background Confirmación" 
