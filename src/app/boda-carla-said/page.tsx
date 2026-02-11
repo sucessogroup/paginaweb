@@ -91,7 +91,7 @@ const translations = {
     horas: "Ore",
     minutos: "Minuti",
     segundos: "Secondi",
-    faltaPoco: "Manca sempre meno al nostro per sempre",
+    faltaPoco: "Manca sempre meno al nostro per sempre. Sii con noi in questo momento.",
     acompananos: "Sii con noi in questo momento",
     calendario: "Aggiungi al calendario",
     itinerario: "Itinerario",
@@ -118,7 +118,7 @@ const translations = {
     trajeSinCorbata: "Abito senza cravatta",
     vestidoLargo: "Abito sotto le ginocchia",
     mesaRegalos: "Lista Nozze",
-    regalosFrase: "Il regalo più grande è la vostra presenza. Per chi volesse farci un pensiero, sarà per noi un aiuto prezioso nel creare la nostra casa in Italia.",
+    regalosFrase: "Il regalo más grande è la vostra presenza. Per chi volesse farci un pensiero, sarà per noi un aiuto prezioso nel creare la nostra casa in Italia.",
     paypal: "PayPal",
     clabe: "CLABE (Messico)",
     iban: "IBAN (Europa)",
@@ -131,7 +131,7 @@ const translations = {
     proximamente: "Informazioni in arrivo",
     wa: "WhatsApp",
     ig: "Instagram",
-    recomendaciones: "Raccomandazioni",
+    recomendaciones: "Raccomandaciones",
     queHacer: "Cosa fare durante il fine settimana o dopo la festa?",
     verMas: "VEDI DI PIÙ",
     cosasEn: "COSE DA FARE A",
@@ -139,8 +139,8 @@ const translations = {
     guerreroCap: "GUERRERO",
     mexicoCap: "MESSICO",
     faqs: [
-      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico como turisti. È richiesto un passaporte valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
-      { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
+      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico come turisti. È richiesto un passaporte valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
+      { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il más vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
       { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servizio dell'hotel. I tragitti son brevi e semplici." },
       { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta può essere consultata sulla mappa disponible su questa pagina." },
       { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una città piccola e i trasferimenti durano solitamente tra i 15 e i 30 minuti." },
@@ -603,7 +603,7 @@ export default function WeddingPage() {
               </h2>
             </div>
 
-            <div className="relative w-full max-w-[220px] md:max-w-[280px] aspect-[4/5] -mt-6 md:-mt-10 transition-all duration-700 z-[1]">
+            <div className="relative w-full max-w-[286px] md:max-w-[364px] aspect-[4/5] -mt-6 md:-mt-10 transition-all duration-700 z-[1]">
               <Image 
                 src={dresscodeImg?.imageUrl || "/dresscode.png"} 
                 alt="Dress Code" 
