@@ -80,7 +80,7 @@ const translations = {
       { q: "¿El aeropuerto, el hotel y el lugar del evento están cerca?", a: "Sí. Zihuatanejo es una ciudad pequeña y los traslados suelen ser de entre 15 y 30 minutos." },
       { q: "¿Cómo es el clima en diciembre?", a: "Diciembre tiene clima cálido y agradable, con temperaturas aproximadas entre 22 °C y 30 °C y muy baja probabilidad de lluvia." },
       { q: "¿Qué moneda se usa y cómo recomiendan pagar?", a: "La moneda oficial es el peso mexicano (MXN). Se recomienda usar tarjetas y llevar algo de efectivo para gastos pequeños." },
-      { q: "¿Es seguro viajar a Zihuatanejo?", a: "Zihuatanejo es un destino turístico tranquilo. Se recomienda seguir precauciones básicas y usar transporte autorizado." },
+      { q: "¿Es seguro viajar a Zihuatanejo?", a: "Zihuatanejo es una destino turístico tranquilo. Se recomienda seguir precauciones básicas y usar transporte autorizado." },
       { q: "¿Pueden asistir niños?", a: "Amamos a sus pequeños, pero queremos que los únicos berrinches de la noche sean los de los adultos en la pista de baile. El evento es solo para adultos." }
     ]
   },
@@ -117,7 +117,7 @@ const translations = {
     trajeSinCorbata: "Abito senza cravatta",
     vestidoLargo: "Abito sotto le ginocchia",
     mesaRegalos: "Lista Nozze",
-    regalosFrase: "Il regalo più grande è la vostra presenza. Per chi volesse farci un pensamiento, sarà per noi un aiuto prezioso nel creare la nostra casa in Italia.",
+    regalosFrase: "Il regalo più grande è la vostra presenza. Per chi volesse farci un pensiero, sarà per noi un aiuto prezioso nel creare la nostra casa in Italia.",
     paypal: "PayPal",
     clabe: "CLABE (Messico)",
     iban: "IBAN (Europa)",
@@ -130,7 +130,7 @@ const translations = {
     proximamente: "Informazioni in arrivo",
     wa: "WhatsApp",
     ig: "Instagram",
-    recomendaciones: "Raccomandaciones",
+    recomendaciones: "Raccomandazioni",
     queHacer: "Cosa fare durante il fine settimana o dopo la festa?",
     verMas: "VEDI DI PIÙ",
     cosasEn: "COSE DA FARE A",
@@ -387,7 +387,7 @@ export default function WeddingPage() {
             src={heroImage?.imageUrl || "/foto1.png"} 
             alt="Carla & Said Wedding" 
             fill
-            className="object-cover object-center pointer-events-none scale-[0.85]"
+            className="object-cover object-center pointer-events-none"
             priority
             data-ai-hint="wedding couple beach"
           />
@@ -779,7 +779,7 @@ export default function WeddingPage() {
             src={footerImage?.imageUrl || "/foto5.png"} 
             alt="Wedding Footer" 
             fill 
-            className="object-cover object-center scale-[0.8] transition-transform duration-700"
+            className="object-cover object-center transition-transform duration-700"
             data-ai-hint="wedding couple sea"
           />
           <div className="absolute inset-0 bg-white/80 h-1/3" />
