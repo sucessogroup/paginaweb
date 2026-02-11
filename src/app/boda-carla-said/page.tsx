@@ -118,7 +118,7 @@ const translations = {
     trajeSinCorbata: "Abito senza cravatta",
     vestidoLargo: "Abito sotto le ginocchia",
     mesaRegalos: "Lista Nozze",
-    regalosFrase: "Il regalo más grande è la vostra presenza. Per chi volesse farci un pensiero, sarà per noi un aiuto prezioso nel creare la nostra casa in Italia.",
+    regalosFrase: "Il regalo più grande è la vostra presenza. Per chi volesse farci un pensiero, sarà per noi un aiuto prezioso nel creare la nostra casa in Italia.",
     paypal: "PayPal",
     clabe: "CLABE (Messico)",
     iban: "IBAN (Europa)",
@@ -131,7 +131,7 @@ const translations = {
     proximamente: "Informazioni in arrivo",
     wa: "WhatsApp",
     ig: "Instagram",
-    recomendaciones: "Raccomandaciones",
+    recomendaciones: "Raccomandazioni",
     queHacer: "Cosa fare durante il fine settimana o dopo la festa?",
     verMas: "VEDI DI PIÙ",
     cosasEn: "COSE DA FARE A",
@@ -139,13 +139,13 @@ const translations = {
     guerreroCap: "GUERRERO",
     mexicoCap: "MESSICO",
     faqs: [
-      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico come turisti. È richiesto un passaporte valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
-      { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il más vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
+      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico come turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
+      { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
       { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servizio dell'hotel. I tragitti son brevi e semplici." },
       { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta può essere consultata sulla mappa disponible su questa pagina." },
       { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una città piccola e i trasferimenti durano solitamente tra i 15 e i 30 minuti." },
       { q: "Com'è il clima a dicembre?", a: "Dicembre ha un clima caldo e piacevole, con temperature approssimative tra i 22 °C e i 30 °C e una probabilità di pioggia molto bassa." },
-      { q: "Quale valuta si usa e como consigliate di pagare?", a: "La valuta ufficiale è el peso messicano (MXN). Si consiglia di utilizzare le carte e portare con sé dei contanti per le festive spese." },
+      { q: "Quale valuta si usa e come consigliate di pagare?", a: "La valuta ufficiale è il peso messicano (MXN). Si consiglia di utilizzare le carte e portare con sé dei contanti per le spese." },
       { q: "È sicuro viaggiare a Zihuatanejo?", a: "Zihuatanejo è una destinazione turistica tranquilla. Si consiglia di seguire le precauzioni di base e utilizzare trasporti autorizzati." },
       { q: "Possono partecipare i bambini?", a: "Amiamo i bambini, ma vogliamo che gli unici capricci della serata siano quelli degli ospiti in pista. L'evento escluso para adultos." }
     ]
@@ -780,7 +780,7 @@ export default function WeddingPage() {
             src={footerImage?.imageUrl || "/foto5.png"} 
             alt="Wedding Footer" 
             fill 
-            className="object-cover object-center scale-100"
+            className="object-cover object-center scale-100 transition-transform duration-700"
             data-ai-hint="wedding couple sea"
           />
           <div className="absolute inset-0 bg-white/80 h-1/3" />
