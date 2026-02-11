@@ -21,3 +21,5 @@ Configura las variables de entorno directamente en la consola de Firebase, dentr
 - `/src/app/boda-carla-said`: Página principal de la invitación.
 - `/src/app/recomendaciones-*`: Páginas de turismo dinámicas.
 - `/src/app/api/recommendations`: Endpoint que conecta con Amadeus.
+
+hola

@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect, useRef } from 'react'
@@ -76,7 +75,7 @@ const translations = {
     faqs: [
       { q: "¿Qué requisitos necesito para viajar a México desde Italia?", a: "Los ciudadanos italianos no necesitan visa para viajar a México como turistas. Se requiere pasaporte vigente, boleto de regreso y completar el formulario migratorio a la llegada." },
       { q: "¿A qué aeropuerto debo llegar?", a: "El aeropuerto recomendado es el Aeropuerto Internacional de Ixtapa–Zihuatanejo (ZIH), el más cercano al hotel y al lugar del evento. También se puede llegar vía Ciudad de México (CDMX) y tomar un vuelo nacional a Zihuatanejo." },
-      { q: "¿Cómo llego del aeropuerto al hotel o al evento?", a: "Desde el aeropuerto pueden trasladarse en taxi autorizado, transporte privado o servicio del hotel. Los trayectos son cortos y sencillos." },
+      { q: "¿Cómo llego del aeropuerto al hotel o al evento?", a: "Desde el aeropuerto pueden trasladarse en taxi autorizado, transporte privado o servicio del hotel. Los trayecots son cortos y sencillos." },
       { q: "¿Dónde se llevará a cabo la boda?", a: "La boda se celebrará en Club de Playa Garrobo, en Zihuatanejo, Guerrero, México. La ubicación exacta puede consultarse en el mapa disponible en esta página." },
       { q: "¿El aeropuerto, el hotel y el lugar del evento están cerca?", a: "Sí. Zihuatanejo es una ciudad pequeña y los traslados suelen ser de entre 15 y 30 minutos." },
       { q: "¿Cómo es el clima en diciembre?", a: "Diciembre tiene clima cálido y agradable, con temperaturas aproximadas entre 22 °C y 30 °C y muy baja probabilidad de lluvia." },
@@ -110,7 +109,7 @@ const translations = {
     rsvpTexto: "Si prega di confermare entro il 1 novembre",
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
     zihua: "Zihuatanejo, Guerrero, Messico",
-    domingo: "Domenica, 20 dicembre 2026",
+    domingo: "Domenica, 20 de diciembre de 2026",
     vestimenta: "Abbigliamento",
     formalLino: "Formale in lino",
     waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia partecipazione per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!",
@@ -118,7 +117,7 @@ const translations = {
     trajeSinCorbata: "Abito senza cravatta",
     vestidoLargo: "Abito sotto le ginocchia",
     mesaRegalos: "Lista Nozze",
-    regalosFrase: "Il regalo più grande è la vostra presenza. Per chi volesse farci un pensiero, sarà per noi un aiuto prezioso nel creare la nostra casa in Italia.",
+    regalosFrase: "Il regalo più grande è la vostra presenza. Per chi volesse farci un pensamiento, sarà per noi un aiuto prezioso nel creare la nostra casa in Italia.",
     paypal: "PayPal",
     clabe: "CLABE (Messico)",
     iban: "IBAN (Europa)",
@@ -131,7 +130,7 @@ const translations = {
     proximamente: "Informazioni in arrivo",
     wa: "WhatsApp",
     ig: "Instagram",
-    recomendaciones: "Raccomandazioni",
+    recomendaciones: "Raccomandaciones",
     queHacer: "Cosa fare durante il fine settimana o dopo la festa?",
     verMas: "VEDI DI PIÙ",
     cosasEn: "COSE DA FARE A",
@@ -388,7 +387,7 @@ export default function WeddingPage() {
             src={heroImage?.imageUrl || "/foto1.png"} 
             alt="Carla & Said Wedding" 
             fill
-            className="object-cover object-center pointer-events-none scale-100"
+            className="object-cover object-center pointer-events-none scale-[0.85]"
             priority
             data-ai-hint="wedding couple beach"
           />
@@ -603,7 +602,7 @@ export default function WeddingPage() {
               </h2>
             </div>
 
-            <div className="relative w-full max-w-[286px] md:max-w-[364px] aspect-[4/5] -mt-6 md:-mt-10 transition-all duration-700 z-[1]">
+            <div className="relative w-full max-w-[286px] md:max-w-[364px] aspect-[4/5] -mt-6 md:-mt-10 transition-all duration-700 z-[1] scale-[1.3]">
               <Image 
                 src={dresscodeImg?.imageUrl || "/dresscode.png"} 
                 alt="Dress Code" 
@@ -707,7 +706,7 @@ export default function WeddingPage() {
       <section id="recomendaciones" className="py-24 md:py-40 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <RevealSection className="text-center mb-24 md:mb-32">
-            <h3 className={cn(serif.className, "text-3xl md:text-8xl italic text-[#5c6b5c]")}>{t.recomendaciones}</h3>
+            <h3 className={cn(serif.className, "text-3xl md:text-5xl italic text-[#5c6b5c]")}>{t.recomendaciones}</h3>
             <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] opacity-40 mt-4 md:mt-6 font-bold">{t.queHacer}</p>
             <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-8 opacity-30" />
           </RevealSection>
@@ -780,7 +779,7 @@ export default function WeddingPage() {
             src={footerImage?.imageUrl || "/foto5.png"} 
             alt="Wedding Footer" 
             fill 
-            className="object-cover object-center scale-100 transition-transform duration-700"
+            className="object-cover object-center scale-[0.8] transition-transform duration-700"
             data-ai-hint="wedding couple sea"
           />
           <div className="absolute inset-0 bg-white/80 h-1/3" />
@@ -811,7 +810,7 @@ export default function WeddingPage() {
         
         <div className="h-[60vh] md:h-[100vh] flex flex-col items-center justify-end pb-24 relative z-10">
           <RevealSection delay={500}>
-            <p className={cn(script.className, "text-7xl md:text-[13rem] text-white drop-shadow-lg italic")}>
+            <p className={cn(script.className, "text-[9rem] md:text-[18rem] text-white drop-shadow-lg italic")}>
               Carla & Said
             </p>
           </RevealSection>
@@ -820,3 +819,5 @@ export default function WeddingPage() {
     </div>
   )
 }
+
+// Actualización técnica para forzar push.
