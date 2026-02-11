@@ -77,7 +77,7 @@ const translations = {
     faqs: [
       { q: "¿Qué requisitos necesito para viajar a México desde Italia?", a: "Los ciudadanos italianos no necesitan visa para viajar a México como turistas. Se requiere pasaporte vigente, boleto de regreso y completar el formulario migratorio a la llegada." },
       { q: "¿A qué aeropuerto debo llegar?", a: "El aeropuerto recomendado es el Aeropuerto Internacional de Ixtapa–Zihuatanejo (ZIH), el más cercano al hotel y al lugar del evento. También se puede llegar vía Ciudad de México (CDMX) y tomar un vuelo nacional a Zihuatanejo." },
-      { q: "¿Cómo llego del aeropuerto al hotel o al evento?", a: "Desde el aeropuerto pueden trasladarse en taxi autorizado, transporte privado o servicio del hotel. Los trayectos son cortos y sencillos." },
+      { q: "¿Cómo llego del aeropuerto al hotel o al evento?", a: "Desde el aeropuerto pueden trasladarse en taxi autorizado, transporte privado o servicio del hotel. Los trayecots son cortos y sencillos." },
       { q: "¿Dónde se llevará a cabo la boda?", a: "La boda se celebrará en Club de Playa Garrobo, en Zihuatanejo, Guerrero, México. La ubicación exacta puede consultarse en el mapa disponible en esta página." },
       { q: "¿El aeropuerto, el hotel y el lugar del evento están cerca?", a: "Sí. Zihuatanejo es una ciudad pequeña y los traslados suelen ser de entre 15 y 30 minutos." },
       { q: "¿Cómo es el clima en diciembre?", a: "Diciembre tiene clima cálido y agradable, con temperaturas aproximadas entre 22 °C y 30 °C y muy baja probabilidad de lluvia." },
@@ -132,7 +132,7 @@ const translations = {
     proximamente: "Informazioni in arrivo",
     wa: "WhatsApp",
     ig: "Instagram",
-    recomendaciones: "Raccomandaciones",
+    recomendaciones: "Raccomandazioni",
     queHacer: "Cosa fare durante il fine settimana o dopo la festa?",
     verMas: "VEDI DI PIÙ",
     cosasEn: "COSE DA FARE A",
@@ -140,7 +140,7 @@ const translations = {
     guerreroCap: "GUERRERO",
     mexicoCap: "MESSICO",
     faqs: [
-      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italian non hanno bisogno di visto per recarsi in Messico come turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
+      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico come turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
       { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
       { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servizio dell'hotel. I tragitti son brevi e semplici." },
       { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta può essere consultata sulla mappa disponible su questa pagina." },
@@ -289,8 +289,6 @@ export default function WeddingPage() {
   const itineraryBgImage = PlaceHolderImages.find(img => img.id === 'wedding-bg-itinerary')
   const hotelImage = PlaceHolderImages.find(img => img.id === 'hotel-villa-mexicana')
   const footerImage = PlaceHolderImages.find(img => img.id === 'wedding-footer')
-  const flagMx = PlaceHolderImages.find(img => img.id === 'flag-mx')
-  const flagIt = PlaceHolderImages.find(img => img.id === 'flag-it')
   const dresscodeImg = PlaceHolderImages.find(img => img.id === 'dresscode-image')
   const recZihuaImg = PlaceHolderImages.find(img => img.id === 'rec-zihua')
   const recGuerreroImg = PlaceHolderImages.find(img => img.id === 'rec-guerrero')
@@ -391,7 +389,7 @@ export default function WeddingPage() {
             src={heroImage?.imageUrl || "/foto1.png"} 
             alt="Carla & Said Wedding" 
             fill
-            className="object-cover object-center pointer-events-none"
+            className="object-cover object-center pointer-events-none scale-110"
             priority
             data-ai-hint="wedding couple beach"
           />
@@ -465,9 +463,9 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Frase y Confirmación */}
+      {/* Frase y Confirmación (RSVP) */}
       <section className="py-24 md:py-40 relative overflow-hidden bg-[#fcfaf7]">
-        <div className="absolute inset-0 z-0 opacity-40">
+        <div className="absolute inset-0 z-0 opacity-60">
           <Image 
             src={quoteBgImage?.imageUrl || "/foto2.png"} 
             alt="Background Confirmación" 
@@ -478,23 +476,10 @@ export default function WeddingPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <RevealSection className="flex justify-center gap-4 md:gap-8 mb-12 md:mb-16">
-            <div className="relative w-32 h-24 md:w-64 md:h-48 transition-transform hover:scale-105 duration-500">
-              <Image 
-                src={flagMx?.imageUrl || "/banderamx.png"} 
-                alt="México" 
-                fill 
-                className="object-contain"
-              />
-            </div>
-            <div className="relative w-32 h-24 md:w-64 md:h-48 transition-transform hover:scale-105 duration-500">
-              <Image 
-                src={flagIt?.imageUrl || "/banderaita.png"} 
-                alt="Italia" 
-                fill 
-                className="object-contain"
-              />
-            </div>
+          <RevealSection className="mb-12 md:mb-16">
+            <h2 className={cn(script.className, "text-7xl md:text-9xl text-[#5c6b5c] italic")}>
+              RSVP
+            </h2>
           </RevealSection>
 
           <RevealSection delay={300} className="space-y-12">
@@ -827,7 +812,7 @@ export default function WeddingPage() {
         
         <div className="h-[60vh] md:h-[100vh] flex flex-col items-center justify-end pb-24 relative z-10">
           <RevealSection delay={500}>
-            <p className={cn(script.className, "text-7xl md:text-[13rem] text-white drop-shadow-lg")}>
+            <p className={cn(script.className, "text-7xl md:text-[13rem] text-white drop-shadow-lg italic")}>
               Carla & Said
             </p>
           </RevealSection>
