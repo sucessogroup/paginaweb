@@ -44,7 +44,7 @@ const translations = {
     tarifaPreferencial: "Contamos con una tarifa preferencial para nuestros invitados.",
     confirmar: "Confirmar asistencia",
     rsvpTexto: "Favor de confirmar antes del 1 de Noviembre",
-    fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
+    fraseFinal: "El amor acorta las distancias y une mundos lejanos",
     zihua: "Zihuatanejo, Guerrero, México",
     domingo: "Domingo, 20 de diciembre de 2026",
     vestimenta: "Vestimenta",
@@ -92,8 +92,8 @@ const translations = {
     horas: "Ore",
     minutos: "Secondi",
     segundos: "Secondi",
-    faltaPoco: "Manca poco al nostro per siempre",
-    acompananos: "Accompagnaci in questo momento",
+    faltaPoco: "Manca sempre meno al nostro per sempre",
+    acompananos: "Sii con noi in questo momento",
     calendario: "Aggiungi al calendario",
     itinerario: "Itinerario",
     llegada: "Arrivo al club de playa",
@@ -102,24 +102,24 @@ const translations = {
     fin: "Fine dell'evento",
     ubicacion: "Posizione",
     verMapa: "Visualizza posizione",
-    hospedaje: "Hotel Sede",
+    hospedaje: "Hotel consigliato",
     reservar: "Prenotazioni a breve",
     reservaMasAdelante: "La prenotación sarà disponibile più avanti.",
     verWeb: "Sito web",
     tarifaPreferencial: "Abbiamo una tarifa preferenziale per i nostri ospiti.",
-    confirmar: "Conferma participación",
+    confirmar: "Conferma partecipazione",
     rsvpTexto: "Si prega di confermare entro il 1 novembre",
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
     zihua: "Zihuatanejo, Guerrero, Messico",
     domingo: "Domenica, 20 dicembre 2026",
     vestimenta: "Abbigliamento",
     formalLino: "Formale in lino",
-    waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia participación per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!",
+    waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia partecipazione per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!",
     venue: "Club de Playa Garrobo",
     trajeSinCorbata: "Abito senza cravatta",
     vestidoLargo: "Abito sotto le ginocchia",
     mesaRegalos: "Lista Nozze",
-    regalosFrase: "Il regalo più grande è la vostra presencia, ma se desiderate farci un pensiero, apprezzeremmo che sia tramite bonifico. Vivere in Italia rende difficile il trasporto di regali fisici, perciò questo gesto ci aiuterà molto a creare la nostra casa lì.",
+    regalosFrase: "Il regalo più grande è la vostra presenza. Per chi volesse farci un pensiero, sarà per noi un aiuto prezioso nel creare la nostra casa in Italia.",
     paypal: "PayPal",
     clabe: "CLABE (Messico)",
     iban: "IBAN (Europa)",
@@ -140,11 +140,11 @@ const translations = {
     guerreroCap: "GUERRERO",
     mexicoCap: "MESSICO",
     faqs: [
-      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico como turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
+      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico come turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
       { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
       { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servizio dell'hotel. I tragitti son brevi e semplici." },
       { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta può essere consultata sulla mappa disponible su questa pagina." },
-      { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una ciudad piccola e i trasferimenti durano solitamente tra i 15 y i 30 minuti." },
+      { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una città piccola e i trasferimenti durano solitamente tra i 15 e i 30 minuti." },
       { q: "Com'è il clima a dicembre?", a: "Dicembre ha un clima caldo e piacevole, con temperature approssimative tra i 22 °C e i 30 °C e una probabilità di pioggia molto bassa." },
       { q: "Quale valuta si usa e come consigliate di pagare?", a: "La valuta ufficiale è il peso messicano (MXN). Si consiglia di utilizzare le carte e portare con sé dei contanti per le piccole spese." },
       { q: "È sicuro viaggiare a Zihuatanejo?", a: "Zihuatanejo è una destinazione turistica tranquilla. Si consiglia di seguire le precauzioni di base e utilizzare trasporti autorizzati." },
@@ -467,7 +467,7 @@ export default function WeddingPage() {
 
       {/* Frase y Confirmación */}
       <section className="py-24 md:py-40 relative overflow-hidden bg-[#fcfaf7]">
-        <div className="absolute inset-0 z-0 opacity-15">
+        <div className="absolute inset-0 z-0 opacity-30">
           <Image 
             src={quoteBgImage?.imageUrl || "/foto2.png"} 
             alt="Background Confirmación" 
@@ -617,9 +617,6 @@ export default function WeddingPage() {
               <h2 className={cn(serif.className, "text-5xl md:text-7xl italic text-[#5c6b5c]")}>
                 {t.vestimenta}
               </h2>
-              <p className="text-[10px] uppercase tracking-[0.4em] opacity-50 font-bold">
-                {t.formalLino}
-              </p>
             </div>
 
             <div className="relative w-full max-w-[220px] md:max-w-[280px] aspect-[4/5] -mt-6 md:-mt-10 transition-all duration-700 z-[1]">
