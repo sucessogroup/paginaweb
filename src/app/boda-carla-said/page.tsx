@@ -38,7 +38,7 @@ const translations = {
     hospedaje: "Hotel Sede",
     reservar: "Reservas próximamente",
     reservaMasAdelante: "La reserva estará disponible más adelante.",
-    verWeb: "Ver página web",
+    verWeb: "Reservar en el sitio web",
     tarifaPreferencial: "Contamos con una tarifa preferencial para nuestros invitados.",
     confirmar: "Confirmar asistencia",
     rsvpTexto: "Favor de confirmar antes del 1 de Noviembre",
@@ -97,7 +97,7 @@ const translations = {
     horas: "Ore",
     minutos: "Minuti",
     segundos: "Secondi",
-    faltaPoco: "Manca sempre meno al nostro per sempre. Sii con noi in este momento.",
+    faltaPoco: "Manca sempre meno al nostro per sempre. Sii con noi in questo momento.",
     acompananos: "Sii con noi in questo momento",
     calendario: "Aggiungi al calendario",
     itinerario: "Itinerario",
@@ -110,7 +110,7 @@ const translations = {
     hospedaje: "Hotel consigliato",
     reservar: "Prenotazioni a breve",
     reservaMasAdelante: "La prenotación sarà disponibile più avanti.",
-    verWeb: "Sito web",
+    verWeb: "Prenota sul sito web",
     tarifaPreferencial: "Abbiamo una tarifa preferenziale per i nostri ospiti.",
     confirmar: "Conferma partecipazione",
     rsvpTexto: "Si prega di confermare entro il 1 novembre",
@@ -153,9 +153,9 @@ const translations = {
     verCotizacion: "Vedi Quotazione (PDF)",
     faqs: [
       { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico come turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
-      { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
-      { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servizio dell'hotel. I tragitti son brevi e semplici." },
-      { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta può essere consultata sulla mappa disponible su questa pagina." },
+      { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) y prendere un volo nazionale per Zihuatanejo." },
+      { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servicio dell'hotel. I tragitti son brevi e semplici." },
+      { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta puede essere consultata sulla mappa disponible su questa pagina." },
       { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una città piccola e i trasferimenti durano solitamente tra i 15 e i 30 minuti." },
       { q: "Com'è il clima a dicembre?", a: "Dicembre ha un clima caldo e piacevole, con temperature approssimative tra i 22 °C e i 30 °C e una probabilità di pioggia molto bassa." },
       { q: "Quale valuta si usa e come consigliate di pagare?", a: "La valuta ufficiale è il peso messicano (MXN). Si consiglia di utilizzare le carte e portare con sé dei contanti per le spese." },
@@ -615,7 +615,7 @@ export default function WeddingPage() {
               </div>
             </RevealSection>
 
-            <RevealSection delay={400} className="flex flex-col sm:flex-row gap-6 md:gap-8 mt-12 md:mt-16 w-full justify-center items-center">
+            <RevealSection delay={400} className="flex flex-col gap-6 md:gap-8 mt-12 md:mt-16 w-full justify-center items-center">
               <Button 
                 onClick={() => window.open('https://hotelvillamexicana.com.mx/zihuatanejo/en/', '_blank')}
                 variant="outline"
@@ -624,16 +624,6 @@ export default function WeddingPage() {
                 {t.verWeb}
                 <ExternalLink size={14} />
               </Button>
-
-              <div className="flex flex-col items-center gap-3 w-full sm:w-auto">
-                <Button 
-                  disabled
-                  className="rounded-full px-12 py-8 bg-[#c5a059]/40 text-white cursor-not-allowed uppercase tracking-[0.2em] text-[10px] w-full sm:w-auto"
-                >
-                  {t.reservar}
-                </Button>
-                <p className="text-[9px] uppercase tracking-widest opacity-30">{t.reservaMasAdelante}</p>
-              </div>
             </RevealSection>
           </div>
         </div>
@@ -866,5 +856,3 @@ export default function WeddingPage() {
     </div>
   )
 }
-
-// Actualización técnica para forzar push.
