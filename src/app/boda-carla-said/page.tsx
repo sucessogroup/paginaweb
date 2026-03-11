@@ -60,6 +60,7 @@ const translations = {
     copiar: "Copiar",
     copiado: "Copiado",
     irPaypal: "Ir a PayPal",
+    regaloProximamente: "Próximamente disponible",
     faqsTitle: "Preguntas frecuentes",
     maquillajeTitle: "Maquillaje y Peinado",
     proveedorMaquillaje: "Proveedor de maquillaje y peinado",
@@ -132,6 +133,7 @@ const translations = {
     copiar: "Copia",
     copiado: "Copiato",
     irPaypal: "Vai a PayPal",
+    regaloProximamente: "Prossimamente disponibile",
     faqsTitle: "Domande frequenti",
     maquillajeTitle: "Trucco e Acconciatura",
     proveedorMaquillaje: "Fornitore di trucco e acconciatura",
@@ -241,7 +243,7 @@ function ItineraryItem({ step }: { step: any }) {
   )
 }
 
-function RegistryCard({ title, icon: Icon, value, bank, name, buttonLabel, onAction, isCopied }: { title: string, icon: any, value: string, bank?: string, name?: string, buttonLabel: string, onAction: () => void, isCopied?: boolean }) {
+function RegistryCard({ title, icon: Icon, value, bank, name, buttonLabel, onAction, isCopied, disabled }: { title: string, icon: any, value: string, bank?: string, name?: string, buttonLabel: string, onAction: () => void, isCopied?: boolean, disabled?: boolean }) {
   return (
     <div className="bg-white p-8 rounded-2xl shadow-sm border border-[#c5a059]/10 flex flex-col items-center gap-4 transition-all duration-500 hover:shadow-md hover:border-[#c5a059]/30">
       <div className="w-12 h-12 rounded-full bg-[#f5f0e6] flex items-center justify-center text-[#c5a059]">
@@ -253,14 +255,16 @@ function RegistryCard({ title, icon: Icon, value, bank, name, buttonLabel, onAct
         {name && <p className="text-[10px] uppercase tracking-wide text-[#5c6b5c] font-medium">{name}</p>}
         <p className="font-mono text-sm tracking-tighter text-[#5c6b5c] break-all pt-2">{value}</p>
       </div>
-      <Button 
-        onClick={onAction}
-        variant="ghost"
-        className="mt-2 rounded-full px-6 text-[10px] uppercase tracking-[0.2em] text-[#c5a059] hover:bg-[#c5a059] hover:text-white transition-all duration-500 gap-2"
-      >
-        {isCopied ? <Check size={14} /> : <Copy size={14} />}
-        {buttonLabel}
-      </Button>
+      {!disabled && (
+        <Button 
+          onClick={onAction}
+          variant="ghost"
+          className="mt-2 rounded-full px-6 text-[10px] uppercase tracking-[0.2em] text-[#c5a059] hover:bg-[#c5a059] hover:text-white transition-all duration-500 gap-2"
+        >
+          {isCopied ? <Check size={14} /> : <Copy size={14} />}
+          {buttonLabel}
+        </Button>
+      )}
     </div>
   )
 }
@@ -410,7 +414,7 @@ export default function WeddingPage() {
             src={heroImage?.imageUrl || "/foto1.png"} 
             alt="Carla & Said Wedding" 
             fill
-            className="object-cover object-[center_25%] md:object-center pointer-events-none"
+            className="object-cover object-center md:object-center pointer-events-none"
             priority
             data-ai-hint="wedding couple beach"
           />
@@ -688,9 +692,10 @@ export default function WeddingPage() {
                 <RegistryCard 
                   title={t.paypal}
                   icon={Globe}
-                  value="paypal.me/carlaandsaid"
+                  value={t.regaloProximamente}
                   buttonLabel={t.irPaypal}
                   onAction={() => window.open('https://paypal.me/', '_blank')}
+                  disabled
                 />
               </RevealSection>
 
@@ -699,7 +704,7 @@ export default function WeddingPage() {
                   title={t.clabe}
                   icon={CreditCard}
                   bank="HSBC"
-                  name="Said Farid Nasser Guerra"
+                  name="SAID FARID NASSER GUERRA"
                   value="021180064713093715"
                   buttonLabel={copiedField === 'clabe' ? t.copiado : t.copiar}
                   isCopied={copiedField === 'clabe'}
@@ -711,10 +716,11 @@ export default function WeddingPage() {
                 <RegistryCard 
                   title={t.iban}
                   icon={Heart}
-                  value="IT00 X000 0000 0000 0000 0000 000"
+                  value={t.regaloProximamente}
                   buttonLabel={copiedField === 'iban' ? t.copiado : t.copiar}
                   isCopied={copiedField === 'iban'}
-                  onAction={() => handleCopy('IT00X00000000000000000000000', 'iban')}
+                  onAction={() => handleCopy('', 'iban')}
+                  disabled
                 />
               </RevealSection>
             </div>
