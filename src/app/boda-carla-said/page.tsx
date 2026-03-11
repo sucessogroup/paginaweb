@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Literata, Dancing_Script } from 'next/font/google'
-import { CalendarPlus, ExternalLink, MapPin, CreditCard, Globe, Heart, Copy, Check, MessageCircle, Instagram, ArrowRight } from 'lucide-react'
+import { CalendarPlus, ExternalLink, MapPin, CreditCard, Globe, Heart, Copy, Check, MessageCircle, Instagram, ArrowRight, FileText, Hotel } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
@@ -72,6 +72,13 @@ const translations = {
     zihuaCap: "ZIHUATANEJO",
     guerreroCap: "GUERRERO",
     mexicoCap: "MÉXICO",
+    infoImportante: "Información Importante de Reserva",
+    temporadaAlta: "Al tratarse de temporada alta en Zihuatanejo, el hotel no cuenta con habitaciones bloqueadas para el evento. Sin embargo, contamos con una tarifa preferencial para nuestros invitados.",
+    opcionesPaquete: "También existe la opción de paquete solo hotel, al cual se le pueden añadir alimentos de manera opcional según las preferencias de cada huésped.",
+    detallesCotizacion: "En la cotización compartida se encuentran todos los detalles sobre las tarifas, tipos de habitación y opciones disponibles.",
+    reservarPronto: "Les recomendamos reservar su habitación lo antes posible para asegurar disponibilidad.",
+    claveEvento: "Para realizar su reserva, favor de indicar la clave del evento: \"Boda Carla y Said\".",
+    verCotizacion: "Ver Cotización (PDF)",
     faqs: [
       { q: "¿Qué requisitos necesito para viajar a México desde Italia?", a: "Los ciudadanos italianos no necesitan visa para viajar a México como turistas. Se requiere pasaporte vigente, boleto de regreso y completar el formulario migratorio a la llegada." },
       { q: "¿A qué aeropuerto debo llegar?", a: "El aeropuerto recomendado es el Aeropuerto Internacional de Ixtapa–Zihuatanejo (ZIH), el más cercano al hotel y al lugar del evento. También se puede llegar vía Ciudad de México (CDMX) y tomar un vuelo nacional a Zihuatanejo." },
@@ -90,7 +97,7 @@ const translations = {
     horas: "Ore",
     minutos: "Minuti",
     segundos: "Secondi",
-    faltaPoco: "Manca sempre meno al nostro per sempre. Sii con noi in questo momento.",
+    faltaPoco: "Manca sempre meno al nostro per sempre. Sii con noi in este momento.",
     acompananos: "Sii con noi in questo momento",
     calendario: "Aggiungi al calendario",
     itinerario: "Itinerario",
@@ -130,13 +137,20 @@ const translations = {
     proximamente: "Informazioni in arrivo",
     wa: "WhatsApp",
     ig: "Instagram",
-    recomendaciones: "Raccomandazioni",
+    recomendaciones: "Raccomandaciones",
     queHacer: "Cosa fare durante il fine settimana o dopo la festa?",
     verMas: "VEDI DI PIÙ",
     cosasEn: "COSE DA FARE A",
     zihuaCap: "ZIHUATANEJO",
     guerreroCap: "GUERRERO",
     mexicoCap: "MESSICO",
+    infoImportante: "Informazioni Importanti sulla Prenotazione",
+    temporadaAlta: "Poiché è alta stagione a Zihuatanejo, l'hotel non ha camere bloccate per l'evento. Tuttavia, abbiamo una tariffa preferenziale per i nostri ospiti.",
+    opcionesPaquete: "C'è anche l'opzione solo hotel, alla quale è possibile aggiungere i pasti facoltativamente secondo le preferenze di ogni ospite.",
+    detallesCotizacion: "Nella quotazione condivisa troverete tutti i dettagli su tariffe, tipi di camere e opzioni disponibili.",
+    reservarPronto: "Vi consigliamo di prenotare la vostra camera il prima possibile per garantire la disponibilità.",
+    claveEvento: "Per effettuare la prenotazione, indicare il codice dell'evento: \"Boda Carla y Said\".",
+    verCotizacion: "Vedi Quotazione (PDF)",
     faqs: [
       { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico come turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
       { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
@@ -362,6 +376,10 @@ export default function WeddingPage() {
     window.open('https://www.google.com/maps/search/?api=1&query=JC8W+55+Caleta+de+Chon+40895+Zihuatanejo+Gro+Mexico', '_blank');
   };
 
+  const openQuotation = () => {
+    window.open('/hotel.pdf', '_blank');
+  };
+
   return (
     <div className="bg-[#fcfaf7] text-[#5c6b5c] font-body overflow-x-hidden">
       {/* Selector de Idioma */}
@@ -566,6 +584,35 @@ export default function WeddingPage() {
               <p className="text-xs md:text-base italic opacity-50 tracking-wide font-light max-w-md mx-auto px-4">
                 {t.tarifaPreferencial}
               </p>
+            </RevealSection>
+
+            {/* Información Detallada de Reserva */}
+            <RevealSection delay={300} className="w-full mt-16">
+              <div className="bg-[#f5f0e6]/50 rounded-[2rem] p-8 md:p-12 border border-[#c5a059]/10 shadow-sm">
+                <div className="flex flex-col items-center text-center gap-6">
+                  <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-[#c5a059] shadow-sm">
+                    <Hotel size={32} />
+                  </div>
+                  <h5 className={cn(serif.className, "text-2xl md:text-4xl italic text-[#5c6b5c]")}>{t.infoImportante}</h5>
+                  <div className="space-y-6 text-sm md:text-base leading-relaxed text-[#5c6b5c]/80 font-light italic">
+                    <p>{t.temporadaAlta}</p>
+                    <p>{t.opcionesPaquete}</p>
+                    <p>{t.detallesCotizacion}</p>
+                    <p className="font-bold text-[#c5a059] not-italic">{t.reservarPronto}</p>
+                    <div className="bg-white/60 p-4 rounded-xl border border-[#c5a059]/10 inline-block mx-auto not-italic font-semibold tracking-wide">
+                      {t.claveEvento}
+                    </div>
+                  </div>
+                  
+                  <Button 
+                    onClick={openQuotation}
+                    className="mt-4 rounded-full px-10 py-7 bg-[#c5a059] hover:bg-[#b08d4a] text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3 shadow-lg shadow-[#c5a059]/20"
+                  >
+                    <FileText size={18} />
+                    {t.verCotizacion}
+                  </Button>
+                </div>
+              </div>
             </RevealSection>
 
             <RevealSection delay={400} className="flex flex-col sm:flex-row gap-6 md:gap-8 mt-12 md:mt-16 w-full justify-center items-center">
