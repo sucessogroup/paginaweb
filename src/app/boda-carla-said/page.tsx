@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect, useRef } from 'react'
@@ -36,7 +37,7 @@ const translations = {
     ubicacion: "Ubicación",
     verMapa: "Ver ubicación en mapa",
     hospedaje: "Hotel Sede",
-    reservar: "Reservas próximamente",
+    reservar: "Reservar en el sitio web",
     reservaMasAdelante: "La reserva estará disponible más adelante.",
     verWeb: "Reservar en el sitio web",
     tarifaPreferencial: "Contamos con una tarifa preferencial para nuestros invitados.",
@@ -108,7 +109,7 @@ const translations = {
     ubicacion: "Posizione",
     verMapa: "Visualizza posizione",
     hospedaje: "Hotel consigliato",
-    reservar: "Prenotazioni a breve",
+    reservar: "Prenota sul sito web",
     reservaMasAdelante: "La prenotación sarà disponibile più avanti.",
     verWeb: "Prenota sul sito web",
     tarifaPreferencial: "Abbiamo una tarifa preferenziale per i nostri ospiti.",
@@ -145,14 +146,14 @@ const translations = {
     guerreroCap: "GUERRERO",
     mexicoCap: "MESSICO",
     infoImportante: "Informazioni Importanti sulla Prenotazione",
-    temporadaAlta: "Poiché è alta stagione a Zihuatanejo, l'hotel non ha camere bloccate per l'evento. Tuttavia, abbiamo una tariffa preferenziale per i nostri ospiti.",
+    temporadaAlta: "Poiché è alta stagione a Zihuatanejo, l'hotel non ha camere bloccate per l'evento. Tuttavia, abbiamo una tariffa preferencial per i nostri ospiti.",
     opcionesPaquete: "C'è anche l'opzione solo hotel, alla quale è possibile aggiungere i pasti facoltativamente secondo le preferenze di ogni ospite.",
     detallesCotizacion: "Nella quotazione condivisa troverete tutti i dettagli su tariffe, tipi di camere e opzioni disponibili.",
     reservarPronto: "Vi consigliamo di prenotare la vostra camera il prima possibile per garantire la disponibilità.",
     claveEvento: "Per effettuare la prenotazione, indicare il codice dell'evento: \"Boda Carla y Said\".",
     verCotizacion: "Vedi Quotazione (PDF)",
     faqs: [
-      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico como turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
+      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico come turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
       { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
       { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servicio dell'hotel. I tragitti son brevi e semplici." },
       { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta puede essere consultata sulla mappa disponible su questa pagina." },
@@ -160,7 +161,7 @@ const translations = {
       { q: "Com'è il clima a dicembre?", a: "Dicembre ha un clima caldo e piacevole, con temperature approssimative tra i 22 °C e i 30 °C e una probabilità di pioggia molto bassa." },
       { q: "Quale valuta si usa e como consigliate di pagare?", a: "La valuta ufficiale è el peso messicano (MXN). Si consiglia di utilizzare le carte e portare con sé dei contanti per le spese." },
       { q: "È sicuro viaggiare a Zihuatanejo?", a: "Zihuatanejo è una destinazione turistica tranquilla. Si consiglia di seguire le precauzioni di base e utilizzare trasporti autorizzati." },
-      { q: "Possono partecipare i bambini?", a: "Amiamo i bambini, ma vogliamo che gli unici capricci della serata siano quelli degli ospiti in pista. L'evento escluso para adultos." }
+      { q: "Possono partecipare i bambini?", a: "Amiamo i bambini, ma vogliamo que gli unici capricci della serata siano quelli degli ospiti in pista. L'evento escluso para adultos." }
     ]
   }
 }
@@ -481,7 +482,7 @@ export default function WeddingPage() {
 
       {/* Frase y Confirmación (RSVP) */}
       <section className="py-24 md:py-40 relative overflow-hidden bg-[#fcfaf7]">
-        <div className="absolute inset-0 z-0 opacity-30">
+        <div className="absolute inset-0 z-0 opacity-40">
           <Image 
             src={quoteBgImage?.imageUrl || "/foto2.png"} 
             alt="Background Confirmación" 
