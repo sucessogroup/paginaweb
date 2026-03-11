@@ -155,7 +155,7 @@ const translations = {
     claveEvento: "Per effettuare la prenotazione, indicare il codice dell'evento: \"Boda Carla y Said\".",
     verCotizacion: "Vedi Quotazione (PDF)",
     faqs: [
-      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico come turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
+      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico como turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
       { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
       { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servicio dell'hotel. I tragitti son brevi e semplici." },
       { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta puede essere consultata sulla mappa disponible su questa pagina." },
@@ -411,10 +411,10 @@ export default function WeddingPage() {
       <section className="relative h-screen w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
-            src={heroImage?.imageUrl || "/foto1.png"} 
+            src={heroImage?.imageUrl || "/foto1.jpg"} 
             alt="Carla & Said Wedding" 
             fill
-            className="object-cover object-center md:object-center pointer-events-none"
+            className="object-cover object-[center_25%] md:object-center pointer-events-none"
             priority
             data-ai-hint="wedding couple beach"
           />
