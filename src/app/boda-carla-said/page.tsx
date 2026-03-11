@@ -153,7 +153,7 @@ const translations = {
     claveEvento: "Per effettuare la prenotazione, indicare il codice dell'evento: \"Boda Carla y Said\".",
     verCotizacion: "Vedi Quotazione (PDF)",
     faqs: [
-      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico como turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
+      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico come turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
       { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
       { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servicio dell'hotel. I tragitti son brevi e semplici." },
       { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta puede essere consultata sulla mappa disponible su questa pagina." },
@@ -241,14 +241,18 @@ function ItineraryItem({ step }: { step: any }) {
   )
 }
 
-function RegistryCard({ title, icon: Icon, value, buttonLabel, onAction, isCopied }: { title: string, icon: any, value: string, buttonLabel: string, onAction: () => void, isCopied?: boolean }) {
+function RegistryCard({ title, icon: Icon, value, bank, name, buttonLabel, onAction, isCopied }: { title: string, icon: any, value: string, bank?: string, name?: string, buttonLabel: string, onAction: () => void, isCopied?: boolean }) {
   return (
     <div className="bg-white p-8 rounded-2xl shadow-sm border border-[#c5a059]/10 flex flex-col items-center gap-4 transition-all duration-500 hover:shadow-md hover:border-[#c5a059]/30">
       <div className="w-12 h-12 rounded-full bg-[#f5f0e6] flex items-center justify-center text-[#c5a059]">
         <Icon size={24} />
       </div>
       <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#5c6b5c]/60">{title}</h4>
-      <p className="font-mono text-sm tracking-tighter text-[#5c6b5c] break-all text-center">{value}</p>
+      <div className="text-center space-y-1">
+        {bank && <p className="text-[9px] uppercase tracking-wider font-bold text-[#c5a059]">{bank}</p>}
+        {name && <p className="text-[10px] uppercase tracking-wide text-[#5c6b5c] font-medium">{name}</p>}
+        <p className="font-mono text-sm tracking-tighter text-[#5c6b5c] break-all pt-2">{value}</p>
+      </div>
       <Button 
         onClick={onAction}
         variant="ghost"
@@ -694,10 +698,12 @@ export default function WeddingPage() {
                 <RegistryCard 
                   title={t.clabe}
                   icon={CreditCard}
-                  value="0123 4567 8901 2345 67"
+                  bank="HSBC"
+                  name="Said Farid Nasser Guerra"
+                  value="021180064713093715"
                   buttonLabel={copiedField === 'clabe' ? t.copiado : t.copiar}
                   isCopied={copiedField === 'clabe'}
-                  onAction={() => handleCopy('012345678901234567', 'clabe')}
+                  onAction={() => handleCopy('021180064713093715', 'clabe')}
                 />
               </RevealSection>
 
