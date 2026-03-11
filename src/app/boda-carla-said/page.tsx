@@ -160,7 +160,7 @@ const translations = {
       { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servicio dell'hotel. I tragitti son brevi e semplici." },
       { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta puede essere consultata sulla mappa disponible su questa pagina." },
       { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una città piccola e i trasferimientos durano solitamente tra i 15 e i 30 minuti." },
-      { q: "Com'è el clima a dicembre?", a: "Dicembre ha un clima caldo e piacevole, con temperature approssimative tra i 22 °C e i 30 °C e una probabilidad de pioggia molto bassa." },
+      { q: "Com'è el clima a dicembre?", a: "Dicembre ha un clima caldo e piacevole, con temperature approssimative tra i 22 °C y i 30 °C e una probabilidad de pioggia molto bassa." },
       { q: "Quale valuta si usa e como consigliate di pagare?", a: "La valuta ufficiale è el peso messicano (MXN). Si consiglia di utilizzare le carte e portare con sé dei contanti per le spese." },
       { q: "È sicuro viaggiare a Zihuatanejo?", a: "Zihuatanejo è una destinazione turistica tranquilla. Si consiglia di seguire le precauzioni di base e utilizzare trasporti autorizzati." },
       { q: "Possono partecipare i bambini?", a: "Amiamo i bambini, ma vogliamo que gli unici capricci della serata siano quelli degli ospiti in pista. L'evento escluso para adultos." }
@@ -824,7 +824,7 @@ export default function WeddingPage() {
       <section id="faqs" className="relative">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image 
-            src={footerImage?.imageUrl || "/foto5.png"} 
+            src={footerImage?.imageUrl || "/foto5.jpeg"} 
             alt="Wedding Footer" 
             fill 
             className="object-cover object-center transition-transform duration-700"
