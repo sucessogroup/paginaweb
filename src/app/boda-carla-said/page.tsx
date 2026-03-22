@@ -111,7 +111,7 @@ const translations = {
     verMapa: "Visualizza posizione",
     hospedaje: "Hotel consigliato",
     reservar: "Prenota sul sito web",
-    reservaMasAdelante: "La prenotación sarà disponibile più avanti.",
+    reservaMasAdelante: "La prenotación será disponibile più avanti.",
     verWeb: "Prenota sul sito web",
     tarifaPreferencial: "Abbiamo una tarifa preferenziale per i nostri ospiti.",
     confirmar: "Conferma partecipazione",
@@ -126,7 +126,7 @@ const translations = {
     trajeSinCorbata: "Abito senza cravatta",
     vestidoLargo: "Abito sotto le ginocchia",
     mesaRegalos: "Lista Nozze",
-    regalosFrase: "Il regalo più grande è la vostra presenza. Per chi volesse farci un pensiero, sarà per noi un aiuto prezioso nel creare la nostra casa in Italia.",
+    regalosFrase: "Il regalo più grande è la vostra presenza. Per chi volesse farci un pensiero, sarà per noi un aiuto prezioso nel creare la nuestra casa in Italia.",
     paypal: "PayPal",
     clabe: "CLABE (Messico)",
     iban: "IBAN (Europa)",
@@ -149,7 +149,7 @@ const translations = {
     mexicoCap: "MESSICO",
     infoImportante: "Informazioni Importanti sulla Prenotazione",
     temporadaAlta: "Poiché è alta stagione a Zihuatanejo, l'hotel non ha camere bloccate per l'evento. Tuttavia, abbiamo una tariffa preferencial per i nostri ospiti.",
-    opcionesPaquete: "C'è anche l'opzione solo hotel, alla quale è possibile aggiungere i pasti facoltativamente secondo le preferenze di ogni ospite.",
+    optionsPaquete: "C'è anche l'opzione solo hotel, alla quale è possibile aggiungere i pasti facoltativamente secondo le preferenze di ogni ospite.",
     detallesCotizacion: "Nella quotazione condivisa troverete tutti i dettagli su tariffe, tipi di camere e opzioni disponibili.",
     reservarPronto: "Vi consigliamo di prenotare la vostra camera il prima possibile per garantire la disponibilità.",
     claveEvento: "Per effettuare la prenotazione, indicare il codice dell'evento: \"Boda Carla y Said\".",
@@ -159,7 +159,7 @@ const translations = {
       { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
       { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servicio dell'hotel. I tragitti son brevi e semplici." },
       { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta puede essere consultata sulla mappa disponible su questa pagina." },
-      { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una città piccola e i trasferimientos durano solitamente tra i 15 e i 30 minuti." },
+      { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una ciudad pequeña e i trasferimientos durano solitamente tra i 15 e i 30 minuti." },
       { q: "Com'è el clima a dicembre?", a: "Dicembre ha un clima caldo e piacevole, con temperature approssimative tra i 22 °C y i 30 °C e una probabilidad de pioggia molto bassa." },
       { q: "Quale valuta si usa e como consigliate di pagare?", a: "La valuta ufficiale è el peso messicano (MXN). Si consiglia di utilizzare le carte e portare con sé dei contanti per le spese." },
       { q: "È sicuro viaggiare a Zihuatanejo?", a: "Zihuatanejo è una destinazione turistica tranquilla. Si consiglia di seguire le precauzioni di base e utilizzare trasporti autorizzati." },
@@ -376,7 +376,7 @@ export default function WeddingPage() {
   }
 
   const handleWhatsAppConfirm = () => {
-    const phoneNumber = "529982418679";
+    const phoneNumber = "393454527422";
     const message = encodeURIComponent(t.waMessage);
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
