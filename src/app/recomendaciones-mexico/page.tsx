@@ -13,7 +13,7 @@ const serif = Literata({ subsets: ['latin'], weight: ['300', '400', '600'] })
 
 const navItems = [
   { label: 'Zihuatanejo', href: 'https://zihuamagico.com/que-hacer-en-ixtapa-zihuatanejo/', external: true },
-  { label: 'Guerrero', href: '/recomendaciones-guerrero' },
+  { label: 'Guerrero', href: 'https://escapadas.mexicodesconocido.com.mx/guerrero/', external: true },
   { label: 'México', href: '/recomendaciones-mexico' },
 ]
 

@@ -162,7 +162,7 @@ const translations = {
       { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una ciudad pequeña e i trasferimientos durano solitamente tra i 15 e i 30 minuti." },
       { q: "Com'è el clima a dicembre?", a: "Dicembre ha un clima caldo e piacevole, con temperature approssimative tra i 22 °C y i 30 °C e una probabilidad de pioggia molto bassa." },
       { q: "Quale valuta si usa e como consigliate di pagare?", a: "La valuta ufficiale è el peso messicano (MXN). Si consiglia di utilizzare le carte e portare con sé dei contanti per le spese." },
-      { q: "È sicuro viaggiare a Zihuatanejo?", a: "Zihuatanejo è una destinazione turistica tranquilla. Si consiglia di seguire le precauzioni di base e utilizzare trasporti autorizzati." },
+      { q: "È sicuro viaggiare a Zihuatanejo?", a: "Zihuatanejo è una destinazione turistica tranquilla. Si consiglia di seguire le precauzioni di base e utilizzare trasporti autorizados." },
       { q: "Possono partecipare i bambini?", a: "Amiamo i bambini, ma vogliamo que gli unici capricci della serata siano quelli degli ospiti in pista. L'evento escluso para adultos." }
     ]
   }
@@ -791,9 +791,9 @@ export default function WeddingPage() {
                   <h4 className={cn(serif.className, "text-4xl md:text-7xl italic text-[#5c6b5c]")}>{t.guerreroCap}</h4>
                 </div>
                 <Button asChild variant="link" className="p-0 h-auto text-[10px] uppercase tracking-[0.3em] text-[#c5a059] font-bold gap-2">
-                  <Link href="/recomendaciones-guerrero">
+                  <a href="https://escapadas.mexicodesconocido.com.mx/guerrero/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                     {t.verMas} <ArrowRight size={14} />
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </RevealSection>
@@ -867,3 +867,4 @@ export default function WeddingPage() {
     </div>
   )
 }
+{/* TÉCNICO: Actualización de enlace de Guerrero a México Desconocido */}
