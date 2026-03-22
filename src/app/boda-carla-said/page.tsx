@@ -772,9 +772,9 @@ export default function WeddingPage() {
                   <h4 className={cn(serif.className, "text-4xl md:text-7xl italic text-[#5c6b5c]")}>{t.zihuaCap}</h4>
                 </div>
                 <Button asChild variant="link" className="p-0 h-auto text-[10px] uppercase tracking-[0.3em] text-[#c5a059] font-bold gap-2">
-                  <Link href="/recomendaciones-zihuatanejo">
+                  <a href="https://zihuamagico.com/que-hacer-en-ixtapa-zihuatanejo/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                     {t.verMas} <ArrowRight size={14} />
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </RevealSection>
@@ -864,8 +864,6 @@ export default function WeddingPage() {
           </RevealSection>
         </div>
       </section>
-
-      {/* Comentario técnico para forzar detección de cambios en Git */}
     </div>
   )
 }

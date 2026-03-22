@@ -12,7 +12,7 @@ import { RecommendationGrid } from '@/components/sections/RecommendationGrid'
 const serif = Literata({ subsets: ['latin'], weight: ['300', '400', '600'] })
 
 const navItems = [
-  { label: 'Zihuatanejo', href: '/recomendaciones-zihuatanejo' },
+  { label: 'Zihuatanejo', href: 'https://zihuamagico.com/que-hacer-en-ixtapa-zihuatanejo/', external: true },
   { label: 'Guerrero', href: '/recomendaciones-guerrero' },
   { label: 'México', href: '/recomendaciones-mexico' },
 ]
@@ -30,18 +30,30 @@ export default function MexicoPage() {
           
           <nav className="flex gap-4 md:gap-12 bg-white/50 backdrop-blur-sm p-2 rounded-full border border-[#5c6b5c]/5">
             {navItems.map((item) => (
-              <Link 
-                key={item.href} 
-                href={item.href}
-                className={cn(
-                  "px-4 py-2 rounded-full text-[9px] md:text-[10px] uppercase tracking-[0.2em] transition-all",
-                  item.href === '/recomendaciones-mexico' 
-                    ? "bg-[#c5a059] text-white font-bold" 
-                    : "opacity-40 hover:opacity-100"
-                )}
-              >
-                {item.label}
-              </Link>
+              item.external ? (
+                <a 
+                  key={item.href} 
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-full text-[9px] md:text-[10px] uppercase tracking-[0.2em] transition-all opacity-40 hover:opacity-100"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link 
+                  key={item.href} 
+                  href={item.href}
+                  className={cn(
+                    "px-4 py-2 rounded-full text-[9px] md:text-[10px] uppercase tracking-[0.2em] transition-all",
+                    item.href === '/recomendaciones-mexico' 
+                      ? "bg-[#c5a059] text-white font-bold" 
+                      : "opacity-40 hover:opacity-100"
+                  )}
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
           </nav>
         </header>
