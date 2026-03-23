@@ -83,7 +83,7 @@ const translations = {
     verCotizacion: "Ver Cotización (PDF)",
     faqs: [
       { q: "¿Qué requisitos necesito para viajar a México desde Italia?", a: "Los ciudadanos italianos no necesitan visa para viajar a México como turistas. Se requiere pasaporte vigente, boleto de regreso y completar el formulario migratorio a la llegada." },
-      { q: "¿A qué aeropuerto debo llegar?", a: "El aeropuerto recomendado es el Aeropuerto Internacional de Ixtapa–Zihuatanejo (ZIH), el más cercano al hotel y al lugar del evento. También se puede llegar vía Ciudad de México (CDMX) y tomar un vuelo nacional a Zihuatanejo." },
+      { q: "¿A qué aeropuerto debo llegar?", a: "El aeropuerto recomendado es el Aeropuerto Internacional de Ixtapa–Zihuatanejo (ZIH), el más cercano al hotel y al lugar del evento. También se puede llegar vía Ciudad de México (CDMX) y tomar un futuro vuelo nacional a Zihuatanejo." },
       { q: "¿Cómo llego del aeropuerto al hotel o al evento?", a: "Desde el aeropuerto pueden trasladarse en taxi autorizado, transporte privado o servicio del hotel. Los trayecots son cortos y sencillos." },
       { q: "¿Dónde se llevará a cabo la boda?", a: "La boda se celebrará en Club de Playa Garrobo, en Zihuatanejo, Guerrero, México. La ubicación exacta puede consultarse en el mapa disponible en esta página." },
       { q: "¿El aeropuerto, el hotel y el lugar del evento están cerca?", a: "Sí. Zihuatanejo es una ciudad pequeña y los traslados suelen ser de entre 15 y 30 minutos." },
@@ -133,7 +133,7 @@ const translations = {
     copiar: "Copia",
     copiado: "Copiato",
     irPaypal: "Vai a PayPal",
-    regaloProximamente: "Prossimamente disponibile",
+    regaloProximamente: "Prossimamente disponible",
     faqsTitle: "Domande frequenti",
     maquillajeTitle: "Trucco e Acconciatura",
     proveedorMaquillaje: "Fornitore di trucco e acconciatura",
@@ -163,7 +163,7 @@ const translations = {
       { q: "Com'è el clima a dicembre?", a: "Dicembre ha un clima caldo e piacevole, con temperature approssimative tra i 22 °C y i 30 °C e una probabilidad de pioggia molto bassa." },
       { q: "Quale valuta si usa e como consigliate di pagare?", a: "La valuta ufficiale è el peso messicano (MXN). Si consiglia di utilizzare le carte e portare con sé dei contanti per le spese." },
       { q: "È sicuro viaggiare a Zihuatanejo?", a: "Zihuatanejo è una destinazione turistica tranquilla. Si consiglia de seguire le precauzioni di base e utilizzare trasporti autorizados." },
-      { q: "Possono partecipare i bambini?", a: "Amiamo i bambini, ma vogliamo que gli unici capricci della serata siano quelli degli ospiti in pista. L'evento escluso para adultos." }
+      { q: "Possono partecipare i bambini?", a: "Amiamo i bambini, mas vogliamo que gli unici capricci della serata siano quelli degli ospiti in pista. L'evento escluso para adultos." }
     ]
   }
 }
@@ -687,19 +687,8 @@ export default function WeddingPage() {
               </p>
             </RevealSection>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <RevealSection delay={300}>
-                <RegistryCard 
-                  title={t.paypal}
-                  icon={Globe}
-                  value={t.regaloProximamente}
-                  buttonLabel={t.irPaypal}
-                  onAction={() => window.open('https://paypal.me/', '_blank')}
-                  disabled
-                />
-              </RevealSection>
-
-              <RevealSection delay={400}>
                 <RegistryCard 
                   title={t.clabe}
                   icon={CreditCard}
@@ -712,15 +701,15 @@ export default function WeddingPage() {
                 />
               </RevealSection>
 
-              <RevealSection delay={500}>
+              <RevealSection delay={400}>
                 <RegistryCard 
                   title={t.iban}
                   icon={Heart}
-                  value={t.regaloProximamente}
+                  name="Nome: Favilli Carla, Nasser Guerra Said Farid"
+                  value="IT95P0854213203000000769393"
                   buttonLabel={copiedField === 'iban' ? t.copiado : t.copiar}
                   isCopied={copiedField === 'iban'}
-                  onAction={() => handleCopy('', 'iban')}
-                  disabled
+                  onAction={() => handleCopy('IT95P0854213203000000769393', 'iban')}
                 />
               </RevealSection>
             </div>
