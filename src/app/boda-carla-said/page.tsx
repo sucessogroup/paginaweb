@@ -99,7 +99,7 @@ const translations = {
     horas: "Ore",
     minutos: "Minuti",
     segundos: "Secondi",
-    faltaPoco: "Manca sempre meno al nostro per sempre. Sii con noi in questo momento.",
+    faltaPoco: "Manca poco al nostro per sempre",
     acompananos: "Sii con noi in questo momento",
     calendario: "Aggiungi al calendario",
     itinerario: "Itinerario",
@@ -113,12 +113,12 @@ const translations = {
     reservar: "Prenota sul sito web",
     reservaMasAdelante: "La prenotación será disponibile più avanti.",
     verWeb: "Prenota sul sito web",
-    tarifaPreferencial: "Abbiamo una tarifa preferenziale per i nostri ospiti.",
+    tarifaPreferencial: "Abbiamo una tariffa preferenziale per i nostri ospiti.",
     confirmar: "Conferma partecipazione",
     rsvpTexto: "Si prega di confermare entro il 1 novembre",
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
     zihua: "Zihuatanejo, Guerrero, Messico",
-    domingo: "Domenica, 20 de diciembre de 2026",
+    domingo: "DOMENICA, 20 DICEMBRE 2026",
     vestimenta: "Abbigliamento",
     formalLino: "Formale in lino",
     waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia partecipazione per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!",
@@ -148,14 +148,14 @@ const translations = {
     guerreroCap: "GUERRERO",
     mexicoCap: "MESSICO",
     infoImportante: "Informazioni Importanti sulla Prenotazione",
-    temporadaAlta: "Poiché è alta stagione a Zihuatanejo, l'hotel non ha camere bloccate per l'evento. Tuttavia, abbiamo una tariffa preferencial per i nostri ospiti.",
-    optionsPaquete: "C'è anche l'opzione solo hotel, alla quale è possibile aggiungere i pasti facoltativamente secondo le preferenze di ogni ospite.",
+    temporadaAlta: "Poiché è alta stagione a Zihuatanejo, l'hotel non ha camere bloccate per l'evento. Tuttavia, abbiamo una tariffa preferenziale per i nostri ospiti.",
+    opcionesPaquete: "C'è anche l'opzione solo hotel, alla quale è possibile aggiungere i pasti facoltativamente secondo le preferenze di ogni ospite.",
     detallesCotizacion: "Nella quotazione condivisa troverete tutti i dettagli su tariffe, tipi di camere e opzioni disponibili.",
     reservarPronto: "Vi consigliamo di prenotare la vostra camera il prima possibile per garantire la disponibilità.",
     claveEvento: "Per effettuare la prenotazione, indicare il codice dell'evento: \"Boda Carla y Said\".",
     verCotizacion: "Vedi Quotazione (PDF)",
     faqs: [
-      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per recarsi in Messico como turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
+      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italianos non hanno bisogno di visto per recarsi in Messico como turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
       { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
       { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servicio dell'hotel. I tragitti son brevi e semplici." },
       { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta puede essere consultata sulla mappa disponible su questa pagina." },
@@ -414,7 +414,7 @@ export default function WeddingPage() {
             src={heroImage?.imageUrl || "/foto1.jpg"} 
             alt="Carla & Said Wedding" 
             fill
-            className="object-cover object-[center_25%] md:object-center pointer-events-none"
+            className="object-cover object-center pointer-events-none"
             priority
             data-ai-hint="wedding couple beach"
           />
@@ -856,4 +856,3 @@ export default function WeddingPage() {
     </div>
   )
 }
-{/* TÉCNICO: Actualización de enlaces de recomendaciones a México Desconocido */}
