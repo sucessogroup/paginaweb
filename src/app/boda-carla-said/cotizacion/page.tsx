@@ -4,7 +4,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { Literata, Dancing_Script } from 'next/font/google'
-import { ArrowLeft, Printer, Download, Hotel, Clock, Info, CreditCard, Ban, Calendar } from 'lucide-react'
+import { ArrowLeft, Printer, Phone, Mail, Calendar, Info, AlertTriangle, CheckCircle2, MapPin, Building2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
@@ -13,80 +13,92 @@ const script = Dancing_Script({ subsets: ['latin'], weight: ['400', '700'] })
 
 const content = {
   es: {
-    title: "HOTEL VILLA MEXICANA",
+    title: "Hotel Villa Mexicana",
     location: "Zihuatanejo, Guerrero",
+    locationContext: "Ubicado frente al mar en Playa La Ropa, Zihuatanejo, a solo 15 minutos del centro.",
     celebration: "Estancia para la celebración de",
     names: "Carla & Said",
-    intro: "Nos complace compartir con ustedes una tarifa preferencial para nuestros invitados, en un entorno privilegiado frente al mar en Playa La Ropa, Zihuatanejo.",
-    distance: "El hotel se encuentra a 15 minutos del centro de Zihuatanejo y a 8 km de Ixtapa.",
-    detailsTitle: "Detalles de la estancia",
-    detailsText: "Las tarifas son por habitación, por noche, e incluyen un 20% de impuestos. Se trata de una tarifa grupal sujeta a disponibilidad.",
-    minStay: "Estancia mínima requerida: 3 noches",
-    bookingCode: "Para realizar su reservación, favor de indicar la clave del evento:",
-    code: "Boda Carla & Said",
-    importantTitle: "Información importante",
-    accessTitle: "Acceso al hotel",
-    accessText: "Debido a regulaciones locales, los autobuses no pueden acceder directamente a Playa La Ropa. Se recomienda considerar transporte adicional para el último tramo.",
-    policyTitle: "Política del hotel",
-    policyText: "El hotel es un espacio 100% libre de humo, conforme a la normativa vigente.",
-    scheduleTitle: "Horarios",
-    checkIn: "Check-in: 15:00 hrs",
-    checkOut: "Check-out: 12:00 hrs",
-    roomsTitle: "Habitaciones",
-    roomsText: "Las tarifas corresponden a habitaciones con vista jardín. La vista al mar está disponible con un costo adicional de $500 MXN por noche, sujeto a disponibilidad.",
-    occupancyTitle: "Ocupación",
-    occupancyText: "A partir de 11 años se considera tarifa de adulto.",
-    paymentTitle: "Política de pago",
-    paymentText: "Se solicitará el pago de 2 noches como anticipo por habitación. En caso de cancelación fuera del plazo permitido, este depósito será considerado como penalización.",
-    cancelTitle: "Política de cancelación",
-    cancelText: "Cancelaciones permitidas hasta 30 días antes de la llegada.",
+    
+    bookingCodeLabel: "Clave del evento",
+    bookingCode: "Boda Carla & Said",
+    
+    howToBookTitle: "Cómo reservar",
+    step1: "Contactar directamente al hotel",
+    step2: "Mencionar la clave del evento: \"Boda Carla & Said\"",
+    step3: "Reservar lo antes posible debido a disponibilidad limitada",
+    
+    contactTitle: "Contacto Reservaciones",
+    phone: "(55) 9000 1300",
+    email: "reservaciones1@villamexicana.mx",
+    
     ratesTitle: "Tarifas por noche",
     dates: "17 al 25 de diciembre de 2026",
     singleDouble: "Habitación Sencilla / Doble",
     triple: "Habitación Triple",
     quad: "Habitación Cuádruple",
     plan: "Plan: Solo hospedaje",
-    recommendationTitle: "Recomendación",
-    recommendationText: "Se sugiere realizar la reservación con anticipación, ya que la disponibilidad es limitada debido a la temporada.",
+    extraSeaView: "Vista al mar disponible: +$500 MXN por noche (sujeto a disponibilidad)",
+    
+    summaryTitle: "Resumen importante",
+    bullet1: "Estancia mínima: 3 noches",
+    bullet2: "Anticipo: 2 noches",
+    bullet3: "Cancelación: 30 días antes",
+    bullet4: "Tarifas sujetas a disponibilidad",
+    bullet5: "Mayores de 11 años pagan como adulto",
+    
+    transportTitle: "Importante",
+    transportText: "Debido a regulaciones locales, los autobuses no pueden acceder directamente a Playa La Ropa. Se recomienda considerar taxi o transporte adicional para el último tramo.",
+    
+    scheduleTitle: "Horarios",
+    checkIn: "Check-in: 15:00 hrs",
+    checkOut: "Check-out: 12:00 hrs",
+    
+    recommendationText: "Se recomienda reservar lo antes posible, ya que la disponibilidad es limitada debido a la temporada.",
     back: "Volver",
     print: "Imprimir / PDF"
   },
   it: {
-    title: "HOTEL VILLA MEXICANA",
+    title: "Hotel Villa Mexicana",
     location: "Zihuatanejo, Guerrero",
+    locationContext: "Situato di fronte al mare a Playa La Ropa, Zihuatanejo, a soli 15 minuti dal centro.",
     celebration: "Soggiorno per la celebrazione di",
     names: "Carla & Said",
-    intro: "Siamo lieti di condividere con voi una tariffa preferenziale per i nostri ospiti, in un ambiente privilegiato di fronte al mare a Playa La Ropa, Zihuatanejo.",
-    distance: "L'hotel si trova a 15 minuti dal centro di Zihuatanejo e a 8 km da Ixtapa.",
-    detailsTitle: "Dettagli del soggiorno",
-    detailsText: "Le tariffe si intendono per camera, per notte e includono il 20% di tasse. Si tratta di una tariffa di gruppo soggetta a disponibilità.",
-    minStay: "Soggiorno minimo richiesto: 3 notti",
-    bookingCode: "Per effettuare la prenotazione, si prega di indicare il codice dell'evento:",
-    code: "Boda Carla & Said",
-    importantTitle: "Informazioni importanti",
-    accessTitle: "Accesso all'hotel",
-    accessText: "A causa delle normative locali, gli autobus non possono accedere direttamente a Playa La Ropa. Si consiglia di considerare un trasporto aggiuntivo per l'ultimo tratto.",
-    policyTitle: "Politica dell'hotel",
-    policyText: "L'hotel è uno spazio 100% non fumatori, in conformità con la normativa vigente.",
-    scheduleTitle: "Orari",
-    checkIn: "Check-in: 15:00 hrs",
-    checkOut: "Check-out: 12:00 hrs",
-    roomsTitle: "Camere",
-    roomsText: "Le tariffe corrispondono a camere con vista giardino. La vista mare è disponibile con un costo aggiuntivo di $500 MXN a notte, soggetto a disponibilità.",
-    occupancyTitle: "Occupazione",
-    occupancyText: "Dagli 11 anni in su è considerata tariffa adulto.",
-    paymentTitle: "Politica di pagamento",
-    paymentText: "Verrà richiesto il pagamento di 2 notti come acconto per camera. In caso di cancellazione al di fuori del periodo consentito, questo deposito sarà considerato come penale.",
-    cancelTitle: "Politica di cancellazione",
-    cancelText: "Cancellazioni consentite fino a 30 giorni prima dell'arrivo.",
+    
+    bookingCodeLabel: "Codice dell'evento",
+    bookingCode: "Boda Carla & Said",
+    
+    howToBookTitle: "Come prenotare",
+    step1: "Contattare direttamente l'hotel",
+    step2: "Menzionare il codice dell'evento: \"Boda Carla & Said\"",
+    step3: "Prenotare il prima possibile a causa della disponibilità limitata",
+    
+    contactTitle: "Contatto Prenotazioni",
+    phone: "(55) 9000 1300",
+    email: "reservaciones1@villamexicana.mx",
+    
     ratesTitle: "Tariffe per notte",
     dates: "17 al 25 dicembre 2026",
     singleDouble: "Camera Singola / Doppia",
     triple: "Camera Tripla",
     quad: "Camera Quadrupla",
     plan: "Piano: Solo pernottamento",
-    recommendationTitle: "Raccomandazione",
-    recommendationText: "Si consiglia di prenotare in anticipo, poiché la disponibilità è limitata a causa della stagione.",
+    extraSeaView: "Vista mare disponibile: +$500 MXN a notte (soggetta a disponibilità)",
+    
+    summaryTitle: "Riepilogo importante",
+    bullet1: "Soggiorno minimo: 3 notti",
+    bullet2: "Acconto: 2 notti",
+    bullet3: "Cancellazione: 30 giorni prima",
+    bullet4: "Tariffe soggette a disponibilità",
+    bullet5: "Dagli 11 anni in su si paga come adulto",
+    
+    transportTitle: "Importante",
+    transportText: "A causa delle normative locali, gli autobus non possono accedere direttamente a Playa La Ropa. Si consiglia di considerare un taxi o un trasporto aggiuntivo per l'ultimo tratto.",
+    
+    scheduleTitle: "Orari",
+    checkIn: "Check-in: 15:00 hrs",
+    checkOut: "Check-out: 12:00 hrs",
+    
+    recommendationText: "Si consiglia di prenotare il prima possibile, poiché la disponibilità è limitata a causa della stagione.",
     back: "Indietro",
     print: "Stampa / PDF"
   }
@@ -101,23 +113,23 @@ export default function QuotationPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#fcfaf7] text-[#5c6b5c] p-4 md:p-8 lg:p-12 print:p-0 print:bg-white">
-      {/* Controles (Se ocultan al imprimir) */}
-      <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center mb-12 gap-6 print:hidden">
-        <Button asChild variant="ghost" className="rounded-full text-[#c5a059] uppercase tracking-widest text-[10px] gap-2">
+    <div className="min-h-screen bg-[#f9f9f9] text-[#1a1a1a] p-4 md:p-8 lg:p-12 print:p-0 print:bg-white">
+      {/* Controles */}
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center mb-12 gap-6 print:hidden">
+        <Button asChild variant="ghost" className="rounded-full text-[#c5a059] uppercase tracking-[0.2em] text-[10px] gap-2">
           <Link href="/boda-carla-said#hotel">
             <ArrowLeft size={14} /> {t.back}
           </Link>
         </Button>
 
-        <div className="flex gap-4 bg-white/50 backdrop-blur-sm p-2 rounded-full border border-[#5c6b5c]/5">
+        <div className="flex gap-4 bg-white shadow-sm p-1 rounded-full border border-black/5">
           {['es', 'it'].map((l) => (
             <button
               key={l}
               onClick={() => setLang(l as 'es' | 'it')}
               className={cn(
                 "px-6 py-2 rounded-full text-[10px] uppercase tracking-[0.2em] transition-all",
-                lang === l ? "bg-[#c5a059] text-white font-bold" : "opacity-40 hover:opacity-100"
+                lang === l ? "bg-[#45141c] text-white font-bold" : "text-[#1a1a1a] opacity-40 hover:opacity-100"
               )}
             >
               {l}
@@ -125,84 +137,96 @@ export default function QuotationPage() {
           ))}
         </div>
 
-        <Button onClick={handlePrint} className="rounded-full bg-[#8a9a5b] hover:bg-[#5c6b5c] text-white uppercase tracking-widest text-[10px] gap-2 px-8">
+        <Button onClick={handlePrint} className="rounded-full bg-black hover:bg-black/80 text-white uppercase tracking-[0.2em] text-[10px] gap-2 px-8">
           <Printer size={14} /> {t.print}
         </Button>
       </div>
 
-      {/* Documento */}
-      <div className="max-w-4xl mx-auto bg-white shadow-2xl rounded-[2rem] overflow-hidden border border-[#c5a059]/10 print:shadow-none print:rounded-none print:border-none">
-        {/* Header con diseño elegante */}
-        <div className="bg-[#f5f0e6] py-12 px-8 md:py-20 text-center border-b border-[#c5a059]/10">
-          <div className="space-y-4">
-            <h1 className={cn(serif.className, "text-4xl md:text-6xl font-bold tracking-tight text-[#5c6b5c]")}>
+      {/* Documento Digital */}
+      <div className="max-w-5xl mx-auto bg-white shadow-xl rounded-3xl overflow-hidden border border-black/5 print:shadow-none print:rounded-none print:border-none">
+        
+        {/* Header Elegante */}
+        <div className="bg-[#fcfaf7] py-16 px-8 md:py-24 text-center border-b border-[#c5a059]/10">
+          <div className="space-y-6">
+            <h1 className={cn(serif.className, "text-4xl md:text-6xl font-light tracking-tight text-[#1a1a1a]")}>
               {t.title}
             </h1>
-            <p className="text-[10px] md:text-xs uppercase tracking-[0.5em] font-bold text-[#c5a059]">
-              {t.location}
+            <div className="flex items-center justify-center gap-2 text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold text-[#c5a059]">
+              <MapPin size={14} /> {t.location}
+            </div>
+            <p className="max-w-md mx-auto text-sm italic text-[#1a1a1a]/60 leading-relaxed font-light">
+              {t.locationContext}
             </p>
-            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto my-8 opacity-30" />
-            <p className={cn(script.className, "text-2xl md:text-4xl text-[#5c6b5c]/80")}>
+            
+            <div className="w-16 h-[1px] bg-[#c5a059]/30 mx-auto my-12" />
+            
+            <p className={cn(script.className, "text-2xl md:text-3xl text-[#1a1a1a]/70")}>
               {t.celebration}
             </p>
-            <h2 className={cn(script.className, "text-5xl md:text-7xl text-[#c5a059] py-4")}>
+            <h2 className={cn(script.className, "text-5xl md:text-8xl text-[#45141c] py-4")}>
               {t.names}
             </h2>
           </div>
         </div>
 
-        <div className="p-8 md:p-16 space-y-16">
-          {/* Introducción */}
-          <div className="text-center max-w-2xl mx-auto space-y-6">
-            <p className="text-sm md:text-lg italic font-light leading-relaxed">
-              {t.intro}
-            </p>
-            <p className="text-xs uppercase tracking-[0.2em] opacity-60">
-              {t.distance}
-            </p>
+        <div className="p-8 md:p-20 space-y-24">
+          
+          {/* Clave del Evento Highlight */}
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="bg-[#f5f0e6] p-8 md:p-12 rounded-3xl border border-[#c5a059]/20 shadow-sm relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#c5a059]/5 rounded-full -mr-16 -mt-16" />
+              <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-[#c5a059] mb-4">
+                {t.bookingCodeLabel}
+              </p>
+              <h3 className={cn(serif.className, "text-3xl md:text-5xl font-bold text-[#45141c] italic")}>
+                {t.bookingCode}
+              </h3>
+            </div>
           </div>
 
-          {/* Detalles e Información Importante */}
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            <div className="space-y-8 bg-[#fcfaf7] p-8 rounded-3xl border border-[#c5a059]/5">
-              <div className="flex items-center gap-4 text-[#c5a059]">
-                <Hotel size={24} />
-                <h3 className={cn(serif.className, "text-xl font-bold italic")}>{t.detailsTitle}</h3>
-              </div>
-              <div className="space-y-4 text-sm leading-relaxed text-[#5c6b5c]/80 italic">
-                <p>{t.detailsText}</p>
-                <p className="font-bold text-[#5c6b5c] not-italic">{t.minStay}</p>
-                <div className="pt-4 border-t border-[#c5a059]/10">
-                  <p className="text-[10px] uppercase tracking-wider mb-2">{t.bookingCode}</p>
-                  <p className="text-lg font-bold text-[#c5a059] not-italic">"{t.code}"</p>
-                </div>
+          {/* Grid de Pasos y Contacto */}
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            {/* Cómo reservar */}
+            <div className="space-y-10">
+              <h3 className={cn(serif.className, "text-3xl italic text-[#1a1a1a]")}>{t.howToBookTitle}</h3>
+              <div className="space-y-8">
+                {[
+                  { icon: Building2, text: t.step1 },
+                  { icon: CheckCircle2, text: t.step2 },
+                  { icon: Calendar, text: t.step3 }
+                ].map((step, idx) => (
+                  <div key={idx} className="flex gap-6 items-start">
+                    <div className="w-10 h-10 rounded-full bg-[#f9f9f9] border border-black/5 flex items-center justify-center flex-shrink-0 text-[#c5a059]">
+                      <span className="text-xs font-bold">{idx + 1}</span>
+                    </div>
+                    <p className="text-base md:text-lg font-light text-[#1a1a1a]/80 pt-1 leading-relaxed">
+                      {step.text}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
 
-            <div className="space-y-8">
-              <div className="flex items-center gap-4 text-[#c5a059]">
-                <Info size={24} />
-                <h3 className={cn(serif.className, "text-xl font-bold italic")}>{t.importantTitle}</h3>
-              </div>
-              <div className="space-y-6">
-                <div className="space-y-2">
-                  <h4 className="text-[10px] uppercase tracking-widest font-bold opacity-60">{t.accessTitle}</h4>
-                  <p className="text-xs leading-relaxed italic">{t.accessText}</p>
+            {/* Contacto Destacado */}
+            <div className="bg-black text-white p-10 md:p-12 rounded-[2.5rem] space-y-10 shadow-2xl">
+              <h3 className={cn(serif.className, "text-2xl md:text-3xl italic text-[#c5a059]")}>{t.contactTitle}</h3>
+              <div className="space-y-8">
+                <div className="flex items-center gap-6 group cursor-pointer">
+                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-[#c5a059] transition-all group-hover:bg-[#c5a059] group-hover:text-white">
+                    <Phone size={20} />
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-[8px] uppercase tracking-widest opacity-40">Teléfono</p>
+                    <p className="text-lg md:text-xl font-medium tracking-tight">{t.phone}</p>
+                  </div>
                 </div>
-                <div className="space-y-2">
-                  <h4 className="text-[10px] uppercase tracking-widest font-bold opacity-60">{t.policyTitle}</h4>
-                  <p className="text-xs leading-relaxed italic">{t.policyText}</p>
-                </div>
-                <div className="flex gap-12 pt-4">
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-[#c5a059]">
-                      <Clock size={14} />
-                      <h4 className="text-[10px] uppercase tracking-widest font-bold">{t.scheduleTitle}</h4>
-                    </div>
-                    <div className="text-xs italic space-y-1">
-                      <p>{t.checkIn}</p>
-                      <p>{t.checkOut}</p>
-                    </div>
+                <div className="flex items-center gap-6 group cursor-pointer">
+                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-[#c5a059] transition-all group-hover:bg-[#c5a059] group-hover:text-white">
+                    <Mail size={20} />
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-[8px] uppercase tracking-widest opacity-40">Email</p>
+                    <p className="text-sm md:text-base font-medium break-all">{t.email}</p>
                   </div>
                 </div>
               </div>
@@ -210,63 +234,86 @@ export default function QuotationPage() {
           </div>
 
           {/* Tarifas */}
-          <div className="space-y-8 bg-[#5c6b5c] text-white p-8 md:p-12 rounded-[2rem] shadow-xl">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-              <div className="space-y-2 text-center md:text-left">
-                <h3 className={cn(serif.className, "text-2xl md:text-4xl italic font-light")}>{t.ratesTitle}</h3>
-                <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] text-[#c5a059] font-bold">{t.dates}</p>
-              </div>
-              <div className="bg-white/10 px-6 py-2 rounded-full text-[10px] uppercase tracking-[0.2em] font-bold">
+          <div className="space-y-12">
+            <div className="text-center space-y-4">
+              <h3 className={cn(serif.className, "text-3xl md:text-5xl italic text-[#1a1a1a]")}>{t.ratesTitle}</h3>
+              <p className="text-[10px] md:text-xs uppercase tracking-[0.5em] text-[#c5a059] font-bold">{t.dates}</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                { label: t.singleDouble, price: "$4,609" },
+                { label: t.triple, price: "$5,209" },
+                { label: t.quad, price: "$5,809" }
+              ].map((rate, i) => (
+                <div key={i} className="p-10 rounded-[2rem] border border-black/5 bg-[#fcfaf7] text-center space-y-4 transition-all hover:shadow-lg hover:border-[#c5a059]/20">
+                  <p className="text-[9px] uppercase tracking-[0.2em] font-bold opacity-40 h-8 flex items-center justify-center">
+                    {rate.label}
+                  </p>
+                  <p className="text-3xl font-bold text-[#1a1a1a]">{rate.price} <span className="text-[10px] font-light opacity-50 uppercase tracking-widest">MXN</span></p>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center space-y-4">
+              <p className="text-xs italic opacity-50 font-light">{t.extraSeaView}</p>
+              <div className="inline-block px-8 py-2 border border-black/10 rounded-full text-[9px] uppercase tracking-[0.3em] font-bold">
                 {t.plan}
               </div>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
-              <div className="bg-white/5 p-6 rounded-2xl border border-white/10 text-center space-y-2">
-                <p className="text-[9px] uppercase tracking-widest opacity-60">{t.singleDouble}</p>
-                <p className="text-2xl font-bold">$4,609 <span className="text-xs font-light">MXN</span></p>
-              </div>
-              <div className="bg-white/5 p-6 rounded-2xl border border-white/10 text-center space-y-2">
-                <p className="text-[9px] uppercase tracking-widest opacity-60">{t.triple}</p>
-                <p className="text-2xl font-bold">$5,209 <span className="text-xs font-light">MXN</span></p>
-              </div>
-              <div className="bg-white/5 p-6 rounded-2xl border border-white/10 text-center space-y-2">
-                <p className="text-[9px] uppercase tracking-widest opacity-60">{t.quad}</p>
-                <p className="text-2xl font-bold">$5,809 <span className="text-xs font-light">MXN</span></p>
-              </div>
-            </div>
-
-            <div className="pt-6 border-t border-white/10 text-center space-y-4">
-              <p className="text-xs italic opacity-80">{t.roomsText}</p>
-              <p className="text-[9px] uppercase tracking-widest font-bold text-[#c5a059]">{t.occupancyText}</p>
-            </div>
           </div>
 
-          {/* Políticas Adicionales */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-3xl border border-[#c5a059]/10 space-y-4">
-              <div className="flex items-center gap-3 text-[#c5a059]">
-                <CreditCard size={18} />
-                <h3 className="text-xs uppercase tracking-widest font-bold">{t.paymentTitle}</h3>
+          {/* Resumen y Transporte */}
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Resumen importante */}
+            <div className="p-10 md:p-12 rounded-[2.5rem] bg-[#f9f9f9] border border-black/5 space-y-8">
+              <div className="flex items-center gap-4 text-[#45141c]">
+                <Info size={24} />
+                <h3 className={cn(serif.className, "text-2xl italic")}>{t.summaryTitle}</h3>
               </div>
-              <p className="text-xs leading-relaxed italic opacity-80">{t.paymentText}</p>
+              <ul className="space-y-4">
+                {[t.bullet1, t.bullet2, t.bullet3, t.bullet4, t.bullet5].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-sm font-light text-[#1a1a1a]/80">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#c5a059]" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="p-8 rounded-3xl border border-[#c5a059]/10 space-y-4">
-              <div className="flex items-center gap-3 text-[#c5a059]">
-                <Ban size={18} />
-                <h3 className="text-xs uppercase tracking-widest font-bold">{t.cancelTitle}</h3>
+
+            {/* Aviso de Transporte */}
+            <div className="space-y-8">
+              <div className="p-10 md:p-12 rounded-[2.5rem] bg-[#45141c]/5 border border-[#45141c]/10 space-y-6">
+                <div className="flex items-center gap-4 text-[#45141c]">
+                  <AlertTriangle size={24} />
+                  <h3 className={cn(serif.className, "text-2xl italic")}>{t.transportTitle}</h3>
+                </div>
+                <p className="text-sm md:text-base leading-relaxed italic text-[#45141c]/80 font-light">
+                  {t.transportText}
+                </p>
               </div>
-              <p className="text-xs leading-relaxed italic opacity-80">{t.cancelText}</p>
+
+              {/* Horarios */}
+              <div className="flex justify-between px-10 py-6 border-t border-black/5">
+                <div className="space-y-1">
+                  <p className="text-[8px] uppercase tracking-widest opacity-40 font-bold">{t.checkIn.split(':')[0]}</p>
+                  <p className="text-sm font-medium">15:00 hrs</p>
+                </div>
+                <div className="space-y-1 text-right">
+                  <p className="text-[8px] uppercase tracking-widest opacity-40 font-bold">{t.checkOut.split(':')[0]}</p>
+                  <p className="text-sm font-medium">12:00 hrs</p>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Cierre */}
-          <div className="text-center space-y-6 pt-8">
-            <div className="inline-flex items-center gap-3 bg-[#f5f0e6] px-8 py-4 rounded-full border border-[#c5a059]/20">
-              <Calendar size={16} className="text-[#c5a059]" />
-              <p className="text-xs font-bold uppercase tracking-widest text-[#5c6b5c]">{t.recommendationText}</p>
+          <div className="text-center space-y-8 pt-12 border-t border-black/5">
+            <div className="inline-flex items-center gap-4 bg-black text-white px-10 py-5 rounded-full shadow-xl">
+              <Calendar size={18} className="text-[#c5a059]" />
+              <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em]">{t.recommendationText}</p>
             </div>
-            <p className={cn(script.className, "text-5xl md:text-7xl text-[#c5a059] pt-12")}>
+            <p className={cn(script.className, "text-6xl md:text-[8rem] text-[#c5a059] pt-16 opacity-40")}>
               {t.names}
             </p>
           </div>
