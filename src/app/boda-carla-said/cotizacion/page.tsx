@@ -4,7 +4,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { Literata, Dancing_Script } from 'next/font/google'
-import { ArrowLeft, Printer, Phone, Mail, Calendar, Info, AlertTriangle, CheckCircle2, MapPin, Building2 } from 'lucide-react'
+import { ArrowLeft, Printer, Phone, Mail, Calendar, Info, AlertTriangle, CheckCircle2, MapPin, Building2, Coffee, Wine } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
@@ -39,6 +39,14 @@ const content = {
     plan: "Plan: Solo hospedaje",
     extraSeaView: "Vista al mar disponible: +$500 MXN por noche (sujeto a disponibilidad)",
     
+    optionalServicesTitle: "Servicios Opcionales",
+    breakfastLabel: "Desayuno Americano",
+    breakfastPrice: "$250.00",
+    breakfastNote: "Por persona. Los precios de desayuno no son comisionables.",
+    allInclusiveLabel: "Bebidas & Snacks Ilimitados",
+    allInclusivePrice: "$1,690.00",
+    allInclusiveNote: "Por persona, por noche. Bebidas (12 PM - 10 PM) y Snacks (12 PM - 6 PM).",
+
     summaryTitle: "Resumen importante",
     bullet1: "Estancia mínima: 3 noches",
     bullet2: "Anticipo: 2 noches",
@@ -84,6 +92,14 @@ const content = {
     plan: "Piano: Solo pernottamento",
     extraSeaView: "Vista mare disponibile: +$500 MXN a notte (soggetta a disponibilità)",
     
+    optionalServicesTitle: "Servizi Opzionali",
+    breakfastLabel: "Colazione Americana",
+    breakfastPrice: "$250.00",
+    breakfastNote: "A persona. I prezzi della colazione non sono commissionabili.",
+    allInclusiveLabel: "Bevande & Snack Illimitati",
+    allInclusivePrice: "$1,690.00",
+    allInclusiveNote: "A persona, per notte. Bevande (12:00 - 22:00) e Snack (12:00 - 18:00).",
+
     summaryTitle: "Riepilogo importante",
     bullet1: "Soggiorno minimo: 3 notti",
     bullet2: "Acconto: 2 notti",
@@ -199,6 +215,31 @@ export default function QuotationPage() {
                 {t.plan}
               </div>
             </div>
+
+            {/* 1.5 Servicios Opcionales */}
+            <div className="space-y-10 pt-16 border-t border-black/5">
+              <div className="text-center">
+                <h3 className={cn(serif.className, "text-2xl md:text-4xl italic text-[#1a1a1a]")}>{t.optionalServicesTitle}</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div className="p-8 rounded-3xl border border-black/5 bg-white text-center space-y-4 shadow-sm">
+                    <div className="w-10 h-10 rounded-full bg-[#fcfaf7] flex items-center justify-center mx-auto text-[#c5a059]">
+                      <Coffee size={20} />
+                    </div>
+                    <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#c5a059]">{t.breakfastLabel}</p>
+                    <p className="text-2xl font-bold">{t.breakfastPrice} <span className="text-[10px] opacity-50 uppercase tracking-widest">MXN</span></p>
+                    <p className="text-[10px] italic opacity-60 leading-tight font-light">{t.breakfastNote}</p>
+                </div>
+                <div className="p-8 rounded-3xl border border-black/5 bg-white text-center space-y-4 shadow-sm">
+                    <div className="w-10 h-10 rounded-full bg-[#fcfaf7] flex items-center justify-center mx-auto text-[#c5a059]">
+                      <Wine size={20} />
+                    </div>
+                    <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#c5a059]">{t.allInclusiveLabel}</p>
+                    <p className="text-2xl font-bold">{t.allInclusivePrice} <span className="text-[10px] opacity-50 uppercase tracking-widest">MXN</span></p>
+                    <p className="text-[10px] italic opacity-60 leading-tight font-light">{t.allInclusiveNote}</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* 2. Resumen y Transporte (con Horarios) */}
@@ -245,7 +286,7 @@ export default function QuotationPage() {
             </div>
           </div>
 
-          {/* Recomendación de Reserva - NUEVA POSICIÓN */}
+          {/* Recomendación de Reserva */}
           <div className="text-center pt-8">
             <div className="inline-flex items-center gap-4 bg-black text-white px-10 py-5 rounded-full shadow-xl">
               <Calendar size={18} className="text-[#c5a059]" />
