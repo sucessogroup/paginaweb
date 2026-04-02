@@ -50,8 +50,8 @@ const content = {
     transportText: "Debido a regulaciones locales, los autobuses no pueden acceder directamente a Playa La Ropa. Se recomienda considerar taxi o transporte adicional para el último tramo.",
     
     scheduleTitle: "Horarios",
-    checkIn: "Check-in: 15:00 hrs",
-    checkOut: "Check-out: 12:00 hrs",
+    checkIn: "Check-in",
+    checkOut: "Check-out",
     
     recommendationText: "Se recomienda reservar lo antes posible, ya que la disponibilidad es limitada debido a la temporada.",
     back: "Volver",
@@ -95,8 +95,8 @@ const content = {
     transportText: "A causa delle normative locali, gli autobus non possono accedere direttamente a Playa La Ropa. Si consiglia di considerare un taxi o un trasporto aggiuntivo per l'ultimo tratto.",
     
     scheduleTitle: "Orari",
-    checkIn: "Check-in: 15:00 hrs",
-    checkOut: "Check-out: 12:00 hrs",
+    checkIn: "Check-in",
+    checkOut: "Check-out",
     
     recommendationText: "Si consiglia di prenotare il prima possibile, poiché la disponibilità è limitata a causa della stagione.",
     back: "Indietro",
@@ -234,14 +234,22 @@ export default function QuotationPage() {
               {/* Horarios */}
               <div className="flex justify-between px-10 py-6 border-t border-black/5">
                 <div className="space-y-1">
-                  <p className="text-[8px] uppercase tracking-widest opacity-40 font-bold">{t.checkIn.split(':')[0]}</p>
+                  <p className="text-[8px] uppercase tracking-widest opacity-40 font-bold">{t.checkIn}</p>
                   <p className="text-sm font-medium">15:00 hrs</p>
                 </div>
                 <div className="space-y-1 text-right">
-                  <p className="text-[8px] uppercase tracking-widest opacity-40 font-bold">{t.checkOut.split(':')[0]}</p>
+                  <p className="text-[8px] uppercase tracking-widest opacity-40 font-bold">{t.checkOut}</p>
                   <p className="text-sm font-medium">12:00 hrs</p>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Recomendación de Reserva - NUEVA POSICIÓN */}
+          <div className="text-center pt-8">
+            <div className="inline-flex items-center gap-4 bg-black text-white px-10 py-5 rounded-full shadow-xl">
+              <Calendar size={18} className="text-[#c5a059]" />
+              <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em]">{t.recommendationText}</p>
             </div>
           </div>
 
@@ -309,10 +317,6 @@ export default function QuotationPage() {
 
           {/* Cierre */}
           <div className="text-center space-y-8 pt-12 border-t border-black/5">
-            <div className="inline-flex items-center gap-4 bg-black text-white px-10 py-5 rounded-full shadow-xl">
-              <Calendar size={18} className="text-[#c5a059]" />
-              <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em]">{t.recommendationText}</p>
-            </div>
             <p className={cn(script.className, "text-6xl md:text-[8rem] text-[#c5a059] pt-16 opacity-40")}>
               {t.names}
             </p>
