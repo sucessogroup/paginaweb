@@ -146,7 +146,7 @@ const translations = {
       { q: "In quale aeroporto arrivare?", a: "Ixtapa-Zihuatanejo (ZIH)." },
       { q: "Trasporto dall'aeroporto?", a: "Taxi autorizzati o transporte privato." },
       { q: "Dove si svolgerà?", a: "Club de Playa Garrobo, Zihuatanejo, Messico." },
-      { q: "Com'è il clima?", a: "Caldo, tra 22 °C e 30 °C." },
+      { q: "Com'è il clima?", a: "Caldo, tra 22 °C y 30 °C." },
       { q: "Quale valuta si usa?", a: "Peso messicano (MXN)." },
       { q: "Possono partecipare i bambini?", a: "L'evento è riservato agli adulti." }
     ]
@@ -334,7 +334,7 @@ export default function WeddingPage() {
   };
 
   const openGoogleMaps = () => {
-    window.open('https://www.google.com/maps/search/?api=1&query=JC8W+55+Caleta+de+Chon+40895+Zihuatanejo+Gro+Mexico', '_blank');
+    window.open('https://maps.app.goo.gl/ZXfrBTdAe1UPgYRr9', '_blank');
   };
 
   const openQuotation = () => {
