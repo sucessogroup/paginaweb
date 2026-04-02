@@ -93,7 +93,7 @@ const translations = {
     minutos: "Minuti",
     segundos: "Secondi",
     faltaPoco: "Manca poco al nostro per sempre",
-    acompananos: "",
+    acompananos: "Sii con noi in questo momento",
     calendario: "Aggiungi al calendario",
     itinerario: "Itinerario",
     llegada: "Arrivo al club de playa",
