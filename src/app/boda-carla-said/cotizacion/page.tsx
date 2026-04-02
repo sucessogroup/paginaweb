@@ -171,7 +171,81 @@ export default function QuotationPage() {
 
         <div className="p-8 md:p-20 space-y-24">
           
-          {/* Clave del Evento Highlight */}
+          {/* 1. Tarifas */}
+          <div className="space-y-12">
+            <div className="text-center space-y-4">
+              <h3 className={cn(serif.className, "text-3xl md:text-5xl italic text-[#1a1a1a]")}>{t.ratesTitle}</h3>
+              <p className="text-[10px] md:text-xs uppercase tracking-[0.5em] text-[#c5a059] font-bold">{t.dates}</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                { label: t.singleDouble, price: "$4,609" },
+                { label: t.triple, price: "$5,209" },
+                { label: t.quad, price: "$5,809" }
+              ].map((rate, i) => (
+                <div key={i} className="p-10 rounded-[2rem] border border-black/5 bg-[#fcfaf7] text-center space-y-4 transition-all hover:shadow-lg hover:border-[#c5a059]/20">
+                  <p className="text-[9px] uppercase tracking-[0.2em] font-bold opacity-40 h-8 flex items-center justify-center">
+                    {rate.label}
+                  </p>
+                  <p className="text-3xl font-bold text-[#1a1a1a]">{rate.price} <span className="text-[10px] font-light opacity-50 uppercase tracking-widest">MXN</span></p>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center space-y-4">
+              <p className="text-xs italic opacity-50 font-light">{t.extraSeaView}</p>
+              <div className="inline-block px-8 py-2 border border-black/10 rounded-full text-[9px] uppercase tracking-[0.3em] font-bold">
+                {t.plan}
+              </div>
+            </div>
+          </div>
+
+          {/* 2. Resumen y Transporte (con Horarios) */}
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Resumen importante */}
+            <div className="p-10 md:p-12 rounded-[2.5rem] bg-[#f9f9f9] border border-black/5 space-y-8">
+              <div className="flex items-center gap-4 text-[#45141c]">
+                <Info size={24} />
+                <h3 className={cn(serif.className, "text-2xl italic")}>{t.summaryTitle}</h3>
+              </div>
+              <ul className="space-y-4">
+                {[t.bullet1, t.bullet2, t.bullet3, t.bullet4, t.bullet5].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-sm font-light text-[#1a1a1a]/80">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#c5a059]" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Aviso de Transporte + Horarios */}
+            <div className="space-y-8">
+              <div className="p-10 md:p-12 rounded-[2.5rem] bg-[#45141c]/5 border border-[#45141c]/10 space-y-6">
+                <div className="flex items-center gap-4 text-[#45141c]">
+                  <AlertTriangle size={24} />
+                  <h3 className={cn(serif.className, "text-2xl italic")}>{t.transportTitle}</h3>
+                </div>
+                <p className="text-sm md:text-base leading-relaxed italic text-[#45141c]/80 font-light">
+                  {t.transportText}
+                </p>
+              </div>
+
+              {/* Horarios */}
+              <div className="flex justify-between px-10 py-6 border-t border-black/5">
+                <div className="space-y-1">
+                  <p className="text-[8px] uppercase tracking-widest opacity-40 font-bold">{t.checkIn.split(':')[0]}</p>
+                  <p className="text-sm font-medium">15:00 hrs</p>
+                </div>
+                <div className="space-y-1 text-right">
+                  <p className="text-[8px] uppercase tracking-widest opacity-40 font-bold">{t.checkOut.split(':')[0]}</p>
+                  <p className="text-sm font-medium">12:00 hrs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 3. Clave del Evento Highlight */}
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-[#f5f0e6] p-8 md:p-12 rounded-3xl border border-[#c5a059]/20 shadow-sm relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#c5a059]/5 rounded-full -mr-16 -mt-16" />
@@ -184,7 +258,7 @@ export default function QuotationPage() {
             </div>
           </div>
 
-          {/* Grid de Pasos y Contacto */}
+          {/* 4. Grid de Pasos y Contacto */}
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Cómo reservar */}
             <div className="space-y-10">
@@ -228,80 +302,6 @@ export default function QuotationPage() {
                     <p className="text-[8px] uppercase tracking-widest opacity-40">Email</p>
                     <p className="text-sm md:text-base font-medium break-all">{t.email}</p>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Tarifas */}
-          <div className="space-y-12">
-            <div className="text-center space-y-4">
-              <h3 className={cn(serif.className, "text-3xl md:text-5xl italic text-[#1a1a1a]")}>{t.ratesTitle}</h3>
-              <p className="text-[10px] md:text-xs uppercase tracking-[0.5em] text-[#c5a059] font-bold">{t.dates}</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                { label: t.singleDouble, price: "$4,609" },
-                { label: t.triple, price: "$5,209" },
-                { label: t.quad, price: "$5,809" }
-              ].map((rate, i) => (
-                <div key={i} className="p-10 rounded-[2rem] border border-black/5 bg-[#fcfaf7] text-center space-y-4 transition-all hover:shadow-lg hover:border-[#c5a059]/20">
-                  <p className="text-[9px] uppercase tracking-[0.2em] font-bold opacity-40 h-8 flex items-center justify-center">
-                    {rate.label}
-                  </p>
-                  <p className="text-3xl font-bold text-[#1a1a1a]">{rate.price} <span className="text-[10px] font-light opacity-50 uppercase tracking-widest">MXN</span></p>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center space-y-4">
-              <p className="text-xs italic opacity-50 font-light">{t.extraSeaView}</p>
-              <div className="inline-block px-8 py-2 border border-black/10 rounded-full text-[9px] uppercase tracking-[0.3em] font-bold">
-                {t.plan}
-              </div>
-            </div>
-          </div>
-
-          {/* Resumen y Transporte */}
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Resumen importante */}
-            <div className="p-10 md:p-12 rounded-[2.5rem] bg-[#f9f9f9] border border-black/5 space-y-8">
-              <div className="flex items-center gap-4 text-[#45141c]">
-                <Info size={24} />
-                <h3 className={cn(serif.className, "text-2xl italic")}>{t.summaryTitle}</h3>
-              </div>
-              <ul className="space-y-4">
-                {[t.bullet1, t.bullet2, t.bullet3, t.bullet4, t.bullet5].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm font-light text-[#1a1a1a]/80">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#c5a059]" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Aviso de Transporte */}
-            <div className="space-y-8">
-              <div className="p-10 md:p-12 rounded-[2.5rem] bg-[#45141c]/5 border border-[#45141c]/10 space-y-6">
-                <div className="flex items-center gap-4 text-[#45141c]">
-                  <AlertTriangle size={24} />
-                  <h3 className={cn(serif.className, "text-2xl italic")}>{t.transportTitle}</h3>
-                </div>
-                <p className="text-sm md:text-base leading-relaxed italic text-[#45141c]/80 font-light">
-                  {t.transportText}
-                </p>
-              </div>
-
-              {/* Horarios */}
-              <div className="flex justify-between px-10 py-6 border-t border-black/5">
-                <div className="space-y-1">
-                  <p className="text-[8px] uppercase tracking-widest opacity-40 font-bold">{t.checkIn.split(':')[0]}</p>
-                  <p className="text-sm font-medium">15:00 hrs</p>
-                </div>
-                <div className="space-y-1 text-right">
-                  <p className="text-[8px] uppercase tracking-widest opacity-40 font-bold">{t.checkOut.split(':')[0]}</p>
-                  <p className="text-sm font-medium">12:00 hrs</p>
                 </div>
               </div>
             </div>
