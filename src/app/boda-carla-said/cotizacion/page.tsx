@@ -42,7 +42,7 @@ const content = {
     optionalServicesTitle: "Servicios Opcionales",
     breakfastLabel: "Desayuno Americano",
     breakfastPrice: "$250.00",
-    breakfastNote: "Precio por persona, por evento.",
+    breakfastNote: "Precio por persona, por día.",
     allInclusiveLabel: "Bebidas & Snacks Ilimitados",
     allInclusivePrice: "$1,690.00",
     allInclusiveNote: "Por persona, por noche. Bebidas (12 PM - 10 PM) y Snacks (12 PM - 6 PM).",
@@ -90,12 +90,12 @@ const content = {
     triple: "Camera Tripla",
     quad: "Camera Quadrupla",
     plan: "Piano: Solo pernottamento",
-    extraSeaView: "Vista mare disponibile: +$500 MXN a notte (soggetta a disponibilità)",
+    extraSeaView: "Vista mare disponible: +$500 MXN a notte (soggetta a disponibilità)",
     
     optionalServicesTitle: "Servizi Opzionali",
     breakfastLabel: "Colazione Americana",
     breakfastPrice: "$250.00",
-    breakfastNote: "Prezzo a persona, per evento.",
+    breakfastNote: "Prezzo a persona, al giorno.",
     allInclusiveLabel: "Bevande & Snack Illimitati",
     allInclusivePrice: "$1,690.00",
     allInclusiveNote: "A persona, per notte. Bevande (12:00 - 22:00) e Snack (12:00 - 18:00).",
@@ -108,7 +108,7 @@ const content = {
     bullet5: "Dagli 11 anni in su si paga come adulto",
     
     transportTitle: "Importante",
-    transportText: "A causa delle normative locali, gli autobus non possono accedere direttamente a Playa La Ropa. Si consiglia di considerare un taxi o un trasporto aggiuntivo per l'ultimo tratto.",
+    transportText: "A causa delle normative locali, gli autobus non possono accedere directamente a Playa La Ropa. Si consiglia di considerare un taxi o un trasporto aggiuntivo per l'ultimo tratto.",
     
     scheduleTitle: "Orari",
     checkIn: "Check-in",
@@ -129,7 +129,7 @@ export default function QuotationPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f9f9f9] text-[#1a1a1a] p-4 md:p-8 lg:p-12 print:p-0 print:bg-white">
+    <div className="min-h-screen bg-[#fcfaf7] text-[#1a1a1a] p-4 md:p-8 lg:p-12 print:p-0 print:bg-white">
       {/* Controles */}
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center mb-12 gap-6 print:hidden">
         <Button asChild variant="ghost" className="rounded-full text-[#c5a059] uppercase tracking-[0.2em] text-[10px] gap-2">
