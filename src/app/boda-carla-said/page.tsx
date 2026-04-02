@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Literata, Dancing_Script } from 'next/font/google'
-import { CalendarPlus, ExternalLink, MapPin, CreditCard, Globe, Heart, Copy, Check, MessageCircle, Instagram, ArrowRight, FileText, Hotel } from 'lucide-react'
+import { CalendarPlus, ExternalLink, MapPin, CreditCard, Heart, Copy, Check, MessageCircle, Instagram, ArrowRight, FileText, Hotel } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
@@ -38,8 +38,6 @@ const translations = {
     verMapa: "Ver ubicación en mapa",
     hospedaje: "Hotel Sede",
     reservar: "Reservar en el sitio web",
-    reservaMasAdelante: "La reserva estará disponible más adelante.",
-    verWeb: "Reservar en el sitio web",
     tarifaPreferencial: "Contamos con una tarifa preferencial para nuestros invitados.",
     confirmar: "Confirmar asistencia",
     rsvpTexto: "Favor de confirmar antes del 1 de Noviembre",
@@ -47,20 +45,16 @@ const translations = {
     zihua: "Zihuatanejo, Guerrero, México",
     domingo: "Domingo, 20 de diciembre de 2026",
     vestimenta: "Vestimenta",
-    formalLino: "Formal de lino",
-    waMessage: "¡Hola Carla y Said! Estoy muy emocionado por su boda. Me encantaría confirmar mi asistencia para celebrar con ustedes el 20 de diciembre de 2026 en Zihuatanejo. ¡Nos vemos pronto!",
-    venue: "Club de Playa Garrobo",
     trajeSinCorbata: "Traje sin corbata",
     vestidoLargo: "Vestido abajo de las rodillas",
+    waMessage: "¡Hola Carla y Said! Estoy muy emocionado por su boda. Me encantaría confirmar mi asistencia para celebrar con ustedes el 20 de diciembre de 2026 en Zihuatanejo. ¡Nos vemos pronto!",
+    venue: "Club de Playa Garrobo",
     mesaRegalos: "Mesa de Regalos",
     regalosFrase: "El mejor regalo es su presencia, pero si desean tener un detalle con nosotros, les agradeceríamos que fuera a través de transferencia. Vivir en Italia dificulta llevar regalos físicos, por lo que este gesto nos facilitará mucho comenzar nuestro hogar allá.",
-    paypal: "PayPal",
     clabe: "CLABE (México)",
     iban: "IBAN (Europa)",
     copiar: "Copiar",
     copiado: "Copiado",
-    irPaypal: "Ir a PayPal",
-    regaloProximamente: "Próximamente disponible",
     faqsTitle: "Preguntas frecuentes",
     maquillajeTitle: "Maquillaje y Peinado",
     proveedorMaquillaje: "Proveedor de maquillaje y peinado",
@@ -83,14 +77,13 @@ const translations = {
     verCotizacion: "Ver Cotización (PDF)",
     faqs: [
       { q: "¿Qué requisitos necesito para viajar a México desde Italia?", a: "Los ciudadanos italianos no necesitan visa para viajar a México como turistas. Se requiere pasaporte vigente, boleto de regreso y completar el formulario migratorio a la llegada." },
-      { q: "¿A qué aeropuerto debo llegar?", a: "El aeropuerto recomendado es el Aeropuerto Internacional de Ixtapa–Zihuatanejo (ZIH), el más cercano al hotel y al lugar del evento. También se puede llegar vía Ciudad de México (CDMX) y tomar un futuro vuelo nacional a Zihuatanejo." },
-      { q: "¿Cómo llego del aeropuerto al hotel o al evento?", a: "Desde el aeropuerto pueden trasladarse en taxi autorizado, transporte privado o servicio del hotel. Los trayecots son cortos y sencillos." },
-      { q: "¿Dónde se llevará a cabo la boda?", a: "La boda se celebrará en Club de Playa Garrobo, en Zihuatanejo, Guerrero, México. La ubicación exacta puede consultarse en el mapa disponible en esta página." },
-      { q: "¿El aeropuerto, el hotel y el lugar del evento están cerca?", a: "Sí. Zihuatanejo es una ciudad pequeña y los traslados suelen ser de entre 15 y 30 minutos." },
-      { q: "¿Cómo es el clima en diciembre?", a: "Diciembre tiene clima cálido y agradable, con temperaturas aproximadas entre 22 °C y 30 °C y muy baja probabilidad de lluvia." },
-      { q: "¿Qué moneda se usa y cómo recomiendan pagar?", a: "La moneda oficial es el peso mexicano (MXN). Se recomienda usar tarjetas y llevar algo de efectivo para gastos pequeños." },
-      { q: "¿Es seguro viajar a Zihuatanejo?", a: "Zihuatanejo es una destino turístico tranquilo. Se recomienda seguir precauciones básicas y usar transporte autorizado." },
-      { q: "¿Pueden asistir niños?", a: "Amamos a sus pequeños, pero queremos que los únicos berrinches de la noche sean los de los adultos en la pista de baile. El evento es solo para adultos." }
+      { q: "¿A qué aeropuerto debo llegar?", a: "El aeropuerto recomendado es el Aeropuerto Internacional de Ixtapa–Zihuatanejo (ZIH), el más cercano al hotel y al lugar del evento." },
+      { q: "¿Cómo llego del aeropuerto al hotel o al evento?", a: "Desde el aeropuerto pueden trasladarse en taxi autorizado, transporte privado o servicio del hotel." },
+      { q: "¿Dónde se llevará a cabo la boda?", a: "En Club de Playa Garrobo, Zihuatanejo, Guerrero, México." },
+      { q: "¿El aeropuerto, el hotel y el lugar del evento están cerca?", a: "Sí. Los traslados suelen ser de entre 15 y 30 minutos." },
+      { q: "¿Cómo es el clima en diciembre?", a: "Diciembre tiene clima cálido, entre 22 °C y 30 °C." },
+      { q: "¿Qué moneda se usa?", a: "El peso mexicano (MXN)." },
+      { q: "¿Pueden asistir niños?", a: "Amamos a sus pequeños, pero el evento es solo para adultos." }
     ]
   },
   it: {
@@ -100,7 +93,7 @@ const translations = {
     minutos: "Minuti",
     segundos: "Secondi",
     faltaPoco: "Manca poco al nostro per sempre",
-    acompananos: "Sii con noi in questo momento",
+    acompananos: "",
     calendario: "Aggiungi al calendario",
     itinerario: "Itinerario",
     llegada: "Arrivo al club de playa",
@@ -111,29 +104,23 @@ const translations = {
     verMapa: "Visualizza posizione",
     hospedaje: "Hotel consigliato",
     reservar: "Prenota sul sito web",
-    reservaMasAdelante: "La prenotación será disponibile più avanti.",
-    verWeb: "Prenota sul sito web",
     tarifaPreferencial: "Abbiamo una tariffa preferenziale per i nostri ospiti.",
     confirmar: "Conferma partecipazione",
     rsvpTexto: "Si prega di confermare entro il 1 novembre",
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
     zihua: "Zihuatanejo, Guerrero, Messico",
-    domingo: "DOMENICA, 20 DICEMBRE 2026",
+    domingo: "DOMENICA, 20 DICIEMBRE 2026",
     vestimenta: "Abbigliamento",
-    formalLino: "Formale in lino",
-    waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia partecipazione per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!",
-    venue: "Club de Playa Garrobo",
     trajeSinCorbata: "Abito senza cravatta",
     vestidoLargo: "Abito sotto le ginocchia",
+    waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia partecipazione per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!",
+    venue: "Club de Playa Garrobo",
     mesaRegalos: "Lista Nozze",
     regalosFrase: "Il regalo più grande è la vostra presenza. Per chi volesse farci un pensiero, sarà per noi un aiuto prezioso nel creare la nuestra casa in Italia.",
-    paypal: "PayPal",
     clabe: "CLABE (Messico)",
     iban: "IBAN (Europa)",
     copiar: "Copia",
     copiado: "Copiato",
-    irPaypal: "Vai a PayPal",
-    regaloProximamente: "Prossimamente disponible",
     faqsTitle: "Domande frequenti",
     maquillajeTitle: "Trucco e Acconciatura",
     proveedorMaquillaje: "Fornitore di trucco e acconciatura",
@@ -155,15 +142,13 @@ const translations = {
     claveEvento: "Per effettuare la prenotazione, indicare il codice dell'evento: \"Boda Carla y Said\".",
     verCotizacion: "Vedi Quotazione (PDF)",
     faqs: [
-      { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italianos non hanno bisogno di visto per recarsi in Messico como turisti. È richiesto un passaporto valido, un biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
-      { q: "In quale aeroporto devo arrivare?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento. È possibile arrivare anche via Città del Messico (CDMX) e prendere un volo nazionale per Zihuatanejo." },
-      { q: "Come arrivo dall'aeroporto all'hotel o al evento?", a: "Dall'aeroporto potete spostarvi con taxi autorizzati, trasporti privati o servicio dell'hotel. I tragitti son brevi e semplici." },
-      { q: "Dove si svolgerà il matrimonio?", a: "Il matrimonio si terrà presso il Club de Playa Garrobo, a Zihuatanejo, Guerrero, Messico. La posizione esatta puede essere consultata sulla mappa disponible su questa pagina." },
-      { q: "L'aeroporto, l'hotel e il luogo dell'evento sono vicini?", a: "Sì. Zihuatanejo è una ciudad pequeña e i trasferimientos durano solitamente tra i 15 e i 30 minuti." },
-      { q: "Com'è el clima a dicembre?", a: "Dicembre ha un clima caldo e piacevole, con temperature approssimative tra i 22 °C y i 30 °C e una probabilidad de pioggia molto bassa." },
-      { q: "Quale valuta si usa e como consigliate di pagare?", a: "La valuta ufficiale è el peso messicano (MXN). Si consiglia di utilizzare le carte e portare con sé dei contanti per le spese." },
-      { q: "È sicuro viaggiare a Zihuatanejo?", a: "Zihuatanejo è una destinazione turistica tranquilla. Si consiglia de seguire le precauzioni di base e utilizzare trasporti autorizados." },
-      { q: "Possono partecipare i bambini?", a: "Amiamo i bambini, mas vogliamo que gli unici capricci della serata siano quelli degli ospiti in pista. L'evento escluso para adultos." }
+      { q: "Requisiti per viaggiare in Messico?", a: "Passaporto valido e biglietto di ritorno." },
+      { q: "In quale aeroporto arrivare?", a: "Ixtapa-Zihuatanejo (ZIH)." },
+      { q: "Trasporto dall'aeroporto?", a: "Taxi autorizzati o trasporto privato." },
+      { q: "Dove si svolgerà?", a: "Club de Playa Garrobo, Zihuatanejo, Messico." },
+      { q: "Com'è il clima?", a: "Caldo, tra 22 °C e 30 °C." },
+      { q: "Quale valuta si usa?", a: "Peso messicano (MXN)." },
+      { q: "Possono partecipare i bambini?", a: "L'evento è riservato agli adulti." }
     ]
   }
 }
@@ -414,7 +399,7 @@ export default function WeddingPage() {
             src={heroImage?.imageUrl || "/foto1.jpg"} 
             alt="Carla & Said Wedding" 
             fill
-            className="object-cover object-center pointer-events-none"
+            className="object-cover object-[center_25%] md:object-center pointer-events-none"
             priority
             data-ai-hint="wedding couple beach"
           />
@@ -444,9 +429,11 @@ export default function WeddingPage() {
             <h2 className={cn(serif.className, "text-3xl md:text-5xl font-light text-[#5c6b5c] italic")}>
               {t.faltaPoco}
             </h2>
-            <p className={cn(script.className, "text-xl md:text-3xl text-[#c5a059] opacity-80")}>
-              {t.acompananos}
-            </p>
+            {t.acompananos && (
+              <p className={cn(script.className, "text-xl md:text-3xl text-[#c5a059] opacity-80")}>
+                {t.acompananos}
+              </p>
+            )}
           </RevealSection>
 
           <RevealSection delay={200} className="min-h-[120px] flex items-center justify-center">
@@ -595,7 +582,6 @@ export default function WeddingPage() {
               </p>
             </RevealSection>
 
-            {/* Información Detallada de Reserva */}
             <RevealSection delay={300} className="w-full mt-16">
               <div className="bg-[#f5f0e6]/50 rounded-[2rem] p-8 md:p-12 border border-[#c5a059]/10 shadow-sm">
                 <div className="flex flex-col items-center text-center gap-6">
@@ -613,7 +599,7 @@ export default function WeddingPage() {
                     </div>
                   </div>
                   
-                  <div className="flex flex-col gap-4 mt-6">
+                  <div className="flex flex-col gap-4 mt-6 w-full max-w-md">
                     <Button 
                       onClick={openQuotation}
                       className="rounded-full px-10 py-7 bg-[#c5a059] hover:bg-[#b08d4a] text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3 shadow-lg shadow-[#c5a059]/20"
@@ -625,7 +611,7 @@ export default function WeddingPage() {
                       onClick={() => window.open('https://hotelvillamexicana.com.mx/zihuatanejo/en/', '_blank')}
                       className="rounded-full px-10 py-7 bg-[#8a9a5b] hover:bg-[#5c6b5c] text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3 shadow-lg shadow-[#8a9a5b]/20"
                     >
-                      {t.verWeb}
+                      {t.reservar}
                       <ExternalLink size={14} />
                     </Button>
                   </div>
@@ -633,42 +619,6 @@ export default function WeddingPage() {
               </div>
             </RevealSection>
           </div>
-        </div>
-      </section>
-
-      {/* Sección de Vestimenta */}
-      <section className="py-8 md:py-16 bg-[#fcfaf7] overflow-hidden">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <RevealSection className="flex flex-col items-center">
-            <div className="space-y-1 relative z-10">
-              <h2 className={cn(serif.className, "text-5xl md:text-7xl italic text-[#5c6b5c]")}>
-                {t.vestimenta}
-              </h2>
-            </div>
-
-            <div className="relative w-full max-w-[286px] md:max-w-[364px] aspect-[4/5] -mt-6 md:-mt-10 transition-all duration-700 z-[1] scale-[1.3]">
-              <Image 
-                src={dresscodeImg?.imageUrl || "/dresscode.png"} 
-                alt="Dress Code" 
-                fill 
-                className="object-contain"
-                data-ai-hint="formal attire illustration"
-              />
-            </div>
-
-            <div className="w-full flex justify-center gap-2 md:gap-4 -mt-2 md:-mt-4 px-2 relative z-10">
-              <div className="flex flex-col items-center w-[120px] md:w-[150px] text-center">
-                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium italic leading-tight text-center">
-                  {t.trajeSinCorbata}
-                </p>
-              </div>
-              <div className="flex flex-col items-center w-[120px] md:w-[150px] text-center">
-                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium italic leading-tight text-center">
-                  {t.vestidoLargo}
-                </p>
-              </div>
-            </div>
-          </RevealSection>
         </div>
       </section>
 
@@ -717,99 +667,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Maquillaje y Peinado */}
-      <section id="maquillaje" className="py-24 md:py-40 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <RevealSection className="text-center mb-16 md:mb-32">
-            <h3 className={cn(serif.className, "text-4xl md:text-7xl italic text-[#5c6b5c]")}>{t.maquillajeTitle}</h3>
-            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
-          </RevealSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <RevealSection delay={200}>
-              <VendorCard title={t.proveedorMaquillaje} subtitle={t.proximamente} t={t} />
-            </RevealSection>
-            <RevealSection delay={300}>
-              <VendorCard title={t.proveedorMaquillaje} subtitle={t.proximamente} t={t} />
-            </RevealSection>
-            <RevealSection delay={400}>
-              <VendorCard title={t.proveedorMaquillaje} subtitle={t.proximamente} t={t} />
-            </RevealSection>
-          </div>
-        </div>
-      </section>
-
-      {/* Recomendaciones */}
-      <section id="recomendaciones" className="py-24 md:py-40 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <RevealSection className="text-center mb-24 md:mb-32">
-            <h3 className={cn(serif.className, "text-3xl md:text-5xl italic text-[#5c6b5c]")}>{t.recomendaciones}</h3>
-            <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] opacity-40 mt-4 md:mt-6 font-bold">{t.queHacer}</p>
-            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-8 opacity-30" />
-          </RevealSection>
-
-          <div className="space-y-16 md:space-y-24">
-            {/* Zihuatanejo */}
-            <RevealSection className="grid md:grid-cols-2 items-center gap-12 md:gap-24 group">
-              <div className="relative aspect-[4/5] rounded-[1.5rem] overflow-hidden">
-                <Image src={recZihuaImg?.imageUrl || "/foto6.png"} alt="Zihuatanejo" fill className="object-cover" />
-                <div className="absolute inset-0 bg-[#8a9a5b]/10 mix-blend-multiply" />
-              </div>
-              <div className="space-y-6 md:space-y-8">
-                <div>
-                  <p className="text-[9px] uppercase tracking-[0.4em] opacity-40 font-bold mb-2">{t.cosasEn}</p>
-                  <h4 className={cn(serif.className, "text-4xl md:text-7xl italic text-[#5c6b5c]")}>{t.zihuaCap}</h4>
-                </div>
-                <Button asChild variant="link" className="p-0 h-auto text-[10px] uppercase tracking-[0.3em] text-[#c5a059] font-bold gap-2">
-                  <a href="https://escapadas.mexicodesconocido.com.mx/guerrero/zihuatanejo/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                    {t.verMas} <ArrowRight size={14} />
-                  </a>
-                </Button>
-              </div>
-            </RevealSection>
-
-            {/* Guerrero */}
-            <RevealSection className="grid md:grid-cols-2 items-center gap-12 md:gap-24 group" delay={200}>
-              <div className="md:order-2 relative aspect-[4/5] rounded-[1.5rem] overflow-hidden">
-                <Image src={recGuerreroImg?.imageUrl || "/foto7.png"} alt="Guerrero" fill className="object-cover" />
-                <div className="absolute inset-0 bg-[#8a9a5b]/10 mix-blend-multiply" />
-              </div>
-              <div className="md:order-1 space-y-6 md:space-y-8 md:text-right flex flex-col md:items-end">
-                <div>
-                  <p className="text-[9px] uppercase tracking-[0.4em] opacity-40 font-bold mb-2">{t.cosasEn}</p>
-                  <h4 className={cn(serif.className, "text-4xl md:text-7xl italic text-[#5c6b5c]")}>{t.guerreroCap}</h4>
-                </div>
-                <Button asChild variant="link" className="p-0 h-auto text-[10px] uppercase tracking-[0.3em] text-[#c5a059] font-bold gap-2">
-                  <a href="https://escapadas.mexicodesconocido.com.mx/guerrero/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                    {t.verMas} <ArrowRight size={14} />
-                  </a>
-                </Button>
-              </div>
-            </RevealSection>
-
-            {/* México */}
-            <RevealSection className="grid md:grid-cols-2 items-center gap-12 md:gap-24 group" delay={400}>
-              <div className="relative aspect-[4/5] rounded-[1.5rem] overflow-hidden">
-                <Image src={recMexicoImg?.imageUrl || "/foto8.png"} alt="México" fill className="object-cover" />
-                <div className="absolute inset-0 bg-[#8a9a5b]/10 mix-blend-multiply" />
-              </div>
-              <div className="space-y-6 md:space-y-8">
-                <div>
-                  <p className="text-[9px] uppercase tracking-[0.4em] opacity-40 font-bold mb-2">{t.cosasEn}</p>
-                  <h4 className={cn(serif.className, "text-4xl md:text-7xl italic text-[#5c6b5c]")}>{t.mexicoCap}</h4>
-                </div>
-                <Button asChild variant="link" className="p-0 h-auto text-[10px] uppercase tracking-[0.3em] text-[#c5a059] font-bold gap-2">
-                  <a href="https://escapadas.mexicodesconocido.com.mx/estados/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                    {t.verMas} <ArrowRight size={14} />
-                  </a>
-                </Button>
-              </div>
-            </RevealSection>
-          </div>
-        </div>
-      </section>
-
-      {/* Preguntas Frecuentes con Fondo Solapado */}
+      {/* Preguntas Frecuentes */}
       <section id="faqs" className="relative">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image 
