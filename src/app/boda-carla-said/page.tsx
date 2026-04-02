@@ -102,7 +102,7 @@ const translations = {
     fin: "Fine dell'evento",
     ubicacion: "Posizione",
     verMapa: "Visualizza posizione",
-    hospedaje: "Hotel consigliato",
+    hospedaje: "Hotel Consigliato",
     reservar: "Prenota sul sito web",
     tarifaPreferencial: "Abbiamo una tariffa preferenziale per i nostri ospiti.",
     confirmar: "Conferma partecipazione",
@@ -116,7 +116,7 @@ const translations = {
     waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia partecipazione per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!",
     venue: "Club de Playa Garrobo",
     mesaRegalos: "Lista Nozze",
-    regalosFrase: "Il regalo più grande è la vostra presenza. Per chi volesse farci un pensiero, sarà per noi un aiuto prezioso nel creare la nuestra casa in Italia.",
+    regalosFrase: "Il regalo più grande è la vostra presenza. Per chi volesse farci un pensiero, sarà per noi un aiuto prezioso nel creare la nostra casa in Italia.",
     clabe: "CLABE (Messico)",
     iban: "IBAN (Italia)",
     copiar: "Copia",
@@ -230,12 +230,12 @@ function ItineraryItem({ step }: { step: any }) {
 
 function RegistryCard({ title, icon: Icon, value, bank, name, buttonLabel, onAction, isCopied, disabled }: { title: string, icon: any, value: string, bank?: string, name?: string, buttonLabel: string, onAction: () => void, isCopied?: boolean, disabled?: boolean }) {
   return (
-    <div className="bg-white p-8 rounded-2xl shadow-sm border border-[#c5a059]/10 flex flex-col items-center gap-4 transition-all duration-500 hover:shadow-md hover:border-[#c5a059]/30">
+    <div className="bg-white p-8 rounded-2xl shadow-sm border border-[#c5a059]/10 flex flex-col items-center gap-4 transition-all duration-500 hover:shadow-md hover:border-[#c5a059]/30 h-full">
       <div className="w-12 h-12 rounded-full bg-[#f5f0e6] flex items-center justify-center text-[#c5a059]">
         <Icon size={24} />
       </div>
       <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#5c6b5c]/60">{title}</h4>
-      <div className="text-center space-y-1">
+      <div className="text-center space-y-1 flex-1 flex flex-col justify-center">
         {bank && <p className="text-[9px] uppercase tracking-wider font-bold text-[#c5a059]">{bank}</p>}
         {name && <p className="text-[10px] uppercase tracking-wide text-[#5c6b5c] font-medium">{name}</p>}
         <p className="font-mono text-sm tracking-tighter text-[#5c6b5c] break-all pt-2">{value}</p>
@@ -604,8 +604,8 @@ export default function WeddingPage() {
               </p>
             </RevealSection>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <RevealSection delay={300}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+              <RevealSection delay={300} className="h-full">
                 <RegistryCard 
                   title={t.clabe}
                   icon={CreditCard}
@@ -618,7 +618,7 @@ export default function WeddingPage() {
                 />
               </RevealSection>
 
-              <RevealSection delay={400}>
+              <RevealSection delay={400} className="h-full">
                 <RegistryCard 
                   title={t.iban}
                   icon={CreditCard}
