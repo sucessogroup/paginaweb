@@ -3,11 +3,11 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Boda Carla & Said',
-  description: '¡Acompáñanos a celebrar nuestro amor el 20 de diciembre de 2026 en Zihuatanejo, Guerrero!',
+  title: 'Sucesso Group',
+  description: 'En SUCESSO diseñamos y producimos eventos corporativos con alma. Creemos que los detalles transforman un evento en una experiencia que deja huella.',
   openGraph: {
-    title: 'Boda de Carla & Said',
-    description: '¡Los esperamos para celebrar juntos nuestro para siempre!',
+    title: 'Sucesso Group',
+    description: 'Expertos en organización de eventos premium y corporativos con alma.',
     type: 'website',
   },
 };
