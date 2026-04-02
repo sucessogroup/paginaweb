@@ -52,7 +52,7 @@ const translations = {
     mesaRegalos: "Mesa de Regalos",
     regalosFrase: "El mejor regalo es su presencia, pero si desean tener un detalle con nosotros, les agradeceríamos que fuera a través de transferencia. Vivir en Italia dificulta llevar regalos físicos, por lo que este gesto nos facilitará mucho comenzar nuestro hogar allá.",
     clabe: "CLABE (México)",
-    iban: "IBAN (Europa)",
+    iban: "IBAN (Italia)",
     copiar: "Copiar",
     copiado: "Copiado",
     faqsTitle: "Preguntas frecuentes",
@@ -118,7 +118,7 @@ const translations = {
     mesaRegalos: "Lista Nozze",
     regalosFrase: "Il regalo più grande è la vostra presenza. Per chi volesse farci un pensiero, sarà per noi un aiuto prezioso nel creare la nuestra casa in Italia.",
     clabe: "CLABE (Messico)",
-    iban: "IBAN (Europa)",
+    iban: "IBAN (Italia)",
     copiar: "Copia",
     copiado: "Copiato",
     faqsTitle: "Domande frequenti",
@@ -621,8 +621,8 @@ export default function WeddingPage() {
               <RevealSection delay={400}>
                 <RegistryCard 
                   title={t.iban}
-                  icon={Heart}
-                  name="Nome: Favilli Carla, Nasser Guerra Said Farid"
+                  icon={CreditCard}
+                  name="Favilli Carla, Nasser Guerra Said Farid"
                   value="IT95P0854213203000000769393"
                   buttonLabel={copiedField === 'iban' ? t.copiado : t.copiar}
                   isCopied={copiedField === 'iban'}
