@@ -109,7 +109,7 @@ const translations = {
     rsvpTexto: "Si prega di confermare entro il 1 novembre",
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
     zihua: "Zihuatanejo, Guerrero, Messico",
-    domingo: "DOMENICA, 20 DICIEMBRE 2026",
+    domingo: "DOMENICA, 20 DICEMBRE 2026",
     vestimenta: "Abbigliamento",
     trajeSinCorbata: "Abito senza cravatta",
     vestidoLargo: "Abito sotto le ginocchia",
@@ -144,7 +144,7 @@ const translations = {
     faqs: [
       { q: "Requisiti per viaggiare in Messico?", a: "Passaporto valido e biglietto di ritorno." },
       { q: "In quale aeroporto arrivare?", a: "Ixtapa-Zihuatanejo (ZIH)." },
-      { q: "Trasporto dall'aeroporto?", a: "Taxi autorizzati o trasporto privato." },
+      { q: "Trasporto dall'aeroporto?", a: "Taxi autorizzati o transporte privato." },
       { q: "Dove si svolgerà?", a: "Club de Playa Garrobo, Zihuatanejo, Messico." },
       { q: "Com'è il clima?", a: "Caldo, tra 22 °C e 30 °C." },
       { q: "Quale valuta si usa?", a: "Peso messicano (MXN)." },
@@ -254,35 +254,6 @@ function RegistryCard({ title, icon: Icon, value, bank, name, buttonLabel, onAct
   )
 }
 
-function VendorCard({ title, subtitle, t }: { title: string, subtitle: string, t: any }) {
-  return (
-    <div className="bg-[#f5f0e6]/50 p-8 rounded-[1.5rem] border border-[#5c6b5c]/10 flex flex-col items-center gap-6 transition-all duration-500 hover:border-[#5c6b5c]/30">
-      <div className="text-center space-y-2">
-        <h4 className={cn(serif.className, "text-xl md:text-2xl italic text-[#5c6b5c]")}>{title}</h4>
-        <p className="text-[10px] uppercase tracking-widest opacity-40">{subtitle}</p>
-      </div>
-      <div className="flex gap-4 w-full">
-        <Button 
-          disabled 
-          variant="outline"
-          className="flex-1 rounded-full border-[#5c6b5c]/20 opacity-40 text-[9px] uppercase tracking-widest gap-2"
-        >
-          <MessageCircle size={14} />
-          {t.wa}
-        </Button>
-        <Button 
-          disabled 
-          variant="outline"
-          className="flex-1 rounded-full border-[#5c6b5c]/20 opacity-40 text-[9px] uppercase tracking-widest gap-2"
-        >
-          <Instagram size={14} />
-          {t.ig}
-        </Button>
-      </div>
-    </div>
-  )
-}
-
 export default function WeddingPage() {
   const [lang, setLang] = useState<'es' | 'it'>('es')
   const [isFinished, setIsFinished] = useState(false)
@@ -295,10 +266,6 @@ export default function WeddingPage() {
   const itineraryBgImage = PlaceHolderImages.find(img => img.id === 'wedding-bg-itinerary')
   const hotelImage = PlaceHolderImages.find(img => img.id === 'hotel-villa-mexicana')
   const footerImage = PlaceHolderImages.find(img => img.id === 'wedding-footer')
-  const dresscodeImg = PlaceHolderImages.find(img => img.id === 'dresscode-image')
-  const recZihuaImg = PlaceHolderImages.find(img => img.id === 'rec-zihua')
-  const recGuerreroImg = PlaceHolderImages.find(img => img.id === 'rec-guerrero')
-  const recMexicoImg = PlaceHolderImages.find(img => img.id === 'rec-mexico')
 
   useEffect(() => {
     const targetDate = new Date('2026-12-20T17:00:00').getTime()
@@ -663,6 +630,63 @@ export default function WeddingPage() {
                 />
               </RevealSection>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Recomendaciones */}
+      <section id="recomendaciones" className="py-24 md:py-40 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <RevealSection className="text-center mb-16 md:mb-24">
+            <h3 className={cn(serif.className, "text-5xl md:text-8xl italic text-[#5c6b5c]")}>{t.recomendaciones}</h3>
+            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
+            <p className="mt-8 text-sm md:text-lg italic opacity-50 tracking-wide font-light max-w-xl mx-auto">
+              {t.queHacer}
+            </p>
+          </RevealSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <RevealSection delay={100} className="group cursor-pointer">
+              <Link href="https://escapadas.mexicodesconocido.com.mx/guerrero/zihuatanejo/" target="_blank" className="block relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-sm">
+                <Image src="/foto6.png" alt="Zihuatanejo" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
+                <div className="absolute inset-x-0 bottom-0 p-8 text-white space-y-2">
+                  <p className="text-[10px] tracking-[0.4em] uppercase font-bold opacity-70">{t.cosasEn}</p>
+                  <h4 className={cn(serif.className, "text-3xl italic")}>{t.zihuaCap}</h4>
+                  <div className="pt-4 flex items-center gap-2 text-[9px] tracking-widest font-bold opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700">
+                    {t.verMas} <ArrowRight size={14} />
+                  </div>
+                </div>
+              </Link>
+            </RevealSection>
+
+            <RevealSection delay={200} className="group cursor-pointer">
+              <Link href="https://escapadas.mexicodesconocido.com.mx/guerrero/" target="_blank" className="block relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-sm">
+                <Image src="/foto7.png" alt="Guerrero" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
+                <div className="absolute inset-x-0 bottom-0 p-8 text-white space-y-2">
+                  <p className="text-[10px] tracking-[0.4em] uppercase font-bold opacity-70">{t.cosasEn}</p>
+                  <h4 className={cn(serif.className, "text-3xl italic")}>{t.guerreroCap}</h4>
+                  <div className="pt-4 flex items-center gap-2 text-[9px] tracking-widest font-bold opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700">
+                    {t.verMas} <ArrowRight size={14} />
+                  </div>
+                </div>
+              </Link>
+            </RevealSection>
+
+            <RevealSection delay={300} className="group cursor-pointer">
+              <Link href="https://escapadas.mexicodesconocido.com.mx/estados/" target="_blank" className="block relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-sm">
+                <Image src="/foto8.png" alt="México" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
+                <div className="absolute inset-x-0 bottom-0 p-8 text-white space-y-2">
+                  <p className="text-[10px] tracking-[0.4em] uppercase font-bold opacity-70">{t.cosasEn}</p>
+                  <h4 className={cn(serif.className, "text-3xl italic")}>{t.mexicoCap}</h4>
+                  <div className="pt-4 flex items-center gap-2 text-[9px] tracking-widest font-bold opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700">
+                    {t.verMas} <ArrowRight size={14} />
+                  </div>
+                </div>
+              </Link>
+            </RevealSection>
           </div>
         </div>
       </section>
