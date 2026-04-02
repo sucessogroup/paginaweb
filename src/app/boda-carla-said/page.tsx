@@ -74,7 +74,7 @@ const translations = {
     detallesCotizacion: "En la cotización compartida se encuentran todos los detalles sobre las tarifas, tipos de habitación y opciones disponibles.",
     reservarPronto: "Les recomendamos reservar su habitación lo antes posible para asegurar disponibilidad.",
     claveEvento: "Para realizar su reserva, favor de indicar la clave del evento: \"Boda Carla y Said\".",
-    verCotizacion: "Ver Cotización (PDF)",
+    verCotizacion: "Ver Cotización",
     faqs: [
       { q: "¿Qué requisitos necesito para viajar a México desde Italia?", a: "Los ciudadanos italianos no necesitan visa para viajar a México como turistas. Se requiere pasaporte vigente, boleto de regreso y completar el formulario migratorio a la llegada." },
       { q: "¿A qué aeropuerto debo llegar?", a: "El aeropuerto recomendado es el Aeropuerto Internacional de Ixtapa–Zihuatanejo (ZIH), el más cercano al hotel y al lugar del evento." },
@@ -140,7 +140,7 @@ const translations = {
     detallesCotizacion: "Nella quotazione condivisa troverete tutti i dettagli su tariffe, tipi di camere e opzioni disponibles.",
     reservarPronto: "Vi consigliamo di prenotare la vostra camera il prima possibile per garantire la disponibilità.",
     claveEvento: "Per effettuare la prenotazione, indicare il codice dell'evento: \"Boda Carla y Said\".",
-    verCotizacion: "Vedi Quotazione (PDF)",
+    verCotizacion: "Vedi Quotazione",
     faqs: [
       { q: "Requisiti per viaggiare in Messico?", a: "Passaporto valido e biglietto di ritorno." },
       { q: "In quale aeroporto arrivare?", a: "Ixtapa-Zihuatanejo (ZIH)." },
@@ -337,10 +337,6 @@ export default function WeddingPage() {
     window.open('https://maps.app.goo.gl/ZXfrBTdAe1UPgYRr9', '_blank');
   };
 
-  const openQuotation = () => {
-    window.open('/hotel.pdf', '_blank');
-  };
-
   return (
     <div className="bg-[#fcfaf7] text-[#5c6b5c] font-body overflow-x-hidden">
       {/* Selector de Idioma */}
@@ -522,7 +518,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Hotel Sede */}
+      {/* Hotel Sugerido */}
       <section id="hotel" className="py-24 md:py-40 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <RevealSection className="text-center mb-16 md:mb-24">
@@ -568,11 +564,13 @@ export default function WeddingPage() {
                   
                   <div className="flex flex-col gap-4 mt-6 w-full max-w-md">
                     <Button 
-                      onClick={openQuotation}
+                      asChild
                       className="rounded-full px-10 py-7 bg-[#c5a059] hover:bg-[#b08d4a] text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3 shadow-lg shadow-[#c5a059]/20"
                     >
-                      <FileText size={18} />
-                      {t.verCotizacion}
+                      <Link href="/boda-carla-said/cotizacion">
+                        <FileText size={18} />
+                        {t.verCotizacion}
+                      </Link>
                     </Button>
                     <Button 
                       onClick={() => window.open('https://hotelvillamexicana.com.mx/zihuatanejo/en/', '_blank')}
@@ -634,7 +632,7 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Recomendaciones */}
+      {/* Raccomandazioni */}
       <section id="recomendaciones" className="py-24 md:py-40 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <RevealSection className="text-center mb-16 md:mb-24">
