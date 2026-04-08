@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -15,14 +16,14 @@ export const Hero = () => {
   }, [])
 
   return (
-    <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden bg-[#19373E]">
+    <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-[#19373E]">
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
         <div className={cn(
           "transition-all duration-1000 ease-out",
           isScrolled ? "opacity-0 translate-y-10" : "opacity-100 translate-y-0"
         )}>
           {/* Espacio para el logo dinámico que baja de la Navbar */}
-          <div className="h-[30vh] md:h-[40vh] flex items-center justify-center mb-8">
+          <div className="h-[40vh] md:h-[50vh] flex items-center justify-center mb-12">
              {/* El logo se renderiza aquí visualmente aunque la lógica de scroll lo mantenga en la Navbar */}
           </div>
 

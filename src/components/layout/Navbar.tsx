@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -43,7 +44,7 @@ export const Navbar = () => {
             className={cn(
               "z-[60] transition-all duration-1000 cubic-bezier(0.4, 0, 0.2, 1) transform-gpu",
               !isScrolled 
-                ? "fixed left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2" 
+                ? "fixed left-1/2 top-[32%] -translate-x-1/2 -translate-y-1/2" 
                 : "relative left-0 top-0 translate-x-0 translate-y-0"
             )}
           >
@@ -51,7 +52,7 @@ export const Navbar = () => {
               "relative transition-all duration-1000 cubic-bezier(0.4, 0, 0.2, 1) transform-gpu flex items-center justify-center",
               isScrolled ? "w-12 h-12" : "w-64 h-64 md:w-[32rem] md:h-[32rem]"
             )}>
-              {/* Video Logo - Sin blend mode, integrado por color de fondo */}
+              {/* Video Logo */}
               <div className={cn(
                 "absolute inset-0 transition-all duration-1000 ease-in-out flex items-center justify-center",
                 !isScrolled ? "opacity-100 scale-100" : "opacity-0 scale-50 pointer-events-none"
