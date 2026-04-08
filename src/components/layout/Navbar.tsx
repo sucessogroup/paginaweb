@@ -63,7 +63,7 @@ export const Navbar = () => {
                   loop 
                   muted 
                   playsInline 
-                  className="w-full h-full object-contain brightness-0 invert"
+                  className="w-full h-full object-contain"
                 />
               </div>
 
