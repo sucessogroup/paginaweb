@@ -4,13 +4,13 @@
     {
       "id": "logo-inside",
       "description": "SUCESSO Isotipo Central (SS)",
-      "imageUrl": "/logo3inside.png",
+      "imageUrl": "/logo3dentro.png",
       "imageHint": "company logo central"
     },
     {
       "id": "logo-outside",
       "description": "SUCESSO Sello Rotativo",
-      "imageUrl": "/logo3outside.png",
+      "imageUrl": "/logo3fuera.png",
       "imageHint": "rotating logo seal"
     },
     {
