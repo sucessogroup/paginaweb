@@ -1,72 +1,63 @@
 
+"use client"
+
 import React from 'react'
-import { Headphones, PenTool, ClipboardList, Play, CheckCircle2 } from 'lucide-react'
+import { cn } from '@/lib/utils'
+import { CheckCircle2, Search, Palette, Zap } from 'lucide-react'
 
 const steps = [
   {
-    title: "Escucha estratégica",
-    desc: "Entendemos tus objetivos, valores y la audiencia a la que quieres impactar.",
-    icon: Headphones
+    title: "Entendemos",
+    desc: "Escuchamos tus objetivos y la esencia de tu marca para diseñar una estrategia a medida.",
+    icon: Search
   },
   {
-    title: "Diseño de la experiencia",
-    desc: "Creamos un concepto creativo y un viaje para el invitado lleno de intención.",
-    icon: PenTool
+    title: "Diseñamos",
+    desc: "Creamos un concepto visual y logístico que impacte y comunique el mensaje correcto.",
+    icon: Palette
   },
   {
-    title: "Planeación y logística",
-    desc: "Coordinamos proveedores de élite y cronogramas rigurosos sin fisuras.",
-    icon: ClipboardList
+    title: "Ejecutamos",
+    desc: "Coordinamos cada proveedor y detalle técnico bajo los más altos estándares de calidad.",
+    icon: Zap
   },
   {
-    title: "Producción y ejecución",
-    desc: "Estamos en el terreno para asegurar que cada detalle suceda tal como se soñó.",
-    icon: Play
-  },
-  {
-    title: "Cierre y evaluación",
-    desc: "Analizamos el impacto y los resultados para garantizar el retorno de inversión.",
+    title: "Tú disfrutas",
+    desc: "Llegas a tu evento y todo funciona. Sin sorpresas, solo resultados impecables.",
     icon: CheckCircle2
   }
 ]
 
 export const Process = () => {
   return (
-    <section id="proceso" className="py-24 bg-white relative">
+    <section id="proceso" className="py-24 md:py-40 bg-[#f9f9f9]">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col lg:flex-row gap-16 items-start">
-          <div className="lg:w-1/3 sticky top-32">
-            <h2 className="text-sm uppercase tracking-widest text-brand-ocean mb-4 font-bold">Metodología</h2>
-            <h3 className="text-4xl md:text-5xl font-headline font-bold text-brand-darkGray mb-6">Cómo <br/>trabajamos</h3>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              Nuestro proceso está diseñado para quitarte el peso de la organización y dejarte solo con el éxito del evento.
-            </p>
-            <div className="hidden lg:block w-32 h-[1px] bg-brand-canary" />
-          </div>
+        <div className="text-center mb-24 space-y-6">
+          <h2 className="text-[10px] uppercase tracking-[0.5em] text-brand-ocean font-bold">Nuestro Método</h2>
+          <h3 className="text-4xl md:text-6xl font-headline font-bold text-brand-darkGray">Orden que genera <span className="italic font-light text-brand-canary">confianza.</span></h3>
+          <div className="w-20 h-[1px] bg-brand-canary mx-auto mt-8" />
+        </div>
 
-          <div className="lg:w-2/3 space-y-12">
-            {steps.map((step, idx) => (
-              <div key={idx} className="flex gap-8 group">
-                <div className="flex-shrink-0 relative">
-                  <div className="w-16 h-16 rounded-full bg-brand-ocean/5 flex items-center justify-center text-brand-ocean group-hover:bg-brand-ocean group-hover:text-white transition-all duration-300">
-                    <step.icon size={28} />
-                  </div>
-                  {idx < steps.length - 1 && (
-                    <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[1px] h-12 bg-gray-100" />
-                  )}
-                </div>
-                <div className="pt-2">
-                  <div className="flex items-center gap-4 mb-2">
-                    <span className="text-brand-canary font-headline font-bold text-lg">0{idx + 1}.</span>
-                    <h4 className="text-xl font-headline font-bold text-brand-darkGray">{step.title}</h4>
-                  </div>
-                  <p className="text-gray-600 font-light leading-relaxed max-w-lg">
-                    {step.desc}
-                  </p>
-                </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {steps.map((step, idx) => (
+            <div key={idx} className="group relative p-10 bg-white rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500 border border-black/5">
+              <div className="mb-8 w-16 h-16 rounded-2xl bg-brand-ocean/5 flex items-center justify-center text-brand-ocean group-hover:bg-brand-ocean group-hover:text-white transition-all duration-500">
+                <step.icon size={32} />
               </div>
-            ))}
-          </div>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <span className="text-brand-canary font-headline font-bold text-xl">0{idx + 1}.</span>
+                  <h4 className="text-xl font-headline font-bold text-brand-darkGray">{step.title}</h4>
+                </div>
+                <p className="text-sm text-gray-500 font-light leading-relaxed">
+                  {step.desc}
+                </p>
+              </div>
+              {idx < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-1/2 -right-6 w-12 h-[1px] bg-gray-100 z-0" />
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>

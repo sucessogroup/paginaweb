@@ -4,64 +4,46 @@ import Image from 'next/image'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
 
 export const About = () => {
-  const sealLogo = PlaceHolderImages.find(img => img.id === 'logo-seal')
-
   return (
-    <section id="nosotros" className="py-24 lg:py-32 bg-white relative overflow-hidden">
+    <section id="nosotros" className="py-24 lg:py-40 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Secondary Logo as Section Header */}
-        <div className="flex flex-col items-center justify-center mb-24">
-          {sealLogo ? (
-            <div className="relative w-72 h-72 md:w-96 md:h-96">
-              <Image 
-                src={sealLogo.imageUrl} 
-                alt="Sello SUCESSO" 
-                fill 
-                className="object-contain" 
-                data-ai-hint="quality seal" 
-              />
+        <div className="grid lg:grid-cols-2 gap-24 items-center">
+          <div className="space-y-10">
+            <div className="space-y-4">
+              <h2 className="text-[10px] uppercase tracking-[0.5em] text-brand-ocean font-bold">Nuestra Filosofía</h2>
+              <h3 className="text-4xl md:text-6xl font-headline font-bold text-brand-darkGray leading-tight">
+                Eventos impecables, <br />
+                <span className="text-brand-canary italic font-light">cero estrés para ti.</span>
+              </h3>
             </div>
-          ) : (
-            <div className="w-48 h-48 border-4 border-brand-canary rounded-full flex items-center justify-center text-brand-ocean font-headline font-bold text-2xl text-center">
-              CALIDAD<br/>SUCESSO
-            </div>
-          )}
-          <div className="mt-8 text-center">
-            <h2 className="text-sm uppercase tracking-[0.5em] text-brand-ocean font-bold">Sello de Excelencia</h2>
-          </div>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
-          <div className="relative z-10 space-y-8">
-            <h2 className="text-4xl md:text-6xl font-headline font-bold text-brand-ocean leading-tight">
-              Diseñamos eventos <br />
-              <span className="text-brand-paradise">con alma.</span>
-            </h2>
-            <div className="w-24 h-1 bg-brand-canary" />
-            <p className="text-xl md:text-3xl font-light text-brand-darkGray leading-relaxed italic">
-              “En SUCESSO diseñamos y producimos eventos corporativos con alma. Creemos que los detalles —cuando se hacen con intención— transforman un evento en una experiencia que deja huella.”
+            
+            <div className="w-20 h-[1px] bg-brand-canary" />
+            
+            <p className="text-xl md:text-2xl font-light text-gray-600 leading-relaxed italic">
+              "En SUCESSO creemos que un gran evento no debería ser una carga para quien lo organiza. Nuestra misión es absorber toda la complejidad operativa para que tú puedas concentrarte en lo que realmente importa: tus objetivos y tus invitados."
             </p>
-            <div className="grid grid-cols-2 gap-10 pt-8">
-              <div>
-                <h4 className="font-headline font-bold text-brand-ocean text-xl mb-3">Hospitalidad</h4>
-                <p className="text-base text-gray-600 font-light">Cada invitado es el centro de nuestra atención estratégica y cuidado personal.</p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-6">
+              <div className="space-y-3">
+                <h4 className="font-headline font-bold text-brand-ocean text-lg uppercase tracking-wide">Precisión</h4>
+                <p className="text-sm text-gray-500 font-light leading-relaxed">Cada detalle es planeado con rigor técnico y sensibilidad estética.</p>
               </div>
-              <div>
-                <h4 className="font-headline font-bold text-brand-ocean text-xl mb-3">Impecabilidad</h4>
-                <p className="text-base text-gray-600 font-light">Ejecución perfecta cuidando hasta el último milímetro de cada proceso operativo.</p>
+              <div className="space-y-3">
+                <h4 className="font-headline font-bold text-brand-ocean text-lg uppercase tracking-wide">Tranquilidad</h4>
+                <p className="text-sm text-gray-500 font-light leading-relaxed">Reportes claros y ejecución autónoma para que no tengas que supervisar nada.</p>
               </div>
             </div>
           </div>
 
-          <div className="relative group">
-            <div className="absolute -inset-6 bg-brand-ocean/5 rounded-[2rem] transform rotate-3 transition-transform group-hover:rotate-1" />
-            <div className="relative h-[600px] w-full rounded-[2rem] overflow-hidden shadow-2xl">
+          <div className="relative">
+            <div className="absolute -inset-4 bg-brand-canary/5 rounded-[3rem] -rotate-2" />
+            <div className="relative aspect-[4/5] w-full rounded-[2.5rem] overflow-hidden shadow-2xl">
               <Image 
-                src="https://picsum.photos/seed/sucesso-team/800/1000"
-                alt="Nuestra esencia"
+                src="https://picsum.photos/seed/sucesso-luxury-event/800/1000"
+                alt="Detalle de evento premium"
                 fill
-                className="object-cover"
-                data-ai-hint="elegant event setup"
+                className="object-cover transition-transform duration-1000 hover:scale-105"
+                data-ai-hint="luxury tableset"
               />
             </div>
           </div>
