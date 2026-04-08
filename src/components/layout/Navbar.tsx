@@ -42,7 +42,7 @@ export const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <Link href="/" className="relative w-48 h-16 md:w-80 md:h-32 transition-all duration-500">
+          <Link href="/" className="relative w-32 h-12 md:w-48 md:h-16 transition-all duration-500">
             {logoMain && (
               <Image 
                 src={logoMain.imageUrl} 
