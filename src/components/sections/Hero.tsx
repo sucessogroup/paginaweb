@@ -23,12 +23,6 @@ export const Hero = () => {
           </p>
         </div>
       </div>
-
-      {/* Indicador de scroll sutil */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-30 animate-bounce">
-        <span className="text-[9px] uppercase tracking-[0.4em] font-bold">Desliza</span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-brand-canary to-transparent" />
-      </div>
     </section>
   )
 }
