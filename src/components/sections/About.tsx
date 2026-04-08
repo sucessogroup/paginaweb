@@ -1,8 +1,11 @@
 
 import React from 'react'
 import Image from 'next/image'
+import { PlaceHolderImages } from '@/lib/placeholder-images'
 
 export const About = () => {
+  const aboutImage = PlaceHolderImages.find(img => img.id === 'about-main')
+
   return (
     <section id="nosotros" className="py-24 lg:py-40 bg-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -40,11 +43,11 @@ export const About = () => {
             <div className="absolute -inset-4 bg-brand-darkGray/5 rounded-[3rem] -rotate-2" />
             <div className="relative aspect-[4/5] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-brand-darkGray/10">
               <Image 
-                src="https://picsum.photos/seed/sucesso-luxury-event/800/1000"
+                src={aboutImage?.imageUrl || "https://picsum.photos/seed/sucesso-luxury-event/800/1000"}
                 alt="Detalle de evento premium"
                 fill
                 className="object-cover transition-transform duration-1000 hover:scale-105"
-                data-ai-hint="luxury tableset"
+                data-ai-hint={aboutImage?.imageHint || "luxury tableset"}
               />
             </div>
           </div>

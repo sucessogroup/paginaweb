@@ -90,6 +90,12 @@
       "description": "Recomendaciones México",
       "imageUrl": "/foto8.png",
       "imageHint": "mexico culture"
+    },
+    {
+      "id": "about-main",
+      "description": "Imagen principal Filosofía",
+      "imageUrl": "/foto1.webp",
+      "imageHint": "luxury event"
     }
   ]
 }
