@@ -50,21 +50,22 @@ export const Navbar = () => {
           >
             <div className={cn(
               "relative transition-all duration-1000 cubic-bezier(0.4, 0, 0.2, 1) transform-gpu flex items-center justify-center",
-              isScrolled ? "w-12 h-12" : "w-64 h-64 md:w-[28rem] md:h-[28rem]"
+              isScrolled ? "w-12 h-12" : "w-64 h-64 md:w-[32rem] md:h-[32rem]"
             )}>
-              {/* Video Logo - Visible solo cuando NO hay scroll */}
+              {/* Video Logo - Con mix-blend-screen para transparencia */}
               <div className={cn(
-                "absolute inset-0 transition-all duration-1000 ease-in-out",
+                "absolute inset-0 transition-all duration-1000 ease-in-out flex items-center justify-center",
                 !isScrolled ? "opacity-100 scale-100" : "opacity-0 scale-50 pointer-events-none"
               )}>
                 <video 
-                  src="/logo3.mp4" 
                   autoPlay 
                   loop 
                   muted 
                   playsInline 
-                  className="w-full h-full object-contain"
-                />
+                  className="w-full h-full object-contain mix-blend-screen pointer-events-none select-none"
+                >
+                  <source src="/logo3.mp4" type="video/mp4" />
+                </video>
               </div>
 
               {/* Isotipo Estático - Visible solo CUANDO HAY scroll */}

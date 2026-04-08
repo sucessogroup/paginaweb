@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { cn } from '@/lib/utils'
+import LogoVideo from '@/components/LogoVideo'
 
 export const Hero = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -16,12 +17,12 @@ export const Hero = () => {
   }, [])
 
   return (
-    <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden bg-brand-darkGray">
+    <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden bg-[#19373e]">
       {/* Overlay sutil para mejorar legibilidad */}
-      <div className="absolute inset-0 bg-black/40 z-0" />
+      <div className="absolute inset-0 bg-black/20 z-0" />
       
-      {/* Imagen de fondo opcional o gradiente */}
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-darkGray via-brand-darkGray/80 to-brand-darkGray z-0" />
+      {/* Fondo base oscuro para asegurar que mix-blend-screen funcione correctamente */}
+      <div className="absolute inset-0 bg-[#19373e] z-0" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
         <div className={cn(
@@ -29,7 +30,9 @@ export const Hero = () => {
           isScrolled ? "opacity-0 translate-y-10" : "opacity-100 translate-y-0"
         )}>
           {/* Espacio para el logo dinámico que baja de la Navbar */}
-          <div className="h-[30vh] md:h-[35vh] flex items-center justify-center mb-8" />
+          <div className="h-[30vh] md:h-[40vh] flex items-center justify-center mb-8">
+             {/* El logo se renderiza aquí visualmente aunque la lógica de scroll lo mantenga en la Navbar */}
+          </div>
 
           <div className="space-y-8">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold leading-tight">
