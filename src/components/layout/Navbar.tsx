@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -54,10 +53,10 @@ export const Navbar = () => {
                 "relative transition-all duration-1000 cubic-bezier(0.4, 0, 0.2, 1) transform-gpu flex items-center justify-center",
                 isScrolled ? "w-12 h-12" : "w-64 h-64 md:w-80 md:h-80"
               )}>
-                {/* Parte Exterior - Gira */}
+                {/* Parte Exterior - Gira muy lento y fluido */}
                 <div className={cn(
                   "absolute inset-0 transition-all duration-1000 ease-in-out",
-                  !isScrolled ? "animate-[spin_20s_linear_infinite]" : "opacity-0 scale-50"
+                  !isScrolled ? "animate-[spin_60s_linear_infinite]" : "opacity-0 scale-50"
                 )}>
                   <Image 
                     src={logoOutside.imageUrl} 
