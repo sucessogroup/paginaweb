@@ -42,13 +42,13 @@ export const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <Link href="/" className="relative w-32 h-12 md:w-48 md:h-16 transition-all duration-500">
+          <Link href="/" className="relative w-32 h-10 md:w-44 md:h-14 transition-all duration-500 group">
             {logoMain && (
               <Image 
                 src={logoMain.imageUrl} 
                 alt="SUCESSO Logo" 
                 fill 
-                className="object-contain brightness-0 invert"
+                className="object-contain brightness-0 invert transition-transform duration-500 group-hover:scale-105"
                 priority
               />
             )}
@@ -70,10 +70,10 @@ export const Navbar = () => {
 
         {/* Mobile Menu Trigger */}
         <button 
-          className="lg:hidden p-2 rounded-md text-white"
+          className="lg:hidden p-2 rounded-md text-white/70 hover:text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
@@ -90,7 +90,7 @@ export const Navbar = () => {
             <Link 
               key={link.name} 
               href={link.href}
-              className="text-2xl font-headline text-white hover:text-brand-canary"
+              className="text-2xl font-headline font-bold text-white hover:text-brand-canary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.name}
