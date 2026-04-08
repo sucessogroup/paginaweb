@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { ShieldCheck, Sparkles, Target, BarChart3 } from 'lucide-react'
 
@@ -27,9 +26,7 @@ const benefits = [
 
 export const WhyUs = () => {
   return (
-    <section className="py-24 md:py-40 bg-brand-wine text-white overflow-hidden relative">
-      <div className="absolute top-0 right-0 w-1/4 h-full bg-black/5 -skew-x-12 translate-x-1/2" />
-      
+    <section className="py-24 md:py-40 bg-[#19373E] text-white overflow-hidden relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-24 items-center">
           <div className="space-y-8">
@@ -37,7 +34,7 @@ export const WhyUs = () => {
             <h3 className="text-4xl md:text-6xl font-headline font-bold mb-8 leading-tight">
               Detalles que no cuestan más, pero <span className="text-brand-canary italic font-light">lo valen todo.</span>
             </h3>
-            <p className="text-lg text-gray-300 font-light max-w-lg leading-relaxed italic opacity-80">
+            <p className="text-lg text-white/60 font-light max-w-lg leading-relaxed italic">
               "En SUCESSO no solo organizamos reuniones, creamos entornos de alto impacto donde los negocios y las relaciones fluyen naturalmente."
             </p>
           </div>
@@ -49,7 +46,7 @@ export const WhyUs = () => {
                   <b.icon size={24} />
                 </div>
                 <h4 className="text-lg font-headline font-bold mb-2">{b.title}</h4>
-                <p className="text-gray-400 font-light text-sm leading-relaxed">{b.desc}</p>
+                <p className="text-white/40 font-light text-sm leading-relaxed">{b.desc}</p>
               </div>
             ))}
           </div>
@@ -58,12 +55,12 @@ export const WhyUs = () => {
         {/* Bloque de Testimonio */}
         <div className="mt-32 max-w-4xl mx-auto text-center border-t border-white/10 pt-24">
           <blockquote className="space-y-10">
-            <p className="text-2xl md:text-4xl font-light italic leading-relaxed text-gray-200">
+            <p className="text-2xl md:text-4xl font-light italic leading-relaxed text-white/80">
               "SUCESSO no solo organizó nuestro congreso anual, crearon una atmósfera donde nuestros directivos se sintieron verdaderamente valorados. El nivel de detalle es otro nivel."
             </p>
             <footer className="space-y-2">
               <cite className="block font-bold text-brand-canary not-italic text-lg tracking-widest uppercase">— Directora de Aseguradora Líder</cite>
-              <span className="text-xs text-gray-500 tracking-[0.3em] uppercase">Vía Instagram</span>
+              <span className="text-xs text-white/30 tracking-[0.3em] uppercase">Vía Instagram</span>
             </footer>
           </blockquote>
         </div>

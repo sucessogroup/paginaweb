@@ -1,63 +1,35 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 190 20% 98%;
-    --foreground: 190 40% 15%;
-    --card: 0 0% 100%;
-    --card-foreground: 190 40% 15%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 190 40% 15%;
-    --primary: 188 88% 24%; /* Ocean #076371 */
-    --primary-foreground: 0 0% 100%;
-    --secondary: 41 97% 50%; /* Deep Canary #f8ac06 */
-    --secondary-foreground: 190 40% 15%;
-    --muted: 188 30% 95%;
-    --muted-foreground: 188 20% 45%;
-    --accent: 29 98% 46%; /* Tangerine #e87402 */
-    --accent-foreground: 0 0% 100%;
-    --destructive: 355 45% 46%; /* Paradise #a44951 */
-    --destructive-foreground: 0 0% 100%;
-    --border: 188 20% 90%;
-    --input: 188 20% 90%;
-    --ring: 188 88% 24%;
-    --radius: 0.75rem;
-    --chart-1: 188 88% 24%;
-    --chart-2: 41 97% 50%;
-    --chart-3: 29 98% 46%;
-    --chart-4: 355 45% 46%;
-    --chart-5: 350 55% 17%; /* Red Wine #45141c */
-  }
-
-  .dark {
-    --background: 190 40% 10%;
-    --foreground: 0 0% 98%;
-    --card: 190 40% 12%;
-    --card-foreground: 0 0% 98%;
-    --popover: 190 40% 10%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 188 88% 35%;
+    --background: 191 43% 17%; /* #19373E */
+    --foreground: 0 0% 100%;
+    --card: 191 43% 15%;
+    --card-foreground: 0 0% 100%;
+    --popover: 191 43% 12%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 188 88% 24%;
     --primary-foreground: 0 0% 100%;
     --secondary: 41 97% 50%;
-    --secondary-foreground: 0 0% 10%;
-    --muted: 190 40% 20%;
-    --muted-foreground: 190 20% 70%;
+    --secondary-foreground: 190 40% 15%;
+    --muted: 191 30% 25%;
+    --muted-foreground: 191 20% 70%;
     --accent: 29 98% 46%;
     --accent-foreground: 0 0% 100%;
     --destructive: 355 45% 46%;
     --destructive-foreground: 0 0% 100%;
-    --border: 190 40% 20%;
-    --input: 190 40% 20%;
-    --ring: 188 88% 35%;
+    --border: 191 30% 25%;
+    --input: 191 30% 25%;
+    --ring: 188 88% 24%;
+    --radius: 0.75rem;
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-white/10;
   }
   body {
     @apply bg-background text-foreground;

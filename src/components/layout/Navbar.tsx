@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -34,7 +33,7 @@ export const Navbar = () => {
     <nav 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-1000 ease-in-out px-6 lg:px-12",
-        isScrolled ? "py-4 bg-white/95 backdrop-blur-md shadow-sm border-b" : "py-8 bg-transparent"
+        isScrolled ? "py-4 bg-[#19373E]/90 backdrop-blur-md border-b border-white/10" : "py-8 bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -52,7 +51,7 @@ export const Navbar = () => {
               "relative transition-all duration-1000 cubic-bezier(0.4, 0, 0.2, 1) transform-gpu flex items-center justify-center",
               isScrolled ? "w-12 h-12" : "w-64 h-64 md:w-[32rem] md:h-[32rem]"
             )}>
-              {/* Video Logo - Con mix-blend-screen para transparencia */}
+              {/* Video Logo - Sin blend mode, integrado por color de fondo */}
               <div className={cn(
                 "absolute inset-0 transition-all duration-1000 ease-in-out flex items-center justify-center",
                 !isScrolled ? "opacity-100 scale-100" : "opacity-0 scale-50 pointer-events-none"
@@ -62,7 +61,7 @@ export const Navbar = () => {
                   loop 
                   muted 
                   playsInline 
-                  className="w-full h-full object-contain mix-blend-screen pointer-events-none select-none"
+                  className="w-full h-full object-contain pointer-events-none select-none"
                 >
                   <source src="/logo3.mp4" type="video/mp4" />
                 </video>
@@ -78,7 +77,7 @@ export const Navbar = () => {
                     src={logoInside.imageUrl} 
                     alt="SUCESSO Logo Isotipo" 
                     fill 
-                    className="object-contain"
+                    className="object-contain brightness-0 invert"
                     priority
                   />
                 </div>
@@ -96,10 +95,7 @@ export const Navbar = () => {
             <Link 
               key={link.name} 
               href={link.href}
-              className={cn(
-                "text-xs font-semibold uppercase tracking-widest transition-colors hover:text-brand-canary",
-                isScrolled ? "text-brand-darkGray" : "text-white"
-              )}
+              className="text-xs font-semibold uppercase tracking-widest text-white/70 transition-colors hover:text-brand-canary"
             >
               {link.name}
             </Link>
@@ -109,8 +105,8 @@ export const Navbar = () => {
         {/* Mobile Menu Trigger */}
         <button 
           className={cn(
-            "lg:hidden p-2 rounded-md transition-all duration-1000",
-            isScrolled ? "text-brand-ocean" : "text-white opacity-0 pointer-events-none"
+            "lg:hidden p-2 rounded-md transition-all duration-1000 text-white",
+            isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"
           )}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
@@ -120,18 +116,18 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       <div className={cn(
-        "lg:hidden fixed inset-0 top-0 bg-white transition-transform duration-500 ease-in-out transform z-[70]",
+        "lg:hidden fixed inset-0 top-0 bg-[#19373E] transition-transform duration-500 ease-in-out transform z-[70]",
         isMenuOpen ? "translate-x-0" : "translate-x-full"
       )}>
         <div className="flex flex-col items-center justify-center h-full gap-8 p-6 text-center">
-          <button className="absolute top-8 right-8 text-brand-darkGray" onClick={() => setIsMenuOpen(false)}>
+          <button className="absolute top-8 right-8 text-white/50" onClick={() => setIsMenuOpen(false)}>
             <X size={36} />
           </button>
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
               href={link.href}
-              className="text-2xl font-headline text-brand-darkGray hover:text-brand-ocean"
+              className="text-2xl font-headline text-white hover:text-brand-canary"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.name}
