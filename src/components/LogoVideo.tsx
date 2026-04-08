@@ -1,3 +1,4 @@
+
 export default function LogoVideo() {
   return (
     <div className="flex items-center justify-center">
@@ -6,7 +7,7 @@ export default function LogoVideo() {
         loop
         muted
         playsInline
-        className="w-[220px] md:w-[480px] h-auto pointer-events-none select-none"
+        className="w-[220px] md:w-[400px] h-auto pointer-events-none select-none"
       >
         <source src="/logo3.mp4" type="video/mp4" />
       </video>
