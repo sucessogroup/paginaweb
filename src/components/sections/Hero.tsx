@@ -2,7 +2,6 @@
 "use client"
 
 import React, { useState, useEffect } from 'react'
-import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
 export const Hero = () => {
@@ -34,9 +33,9 @@ export const Hero = () => {
           </div>
           
           {/* Espacio para el logo que baja de la Navbar */}
-          <div className="h-[25vh] md:h-[30vh] flex items-center justify-center mb-12" />
+          <div className="h-[25vh] md:h-[35vh] flex items-center justify-center mb-12" />
 
-          <div className="space-y-8 mb-16">
+          <div className="space-y-8">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold leading-tight">
               Diseñamos, coordinamos y ejecutamos. <br />
               <span className="italic font-light text-brand-canary">Tú solo disfruta el éxito.</span>
@@ -44,19 +43,6 @@ export const Hero = () => {
             <p className="text-lg md:text-xl font-light max-w-3xl mx-auto leading-relaxed text-gray-300 italic opacity-80">
               Nos encargamos de cada milímetro de tu evento corporativo para que tu única preocupación sea atender a tus invitados.
             </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Button size="lg" className="bg-brand-canary hover:bg-brand-tangerine text-brand-darkGray font-bold px-12 py-8 text-sm uppercase tracking-widest rounded-full shadow-2xl transition-all duration-500 hover:scale-105">
-              Agendar una reunión
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="bg-transparent border-white/20 text-white hover:bg-white hover:text-brand-ocean px-12 py-8 text-sm uppercase tracking-widest rounded-full backdrop-blur-sm transition-all duration-500"
-            >
-              Ver portafolio
-            </Button>
           </div>
         </div>
       </div>

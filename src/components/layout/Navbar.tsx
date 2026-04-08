@@ -6,7 +6,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
 
 export const Navbar = () => {
@@ -45,14 +44,14 @@ export const Navbar = () => {
             className={cn(
               "z-[60] transition-all duration-1000 cubic-bezier(0.4, 0, 0.2, 1) transform-gpu",
               !isScrolled 
-                ? "fixed left-1/2 top-24 -translate-x-1/2 scale-[2.5] md:scale-[3.5] lg:scale-[4.5]" 
+                ? "fixed left-1/2 top-32 -translate-x-1/2 scale-[3.5] md:scale-[5] lg:scale-[6.5]" 
                 : "relative left-0 top-0 translate-x-0 scale-100"
             )}
           >
             {logoData ? (
               <div className={cn(
                 "relative transition-all duration-1000 cubic-bezier(0.4, 0, 0.2, 1) transform-gpu",
-                isScrolled ? "w-32 h-10 md:w-40 md:h-12" : "w-48 h-16"
+                isScrolled ? "w-32 h-10 md:w-40 md:h-12" : "w-56 h-20"
               )}>
                 <Image 
                   src={logoData.imageUrl} 
@@ -94,13 +93,6 @@ export const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Button 
-            className={cn(
-              "font-bold px-6 py-5 transition-all rounded-full bg-brand-ocean text-white hover:bg-brand-darkGray shadow-lg text-xs"
-            )}
-          >
-            Agendar Reunión
-          </Button>
         </div>
 
         {/* Mobile Menu Trigger */}
@@ -134,12 +126,6 @@ export const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Button 
-            className="bg-brand-canary hover:bg-brand-tangerine text-brand-darkGray w-full max-w-xs text-lg py-7 rounded-full"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Agendar Reunión
-          </Button>
         </div>
       </div>
     </nav>
