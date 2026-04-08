@@ -12,7 +12,8 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const logoData = PlaceHolderImages.find(img => img.id === 'logo-main')
+  const logoInside = PlaceHolderImages.find(img => img.id === 'logo-inside')
+  const logoOutside = PlaceHolderImages.find(img => img.id === 'logo-outside')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,26 +45,47 @@ export const Navbar = () => {
             className={cn(
               "z-[60] transition-all duration-1000 cubic-bezier(0.4, 0, 0.2, 1) transform-gpu",
               !isScrolled 
-                ? "fixed left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 scale-[4] md:scale-[5.5] lg:scale-[7]" 
-                : "relative left-0 top-0 translate-x-0 translate-y-0 scale-100"
+                ? "fixed left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2" 
+                : "relative left-0 top-0 translate-x-0 translate-y-0"
             )}
           >
-            {logoData ? (
+            {logoInside && logoOutside ? (
               <div className={cn(
-                "relative transition-all duration-1000 cubic-bezier(0.4, 0, 0.2, 1) transform-gpu",
-                isScrolled ? "w-32 h-10 md:w-40 md:h-12" : "w-48 h-16"
+                "relative transition-all duration-1000 cubic-bezier(0.4, 0, 0.2, 1) transform-gpu flex items-center justify-center",
+                isScrolled ? "w-12 h-12" : "w-64 h-64 md:w-80 md:h-80"
               )}>
-                <Image 
-                  src={logoData.imageUrl} 
-                  alt="SUCESSO Logo" 
-                  fill 
-                  className={cn(
-                    "object-contain transition-all duration-1000 ease-in-out", 
-                    !isScrolled && "brightness-0 invert"
-                  )}
-                  priority
-                  data-ai-hint="company logo"
-                />
+                {/* Parte Exterior - Gira */}
+                <div className={cn(
+                  "absolute inset-0 transition-all duration-1000 ease-in-out",
+                  !isScrolled ? "animate-[spin_20s_linear_infinite]" : "opacity-0 scale-50"
+                )}>
+                  <Image 
+                    src={logoOutside.imageUrl} 
+                    alt="SUCESSO Logo Circular" 
+                    fill 
+                    className={cn(
+                      "object-contain transition-all duration-1000 ease-in-out", 
+                      !isScrolled && "brightness-0 invert"
+                    )}
+                    priority
+                  />
+                </div>
+                {/* Parte Interior - Inmóvil */}
+                <div className={cn(
+                  "relative transition-all duration-1000 ease-in-out",
+                  isScrolled ? "w-8 h-8" : "w-32 h-32 md:w-40 md:h-40"
+                )}>
+                  <Image 
+                    src={logoInside.imageUrl} 
+                    alt="SUCESSO Logo Isotipo" 
+                    fill 
+                    className={cn(
+                      "object-contain transition-all duration-1000 ease-in-out", 
+                      isScrolled ? "brightness-100" : "brightness-0 invert"
+                    )}
+                    priority
+                  />
+                </div>
               </div>
             ) : (
               <div className={cn(

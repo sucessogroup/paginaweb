@@ -28,12 +28,8 @@ export const Hero = () => {
           "transition-all duration-1000 ease-out",
           isScrolled ? "opacity-0 translate-y-10" : "opacity-100 translate-y-0"
         )}>
-          <div className="text-[10px] md:text-xs tracking-[0.5em] uppercase font-bold mb-12 text-brand-canary">
-            Organización de <span className="font-handwriting normal-case text-2xl lowercase tracking-normal ml-2">eventos</span> premium
-          </div>
-          
-          {/* Espacio para el logo que baja de la Navbar - Ajustado para centrarlo verticalmente */}
-          <div className="h-[20vh] md:h-[25vh] flex items-center justify-center mb-16" />
+          {/* Espacio para el logo dinámico que baja de la Navbar */}
+          <div className="h-[30vh] md:h-[35vh] flex items-center justify-center mb-8" />
 
           <div className="space-y-8">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold leading-tight">

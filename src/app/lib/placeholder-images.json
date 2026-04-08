@@ -2,6 +2,18 @@
 {
   "placeholderImages": [
     {
+      "id": "logo-inside",
+      "description": "SUCESSO Isotipo Central (SS)",
+      "imageUrl": "/logo3inside.png",
+      "imageHint": "company logo central"
+    },
+    {
+      "id": "logo-outside",
+      "description": "SUCESSO Sello Rotativo",
+      "imageUrl": "/logo3outside.png",
+      "imageHint": "rotating logo seal"
+    },
+    {
       "id": "logo-main",
       "description": "SUCESSO Logo Principal",
       "imageUrl": "/logo1.png",
