@@ -13,7 +13,6 @@ export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const logoInside = PlaceHolderImages.find(img => img.id === 'logo-inside')
-  const logoOutside = PlaceHolderImages.find(img => img.id === 'logo-outside')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,52 +48,41 @@ export const Navbar = () => {
                 : "relative left-0 top-0 translate-x-0 translate-y-0"
             )}
           >
-            {logoInside && logoOutside ? (
+            <div className={cn(
+              "relative transition-all duration-1000 cubic-bezier(0.4, 0, 0.2, 1) transform-gpu flex items-center justify-center",
+              isScrolled ? "w-12 h-12" : "w-64 h-64 md:w-[28rem] md:h-[28rem]"
+            )}>
+              {/* Video Logo - Visible solo cuando NO hay scroll */}
               <div className={cn(
-                "relative transition-all duration-1000 cubic-bezier(0.4, 0, 0.2, 1) transform-gpu flex items-center justify-center",
-                isScrolled ? "w-12 h-12" : "w-64 h-64 md:w-80 md:h-80"
+                "absolute inset-0 transition-all duration-1000 ease-in-out",
+                !isScrolled ? "opacity-100 scale-100" : "opacity-0 scale-50 pointer-events-none"
               )}>
-                {/* Parte Exterior - Rotación extremadamente lenta y fluida */}
-                <div className={cn(
-                  "absolute inset-0 transition-all duration-1000 ease-in-out",
-                  !isScrolled ? "animate-[spin_180s_linear_infinite]" : "opacity-0 scale-50"
-                )}>
-                  <Image 
-                    src={logoOutside.imageUrl} 
-                    alt="SUCESSO Logo Circular" 
-                    fill 
-                    className={cn(
-                      "object-contain transition-all duration-1000 ease-in-out", 
-                      !isScrolled && "brightness-0 invert"
-                    )}
-                    priority
-                  />
-                </div>
-                {/* Parte Interior - Inmóvil */}
+                <video 
+                  src="/logo3.mp4" 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline 
+                  className="w-full h-full object-contain brightness-0 invert"
+                />
+              </div>
+
+              {/* Isotipo Estático - Visible solo CUANDO HAY scroll */}
+              {logoInside && (
                 <div className={cn(
                   "relative transition-all duration-1000 ease-in-out",
-                  isScrolled ? "w-8 h-8" : "w-32 h-32 md:w-40 md:h-40"
+                  isScrolled ? "w-8 h-8 opacity-100 scale-100" : "w-32 h-32 md:w-40 md:h-40 opacity-0 scale-150 pointer-events-none"
                 )}>
                   <Image 
                     src={logoInside.imageUrl} 
                     alt="SUCESSO Logo Isotipo" 
                     fill 
-                    className={cn(
-                      "object-contain transition-all duration-1000 ease-in-out", 
-                      isScrolled ? "brightness-100" : "brightness-0 invert"
-                    )}
+                    className="object-contain"
                     priority
                   />
                 </div>
-              </div>
-            ) : (
-              <div className={cn(
-                "text-2xl md:text-3xl font-headline font-bold tracking-widest transition-all duration-1000",
-                isScrolled ? "text-brand-ocean" : "text-white"
-              )}>
-                SUCESSO
-              </div>
-            )}
+              )}
+            </div>
           </Link>
         </div>
 
