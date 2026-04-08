@@ -392,11 +392,9 @@ export default function WeddingPage() {
             <h2 className={cn(serif.className, "text-3xl md:text-5xl font-light text-[#5c6b5c] italic")}>
               {t.faltaPoco}
             </h2>
-            {t.acompananos && (
-              <p className={cn(script.className, "text-xl md:text-3xl text-[#c5a059] opacity-80")}>
-                {t.acompananos}
-              </p>
-            )}
+            <p className={cn(script.className, "text-xl md:text-3xl text-[#c5a059] opacity-80")}>
+              {t.acompananos}
+            </p>
           </RevealSection>
 
           <RevealSection delay={200} className="min-h-[120px] flex items-center justify-center">

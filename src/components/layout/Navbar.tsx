@@ -34,7 +34,7 @@ export const Navbar = () => {
   return (
     <nav 
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-700 px-6 lg:px-12",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-1000 ease-in-out px-6 lg:px-12",
         isScrolled ? "py-4 bg-white/95 backdrop-blur-md shadow-sm border-b" : "py-8 bg-transparent"
       )}
     >
@@ -43,7 +43,7 @@ export const Navbar = () => {
           <Link 
             href="/" 
             className={cn(
-              "transition-all duration-[1200ms] ease-in-out z-[60]",
+              "z-[60] transition-all duration-1000 cubic-bezier(0.4, 0, 0.2, 1) transform-gpu",
               !isScrolled 
                 ? "fixed left-1/2 top-24 -translate-x-1/2 scale-[2.5] md:scale-[3.5] lg:scale-[4.5]" 
                 : "relative left-0 top-0 translate-x-0 scale-100"
@@ -51,7 +51,7 @@ export const Navbar = () => {
           >
             {logoData ? (
               <div className={cn(
-                "relative transition-all duration-[1200ms] ease-in-out",
+                "relative transition-all duration-1000 cubic-bezier(0.4, 0, 0.2, 1) transform-gpu",
                 isScrolled ? "w-32 h-10 md:w-40 md:h-12" : "w-48 h-16"
               )}>
                 <Image 
@@ -59,7 +59,7 @@ export const Navbar = () => {
                   alt="SUCESSO Logo" 
                   fill 
                   className={cn(
-                    "object-contain transition-all duration-[1200ms] ease-in-out", 
+                    "object-contain transition-all duration-1000 ease-in-out", 
                     !isScrolled && "brightness-0 invert"
                   )}
                   priority
@@ -68,7 +68,7 @@ export const Navbar = () => {
               </div>
             ) : (
               <div className={cn(
-                "text-2xl md:text-3xl font-headline font-bold tracking-widest transition-colors duration-[1200ms]",
+                "text-2xl md:text-3xl font-headline font-bold tracking-widest transition-all duration-1000",
                 isScrolled ? "text-brand-ocean" : "text-white"
               )}>
                 SUCESSO
@@ -79,7 +79,7 @@ export const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className={cn(
-          "hidden lg:flex items-center gap-10 transition-all duration-700 delay-300",
+          "hidden lg:flex items-center gap-10 transition-all duration-1000 ease-in-out",
           !isScrolled ? "opacity-0 pointer-events-none translate-y-4" : "opacity-100 translate-y-0"
         )}>
           {navLinks.map((link) => (
@@ -106,7 +106,7 @@ export const Navbar = () => {
         {/* Mobile Menu Trigger */}
         <button 
           className={cn(
-            "lg:hidden p-2 rounded-md transition-all duration-700",
+            "lg:hidden p-2 rounded-md transition-all duration-1000",
             isScrolled ? "text-brand-ocean" : "text-white opacity-0 pointer-events-none"
           )}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
