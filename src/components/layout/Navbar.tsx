@@ -17,7 +17,7 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 80)
+      setIsScrolled(window.scrollY > 50)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
@@ -34,32 +34,32 @@ export const Navbar = () => {
   return (
     <nav 
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-1000 px-6 lg:px-12",
-        isScrolled ? "py-4 bg-white/95 backdrop-blur-md shadow-sm border-b" : "py-12 bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-700 px-6 lg:px-12",
+        isScrolled ? "py-4 bg-white/95 backdrop-blur-md shadow-sm border-b" : "py-8 bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center">
           <Link 
             href="/" 
             className={cn(
-              "transition-all duration-[2500ms] ease-in-out z-[60]",
+              "transition-all duration-[1200ms] ease-in-out z-[60]",
               !isScrolled 
-                ? "fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-[3] md:scale-[4] lg:scale-[5]" 
-                : "relative left-0 top-0 translate-x-0 translate-y-0 scale-100"
+                ? "fixed left-1/2 top-24 -translate-x-1/2 scale-[2.5] md:scale-[3.5] lg:scale-[4.5]" 
+                : "relative left-0 top-0 translate-x-0 scale-100"
             )}
           >
             {logoData ? (
               <div className={cn(
-                "relative transition-all duration-[2500ms] ease-in-out",
-                isScrolled ? "w-40 h-12" : "w-48 h-16"
+                "relative transition-all duration-[1200ms] ease-in-out",
+                isScrolled ? "w-32 h-10 md:w-40 md:h-12" : "w-48 h-16"
               )}>
                 <Image 
                   src={logoData.imageUrl} 
                   alt="SUCESSO Logo" 
                   fill 
                   className={cn(
-                    "object-contain transition-all duration-[2500ms] ease-in-out", 
+                    "object-contain transition-all duration-[1200ms] ease-in-out", 
                     !isScrolled && "brightness-0 invert"
                   )}
                   priority
@@ -68,7 +68,7 @@ export const Navbar = () => {
               </div>
             ) : (
               <div className={cn(
-                "text-3xl font-headline font-bold tracking-widest transition-colors duration-[2500ms]",
+                "text-2xl md:text-3xl font-headline font-bold tracking-widest transition-colors duration-[1200ms]",
                 isScrolled ? "text-brand-ocean" : "text-white"
               )}>
                 SUCESSO
@@ -79,7 +79,7 @@ export const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className={cn(
-          "hidden lg:flex items-center gap-10 transition-all duration-1000 delay-[1000ms]",
+          "hidden lg:flex items-center gap-10 transition-all duration-700 delay-300",
           !isScrolled ? "opacity-0 pointer-events-none translate-y-4" : "opacity-100 translate-y-0"
         )}>
           {navLinks.map((link) => (
@@ -87,7 +87,7 @@ export const Navbar = () => {
               key={link.name} 
               href={link.href}
               className={cn(
-                "text-sm font-semibold uppercase tracking-widest transition-colors hover:text-brand-canary",
+                "text-xs font-semibold uppercase tracking-widest transition-colors hover:text-brand-canary",
                 isScrolled ? "text-brand-darkGray" : "text-white"
               )}
             >
@@ -96,7 +96,7 @@ export const Navbar = () => {
           ))}
           <Button 
             className={cn(
-              "font-bold px-8 py-6 transition-all rounded-full bg-brand-ocean text-white hover:bg-brand-darkGray shadow-lg"
+              "font-bold px-6 py-5 transition-all rounded-full bg-brand-ocean text-white hover:bg-brand-darkGray shadow-lg text-xs"
             )}
           >
             Agendar Reunión
@@ -111,7 +111,7 @@ export const Navbar = () => {
           )}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
+          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
@@ -122,20 +122,20 @@ export const Navbar = () => {
       )}>
         <div className="flex flex-col items-center justify-center h-full gap-8 p-6 text-center">
           <button className="absolute top-8 right-8 text-brand-darkGray" onClick={() => setIsMenuOpen(false)}>
-            <X size={40} />
+            <X size={36} />
           </button>
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
               href={link.href}
-              className="text-3xl font-headline text-brand-darkGray hover:text-brand-ocean"
+              className="text-2xl font-headline text-brand-darkGray hover:text-brand-ocean"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.name}
             </Link>
           ))}
           <Button 
-            className="bg-brand-canary hover:bg-brand-tangerine text-brand-darkGray w-full max-w-xs text-xl py-8 rounded-full"
+            className="bg-brand-canary hover:bg-brand-tangerine text-brand-darkGray w-full max-w-xs text-lg py-7 rounded-full"
             onClick={() => setIsMenuOpen(false)}
           >
             Agendar Reunión
