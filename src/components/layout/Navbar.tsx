@@ -44,14 +44,14 @@ export const Navbar = () => {
             className={cn(
               "z-[60] transition-all duration-1000 cubic-bezier(0.4, 0, 0.2, 1) transform-gpu",
               !isScrolled 
-                ? "fixed left-1/2 top-32 -translate-x-1/2 scale-[3.5] md:scale-[5] lg:scale-[6.5]" 
-                : "relative left-0 top-0 translate-x-0 scale-100"
+                ? "fixed left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 scale-[4] md:scale-[5.5] lg:scale-[7]" 
+                : "relative left-0 top-0 translate-x-0 translate-y-0 scale-100"
             )}
           >
             {logoData ? (
               <div className={cn(
                 "relative transition-all duration-1000 cubic-bezier(0.4, 0, 0.2, 1) transform-gpu",
-                isScrolled ? "w-32 h-10 md:w-40 md:h-12" : "w-56 h-20"
+                isScrolled ? "w-32 h-10 md:w-40 md:h-12" : "w-48 h-16"
               )}>
                 <Image 
                   src={logoData.imageUrl} 

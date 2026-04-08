@@ -32,8 +32,8 @@ export const Hero = () => {
             Organización de <span className="font-handwriting normal-case text-2xl lowercase tracking-normal ml-2">eventos</span> premium
           </div>
           
-          {/* Espacio para el logo que baja de la Navbar */}
-          <div className="h-[25vh] md:h-[35vh] flex items-center justify-center mb-12" />
+          {/* Espacio para el logo que baja de la Navbar - Ajustado para centrarlo verticalmente */}
+          <div className="h-[20vh] md:h-[25vh] flex items-center justify-center mb-16" />
 
           <div className="space-y-8">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold leading-tight">
