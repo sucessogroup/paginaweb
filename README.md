@@ -1,26 +1,28 @@
 
-# Boda Carla & Said - Invitación Digital
+# SUCESSO Group - Plataforma Digital
 
-Este es el proyecto de la invitación digital para la boda de Carla y Said en Zihuatanejo.
+Este proyecto es la presencia digital de SUCESSO, enfocada en el diseño y producción de eventos corporativos de alto impacto.
 
-## Configuración de APIs
+## Guía de Medios (Imágenes y Video)
 
-Para que la sección de **Recomendaciones** funcione (alimentada por Amadeus), debes configurar las siguientes variables de entorno:
+Para mantener el rendimiento premium del sitio, sigue estas recomendaciones:
 
-1. `AMADEUS_CLIENT_ID`
-2. `AMADEUS_CLIENT_SECRET`
+### Imágenes
+- **Formatos soportados:** WebP (Recomendado), JPG, PNG.
+- **NO USAR .HEIC:** Los navegadores no lo visualizan. Debes convertirlos a WebP o JPG antes de subirlos.
+- **Optimización:** Intenta que las imágenes de galería no superen los 500KB.
+- **Dimensiones:** Para el Hero o fondos, usa imágenes de al menos 1920px de ancho.
 
-### Desarrollo Local
-1. Crea un archivo `.env.local` en la raíz del proyecto.
-2. Copia el contenido de `.env.example`.
-3. Reemplaza los valores con tus credenciales de [Amadeus for Developers](https://developers.amadeus.com/).
+### Videos
+- **Formato:** MP4 (H.264) para máxima compatibilidad.
+- **Logo Animado:** El archivo `logo3.mp4` debe mantenerse en `/public/` para que el componente `LogoVideo` funcione correctamente.
 
-### Producción (Firebase App Hosting)
-Configura las variables de entorno directamente en la consola de Firebase, dentro de la configuración de App Hosting de tu proyecto.
+## Configuración Técnica
+- **Framework:** Next.js 15 (App Router)
+- **Estilos:** Tailwind CSS
+- **Componentes:** ShadCN UI
+- **Color Principal:** `#19373E` (Azul Petróleo SUCESSO)
 
-## Estructura del Proyecto
-- `/src/app/boda-carla-said`: Página principal de la invitación.
-- `/src/app/recomendaciones-*`: Páginas de turismo dinámicas.
-- `/src/app/api/recommendations`: Endpoint que conecta con Amadeus.
-
-hola
+## Estructura de Archivos
+- `/src/components/LogoVideo.tsx`: Maneja el logo animado del Hero.
+- `/src/app/lib/placeholder-images.json`: Diccionario de imágenes del sitio.
