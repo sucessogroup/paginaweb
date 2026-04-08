@@ -3,13 +3,13 @@ import Image from 'next/image'
 
 export const About = () => {
   return (
-    <section id="nosotros" className="py-24 lg:py-40 bg-[#19373E]">
+    <section id="nosotros" className="py-24 lg:py-40 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-24 items-center">
           <div className="space-y-10">
             <div className="space-y-4">
               <h2 className="text-[10px] uppercase tracking-[0.5em] text-brand-canary font-bold">Nuestra Filosofía</h2>
-              <h3 className="text-4xl md:text-6xl font-headline font-bold text-white leading-tight">
+              <h3 className="text-4xl md:text-6xl font-headline font-bold text-brand-darkGray leading-tight">
                 Eventos impecables, <br />
                 <span className="text-brand-canary italic font-light">cero estrés para ti.</span>
               </h3>
@@ -17,25 +17,25 @@ export const About = () => {
             
             <div className="w-20 h-[1px] bg-brand-canary" />
             
-            <p className="text-xl md:text-2xl font-light text-white/80 leading-relaxed italic">
+            <p className="text-xl md:text-2xl font-light text-brand-darkGray/80 leading-relaxed italic">
               "En SUCESSO creemos que un gran evento no debería ser una carga para quien lo organiza. Nuestra misión es absorber toda la complejidad operativa para que tú puedas concentrarte en lo que realmente importa: tus objetivos y tus invitados."
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-6">
               <div className="space-y-3">
                 <h4 className="font-headline font-bold text-brand-canary text-lg uppercase tracking-wide">Precisión</h4>
-                <p className="text-sm text-white/50 font-light leading-relaxed">Cada detalle es planeado con rigor técnico y sensibilidad estética.</p>
+                <p className="text-sm text-brand-darkGray/50 font-light leading-relaxed">Cada detalle es planeado con rigor técnico y sensibilidad estética.</p>
               </div>
               <div className="space-y-3">
                 <h4 className="font-headline font-bold text-brand-canary text-lg uppercase tracking-wide">Tranquilidad</h4>
-                <p className="text-sm text-white/50 font-light leading-relaxed">Reportes claros y ejecución autónoma para que no tengas que supervisar nada.</p>
+                <p className="text-sm text-brand-darkGray/50 font-light leading-relaxed">Reportes claros y ejecución autónoma para que no tengas que supervisar nada.</p>
               </div>
             </div>
           </div>
 
           <div className="relative">
-            <div className="absolute -inset-4 bg-white/5 rounded-[3rem] -rotate-2" />
-            <div className="relative aspect-[4/5] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10">
+            <div className="absolute -inset-4 bg-brand-darkGray/5 rounded-[3rem] -rotate-2" />
+            <div className="relative aspect-[4/5] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-brand-darkGray/10">
               <Image 
                 src="https://picsum.photos/seed/sucesso-luxury-event/800/1000"
                 alt="Detalle de evento premium"
