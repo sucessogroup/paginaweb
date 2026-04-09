@@ -4,23 +4,23 @@ import { UserCheck, Sparkles, ShieldCheck, TrendingUp } from 'lucide-react'
 
 const benefits = [
   {
-    title: "Atención Personalizada",
-    desc: "Un acompañamiento cercano y experto que entiende la singularidad de cada visión corporativa.",
+    title: "Atención personalizada",
+    desc: "Cada proyecto es único y lo tratamos como tal, adaptándonos a tu visión y objetivos.",
     icon: UserCheck
   },
   {
     title: "Cuidado en cada detalle",
-    desc: "La excelencia reside en revisar lo invisible para que lo visible sea simplemente perfecto.",
+    desc: "Creemos que los pequeños elementos son los que transforman un evento en algo extraordinario.",
     icon: Sparkles
   },
   {
-    title: "Acompañamiento Constante",
-    desc: "Somos socios estratégicos en cada fase, brindando seguridad y respaldo absoluto a tu gestión.",
+    title: "Acompañamiento constante",
+    desc: "Estamos contigo en cada etapa, brindando claridad, control y confianza.",
     icon: ShieldCheck
   },
   {
-    title: "Valor y Rentabilidad",
-    desc: "Transformamos la inversión en resultados tangibles y una reputación de marca impecable.",
+    title: "Valor para tu inversión",
+    desc: "Diseñamos experiencias estratégicas que generan impacto, conexión y resultados.",
     icon: TrendingUp
   }
 ]
@@ -33,10 +33,10 @@ export const WhyUs = () => {
           <div className="space-y-8">
             <h2 className="text-brand-canary font-bold tracking-[0.5em] text-[10px] uppercase">Diferenciación</h2>
             <h3 className="text-4xl md:text-6xl font-headline font-bold mb-8 leading-tight">
-              Detalles que inspiran, <br /> <span className="text-brand-canary italic font-light">valor que trasciende.</span>
+              Detalles que no cuestan más, <br /> <span className="text-brand-canary italic font-light">pero lo valen todo.</span>
             </h3>
             <p className="text-lg text-white/60 font-light max-w-lg leading-relaxed italic">
-              "En SUCESSO no solo organizamos reuniones; creamos entornos de alto impacto donde los negocios y las relaciones humanas fluyen en total armonía."
+              “En SUCESSO no solo organizamos eventos, diseñamos experiencias que reflejan la esencia de tu marca y generan impacto real en las personas.”
             </p>
           </div>
 

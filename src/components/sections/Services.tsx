@@ -5,33 +5,33 @@ import { PlaceHolderImages } from '@/lib/placeholder-images'
 
 const services = [
   {
-    title: "Corporativos Internos",
-    description: "Fortalecemos la cultura organizacional a través de experiencias que inspiran y motivan a tu capital más valioso.",
+    title: "Eventos Corporativos Internos",
+    description: "Experiencias diseñadas para equipos y colaboradores: integraciones, celebraciones, reconocimientos y lanzamientos internos.",
     img: "service-internal",
   },
   {
-    title: "Corporativos Externos",
-    description: "Diseñamos lanzamientos y activaciones de alto impacto que posicionan tu marca en la mente de tus clientes estratégicos.",
+    title: "Eventos Corporativos Externos",
+    description: "Activaciones, lanzamientos y experiencias para clientes, aliados y stakeholders que fortalecen relaciones y posicionamiento.",
     img: "service-congress",
   },
   {
-    title: "Académicos y Profesionales",
-    description: "Gestión impecable de congresos y seminarios donde el conocimiento fluye en un entorno de excelencia operativa.",
+    title: "Congresos y Eventos Profesionales",
+    description: "Planeación y ejecución de encuentros académicos, convenciones y seminarios de alto nivel.",
     img: "service-custom",
   },
   {
-    title: "Protocolarios e Institucionales",
-    description: "Respeto absoluto por las formas y la jerarquía en eventos que requieren una sobriedad y elegancia sin fisuras.",
+    title: "Eventos Protocolarios e Institucionales",
+    description: "Ceremonias, aniversarios y eventos formales para empresas, asociaciones o entidades de gobierno.",
     img: "service-internal", 
   },
   {
-    title: "Virtuales e Híbridos",
-    description: "Tecnología de vanguardia al servicio de la conexión global, rompiendo barreras físicas sin perder la calidez humana.",
+    title: "Eventos Virtuales e Híbridos",
+    description: "Soluciones tecnológicas que conectan audiencias a distancia sin perder impacto ni emoción.",
     img: "service-congress",
   },
   {
-    title: "Experienciales y Creativos",
-    description: "Momentos disruptivos diseñados para sorprender, donde la creatividad se convierte en un activo de negocio.",
+    title: "Experiencias Creativas y de Marca",
+    description: "Conceptos únicos diseñados para generar impacto sensorial, emocional y recordación.",
     img: "service-custom",
   }
 ]
@@ -42,9 +42,9 @@ export const Services = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-32 space-y-6">
           <h2 className="text-[10px] uppercase tracking-[0.5em] text-brand-canary font-bold">Expertise Estratégico</h2>
-          <h3 className="text-4xl md:text-6xl font-headline font-bold">Soluciones <span className="font-handwriting font-normal text-brand-canary text-6xl lowercase">especializadas.</span></h3>
+          <h3 className="text-4xl md:text-6xl font-headline font-bold">Qué <span className="font-handwriting font-normal text-brand-canary text-6xl lowercase">hacemos.</span></h3>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg font-light leading-relaxed italic opacity-80">
-            Diseñamos y producimos momentos significativos para marcas que buscan trascender a través de la excelencia y la estrategia.
+            Diseñamos y producimos eventos corporativos que responden a distintos objetivos, audiencias y momentos clave de cada organización.
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export const Services = () => {
                     alt={service.title}
                     fill
                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                    data-ai-hint={imgData?.imageHint || "elegant event"}
+                    data-ai-hint="premium corporate service"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-darkGray via-transparent to-transparent opacity-60" />
                 </div>

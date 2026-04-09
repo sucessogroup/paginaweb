@@ -6,28 +6,28 @@ import { Target, Palette, Box, Zap, Heart } from 'lucide-react'
 
 const steps = [
   {
-    title: "Brief Estratégico",
-    desc: "Escuchamos la intención detrás del evento para alinear cada decisión con tus objetivos de negocio.",
+    title: "Brief estratégico",
+    desc: "Definimos objetivos, audiencia y mensaje clave para construir una base sólida.",
     icon: Target
   },
   {
-    title: "Diseño de Experiencia",
-    desc: "Conceptualizamos un viaje sensorial y emocional único, donde tu marca es la protagonista indiscutible.",
+    title: "Diseño de experiencia",
+    desc: "Traducimos la estrategia en una experiencia sensorial, personalizada y memorable.",
     icon: Palette
   },
   {
-    title: "Coordinación y Logística",
-    desc: "Una orquesta de precisión técnica donde cada pieza encaja para asegurar una ejecución sin contratiempos.",
+    title: "Coordinación y logística",
+    desc: "Ejecutamos con precisión cada detalle, alineando proveedores, tiempos y operación.",
     icon: Box
   },
   {
-    title: "Cierre con Impacto",
-    desc: "Supervisamos la culminación del evento asegurando que el mensaje final resuene con fuerza en cada asistente.",
+    title: "Cierre con impacto",
+    desc: "Medimos resultados, recopilamos aprendizajes y aseguramos valor para futuros eventos.",
     icon: Zap
   },
   {
-    title: "Sucessos Memorables",
-    desc: "Evaluamos resultados y celebramos el impacto duradero de una experiencia que superó las expectativas.",
+    title: "Sucessos memorables",
+    desc: "Creamos momentos que conectan emocionalmente y dejan huella en la marca.",
     icon: Heart
   }
 ]
@@ -38,7 +38,7 @@ export const Process = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-24 space-y-6">
           <h2 className="text-[10px] uppercase tracking-[0.5em] text-brand-canary font-bold">Nuestro Método</h2>
-          <h3 className="text-4xl md:text-6xl font-headline font-bold text-brand-darkGray">Estrategia que genera <span className="italic font-light text-brand-canary">legado.</span></h3>
+          <h3 className="text-4xl md:text-6xl font-headline font-bold text-brand-darkGray">Orden que genera <span className="italic font-light text-brand-canary">confianza.</span></h3>
           <div className="w-20 h-[1px] bg-brand-canary mx-auto mt-8" />
         </div>
 
