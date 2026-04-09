@@ -1,13 +1,13 @@
-
 export default function LogoVideo() {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center overflow-hidden">
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="w-[220px] md:w-[400px] h-auto pointer-events-none select-none"
+        className="w-[220px] md:w-[400px] h-auto pointer-events-none select-none bg-transparent"
+        style={{ mixBlendMode: 'normal' }}
       >
         <source src="/logo3.mp4" type="video/mp4" />
       </video>

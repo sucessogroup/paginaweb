@@ -4,7 +4,8 @@
 
 @layer base {
   :root {
-    --background: 191 43% 17%; /* Correspondiente exacto a #19373E */
+    /* Color SUCESSO exacto: #19373E */
+    --background: 191 43% 17%; 
     --foreground: 0 0% 100%;
     --card: 191 43% 15%;
     --card-foreground: 0 0% 100%;
@@ -32,7 +33,9 @@
     @apply border-white/10;
   }
   body {
-    @apply bg-background text-foreground;
+    /* Forzamos el color de fondo exacto para evitar variaciones de renderizado */
+    background-color: #19373E;
+    @apply text-foreground antialiased;
   }
 }
 
