@@ -33,12 +33,17 @@
     @apply border-white/10;
   }
   body {
-    /* Forzamos el color de fondo exacto para evitar variaciones de renderizado */
-    background-color: #19373E;
+    background-color: #19373E !important;
     @apply text-foreground antialiased;
   }
 }
 
 .font-handwriting {
   font-family: 'Dancing Script', cursive;
+}
+
+/* Máscara para suavizar bordes de video en móviles */
+.video-mask {
+  mask-image: radial-gradient(circle, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
 }
