@@ -48,7 +48,7 @@ export const Process = () => {
   })
 
   return (
-    <section ref={containerRef} id="proceso" className="relative h-[450vh] bg-white">
+    <section ref={containerRef} id="proceso" className="relative h-[500vh] bg-white">
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden">
         
         {/* Barra de Progreso Lateral Sutil */}
@@ -97,29 +97,30 @@ const StepScene = ({ step, index, total, progress }: { step: any, index: number,
   const end = (index + 1) / total
   const middle = (start + end) / 2
 
-  // Animaciones basadas en el progreso del scroll
+  // Animaciones basadas en el progreso del scroll con "plateaus" para mayor legibilidad
+  // El texto se mantiene en opacidad 1 y blur 0 durante un rango central más amplio
   const opacity = useTransform(
     progress,
-    [start - 0.05, start, middle, end, end + 0.05],
-    [0, 0.25, 1, 0.25, 0]
+    [start, start + 0.05, middle - 0.08, middle + 0.08, end - 0.05, end],
+    [0, 0.4, 1, 1, 0.4, 0]
   )
   
   const scale = useTransform(
     progress,
-    [start, middle, end],
-    [0.98, 1, 0.98]
+    [start, middle - 0.05, middle + 0.05, end],
+    [0.97, 1, 1, 0.97]
   )
   
   const y = useTransform(
     progress,
-    [start, middle, end],
-    [40, 0, -40]
+    [start, middle - 0.08, middle + 0.08, end],
+    [60, 0, 0, -60]
   )
 
   const blur = useTransform(
     progress,
-    [start, middle, end],
-    ["blur(8px)", "blur(0px)", "blur(8px)"]
+    [start, middle - 0.1, middle + 0.1, end],
+    ["blur(12px)", "blur(0px)", "blur(0px)", "blur(12px)"]
   )
 
   const numberOpacity = useTransform(
@@ -141,7 +142,7 @@ const StepScene = ({ step, index, total, progress }: { step: any, index: number,
         {step.number}
       </motion.span>
 
-      <div className="space-y-8 max-w-3xl pointer-events-auto">
+      <div className="space-y-8 max-w-3xl pointer-events-auto px-4">
         <div className="space-y-2">
            <span className="text-brand-canary font-headline font-bold text-lg md:text-xl">0{index + 1}.</span>
            <h4 className="text-4xl md:text-7xl font-headline font-bold text-brand-darkGray leading-tight tracking-tight">
