@@ -26,76 +26,28 @@
       "imageHint": "quality seal"
     },
     {
-      "id": "wedding-hero",
-      "description": "Hero principal de la boda",
-      "imageUrl": "/foto1.jpg",
-      "imageHint": "wedding couple"
-    },
-    {
-      "id": "wedding-bg-quote",
-      "description": "Fondo sutil para la sección de frase",
-      "imageUrl": "/foto2.png",
-      "imageHint": "elegant background"
-    },
-    {
-      "id": "wedding-bg-itinerary",
-      "description": "Fondo elegante para el itinerario",
-      "imageUrl": "/foto3.png",
-      "imageHint": "wedding decoration"
-    },
-    {
-      "id": "hotel-villa-mexicana",
-      "description": "Villa Mexicana Hotel",
-      "imageUrl": "/foto4.png",
-      "imageHint": "hotel architecture"
-    },
-    {
-      "id": "wedding-footer",
-      "description": "Imagen de cierre foto5",
-      "imageUrl": "/foto5.jpeg",
-      "imageHint": "wedding landscape"
-    },
-    {
-      "id": "flag-mx",
-      "description": "Bandera México PNG",
-      "imageUrl": "/banderamx.png",
-      "imageHint": "mexico flag"
-    },
-    {
-      "id": "flag-it",
-      "description": "Bandera Italia PNG",
-      "imageUrl": "/banderaita.png",
-      "imageHint": "italy flag"
-    },
-    {
-      "id": "dresscode-image",
-      "description": "Imagen de código de vestimenta",
-      "imageUrl": "/dresscode.png",
-      "imageHint": "dress code"
-    },
-    {
-      "id": "rec-zihua",
-      "description": "Recomendaciones Zihuatanejo",
-      "imageUrl": "/foto6.png",
-      "imageHint": "zihuatanejo beach"
-    },
-    {
-      "id": "rec-guerrero",
-      "description": "Recomendaciones Guerrero",
-      "imageUrl": "/foto7.png",
-      "imageHint": "mexico landscape"
-    },
-    {
-      "id": "rec-mexico",
-      "description": "Recomendaciones México",
-      "imageUrl": "/foto8.png",
-      "imageHint": "mexico culture"
-    },
-    {
       "id": "about-main",
       "description": "Imagen principal Filosofía",
       "imageUrl": "/foto1.webp",
       "imageHint": "luxury event"
+    },
+    {
+      "id": "service-internal",
+      "description": "Imagen Eventos Corporativos",
+      "imageUrl": "/foto2.webp",
+      "imageHint": "corporate event"
+    },
+    {
+      "id": "service-congress",
+      "description": "Imagen Convenciones",
+      "imageUrl": "https://picsum.photos/seed/service-congress/800/1000",
+      "imageHint": "business congress"
+    },
+    {
+      "id": "service-custom",
+      "description": "Imagen Experiencias Incentivo",
+      "imageUrl": "https://picsum.photos/seed/service-incentive/800/1000",
+      "imageHint": "luxury dinner incentive"
     }
   ]
 }

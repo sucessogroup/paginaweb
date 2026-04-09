@@ -44,7 +44,7 @@ export const Services = () => {
                     alt={service.title}
                     fill
                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                    data-ai-hint="elegant event"
+                    data-ai-hint={imgData?.imageHint || "elegant event"}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-darkGray via-transparent to-transparent opacity-60" />
                 </div>
