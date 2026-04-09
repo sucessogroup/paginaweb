@@ -33,8 +33,8 @@
   /* Ajuste de color específico para teléfonos solicitado por el usuario */
   @media (max-width: 767px) {
     :root {
-      --brand-bg: #1F4447;
-      --background: 183 39% 20%;
+      --brand-bg: #173035;
+      --background: 190 39% 15%;
     }
   }
 }
