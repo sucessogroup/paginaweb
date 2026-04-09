@@ -1,26 +1,27 @@
+
 import React from 'react'
-import { ShieldCheck, Sparkles, Target, BarChart3 } from 'lucide-react'
+import { UserCheck, Sparkles, ShieldCheck, TrendingUp } from 'lucide-react'
 
 const benefits = [
   {
-    title: "Cero estrés operativo",
-    desc: "Nosotros resolvemos las crisis antes de que te enteres que existieron.",
-    icon: ShieldCheck
+    title: "Atención Personalizada",
+    desc: "Un acompañamiento cercano y experto que entiende la singularidad de cada visión corporativa.",
+    icon: UserCheck
   },
   {
-    title: "Representación de marca",
-    desc: "Eventos que proyectan la altura y profesionalismo de tu organización.",
-    icon: Target
-  },
-  {
-    title: "Ejecución impecable",
-    desc: "Cuidamos los detalles que otros pasan por alto: desde la luz hasta el tono de voz.",
+    title: "Cuidado en cada detalle",
+    desc: "La excelencia reside en revisar lo invisible para que lo visible sea simplemente perfecto.",
     icon: Sparkles
   },
   {
-    title: "Retorno de inversión",
-    desc: "Diseñamos experiencias con objetivos claros para asegurar resultados medibles.",
-    icon: BarChart3
+    title: "Acompañamiento Constante",
+    desc: "Somos socios estratégicos en cada fase, brindando seguridad y respaldo absoluto a tu gestión.",
+    icon: ShieldCheck
+  },
+  {
+    title: "Valor y Rentabilidad",
+    desc: "Transformamos la inversión en resultados tangibles y una reputación de marca impecable.",
+    icon: TrendingUp
   }
 ]
 
@@ -30,12 +31,12 @@ export const WhyUs = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-24 items-center">
           <div className="space-y-8">
-            <h2 className="text-brand-canary font-bold tracking-[0.5em] text-[10px] uppercase">¿Por qué elegirnos?</h2>
+            <h2 className="text-brand-canary font-bold tracking-[0.5em] text-[10px] uppercase">Diferenciación</h2>
             <h3 className="text-4xl md:text-6xl font-headline font-bold mb-8 leading-tight">
-              Detalles que no cuestan más, pero <span className="text-brand-canary italic font-light">lo valen todo.</span>
+              Detalles que inspiran, <br /> <span className="text-brand-canary italic font-light">valor que trasciende.</span>
             </h3>
             <p className="text-lg text-white/60 font-light max-w-lg leading-relaxed italic">
-              "En SUCESSO no solo organizamos reuniones, creamos entornos de alto impacto donde los negocios y las relaciones fluyen naturalmente."
+              "En SUCESSO no solo organizamos reuniones; creamos entornos de alto impacto donde los negocios y las relaciones humanas fluyen en total armonía."
             </p>
           </div>
 
@@ -52,15 +53,14 @@ export const WhyUs = () => {
           </div>
         </div>
 
-        {/* Bloque de Testimonio */}
         <div className="mt-32 max-w-4xl mx-auto text-center border-t border-white/10 pt-24">
           <blockquote className="space-y-10">
             <p className="text-2xl md:text-4xl font-light italic leading-relaxed text-white/80">
-              "SUCESSO no solo organizó nuestro congreso anual, crearon una atmósfera donde nuestros directivos se sintieron verdaderamente valorados. El nivel de detalle es otro nivel."
+              "Elevaron nuestro congreso anual a una categoría superior. SUCESSO no solo cumple, sino que dota de alma a la identidad de nuestra organización."
             </p>
             <footer className="space-y-2">
-              <cite className="block font-bold text-brand-canary not-italic text-lg tracking-widest uppercase">— Directora de Aseguradora Líder</cite>
-              <span className="text-xs text-white/30 tracking-[0.3em] uppercase">Vía Instagram</span>
+              <cite className="block font-bold text-brand-canary not-italic text-lg tracking-widest uppercase">— Vicepresidencia de Marketing Global</cite>
+              <span className="text-xs text-white/30 tracking-[0.3em] uppercase">Testimonio Exclusivo</span>
             </footer>
           </blockquote>
         </div>

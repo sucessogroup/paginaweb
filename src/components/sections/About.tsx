@@ -14,12 +14,12 @@ export const About = () => {
             <div className="space-y-6">
               <h2 className="text-[10px] uppercase tracking-[0.5em] text-brand-canary font-bold">Nuestra Filosofía</h2>
               <h3 className="text-4xl md:text-6xl font-headline font-bold text-brand-darkGray leading-tight">
-                Eventos impecables, <br />
-                <span className="text-brand-canary italic font-light">cero estrés para ti.</span>
+                Eventos con alma, <br />
+                <span className="text-brand-canary italic font-light">historias que perduran.</span>
               </h3>
               <div className="w-20 h-[1px] bg-brand-canary" />
               <p className="text-xl md:text-2xl font-light text-brand-darkGray/80 leading-relaxed italic">
-                “En SUCESSO creemos que un gran evento no debería ser una carga para quien lo organiza. Nuestra misión es absorber toda la complejidad operativa para que tú puedas concentrarte en lo que realmente importa: tus objetivos y tus invitados.”
+                “Nacimos para transformar encuentros empresariales en experiencias humanas memorables. En SUCESSO, entendemos que detrás de cada evento hay un propósito mayor: conectar voluntades y fortalecer vínculos a través del cuidado absoluto de cada detalle.”
               </p>
             </div>
 
@@ -27,13 +27,13 @@ export const About = () => {
               <div className="space-y-3">
                 <h4 className="text-lg font-headline font-bold text-brand-darkGray">Precisión</h4>
                 <p className="text-sm text-brand-darkGray/60 font-light leading-relaxed">
-                  Cada detalle es planeado con rigor técnico y sensibilidad estética para asegurar un resultado perfecto.
+                  Planificación con rigor técnico y sensibilidad estética para asegurar que la esencia de tu marca respire en cada rincón.
                 </p>
               </div>
               <div className="space-y-3">
-                <h4 className="text-lg font-headline font-bold text-brand-darkGray">Tranquilidad</h4>
+                <h4 className="text-lg font-headline font-bold text-brand-darkGray">Conexión</h4>
                 <p className="text-sm text-brand-darkGray/60 font-light leading-relaxed">
-                  Reportes claros y ejecución autónoma para que no tengas que supervisar nada durante el proceso.
+                  Diseñamos entornos donde la interacción humana fluye de manera natural, convirtiendo un evento en un activo estratégico.
                 </p>
               </div>
             </div>
