@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { UserCheck, Sparkles, ShieldCheck, TrendingUp } from 'lucide-react'
 
@@ -27,7 +26,7 @@ const benefits = [
 
 export const WhyUs = () => {
   return (
-    <section className="py-24 md:py-40 bg-[#19373E] text-white overflow-hidden relative border-t border-white/5">
+    <section className="py-24 md:py-40 bg-background text-white overflow-hidden relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-24 items-center">
           <div className="space-y-8">
