@@ -16,13 +16,16 @@ Para mantener el rendimiento premium del sitio, sigue estas recomendaciones:
 ### Videos
 - **Formato:** MP4 (H.264) para máxima compatibilidad.
 - **Logo Animado:** El archivo `logo3.mp4` debe mantenerse en `/public/` para que el componente `LogoVideo` funcione correctamente.
+- **Integración de Color:** 
+  - Desktop: Fondo `#19373E`
+  - Mobile: Fondo `#173035` (Ajustado para coincidir con el renderizado de video en dispositivos móviles).
 
 ## Configuración Técnica
 - **Framework:** Next.js 15 (App Router)
 - **Estilos:** Tailwind CSS
 - **Componentes:** ShadCN UI
-- **Color Principal:** `#19373E` (Azul Petróleo SUCESSO)
+- **Storytelling:** Enfoque editorial cinematográfico en la sección de procesos.
 
 ## Estructura de Archivos
-- `/src/components/LogoVideo.tsx`: Maneja el logo animado del Hero.
+- `/src/components/LogoVideo.tsx`: Maneja el logo animado del Hero con máscara de suavizado radial.
 - `/src/app/lib/placeholder-images.json`: Diccionario de imágenes del sitio.
