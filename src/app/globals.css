@@ -30,11 +30,11 @@
     --brand-bg: #19373E;
   }
 
-  /* Ajuste de color para teléfonos */
+  /* Ajuste de color específico para teléfonos solicitado por el usuario */
   @media (max-width: 767px) {
     :root {
-      --brand-bg: #163F3F;
-      --background: 180 48% 17%;
+      --brand-bg: #1E4B4C;
+      --background: 181 43% 21%;
     }
   }
 }
