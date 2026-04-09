@@ -22,7 +22,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Literata:opsz,wght@7..72,400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
-        <meta name="theme-color" content="#19373E" />
+        <meta name="theme-color" content="#163F3F" media="(max-width: 767px)" />
+        <meta name="theme-color" content="#19373E" media="(min-width: 768px)" />
       </head>
       <body className="font-body antialiased bg-background text-white selection:bg-brand-canary/30">{children}</body>
     </html>

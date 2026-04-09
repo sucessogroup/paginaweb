@@ -25,6 +25,17 @@
     --input: 191 30% 25%;
     --ring: 188 88% 24%;
     --radius: 0.75rem;
+    
+    /* Variable para el fondo sólido exacto */
+    --brand-bg: #19373E;
+  }
+
+  /* Ajuste de color para teléfonos */
+  @media (max-width: 767px) {
+    :root {
+      --brand-bg: #163F3F;
+      --background: 180 48% 17%;
+    }
   }
 }
 
@@ -33,7 +44,7 @@
     @apply border-white/10;
   }
   body {
-    background-color: #19373E !important;
+    background-color: var(--brand-bg) !important;
     @apply text-foreground antialiased;
   }
 }

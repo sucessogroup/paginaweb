@@ -9,7 +9,7 @@ export default function LogoVideo() {
         className="w-[220px] md:w-[400px] h-auto pointer-events-none select-none bg-transparent"
         style={{ 
           mixBlendMode: 'normal',
-          backgroundColor: '#19373E' 
+          backgroundColor: 'var(--brand-bg)' 
         }}
       >
         <source src="/logo3.mp4" type="video/mp4" />
