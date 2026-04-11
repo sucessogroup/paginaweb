@@ -2,18 +2,6 @@
 {
   "placeholderImages": [
     {
-      "id": "logo-inside",
-      "description": "SUCESSO Isotipo Central (SS)",
-      "imageUrl": "/logo3dentro.png",
-      "imageHint": "company logo central"
-    },
-    {
-      "id": "logo-outside",
-      "description": "SUCESSO Sello Rotativo",
-      "imageUrl": "/logo3fuera.png",
-      "imageHint": "rotating logo seal"
-    },
-    {
       "id": "logo-main",
       "description": "SUCESSO Logo Principal",
       "imageUrl": "/logo1.png",
@@ -27,27 +15,75 @@
     },
     {
       "id": "about-main",
-      "description": "Imagen principal Filosofía",
+      "description": "Filosofía SUCESSO",
       "imageUrl": "/foto1.webp",
-      "imageHint": "luxury event"
+      "imageHint": "luxury event philosophy"
     },
     {
       "id": "service-internal",
-      "description": "Imagen Eventos Corporativos",
+      "description": "Eventos Internos",
       "imageUrl": "/foto2.webp",
-      "imageHint": "corporate event"
+      "imageHint": "corporate team building"
     },
     {
       "id": "service-congress",
-      "description": "Imagen Convenciones",
+      "description": "Congresos y Convenciones",
       "imageUrl": "https://picsum.photos/seed/service-congress/800/1000",
       "imageHint": "business congress"
     },
     {
       "id": "service-custom",
-      "description": "Imagen Experiencias Incentivo",
+      "description": "Experiencias de Marca",
       "imageUrl": "https://picsum.photos/seed/service-incentive/800/1000",
-      "imageHint": "luxury dinner incentive"
+      "imageHint": "luxury brand experience"
+    },
+    {
+      "id": "gallery-1",
+      "description": "Producción Premium",
+      "imageUrl": "/foto6.png",
+      "imageHint": "event production detail"
+    },
+    {
+      "id": "gallery-2",
+      "description": "Diseño de Espacios",
+      "imageUrl": "/foto7.jpeg",
+      "imageHint": "event space design"
+    },
+    {
+      "id": "gallery-3",
+      "description": "Momentos SUCESSO",
+      "imageUrl": "/foto8.jpeg",
+      "imageHint": "event highlight"
+    },
+    {
+      "id": "wedding-hero",
+      "description": "Boda Carla & Said",
+      "imageUrl": "/foto1.png",
+      "imageHint": "wedding couple beach"
+    },
+    {
+      "id": "wedding-bg-quote",
+      "description": "RSVP Background",
+      "imageUrl": "/foto2.png",
+      "imageHint": "elegant beach texture"
+    },
+    {
+      "id": "wedding-bg-itinerary",
+      "description": "Itinerary Detail",
+      "imageUrl": "/foto3.png",
+      "imageHint": "wedding decoration detail"
+    },
+    {
+      "id": "hotel-villa-mexicana",
+      "description": "Villa Mexicana",
+      "imageUrl": "/foto4.png",
+      "imageHint": "hotel architecture"
+    },
+    {
+      "id": "wedding-footer",
+      "description": "Wedding Sunset",
+      "imageUrl": "/foto5.jpeg",
+      "imageHint": "sunset beach wedding"
     }
   ]
 }
