@@ -658,7 +658,7 @@ export default function WeddingPage() {
 
             <RevealSection delay={200} className="group cursor-pointer">
               <Link href="https://escapadas.mexicodesconocido.com.mx/guerrero/" target="_blank" className="block relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-sm">
-                <Image src="/foto7.png" alt="Guerrero" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                <Image src="/foto7.jpeg" alt="Guerrero" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
                 <div className="absolute inset-x-0 bottom-0 p-8 text-white space-y-2">
                   <p className="text-[10px] tracking-[0.4em] uppercase font-bold opacity-70">{t.cosasEn}</p>
@@ -672,7 +672,7 @@ export default function WeddingPage() {
 
             <RevealSection delay={300} className="group cursor-pointer">
               <Link href="https://escapadas.mexicodesconocido.com.mx/estados/" target="_blank" className="block relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-sm">
-                <Image src="/foto8.png" alt="México" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                <Image src="/foto8.jpeg" alt="México" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
                 <div className="absolute inset-x-0 bottom-0 p-8 text-white space-y-2">
                   <p className="text-[10px] tracking-[0.4em] uppercase font-bold opacity-70">{t.cosasEn}</p>
