@@ -137,7 +137,7 @@ const translations = {
     infoImportante: "Informazioni Importanti sulla Prenotazione",
     temporadaAlta: "Poiché è alta stagione a Zihuatanejo, l'hotel non ha camere bloccate per l'evento. Tuttavia, abbiamo una tariffa preferenziale per i nostri ospiti.",
     opcionesPaquete: "C'è anche l'opzione solo hotel, alla quale è possibile aggiungere i pasti facoltativamente secondo le preferenze di ogni ospite.",
-    detallesCotizacion: "Nella quotazione condivisa troverete tutti i dettagli su tariffe, tipi di camere e opzioni disponibles.",
+    detallesCotizacion: "Nella quotazione condivisa troverete tutti i dettagli su tariffe, tipi di cardi e opzioni disponibles.",
     reservarPronto: "Vi consigliamo di prenotare la vostra camera il prima possibile per garantire la disponibilità.",
     claveEvento: "Per effettuare la prenotazione, indicare il codice dell'evento: \"Boda Carla y Said\".",
     verCotizacion: "Vedi Quotazione",
@@ -723,13 +723,8 @@ export default function WeddingPage() {
           </RevealSection>
         </div>
         
-        <div className="h-[60vh] md:h-[100vh] flex flex-col items-center justify-end pb-24 relative z-10">
-          <RevealSection delay={500}>
-            <p className={cn(script.className, "text-[9rem] md:text-[18rem] text-white drop-shadow-lg italic")}>
-              Carla & Said
-            </p>
-          </RevealSection>
-        </div>
+        {/* Espacio final elegante sin footnote de nombres */}
+        <div className="h-[60vh] md:h-[100vh] relative z-10" />
       </section>
     </div>
   )
