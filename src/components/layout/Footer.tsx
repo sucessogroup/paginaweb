@@ -30,20 +30,20 @@ export const Footer = () => {
           )}
           
           <p className="text-brand-canary font-light text-2xl italic mb-12">
-            “Cada detalle, un sucesso.”
+            “Cada detalle, un suceso.”
           </p>
           
           <div className="w-full h-[1px] bg-white/10 mb-16" />
           
           <div className="grid md:grid-cols-3 gap-16 w-full text-base font-light opacity-60 mb-20 text-center md:text-left">
             <div className="flex flex-col items-center md:items-start">
-              <h5 className="font-bold text-white mb-6 uppercase tracking-widest text-sm">SUCESSO Events</h5>
+              <h5 className="font-bold text-white mb-6 uppercase tracking-widest text-sm">SUCESSO Group</h5>
               <p>Querétaro, México</p>
               <p>Experiencias de impacto global</p>
             </div>
             <div className="flex flex-col items-center md:items-start">
               <h5 className="font-bold text-white mb-6 uppercase tracking-widest text-sm">Contacto Directo</h5>
-              <p className="hover:text-brand-canary transition-colors cursor-pointer">paola@sucessomx.com</p>
+              <a href="mailto:paola@sucessogroup.com" className="hover:text-brand-canary transition-colors cursor-pointer">paola@sucessogroup.com</a>
               <p className="hover:text-brand-canary transition-colors cursor-pointer">(442) 377 5646</p>
             </div>
             <div className="flex flex-col items-center md:items-start">
@@ -54,7 +54,7 @@ export const Footer = () => {
           </div>
           
           <div className="text-[10px] opacity-40 uppercase tracking-[0.4em] pt-10 border-t border-white/5 w-full">
-            © {new Date().getFullYear()} SUCESSO. TODOS LOS DERECHOS RESERVADOS.
+            © {new Date().getFullYear()} SUCESSO GROUP. TODOS LOS DERECHOS RESERVADOS.
           </div>
         </div>
       </div>

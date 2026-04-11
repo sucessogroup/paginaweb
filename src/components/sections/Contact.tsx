@@ -1,3 +1,4 @@
+
 "use client"
 
 import React from 'react'
@@ -41,7 +42,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <p className="text-[9px] text-brand-darkGray/30 uppercase tracking-widest font-bold">Escríbenos</p>
-                  <a href="mailto:paola@sucessomx.com" className="text-xl font-headline font-bold text-brand-darkGray hover:text-brand-canary transition-colors">paola@sucessomx.com</a>
+                  <a href="mailto:paola@sucessogroup.com" className="text-xl font-headline font-bold text-brand-darkGray hover:text-brand-canary transition-colors">paola@sucessogroup.com</a>
                 </div>
               </div>
 
