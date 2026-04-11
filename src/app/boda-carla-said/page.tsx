@@ -113,10 +113,10 @@ const translations = {
     vestimenta: "Abbigliamento",
     trajeSinCorbata: "Abito senza cravatta",
     vestidoLargo: "Abito sotto le ginocchia",
-    waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia partecipazione per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!",
+    waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia partecipazione per festeggiare con voi il 20 documento 2026 a Zihuatanejo. A presto!",
     venue: "Club de Playa Garrobo",
     mesaRegalos: "Lista Nozze",
-    regalosFrase: "Il regalo più grande è la vostra presenza. Per chi volesse farci un pensiero, sarà per noi un aiuto prezioso nel creare la nostra casa in Italia.",
+    regalosFrase: "Il regalo più grande è la vostra presenza. Per chi volesse farci un pensiero, será per noi un aiuto prezioso nel creare la nostra casa in Italia.",
     clabe: "CLABE (Messico)",
     iban: "IBAN (Italia)",
     copiar: "Copia",
@@ -127,7 +127,7 @@ const translations = {
     proximamente: "Informazioni in arrivo",
     wa: "WhatsApp",
     ig: "Instagram",
-    recomendaciones: "Raccomandazioni",
+    recomendaciones: "Raccomandaciones",
     queHacer: "Cosa fare durante il fine settimana o dopo la festa?",
     verMas: "VEDI DI PIÙ",
     cosasEn: "COSE DA FARE A",
@@ -359,7 +359,7 @@ export default function WeddingPage() {
       <section className="relative h-screen w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
-            src={heroImage?.imageUrl || "/foto1.jpg"} 
+            src={heroImage?.imageUrl || "/foto1.png"} 
             alt="Carla & Said Wedding" 
             fill
             className="object-cover object-[center_25%] md:object-center pointer-events-none"
