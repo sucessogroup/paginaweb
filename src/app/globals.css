@@ -4,49 +4,46 @@
 
 @layer base {
   :root {
-    /* Paleta SUCESSO Premium */
-    /* Fondo Petrol: #19373E (Desktop) */
+    /* Paleta SUCESSO Corporativo (Petrol & Gold) */
     --background: 191 43% 17%; 
-    --foreground: 60 13% 95%; /* Off-white cremosa */
-    
-    --card: 191 43% 14%;
-    --card-foreground: 60 13% 95%;
-    
-    --popover: 191 43% 12%;
-    --popover-foreground: 60 13% 95%;
-    
-    /* Primary: El tono petróleo insignia */
+    --foreground: 60 13% 95%;
     --primary: 191 43% 17%;
     --primary-foreground: 60 13% 95%;
-    
-    /* Secondary: Un tono más suave para profundidad */
-    --secondary: 191 30% 25%;
-    --secondary-foreground: 60 13% 95%;
-    
-    /* Accent: Oro Champagne (#C5A059) */
     --accent: 39 51% 56%;
     --accent-foreground: 191 43% 10%;
-    
-    --muted: 191 25% 22%;
-    --muted-foreground: 191 15% 75%;
-    
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 60 13% 95%;
-    
-    --border: 191 30% 25%;
-    --input: 191 30% 25%;
-    --ring: 39 51% 56%;
-    --radius: 1rem;
-    
     --brand-bg: #19373E;
+
+    /* Wedding Palette tokens */
+    --wedding-ocean: #6FA7C4;
+    --wedding-aqua: #9FD7D3;
+    --wedding-seafoam: #CFE6DA;
+    --wedding-sand: #E7D8C4;
+    --wedding-ivory: #F7F1E8;
+    --wedding-palm: #556B4F;
+    --wedding-jungle: #2F4633;
+    --wedding-sage: #6F7C6B;
+    --wedding-gold: #C8A15A;
+    --wedding-terracotta: #C98A5B;
+    --wedding-charcoal: #2F3A37;
+
+    /* Semantic Wedding Tokens */
+    --w-bg: var(--wedding-ivory);
+    --w-bg-soft: var(--wedding-sand);
+    --w-bg-alt: var(--wedding-seafoam);
+    --w-text-primary: var(--wedding-jungle);
+    --w-text-secondary: var(--wedding-sage);
+    --w-heading: var(--wedding-palm);
+    --w-accent: var(--wedding-gold);
+    --w-accent-warm: var(--wedding-terracotta);
+    --w-button: var(--wedding-palm);
+    --w-button-hover: var(--wedding-jungle);
+    --w-border: rgba(111, 124, 107, 0.2);
+    --w-overlay: rgba(47, 58, 55, 0.3);
   }
 
-  /* Optimización para móviles basada en el renderizado del video logo3.mp4 */
   @media (max-width: 767px) {
     :root {
       --brand-bg: #173035;
-      --background: 191 39% 15%;
-      --card: 191 39% 13%;
     }
   }
 }
@@ -57,41 +54,16 @@
   }
   body {
     background-color: var(--brand-bg) !important;
-    @apply text-foreground antialiased selection:bg-accent/30 selection:text-white;
+    @apply text-foreground antialiased;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply tracking-tight font-headline;
-    color: hsl(var(--foreground));
-  }
+}
 
-  p {
-    @apply font-body font-light leading-relaxed;
-    color: hsla(var(--foreground) / 0.8);
-  }
+/* Clases de utilidad para el tema de la boda */
+.wedding-theme {
+  background-color: var(--wedding-ivory) !important;
+  color: var(--wedding-jungle);
 }
 
 .font-handwriting {
   font-family: 'Dancing Script', cursive;
-}
-
-/* Máscara de suavizado radial para el video */
-.video-mask {
-  mask-image: radial-gradient(circle, black 50%, transparent 95%);
-  -webkit-mask-image: radial-gradient(circle, black 50%, transparent 95%);
-}
-
-/* Scrollbar sutil */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: hsl(var(--background));
-}
-::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted));
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--accent) / 0.5);
 }

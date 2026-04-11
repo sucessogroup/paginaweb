@@ -1,4 +1,3 @@
-
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -20,13 +19,24 @@ export default {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         brand: {
-          ocean: '#076371',
-          canary: '#f8ac06',
-          tangerine: '#e87402',
-          darkGray: '#19373e',
-          paradise: '#a44951',
+          petrol: '#19373e',
+          gold: '#c5a059',
+          cream: '#f5f5f0',
           wine: '#45141c',
-          jade: '#2c5a37',
+          ocean: '#076371',
+        },
+        wedding: {
+          ocean: 'var(--wedding-ocean)',
+          aqua: 'var(--wedding-aqua)',
+          seafoam: 'var(--wedding-seafoam)',
+          sand: 'var(--wedding-sand)',
+          ivory: 'var(--wedding-ivory)',
+          palm: 'var(--wedding-palm)',
+          jungle: 'var(--wedding-jungle)',
+          sage: 'var(--wedding-sage)',
+          gold: 'var(--wedding-gold)',
+          terracotta: 'var(--wedding-terracotta)',
+          charcoal: 'var(--wedding-charcoal)',
         },
         card: {
           DEFAULT: 'hsl(var(--card))',

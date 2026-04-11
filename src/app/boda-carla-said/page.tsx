@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect, useRef } from 'react'
@@ -116,7 +115,7 @@ const translations = {
     waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia partecipazione per festeggiare con voi il 20 documento 2026 a Zihuatanejo. A presto!",
     venue: "Club de Playa Garrobo",
     mesaRegalos: "Lista Nozze",
-    regalosFrase: "Il regalo più grande è la vostra presenza. Per chi volesse farci un pensiero, será per noi un aiuto prezioso nel creare la nostra casa in Italia.",
+    regalosFrase: "Il regalo più grande è la vostra presencia. Per chi volesse farci un pensiero, será per noi un aiuto prezioso nel creare la nostra casa in Italia.",
     clabe: "CLABE (Messico)",
     iban: "IBAN (Italia)",
     copiar: "Copia",
@@ -212,17 +211,17 @@ function ItineraryItem({ step }: { step: any }) {
     >
       <div className="flex items-center justify-center gap-4 md:gap-8 w-full max-w-xl">
         <div className={cn(
-          "h-[1px] bg-[#c5a059] transition-all duration-1000 ease-in-out flex-1",
+          "h-[1px] bg-wedding-palm transition-all duration-1000 ease-in-out flex-1",
           isVisible ? "opacity-30" : "opacity-0"
         )} />
-        <p className={cn(serif.className, "text-4xl md:text-6xl tracking-widest text-[#c5a059] whitespace-nowrap")}>{step.time}</p>
+        <p className={cn(serif.className, "text-4xl md:text-6xl tracking-widest text-wedding-palm whitespace-nowrap")}>{step.time}</p>
         <div className={cn(
-          "h-[1px] bg-[#c5a059] transition-all duration-1000 ease-in-out flex-1",
+          "h-[1px] bg-wedding-palm transition-all duration-1000 ease-in-out flex-1",
           isVisible ? "opacity-30" : "opacity-0"
         )} />
       </div>
       <div className="space-y-4">
-        <h3 className="text-xl md:text-2xl uppercase tracking-[0.4em] font-light text-[#5c6b5c]">{step.label}</h3>
+        <h3 className="text-xl md:text-2xl uppercase tracking-[0.4em] font-light text-wedding-jungle">{step.label}</h3>
       </div>
     </div>
   )
@@ -230,21 +229,21 @@ function ItineraryItem({ step }: { step: any }) {
 
 function RegistryCard({ title, icon: Icon, value, bank, name, buttonLabel, onAction, isCopied, disabled }: { title: string, icon: any, value: string, bank?: string, name?: string, buttonLabel: string, onAction: () => void, isCopied?: boolean, disabled?: boolean }) {
   return (
-    <div className="bg-white p-8 rounded-2xl shadow-sm border border-[#c5a059]/10 flex flex-col items-center gap-4 transition-all duration-500 hover:shadow-md hover:border-[#c5a059]/30 h-full">
-      <div className="w-12 h-12 rounded-full bg-[#f5f0e6] flex items-center justify-center text-[#c5a059]">
+    <div className="bg-wedding-ivory p-8 rounded-2xl shadow-sm border border-wedding-sage/20 flex flex-col items-center gap-4 transition-all duration-500 hover:shadow-md hover:border-wedding-palm/40 h-full">
+      <div className="w-12 h-12 rounded-full bg-wedding-seafoam flex items-center justify-center text-wedding-palm">
         <Icon size={24} />
       </div>
-      <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#5c6b5c]/60">{title}</h4>
+      <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-wedding-jungle/60">{title}</h4>
       <div className="text-center space-y-1 flex-1 flex flex-col justify-center">
-        {bank && <p className="text-[9px] uppercase tracking-wider font-bold text-[#c5a059]">{bank}</p>}
-        {name && <p className="text-[10px] uppercase tracking-wide text-[#5c6b5c] font-medium">{name}</p>}
-        <p className="font-mono text-sm tracking-tighter text-[#5c6b5c] break-all pt-2">{value}</p>
+        {bank && <p className="text-[9px] uppercase tracking-wider font-bold text-wedding-gold">{bank}</p>}
+        {name && <p className="text-[10px] uppercase tracking-wide text-wedding-jungle font-medium">{name}</p>}
+        <p className="font-mono text-sm tracking-tighter text-wedding-jungle break-all pt-2">{value}</p>
       </div>
       {!disabled && (
         <Button 
           onClick={onAction}
           variant="ghost"
-          className="mt-2 rounded-full px-6 text-[10px] uppercase tracking-[0.2em] text-[#c5a059] hover:bg-[#c5a059] hover:text-white transition-all duration-500 gap-2"
+          className="mt-2 rounded-full px-6 text-[10px] uppercase tracking-[0.2em] text-wedding-palm hover:bg-wedding-palm hover:text-wedding-ivory transition-all duration-500 gap-2"
         >
           {isCopied ? <Check size={14} /> : <Copy size={14} />}
           {buttonLabel}
@@ -338,7 +337,7 @@ export default function WeddingPage() {
   };
 
   return (
-    <div className="bg-[#fcfaf7] text-[#5c6b5c] font-body overflow-x-hidden">
+    <div className="bg-wedding-ivory text-wedding-jungle font-body overflow-x-hidden wedding-theme">
       {/* Selector de Idioma */}
       <div className="fixed top-8 right-8 z-[100] flex gap-4">
         {['es', 'it'].map((l) => (
@@ -347,7 +346,7 @@ export default function WeddingPage() {
             onClick={() => setLang(l as 'es' | 'it')}
             className={cn(
               "text-[10px] tracking-[0.3em] uppercase transition-all duration-500 border-b pb-1",
-              lang === l ? "border-[#c5a059] text-[#5c6b5c] font-bold" : "border-transparent opacity-40 hover:opacity-100"
+              lang === l ? "border-wedding-gold text-wedding-jungle font-bold" : "border-transparent opacity-40 hover:opacity-100"
             )}
           >
             {l}
@@ -368,16 +367,17 @@ export default function WeddingPage() {
           />
         </div>
 
-        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/5 via-transparent to-[#F4F0EA]/10 pointer-events-none" />
+        {/* Overlay sutil solicitado */}
+        <div className="absolute inset-0 z-[1] bg-wedding-charcoal/10 pointer-events-none" />
         
         <div className="relative z-10 h-full w-full flex flex-col items-center justify-start pt-32 px-6 text-center">
           <RevealSection delay={300} className="space-y-6">
-            <h1 className={cn(script.className, "text-7xl md:text-[9.5rem] text-[#5c6b5c] leading-none tracking-tight drop-shadow-sm")}>
+            <h1 className={cn(script.className, "text-7xl md:text-[9.5rem] text-wedding-palm leading-none tracking-tight drop-shadow-sm")}>
               Carla & Said
             </h1>
             <div className="space-y-3">
-              <p className={cn(serif.className, "text-lg md:text-xl tracking-widest uppercase italic text-[#c5a059] font-medium drop-shadow-sm")}>{t.domingo}</p>
-              <p className="text-[12px] md:text-sm tracking-[0.6em] uppercase font-bold text-[#5c6b5c] drop-shadow-sm inline-block">
+              <p className={cn(serif.className, "text-lg md:text-xl tracking-widest uppercase italic text-wedding-gold font-medium drop-shadow-sm")}>{t.domingo}</p>
+              <p className="text-[12px] md:text-sm tracking-[0.6em] uppercase font-bold text-wedding-jungle drop-shadow-sm inline-block">
                 {t.zihua}
               </p>
             </div>
@@ -386,20 +386,20 @@ export default function WeddingPage() {
       </section>
 
       {/* Countdown */}
-      <section className="py-24 md:py-32 bg-[#F4F0EA] border-b border-[#c5a059]/10">
+      <section className="py-24 md:py-32 bg-wedding-ivory border-b border-wedding-sage/10">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
           <RevealSection className="space-y-4">
-            <h2 className={cn(serif.className, "text-3xl md:text-5xl font-light text-[#5c6b5c] italic")}>
+            <h2 className={cn(serif.className, "text-3xl md:text-5xl font-light text-wedding-palm italic")}>
               {t.faltaPoco}
             </h2>
-            <p className={cn(script.className, "text-xl md:text-3xl text-[#c5a059] opacity-80")}>
+            <p className={cn(script.className, "text-xl md:text-3xl text-wedding-gold opacity-80")}>
               {t.acompananos}
             </p>
           </RevealSection>
 
           <RevealSection delay={200} className="min-h-[120px] flex items-center justify-center">
             {isFinished ? (
-              <h2 className={cn(serif.className, "text-4xl md:text-6xl italic text-[#c5a059] drop-shadow-sm")}>
+              <h2 className={cn(serif.className, "text-4xl md:text-6xl italic text-wedding-palm drop-shadow-sm")}>
                 {t.seAcabo}
               </h2>
             ) : (
@@ -411,10 +411,10 @@ export default function WeddingPage() {
                   { val: timeLeft.seconds, label: t.segundos }
                 ].map((unit, i) => (
                   <div key={i} className="flex flex-col items-center">
-                    <span className={cn(serif.className, "text-3xl md:text-6xl font-light text-[#5c6b5c]")}>
+                    <span className={cn(serif.className, "text-3xl md:text-6xl font-light text-wedding-jungle")}>
                       {unit.val.toString().padStart(2, '0')}
                     </span>
-                    <span className="text-[8px] md:text-[9px] uppercase tracking-[0.3em] md:tracking-[0.4em] opacity-40 text-[#5c6b5c] mt-2 md:mt-4">{unit.label}</span>
+                    <span className="text-[8px] md:text-[9px] uppercase tracking-[0.3em] md:tracking-[0.4em] opacity-40 text-wedding-sage mt-2 md:mt-4">{unit.label}</span>
                   </div>
                 ))}
               </div>
@@ -426,7 +426,7 @@ export default function WeddingPage() {
               <Button 
                 onClick={handleAddToCalendar}
                 variant="outline"
-                className="rounded-full px-8 py-6 border-[#c5a059] text-[#c5a059] hover:bg-[#c5a059] hover:text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3"
+                className="rounded-full px-8 py-6 border-wedding-palm text-wedding-palm hover:bg-wedding-palm hover:text-wedding-ivory transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3"
               >
                 <CalendarPlus size={16} />
                 {t.calendario}
@@ -437,33 +437,33 @@ export default function WeddingPage() {
       </section>
 
       {/* Frase y Confirmación (RSVP) */}
-      <section className="py-24 md:py-40 relative overflow-hidden bg-[#fcfaf7]">
-        <div className="absolute inset-0 z-0 opacity-30">
+      <section className="py-24 md:py-40 relative overflow-hidden bg-wedding-sand/20">
+        <div className="absolute inset-0 z-0 opacity-20">
           <Image 
             src={quoteBgImage?.imageUrl || "/foto2.png"} 
             alt="Background Confirmación" 
             fill 
             className="object-cover object-center pointer-events-none"
-            data-ai-hint="elegant wedding background"
+            data-ai-hint="elegant beach texture"
           />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <RevealSection className="mb-12 md:mb-16">
-            <h2 className={cn(script.className, "text-7xl md:text-9xl text-[#5c6b5c] italic")}>
+            <h2 className={cn(script.className, "text-7xl md:text-9xl text-wedding-jungle italic")}>
               RSVP
             </h2>
           </RevealSection>
 
           <RevealSection delay={300} className="space-y-12">
-            <p className={cn(script.className, "text-3xl md:text-6xl text-[#5c6b5c] font-medium leading-relaxed italic")}>
+            <p className={cn(script.className, "text-3xl md:text-6xl text-wedding-jungle font-medium leading-relaxed italic")}>
               “{t.fraseFinal}”
             </p>
             
             <div className="pt-8">
               <Button 
                 onClick={handleWhatsAppConfirm}
-                className="rounded-full px-12 py-8 bg-[#8a9a5b] hover:bg-[#5c6b5c] text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] shadow-lg shadow-[#8a9a5b]/20"
+                className="rounded-full px-12 py-8 bg-wedding-palm hover:bg-wedding-jungle text-wedding-ivory transition-all duration-700 uppercase tracking-[0.2em] text-[10px] shadow-lg shadow-wedding-palm/20"
               >
                 {t.confirmar}
               </Button>
@@ -473,7 +473,7 @@ export default function WeddingPage() {
       </section>
 
       {/* Itinerario */}
-      <section className="py-24 md:py-40 relative overflow-hidden bg-[#f5f0e6]/40">
+      <section className="py-24 md:py-40 relative overflow-hidden bg-wedding-seafoam/30">
         <div className="absolute inset-0 z-0 opacity-10">
           <Image 
             src={itineraryBgImage?.imageUrl || "/foto3.png"} 
@@ -486,16 +486,16 @@ export default function WeddingPage() {
 
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <RevealSection className="text-center mb-16 md:mb-32">
-            <h2 className={cn(serif.className, "text-5xl md:text-8xl italic text-[#5c6b5c]")}>
+            <h2 className={cn(serif.className, "text-5xl md:text-8xl italic text-wedding-palm")}>
               {t.itinerario}
             </h2>
-            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
+            <div className="w-24 h-[1px] bg-wedding-palm mx-auto mt-6 md:mt-8 opacity-30" />
             <div className="mt-8 flex flex-col items-center gap-2">
-              <p className="text-sm uppercase tracking-[0.3em] font-medium opacity-60">Club de Playa Garrobo</p>
+              <p className="text-sm uppercase tracking-[0.3em] font-medium opacity-60 text-wedding-sage">Club de Playa Garrobo</p>
               <Button 
                 variant="outline" 
                 onClick={openGoogleMaps}
-                className="rounded-full px-8 py-4 border-[#c5a059]/30 text-[#c5a059] hover:bg-[#c5a059] hover:text-white transition-all duration-700 uppercase tracking-[0.2em] text-[9px] gap-2 mt-4"
+                className="rounded-full px-8 py-4 border-wedding-palm/30 text-wedding-palm hover:bg-wedding-palm hover:text-wedding-ivory transition-all duration-700 uppercase tracking-[0.2em] text-[9px] gap-2 mt-4"
               >
                 <MapPin size={14} />
                 {t.verMapa}
@@ -517,11 +517,11 @@ export default function WeddingPage() {
       </section>
 
       {/* Hotel Sugerido */}
-      <section id="hotel" className="py-24 md:py-40 bg-white">
+      <section id="hotel" className="py-24 md:py-40 bg-wedding-ivory">
         <div className="max-w-6xl mx-auto px-6">
           <RevealSection className="text-center mb-16 md:mb-24">
-            <h3 className={cn(serif.className, "text-5xl md:text-8xl italic text-[#5c6b5c]")}>{t.hospedaje}</h3>
-            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
+            <h3 className={cn(serif.className, "text-5xl md:text-8xl italic text-wedding-palm")}>{t.hospedaje}</h3>
+            <div className="w-24 h-[1px] bg-wedding-gold mx-auto mt-6 md:mt-8 opacity-30" />
           </RevealSection>
 
           <div className="max-w-4xl mx-auto flex flex-col items-center">
@@ -537,25 +537,25 @@ export default function WeddingPage() {
             </RevealSection>
 
             <RevealSection delay={200} className="text-center space-y-4 md:space-y-6">
-              <h4 className={cn(serif.className, "text-3xl md:text-5xl italic text-[#5c6b5c]")}>Villa Mexicana Hotel</h4>
-              <p className="text-xs md:text-base italic opacity-50 tracking-wide font-light max-w-md mx-auto px-4">
+              <h4 className={cn(serif.className, "text-3xl md:text-5xl italic text-wedding-jungle")}>Villa Mexicana Hotel</h4>
+              <p className="text-xs md:text-base italic text-wedding-sage tracking-wide font-light max-w-md mx-auto px-4">
                 {t.tarifaPreferencial}
               </p>
             </RevealSection>
 
             <RevealSection delay={300} className="w-full mt-16">
-              <div className="bg-[#f5f0e6]/50 rounded-[2rem] p-8 md:p-12 border border-[#c5a059]/10 shadow-sm">
+              <div className="bg-wedding-sand/20 rounded-[2rem] p-8 md:p-12 border border-wedding-gold/10 shadow-sm">
                 <div className="flex flex-col items-center text-center gap-6">
-                  <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-[#c5a059] shadow-sm">
+                  <div className="w-16 h-16 rounded-full bg-wedding-ivory flex items-center justify-center text-wedding-palm shadow-sm">
                     <Hotel size={32} />
                   </div>
-                  <h5 className={cn(serif.className, "text-2xl md:text-4xl italic text-[#5c6b5c]")}>{t.infoImportante}</h5>
-                  <div className="space-y-6 text-sm md:text-base leading-relaxed text-[#5c6b5c]/80 font-light italic">
+                  <h5 className={cn(serif.className, "text-2xl md:text-4xl italic text-wedding-palm")}>{t.infoImportante}</h5>
+                  <div className="space-y-6 text-sm md:text-base leading-relaxed text-wedding-jungle/80 font-light italic">
                     <p>{t.temporadaAlta}</p>
                     <p>{t.opcionesPaquete}</p>
                     <p>{t.detallesCotizacion}</p>
-                    <p className="font-bold text-[#c5a059] not-italic">{t.reservarPronto}</p>
-                    <div className="bg-white/60 p-4 rounded-xl border border-[#c5a059]/10 inline-block mx-auto not-italic font-semibold tracking-wide">
+                    <p className="font-bold text-wedding-palm not-italic">{t.reservarPronto}</p>
+                    <div className="bg-wedding-ivory/80 p-4 rounded-xl border border-wedding-gold/20 inline-block mx-auto not-italic font-semibold tracking-wide">
                       {t.claveEvento}
                     </div>
                   </div>
@@ -563,7 +563,7 @@ export default function WeddingPage() {
                   <div className="flex flex-col gap-4 mt-6 w-full max-w-md">
                     <Button 
                       asChild
-                      className="rounded-full px-10 py-7 bg-[#c5a059] hover:bg-[#b08d4a] text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3 shadow-lg shadow-[#c5a059]/20"
+                      className="rounded-full px-10 py-7 bg-wedding-palm hover:bg-wedding-jungle text-wedding-ivory transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3 shadow-lg shadow-wedding-palm/20"
                     >
                       <Link href="/boda-carla-said/cotizacion">
                         <FileText size={18} />
@@ -572,7 +572,8 @@ export default function WeddingPage() {
                     </Button>
                     <Button 
                       onClick={() => window.open('https://hotelvillamexicana.com.mx/zihuatanejo/en/', '_blank')}
-                      className="rounded-full px-10 py-7 bg-[#8a9a5b] hover:bg-[#5c6b5c] text-white transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3 shadow-lg shadow-[#8a9a5b]/20"
+                      variant="outline"
+                      className="rounded-full px-10 py-7 border-wedding-palm text-wedding-palm hover:bg-wedding-palm hover:text-wedding-ivory transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3"
                     >
                       {t.reservar}
                       <ExternalLink size={14} />
@@ -586,16 +587,16 @@ export default function WeddingPage() {
       </section>
 
       {/* Mesa de Regalos */}
-      <section id="regalos" className="py-24 md:py-40 bg-[#f4f1ea]">
+      <section id="regalos" className="py-24 md:py-40 bg-wedding-sand/10">
         <div className="max-w-6xl mx-auto px-6">
           <RevealSection className="text-center mb-16 md:mb-24">
-            <h3 className={cn(serif.className, "text-5xl md:text-8xl italic text-[#5c6b5c]")}>{t.mesaRegalos}</h3>
-            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
+            <h3 className={cn(serif.className, "text-5xl md:text-8xl italic text-wedding-palm")}>{t.mesaRegalos}</h3>
+            <div className="w-24 h-[1px] bg-wedding-gold mx-auto mt-6 md:mt-8 opacity-30" />
           </RevealSection>
 
           <div className="max-w-4xl mx-auto">
             <RevealSection delay={200} className="text-center mb-16">
-              <p className="text-sm md:text-lg italic opacity-70 tracking-wide font-light max-w-2xl mx-auto leading-relaxed">
+              <p className="text-sm md:text-lg italic text-wedding-jungle/70 tracking-wide font-light max-w-2xl mx-auto leading-relaxed">
                 “{t.regalosFrase}”
               </p>
             </RevealSection>
@@ -630,13 +631,13 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* Raccomandazioni */}
-      <section id="recomendaciones" className="py-24 md:py-40 bg-white">
+      {/* Recomendaciones */}
+      <section id="recomendaciones" className="py-24 md:py-40 bg-wedding-ivory">
         <div className="max-w-6xl mx-auto px-6">
           <RevealSection className="text-center mb-16 md:mb-24">
-            <h3 className={cn(serif.className, "text-5xl md:text-8xl italic text-[#5c6b5c]")}>{t.recomendaciones}</h3>
-            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
-            <p className="mt-8 text-sm md:text-lg italic opacity-50 tracking-wide font-light max-w-xl mx-auto">
+            <h3 className={cn(serif.className, "text-5xl md:text-8xl italic text-wedding-palm")}>{t.recomendaciones}</h3>
+            <div className="w-24 h-[1px] bg-wedding-gold mx-auto mt-6 md:mt-8 opacity-30" />
+            <p className="mt-8 text-sm md:text-lg italic text-wedding-sage tracking-wide font-light max-w-xl mx-auto">
               {t.queHacer}
             </p>
           </RevealSection>
@@ -645,8 +646,8 @@ export default function WeddingPage() {
             <RevealSection delay={100} className="group cursor-pointer">
               <Link href="https://escapadas.mexicodesconocido.com.mx/guerrero/zihuatanejo/" target="_blank" className="block relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-sm">
                 <Image src="/foto6.png" alt="Zihuatanejo" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
-                <div className="absolute inset-x-0 bottom-0 p-8 text-white space-y-2">
+                <div className="absolute inset-0 bg-wedding-charcoal/20 group-hover:bg-wedding-charcoal/40 transition-colors duration-500" />
+                <div className="absolute inset-x-0 bottom-0 p-8 text-wedding-ivory space-y-2">
                   <p className="text-[10px] tracking-[0.4em] uppercase font-bold opacity-70">{t.cosasEn}</p>
                   <h4 className={cn(serif.className, "text-3xl italic")}>{t.zihuaCap}</h4>
                   <div className="pt-4 flex items-center gap-2 text-[9px] tracking-widest font-bold opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700">
@@ -659,8 +660,8 @@ export default function WeddingPage() {
             <RevealSection delay={200} className="group cursor-pointer">
               <Link href="https://escapadas.mexicodesconocido.com.mx/guerrero/" target="_blank" className="block relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-sm">
                 <Image src="/foto7.jpeg" alt="Guerrero" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
-                <div className="absolute inset-x-0 bottom-0 p-8 text-white space-y-2">
+                <div className="absolute inset-0 bg-wedding-charcoal/20 group-hover:bg-wedding-charcoal/40 transition-colors duration-500" />
+                <div className="absolute inset-x-0 bottom-0 p-8 text-wedding-ivory space-y-2">
                   <p className="text-[10px] tracking-[0.4em] uppercase font-bold opacity-70">{t.cosasEn}</p>
                   <h4 className={cn(serif.className, "text-3xl italic")}>{t.guerreroCap}</h4>
                   <div className="pt-4 flex items-center gap-2 text-[9px] tracking-widest font-bold opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700">
@@ -673,8 +674,8 @@ export default function WeddingPage() {
             <RevealSection delay={300} className="group cursor-pointer">
               <Link href="https://escapadas.mexicodesconocido.com.mx/estados/" target="_blank" className="block relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-sm">
                 <Image src="/foto8.jpeg" alt="México" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
-                <div className="absolute inset-x-0 bottom-0 p-8 text-white space-y-2">
+                <div className="absolute inset-0 bg-wedding-charcoal/20 group-hover:bg-wedding-charcoal/40 transition-colors duration-500" />
+                <div className="absolute inset-x-0 bottom-0 p-8 text-wedding-ivory space-y-2">
                   <p className="text-[10px] tracking-[0.4em] uppercase font-bold opacity-70">{t.cosasEn}</p>
                   <h4 className={cn(serif.className, "text-3xl italic")}>{t.mexicoCap}</h4>
                   <div className="pt-4 flex items-center gap-2 text-[9px] tracking-widest font-bold opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700">
@@ -697,24 +698,24 @@ export default function WeddingPage() {
             className="object-cover object-center transition-transform duration-700"
             data-ai-hint="wedding couple sea"
           />
-          <div className="absolute inset-0 bg-white/80 h-1/3" />
-          <div className="absolute inset-x-0 top-[33.33%] bottom-0 bg-gradient-to-b from-white/80 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-wedding-ivory/80 h-1/3" />
+          <div className="absolute inset-x-0 top-[33.33%] bottom-0 bg-gradient-to-b from-wedding-ivory/80 via-transparent to-transparent" />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 pt-24 pb-32">
           <RevealSection className="text-center mb-16 md:mb-24">
-            <h3 className={cn(serif.className, "text-4xl md:text-7xl italic text-[#5c6b5c]")}>{t.faqsTitle}</h3>
-            <div className="w-24 h-[1px] bg-[#c5a059] mx-auto mt-6 md:mt-8 opacity-30" />
+            <h3 className={cn(serif.className, "text-4xl md:text-7xl italic text-wedding-palm")}>{t.faqsTitle}</h3>
+            <div className="w-24 h-[1px] bg-wedding-gold mx-auto mt-6 md:mt-8 opacity-30" />
           </RevealSection>
 
           <RevealSection delay={300}>
             <Accordion type="single" collapsible className="w-full">
               {t.faqs.map((faq, idx) => (
-                <AccordionItem key={idx} value={`item-${idx}`} className="border-[#c5a059]/10 bg-white/40 backdrop-blur-sm px-4 rounded-lg mb-2 overflow-hidden">
-                  <AccordionTrigger className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-bold text-[#5c6b5c] text-left hover:no-underline hover:text-[#c5a059] py-6 [&[data-state=open]>svg]:rotate-180">
+                <AccordionItem key={idx} value={`item-${idx}`} className="border-wedding-gold/10 bg-wedding-ivory/40 backdrop-blur-sm px-4 rounded-lg mb-2 overflow-hidden">
+                  <AccordionTrigger className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-bold text-wedding-jungle text-left hover:no-underline hover:text-wedding-terracotta py-6 [&[data-state=open]>svg]:rotate-180">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-sm md:text-base font-light italic opacity-90 leading-relaxed text-[#5c6b5c] pb-8">
+                  <AccordionContent className="text-sm md:text-base font-light italic opacity-90 leading-relaxed text-wedding-jungle pb-8">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -723,7 +724,7 @@ export default function WeddingPage() {
           </RevealSection>
         </div>
         
-        {/* Espacio final elegante sin footnote de nombres */}
+        {/* Espacio final elegante */}
         <div className="h-[60vh] md:h-[100vh] relative z-10" />
       </section>
     </div>
