@@ -17,15 +17,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Literata:opsz,wght@7..72,400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
+        {/* Meta tags de color optimizados para móvil y desktop */}
         <meta name="theme-color" content="#173035" media="(max-width: 767px)" />
         <meta name="theme-color" content="#19373E" media="(min-width: 768px)" />
       </head>
-      <body className="font-body antialiased bg-background text-white selection:bg-brand-canary/30">{children}</body>
+      <body className="font-body antialiased bg-background text-foreground selection:bg-accent/30">{children}</body>
     </html>
   );
 }
