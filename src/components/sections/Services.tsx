@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Image from 'next/image'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
@@ -11,12 +12,12 @@ const services = [
   {
     title: "Eventos Corporativos Externos",
     description: "Activaciones, lanzamientos y experiencias para clientes que fortalecen relaciones y posicionamiento.",
-    img: "service-congress",
+    img: "service-custom",
   },
   {
     title: "Congresos y Convenciones",
     description: "Planeación y ejecución de encuentros académicos y seminarios de alto nivel.",
-    img: "service-custom",
+    img: "service-congress",
   },
   {
     title: "Eventos Protocolarios",
@@ -26,12 +27,12 @@ const services = [
   {
     title: "Eventos Virtuales e Híbridos",
     description: "Soluciones tecnológicas que conectan audiencias a distancia sin perder impacto.",
-    img: "service-congress",
+    img: "service-custom",
   },
   {
     title: "Experiencias de Marca",
     description: "Conceptos únicos diseñados para generar impacto sensorial y recordación emocional.",
-    img: "service-custom",
+    img: "service-internal",
   }
 ]
 
