@@ -60,7 +60,7 @@ export default function MexicoPage() {
 
         <section className="space-y-12">
           <div className="text-center space-y-4">
-            <h1 className={cn(serif.className, "text-5xl md:text-8xl italic")}>México</h1>
+            <h1 className={cn(serif.className, "text-4xl md:text-6xl lg:text-7xl italic")}>México</h1>
             <p className="text-[10px] uppercase tracking-[0.5em] opacity-40">Cultura sin fronteras</p>
             <div className="w-24 h-[1px] bg-[#c5a059] mx-auto opacity-30" />
           </div>

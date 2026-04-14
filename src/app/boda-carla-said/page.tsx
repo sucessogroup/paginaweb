@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect, useRef } from 'react'
@@ -635,7 +636,7 @@ export default function WeddingPage() {
       <section id="recomendaciones" className="py-24 md:py-40 bg-wedding-ivory">
         <div className="max-w-6xl mx-auto px-6">
           <RevealSection className="text-center mb-16 md:mb-24">
-            <h3 className={cn(serif.className, "text-5xl md:text-8xl italic text-wedding-palm")}>{t.recomendaciones}</h3>
+            <h3 className={cn(serif.className, "text-4xl md:text-6xl lg:text-7xl italic text-wedding-palm")}>{t.recomendaciones}</h3>
             <div className="w-24 h-[1px] bg-wedding-gold mx-auto mt-6 md:mt-8 opacity-30" />
             <p className="mt-8 text-sm md:text-lg italic text-wedding-sage tracking-wide font-light max-w-xl mx-auto">
               {t.queHacer}
@@ -644,7 +645,7 @@ export default function WeddingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <RevealSection delay={100} className="group cursor-pointer">
-              <Link href="https://escapadas.mexicodesconocido.com.mx/guerrero/zihuatanejo/" target="_blank" className="block relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-sm">
+              <Link href="/recomendaciones-zihuatanejo" className="block relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-sm">
                 <Image src="/foto6.png" alt="Zihuatanejo" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-wedding-charcoal/20 group-hover:bg-wedding-charcoal/40 transition-colors duration-500" />
                 <div className="absolute inset-x-0 bottom-0 p-8 text-wedding-ivory space-y-2">
@@ -658,7 +659,7 @@ export default function WeddingPage() {
             </RevealSection>
 
             <RevealSection delay={200} className="group cursor-pointer">
-              <Link href="https://escapadas.mexicodesconocido.com.mx/guerrero/" target="_blank" className="block relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-sm">
+              <Link href="/recomendaciones-guerrero" className="block relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-sm">
                 <Image src="/foto7.jpeg" alt="Guerrero" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-wedding-charcoal/20 group-hover:bg-wedding-charcoal/40 transition-colors duration-500" />
                 <div className="absolute inset-x-0 bottom-0 p-8 text-wedding-ivory space-y-2">
@@ -672,7 +673,7 @@ export default function WeddingPage() {
             </RevealSection>
 
             <RevealSection delay={300} className="group cursor-pointer">
-              <Link href="https://escapadas.mexicodesconocido.com.mx/estados/" target="_blank" className="block relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-sm">
+              <Link href="/recomendaciones-mexico" className="block relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-sm">
                 <Image src="/foto8.jpeg" alt="México" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-wedding-charcoal/20 group-hover:bg-wedding-charcoal/40 transition-colors duration-500" />
                 <div className="absolute inset-x-0 bottom-0 p-8 text-wedding-ivory space-y-2">
