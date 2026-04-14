@@ -32,6 +32,12 @@
       "imageHint": "business congress"
     },
     {
+      "id": "service-protocol",
+      "description": "Eventos Protocolarios",
+      "imageUrl": "/foto4.webp",
+      "imageHint": "formal protocol event"
+    },
+    {
       "id": "service-custom",
       "description": "Experiencias de Marca",
       "imageUrl": "https://picsum.photos/seed/service-incentive/800/1000",

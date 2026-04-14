@@ -22,7 +22,7 @@ const services = [
   {
     title: "Eventos Protocolarios",
     description: "Ceremonias y eventos formales para empresas, asociaciones o entidades de gobierno.",
-    img: "service-internal", 
+    img: "service-protocol", 
   },
   {
     title: "Eventos Virtuales e Híbridos",
