@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -27,7 +26,6 @@ export const Navbar = () => {
     { name: 'Nosotros', href: '#nosotros' },
     { name: 'Servicios', href: '#servicios' },
     { name: 'Proceso', href: '#proceso' },
-    { name: 'Experiencias', href: '#experiencias' },
     { name: 'Contacto', href: '#contacto' },
   ]
 
@@ -61,7 +59,7 @@ export const Navbar = () => {
             <Link 
               key={link.name} 
               href={link.href}
-              className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70 transition-colors hover:text-brand-canary"
+              className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70 transition-colors hover:text-brand-gold"
             >
               {link.name}
             </Link>
@@ -90,7 +88,7 @@ export const Navbar = () => {
             <Link 
               key={link.name} 
               href={link.href}
-              className="text-2xl font-headline font-bold text-white hover:text-brand-canary transition-colors"
+              className="text-2xl font-headline font-bold text-white hover:text-brand-gold transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.name}
