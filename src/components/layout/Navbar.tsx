@@ -15,7 +15,6 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Mostrar la navbar después de que el usuario haya pasado el 80% de la sección Hero
       setIsVisible(window.scrollY > window.innerHeight * 0.8)
     }
     window.addEventListener('scroll', handleScroll)
