@@ -54,7 +54,7 @@ const translations = {
     iban: "IBAN (Italia)",
     copiar: "Copiar",
     copiado: "Copiado",
-    faqsTitle: "Preguntas frecuentes",
+    faqsTitle: "Preguntas Frecuentes",
     maquillajeTitle: "Maquillaje y Peinado",
     proveedorMaquillaje: "Proveedor de maquillaje y peinado",
     proximamente: "Información próximamente",
@@ -120,7 +120,7 @@ const translations = {
     iban: "IBAN (Italia)",
     copiar: "Copia",
     copiado: "Copiato",
-    faqsTitle: "Domande frequenti",
+    faqsTitle: "Domande Frequenti",
     maquillajeTitle: "Trucco e Acconciatura",
     proveedorMaquillaje: "Fornitore di trucco e acconciatura",
     proximamente: "Informazioni in arrivo",
@@ -711,7 +711,7 @@ export default function WeddingPage() {
           <RevealSection delay={300}>
             <Accordion type="single" collapsible className="w-full">
               {t.faqs.map((faq, idx) => (
-                <AccordionItem key={idx} value={`item-${idx}`} className="border-wedding-gold/10 bg-wedding-ivory/80 backdrop-blur-sm px-4 rounded-lg mb-2 overflow-hidden">
+                <AccordionItem key={idx} value={`item-${idx}`} className="border-wedding-gold/10 bg-wedding-seafoam/95 backdrop-blur-sm px-4 rounded-lg mb-2 overflow-hidden shadow-sm">
                   <AccordionTrigger className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-bold text-wedding-jungle text-left hover:no-underline hover:text-wedding-terracotta py-6 [&[data-state=open]>svg]:rotate-180">
                     {faq.q}
                   </AccordionTrigger>
