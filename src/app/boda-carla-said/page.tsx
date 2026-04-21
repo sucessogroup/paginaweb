@@ -693,7 +693,7 @@ export default function WeddingPage() {
       <section id="faqs" className="relative">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image 
-            src={footerImage?.imageUrl || "/foto5.jpeg"} 
+            src={footerImage?.imageUrl || "/foto5.jpg"} 
             alt="Wedding Footer" 
             fill 
             className="object-cover object-center transition-transform duration-700"
