@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect, useRef } from 'react'
@@ -120,7 +121,7 @@ const translations = {
     iban: "IBAN (Italia)",
     copiar: "Copia",
     copiado: "Copiato",
-    faqsTitle: "Domande Frequenti",
+    faqsTitle: "Preguntas Frecuentes",
     maquillajeTitle: "Trucco e Acconciatura",
     proveedorMaquillaje: "Fornitore di trucco e acconciatura",
     proximamente: "Informazioni in arrivo",
@@ -709,14 +710,20 @@ export default function WeddingPage() {
           </RevealSection>
 
           <RevealSection delay={300}>
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible className="w-full space-y-4">
               {t.faqs.map((faq, idx) => (
-                <AccordionItem key={idx} value={`item-${idx}`} className="border-wedding-gold/10 bg-wedding-seafoam/95 backdrop-blur-sm px-4 rounded-lg mb-2 overflow-hidden shadow-sm">
-                  <AccordionTrigger className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-bold text-wedding-jungle text-left hover:no-underline hover:text-wedding-terracotta py-6 [&[data-state=open]>svg]:rotate-180">
+                <AccordionItem 
+                  key={idx} 
+                  value={`item-${idx}`} 
+                  className="border-wedding-gold/10 bg-wedding-ivory/95 backdrop-blur-md px-6 md:px-8 rounded-[12px] overflow-hidden shadow-lg"
+                >
+                  <AccordionTrigger className="text-[11px] md:text-xs uppercase tracking-[0.2em] font-bold text-wedding-jungle text-left hover:no-underline hover:text-wedding-terracotta py-7 md:py-8 [&[data-state=open]>svg]:rotate-180">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-sm md:text-base font-light italic opacity-90 leading-relaxed text-wedding-jungle pb-8">
-                    {faq.a}
+                  <AccordionContent className="text-sm md:text-base font-light italic leading-relaxed text-wedding-jungle pb-8 opacity-100">
+                    <div className="pt-2 border-t border-wedding-gold/5 mt-2">
+                      {faq.a}
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
               ))}
