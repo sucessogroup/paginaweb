@@ -142,7 +142,7 @@ const translations = {
     claveEvento: "Per effettuare la prenotazione, indicare il codice dell'evento: \"Boda Carla y Said\".",
     verCotizacion: "Vedi Quotazione",
     faqs: [
-      { q: "Requisiti per viaggiare in Messico?", a: "Passaporto valido e biglietto di ritorno." },
+      { q: "Requisiti per viaggiare in Messico?", a: "Passaporto valido e biglietto di retorno." },
       { q: "In quale aeroporto arrivare?", a: "Ixtapa-Zihuatanejo (ZIH)." },
       { q: "Trasporto dall'aeroporto?", a: "Taxi autorizzati o transporte privato." },
       { q: "Dove si svolgerà?", a: "Club de Playa Garrobo, Zihuatanejo, Messico." },
@@ -368,7 +368,7 @@ export default function WeddingPage() {
           />
         </div>
 
-        {/* Overlay sutil solicitado */}
+        {/* Overlay sutil */}
         <div className="absolute inset-0 z-[1] bg-wedding-charcoal/10 pointer-events-none" />
         
         <div className="relative z-10 h-full w-full flex flex-col items-center justify-start pt-32 px-6 text-center">
@@ -699,6 +699,7 @@ export default function WeddingPage() {
             className="object-cover object-center transition-transform duration-700"
             data-ai-hint="wedding couple sea"
           />
+          {/* Degradados sutiles para transiciones suaves */}
           <div className="absolute inset-0 bg-wedding-ivory/80 h-1/3" />
           <div className="absolute inset-x-0 top-[33.33%] bottom-0 bg-gradient-to-b from-wedding-ivory/80 via-transparent to-transparent" />
         </div>
@@ -717,7 +718,7 @@ export default function WeddingPage() {
                   value={`item-${idx}`} 
                   className="border-wedding-gold/10 bg-wedding-ivory/95 backdrop-blur-md px-6 md:px-8 rounded-[12px] overflow-hidden shadow-lg"
                 >
-                  <AccordionTrigger className="text-[11px] md:text-xs uppercase tracking-[0.2em] font-bold text-wedding-jungle text-left hover:no-underline hover:text-wedding-terracotta py-7 md:py-8 [&[data-state=open]>svg]:rotate-180">
+                  <AccordionTrigger className="text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-wedding-jungle text-left hover:no-underline hover:text-wedding-terracotta py-7 md:py-8 [&[data-state=open]>svg]:rotate-180">
                     {faq.q}
                   </AccordionTrigger>
                   <AccordionContent className="text-sm md:text-base font-light italic leading-relaxed text-wedding-jungle pb-8 opacity-100">
