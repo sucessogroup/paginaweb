@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect, useRef } from 'react'
@@ -116,7 +115,7 @@ const translations = {
     waMessage: "Ciao Carla e Said! Sono molto entusiasta per il vostro matrimonio. Vorrei confermare la mia partecipazione per festeggiare con voi il 20 documento 2026 a Zihuatanejo. A presto!",
     venue: "Club de Playa Garrobo",
     mesaRegalos: "Lista Nozze",
-    regalosFrase: "Il regalo più grande è la vostra presencia. Per chi volesse farci un pensiero, será per noi un aiuto prezioso nel creare la nostra casa in Italia.",
+    regalosFrase: "Il regalo più grande è la vostra presencia. Per chi volesse farci un pensiero, será per noi un aiuto prezioso nel creare la nuestra casa in Italia.",
     clabe: "CLABE (Messico)",
     iban: "IBAN (Italia)",
     copiar: "Copia",
@@ -712,7 +711,7 @@ export default function WeddingPage() {
           <RevealSection delay={300}>
             <Accordion type="single" collapsible className="w-full">
               {t.faqs.map((faq, idx) => (
-                <AccordionItem key={idx} value={`item-${idx}`} className="border-wedding-gold/10 bg-wedding-ivory/40 backdrop-blur-sm px-4 rounded-lg mb-2 overflow-hidden">
+                <AccordionItem key={idx} value={`item-${idx}`} className="border-wedding-gold/10 bg-wedding-ivory/80 backdrop-blur-sm px-4 rounded-lg mb-2 overflow-hidden">
                   <AccordionTrigger className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-bold text-wedding-jungle text-left hover:no-underline hover:text-wedding-terracotta py-6 [&[data-state=open]>svg]:rotate-180">
                     {faq.q}
                   </AccordionTrigger>
