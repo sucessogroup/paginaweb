@@ -12,9 +12,9 @@
     --primary-foreground: 60 13% 95%;
     --accent: 39 51% 56%;
     --accent-foreground: 191 43% 10%;
-    --brand-bg: #11282D; /* Fondo más oscuro y sobrio */
+    --brand-bg: #11282D; 
 
-    /* Wedding Palette tokens (Mantener para consistencia de rutas de boda) */
+    /* Wedding Palette tokens */
     --wedding-ocean: #6FA7C4;
     --wedding-aqua: #9FD7D3;
     --wedding-seafoam: #CFE6DA;
@@ -59,12 +59,10 @@
   }
 }
 
-/* Scroll smooth global */
 html {
   scroll-behavior: smooth;
 }
 
-/* Clases de utilidad para el tema de la boda */
 .wedding-theme {
   background-color: var(--wedding-ivory) !important;
   color: var(--wedding-jungle);
@@ -74,7 +72,6 @@ html {
   font-family: 'Dancing Script', cursive;
 }
 
-/* Efectos de vidrio premium */
 .glass-panel {
   @apply bg-white/[0.02] backdrop-blur-md border border-white/5;
 }

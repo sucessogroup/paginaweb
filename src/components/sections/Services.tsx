@@ -1,4 +1,6 @@
 
+"use client"
+
 import React from 'react'
 import Image from 'next/image'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
@@ -8,16 +10,16 @@ import Link from 'next/link'
 
 const services = [
   {
-    title: "Eventos Corporativos Estratégicos",
+    title: "Congresos y Convenciones",
     benefit: "Cultura & Identidad",
     description: "Diseñamos encuentros que fortalecen el sentido de pertenencia y alinean a tu equipo con los valores de la organización.",
-    img: "service-corp",
+    img: "/foto3.webp",
   },
   {
-    title: "Experiencias para Clientes",
+    title: "Eventos Protocolarios",
     benefit: "Crecimiento & Lealtad",
     description: "Activaciones de marca y cenas exclusivas diseñadas para convertir invitados en embajadores apasionados.",
-    img: "service-clients",
+    img: "/foto4.webp",
   },
   {
     title: "Offsites & Leadership Retreats",
@@ -50,11 +52,13 @@ export const Services = () => {
         <div className="grid md:grid-cols-2 gap-24 lg:gap-16">
           {services.map((service, idx) => {
             const imgData = PlaceHolderImages.find(p => p.id === service.img)
+            const imgSrc = service.img.startsWith('/') ? service.img : (imgData?.imageUrl || "https://picsum.photos/seed/service/1200/800")
+            
             return (
               <div key={idx} className="group flex flex-col space-y-10">
                 <div className="relative aspect-[16/9] w-full rounded-[2.5rem] overflow-hidden bg-muted border border-white/5 shadow-2xl">
                   <Image 
-                    src={imgData?.imageUrl || "https://picsum.photos/seed/service/1200/800"} 
+                    src={imgSrc} 
                     alt={service.title}
                     fill
                     className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100"
