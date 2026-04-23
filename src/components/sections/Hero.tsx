@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 export const Hero = () => {
   return (
-    <section className="relative h-screen min-h-[800px] flex flex-col items-center justify-center overflow-hidden" style={{ backgroundColor: '#1F4A4D' }}>
+    <section className="relative h-screen min-h-[800px] flex flex-col items-center justify-center overflow-hidden" style={{ backgroundColor: '#19373E' }}>
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white flex flex-col items-center pt-24 pb-12">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}

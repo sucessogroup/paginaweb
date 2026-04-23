@@ -4,14 +4,14 @@
 
 @layer base {
   :root {
-    /* Paleta SUCESSO Corporativo - Petrol Profundo #1F4A4D */
-    --background: 184 43% 21%;
+    /* Paleta SUCESSO Corporativo - Petrol #19373E */
+    --background: 191 43% 17%;
     --foreground: 0 0% 98%;
     --primary: 191 43% 17%;
     --primary-foreground: 0 0% 96%;
     --accent: 39 51% 56%; /* Gold */
     --accent-foreground: 191 43% 10%;
-    --brand-bg: #1F4A4D; 
+    --brand-bg: #19373E; 
 
     /* Wedding Palette tokens */
     --wedding-ocean: #6FA7C4;
@@ -44,7 +44,7 @@
 
   @media (max-width: 767px) {
     :root {
-      --brand-bg: #1F4A4D;
+      --brand-bg: #173035;
     }
   }
 }
