@@ -121,13 +121,13 @@ const translations = {
     iban: "IBAN (Italia)",
     copiar: "Copia",
     copiado: "Copiato",
-    faqsTitle: "Domande Frequenti",
+    faqsTitle: "Pregunte Frequenti",
     maquillajeTitle: "Trucco e Acconciatura",
     proveedorMaquillaje: "Servizio trucco e acconciatura",
     proximamente: "Informazioni in arrivo",
     wa: "WhatsApp",
     ig: "Instagram",
-    recomendaciones: "Consigli",
+    recomendaciones: "Raccomandazioni",
     queHacer: "Cosa fare durante il weekend o dopo la festa?",
     verMas: "SCOPRI DI PIÙ",
     cosasEn: "COSA FARE A",
@@ -427,8 +427,7 @@ export default function WeddingPage() {
             <RevealSection delay={400} className="pt-8">
               <Button 
                 onClick={handleAddToCalendar}
-                variant="outline"
-                className="rounded-full px-8 py-6 border-wedding-palm text-wedding-palm hover:bg-wedding-palm hover:text-wedding-ivory transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3"
+                className="rounded-full px-8 py-6 bg-wedding-seafoam text-wedding-jungle hover:bg-wedding-palm hover:text-wedding-ivory transition-all duration-700 uppercase tracking-[0.2em] text-[10px] gap-3 border-none shadow-sm"
               >
                 <CalendarPlus size={16} />
                 {t.calendario}
@@ -495,9 +494,8 @@ export default function WeddingPage() {
             <div className="mt-8 flex flex-col items-center gap-2">
               <p className="text-sm uppercase tracking-[0.3em] font-medium opacity-60 text-wedding-sage">Club de Playa Garrobo</p>
               <Button 
-                variant="outline" 
                 onClick={openGoogleMaps}
-                className="rounded-full px-8 py-4 border-wedding-palm/30 text-wedding-palm hover:bg-wedding-palm hover:text-wedding-ivory transition-all duration-700 uppercase tracking-[0.2em] text-[9px] gap-2 mt-4"
+                className="rounded-full px-8 py-4 bg-wedding-seafoam text-wedding-jungle hover:bg-wedding-palm hover:text-wedding-ivory transition-all duration-700 uppercase tracking-[0.2em] text-[9px] gap-2 mt-4 border-none shadow-sm"
               >
                 <MapPin size={14} />
                 {t.verMapa}
@@ -719,7 +717,7 @@ export default function WeddingPage() {
                   value={`item-${idx}`} 
                   className="border-wedding-gold/10 bg-wedding-ivory/95 backdrop-blur-md px-6 md:px-8 rounded-[12px] overflow-hidden shadow-lg"
                 >
-                  <AccordionTrigger className="text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-wedding-jungle text-left hover:no-underline hover:text-wedding-terracotta py-7 md:py-8 [&[data-state=open]>svg]:rotate-180">
+                  <AccordionTrigger className="text-sm md:text-base uppercase tracking-[0.2em] font-bold text-wedding-jungle text-left hover:no-underline hover:text-wedding-terracotta py-7 md:py-8 [&[data-state=open]>svg]:rotate-180">
                     {faq.q}
                   </AccordionTrigger>
                   <AccordionContent className="text-sm md:text-base font-light italic leading-relaxed text-wedding-jungle pb-8 opacity-100">
