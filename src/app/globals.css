@@ -1,19 +1,20 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Paleta SUCESSO Corporativo (Petrol & Gold) */
-    --background: 191 43% 17%; 
+    /* Paleta SUCESSO Corporativo Re-ajustada para Luxury Minimal */
+    --background: 191 43% 10%; 
     --foreground: 60 13% 95%;
     --primary: 191 43% 17%;
     --primary-foreground: 60 13% 95%;
     --accent: 39 51% 56%;
     --accent-foreground: 191 43% 10%;
-    --brand-bg: #19373E;
+    --brand-bg: #11282D; /* Fondo más oscuro y sobrio */
 
-    /* Wedding Palette tokens */
+    /* Wedding Palette tokens (Mantener para consistencia de rutas de boda) */
     --wedding-ocean: #6FA7C4;
     --wedding-aqua: #9FD7D3;
     --wedding-seafoam: #CFE6DA;
@@ -43,7 +44,7 @@
 
   @media (max-width: 767px) {
     :root {
-      --brand-bg: #173035;
+      --brand-bg: #0D1E22;
     }
   }
 }
@@ -54,8 +55,13 @@
   }
   body {
     background-color: var(--brand-bg) !important;
-    @apply text-foreground antialiased;
+    @apply text-foreground antialiased selection:bg-brand-gold/30 selection:text-white;
   }
+}
+
+/* Scroll smooth global */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Clases de utilidad para el tema de la boda */
@@ -66,4 +72,9 @@
 
 .font-handwriting {
   font-family: 'Dancing Script', cursive;
+}
+
+/* Efectos de vidrio premium */
+.glass-panel {
+  @apply bg-white/[0.02] backdrop-blur-md border border-white/5;
 }

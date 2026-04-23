@@ -14,52 +14,46 @@
       "imageHint": "quality seal"
     },
     {
-      "id": "about-main",
-      "description": "Filosofía SUCESSO",
-      "imageUrl": "/foto1.webp",
-      "imageHint": "luxury event philosophy"
+      "id": "about-strategic",
+      "description": "Visión Estratégica",
+      "imageUrl": "https://picsum.photos/seed/strategic/1200/800",
+      "imageHint": "high-end boardroom"
     },
     {
-      "id": "service-internal",
-      "description": "Eventos Internos",
-      "imageUrl": "/foto2.webp",
-      "imageHint": "corporate team building"
+      "id": "service-corp",
+      "description": "Eventos Corporativos Estratégicos",
+      "imageUrl": "https://picsum.photos/seed/corporate-ux/800/1000",
+      "imageHint": "modern conference hall"
     },
     {
-      "id": "service-congress",
-      "description": "Congresos y Convenciones",
-      "imageUrl": "/foto3.webp",
-      "imageHint": "business congress"
+      "id": "service-clients",
+      "description": "Experiencias de Cliente",
+      "imageUrl": "https://picsum.photos/seed/clients-ux/800/1000",
+      "imageHint": "luxury brand activation"
     },
     {
-      "id": "service-protocol",
-      "description": "Eventos Protocolarios",
-      "imageUrl": "/foto4.webp",
-      "imageHint": "formal protocol event"
+      "id": "service-offsites",
+      "description": "Offsites & Retreats",
+      "imageUrl": "https://picsum.photos/seed/retreat/800/1000",
+      "imageHint": "premium team retreat"
     },
     {
-      "id": "service-custom",
-      "description": "Experiencias de Marca",
-      "imageUrl": "https://picsum.photos/seed/service-incentive/800/1000",
-      "imageHint": "luxury brand experience"
+      "id": "service-launch",
+      "description": "Lanzamientos de Marca",
+      "imageUrl": "https://picsum.photos/seed/launch/800/1000",
+      "imageHint": "minimalist product reveal"
     },
     {
-      "id": "gallery-1",
-      "description": "Producción Premium",
-      "imageUrl": "/foto6.png",
-      "imageHint": "event production detail"
+      "id": "trust-1",
+      "description": "Impacto Visual",
+      "imageUrl": "https://picsum.photos/seed/impact1/800/600",
+      "imageHint": "elegant event detail"
     },
     {
-      "id": "gallery-2",
-      "description": "Diseño de Espacios",
-      "imageUrl": "/foto7.jpeg",
-      "imageHint": "event space design"
-    },
-    {
-      "id": "gallery-3",
-      "description": "Momentos SUCESSO",
-      "imageUrl": "/foto8.jpeg",
-      "imageHint": "event highlight"
+      "id": "trust-2",
+      "description": "Atención al Detalle",
+      "imageUrl": "https://picsum.photos/seed/impact2/800/600",
+      "imageHint": "luxury catering detail"
     },
     {
       "id": "wedding-hero",
