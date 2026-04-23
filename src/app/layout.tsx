@@ -1,4 +1,3 @@
-
 import type {Metadata} from 'next';
 import './globals.css';
 
@@ -23,8 +22,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Literata:opsz,wght@7..72,400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
-        {/* Meta tags de color optimizados para el nuevo fondo #5FA8B3 */}
-        <meta name="theme-color" content="#5FA8B3" />
+        <meta name="theme-color" content="#1F4A4D" />
       </head>
       <body className="font-body antialiased bg-background text-foreground selection:bg-accent/30">{children}</body>
     </html>

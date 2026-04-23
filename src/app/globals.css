@@ -1,18 +1,17 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Paleta SUCESSO Corporativo - Custom Theme */
-    --background: 188 37% 54%; /* #5FA8B3 */
-    --foreground: 191 43% 10%; /* Petrol Profundo */
+    /* Paleta SUCESSO Corporativo - Petrol Profundo #1F4A4D */
+    --background: 184 43% 21%;
+    --foreground: 0 0% 98%;
     --primary: 191 43% 17%;
     --primary-foreground: 0 0% 96%;
     --accent: 39 51% 56%; /* Gold */
     --accent-foreground: 191 43% 10%;
-    --brand-bg: #5FA8B3; 
+    --brand-bg: #1F4A4D; 
 
     /* Wedding Palette tokens */
     --wedding-ocean: #6FA7C4;
@@ -40,11 +39,12 @@
     --w-button-hover: var(--wedding-jungle);
     --w-border: rgba(111, 124, 107, 0.2);
     --w-overlay: rgba(47, 58, 55, 0.3);
+    --radius: 1rem;
   }
 
   @media (max-width: 767px) {
     :root {
-      --brand-bg: #5FA8B3;
+      --brand-bg: #1F4A4D;
     }
   }
 }
@@ -55,7 +55,7 @@
   }
   body {
     background-color: var(--brand-bg) !important;
-    @apply text-foreground antialiased selection:bg-brand-gold/30 selection:text-foreground;
+    @apply text-foreground antialiased selection:bg-accent/30 selection:text-foreground;
   }
 }
 
@@ -73,7 +73,7 @@ html {
 }
 
 .glass-panel {
-  @apply bg-white/40 backdrop-blur-md border border-black/5;
+  @apply bg-white/10 backdrop-blur-md border border-white/10;
 }
 
 .video-mask {

@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react'
@@ -10,8 +9,8 @@ import Link from 'next/link'
 
 export const Hero = () => {
   return (
-    <section className="relative h-screen min-h-[800px] flex flex-col items-center justify-center overflow-hidden" style={{ backgroundColor: 'var(--brand-bg)' }}>
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-foreground flex flex-col items-center pt-24 pb-12">
+    <section className="relative h-screen min-h-[800px] flex flex-col items-center justify-center overflow-hidden" style={{ backgroundColor: '#1F4A4D' }}>
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white flex flex-col items-center pt-24 pb-12">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1.1 }}
@@ -29,13 +28,13 @@ export const Hero = () => {
         >
           <div className="space-y-4">
             <p className="text-[10px] md:text-xs uppercase tracking-[0.5em] text-brand-gold font-bold">Experiencias de Impacto Global</p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold leading-[1.1] tracking-tight text-foreground">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold leading-[1.1] tracking-tight text-white">
               Firma de diseño estratégico <br />
               <span className="italic font-light text-brand-gold opacity-90">que eleva tu marca.</span>
             </h1>
           </div>
           
-          <p className="text-lg md:text-xl text-foreground/60 font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white/70 font-light max-w-2xl mx-auto leading-relaxed">
             Diseñamos experiencias corporativas personalizadas que transforman la cultura organizacional y proyectan una imagen impecable ante el mundo.
           </p>
 
@@ -45,7 +44,7 @@ export const Hero = () => {
                 Agenda una llamada <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform" size={16} />
               </Link>
             </Button>
-            <Button asChild variant="ghost" className="text-foreground/60 hover:text-foreground text-[11px] uppercase tracking-widest transition-colors font-bold">
+            <Button asChild variant="ghost" className="text-white/60 hover:text-white text-[11px] uppercase tracking-widest transition-colors font-bold">
               <Link href="#servicios">Diseñemos tu evento</Link>
             </Button>
           </div>
