@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState } from 'react'
@@ -67,29 +68,29 @@ const content = {
   it: {
     title: "Hotel Villa Mexicana",
     location: "Zihuatanejo, Guerrero",
-    locationContext: "Situato di fronte al mare a Playa La Ropa, Zihuatanejo, a soli 15 minuti dal centro.",
-    celebration: "Soggiorno per la celebrazione di",
+    locationContext: "Situato di fronte al mare presso Playa La Ropa, Zihuatanejo, a soli 15 minuti dal centro.",
+    celebration: "Soggiorno per il matrimonio di",
     names: "Carla & Said",
     
-    bookingCodeLabel: "Codice dell'evento",
+    bookingCodeLabel: "Codice evento",
     bookingCode: "Boda Carla & Said",
     
     howToBookTitle: "Come prenotare",
     step1: "Contattare direttamente l'hotel",
-    step2: "Menzionare il codice dell'evento: \"Boda Carla & Said\"",
-    step3: "Prenotare il prima possibile a causa della disponibilità limitata",
+    step2: "Comunicare il codice evento: \"Boda Carla & Said\"",
+    step3: "Si consiglia di prenotare il prima possibile, data la disponibilità limitata",
     
-    contactTitle: "Contatto Prenotazioni",
+    contactTitle: "Ufficio Prenotazioni",
     phone: "(55) 9000 1300",
     email: "reservaciones1@villamexicana.mx",
     
-    ratesTitle: "Tariffe per notte",
-    dates: "17 al 25 dicembre 2026",
+    ratesTitle: "Tariffe a notte",
+    dates: "Dal 17 al 25 dicembre 2026",
     singleDouble: "Camera Singola / Doppia",
     triple: "Camera Tripla",
     quad: "Camera Quadrupla",
-    plan: "Piano: Solo pernottamento",
-    extraSeaView: "Vista mare disponible: +$500 MXN a notte (soggetta a disponibilità)",
+    plan: "Trattamento: Solo pernottamento",
+    extraSeaView: "Vista mare disponibile: +$500 MXN a notte (soggetta a disponibilità)",
     
     optionalServicesTitle: "Servizi Opzionali",
     breakfastLabel: "Colazione Americana",
@@ -97,23 +98,23 @@ const content = {
     breakfastNote: "Prezzo a persona, al giorno.",
     allInclusiveLabel: "Bevande & Snack Illimitati",
     allInclusivePrice: "$1,690.00",
-    allInclusiveNote: "A persona, per notte. Bevande (12:00 - 22:00) e Snack (12:00 - 18:00).",
+    allInclusiveNote: "A persona, a notte. Bevande (12:00 - 22:00) e Snack (12:00 - 18:00).",
 
-    summaryTitle: "Riepilogo importante",
+    summaryTitle: "Informazioni Importanti",
     bullet1: "Soggiorno minimo: 3 notti",
-    bullet2: "Acconto: 2 notti",
-    bullet3: "Cancellazione: 30 giorni prima",
+    bullet2: "Acconto richiesto: 2 notti",
+    bullet3: "Termini di cancellazione: 30 giorni prima",
     bullet4: "Tariffe soggette a disponibilità",
-    bullet5: "Dagli 11 anni in su si paga como adulto",
+    bullet5: "Bambini dagli 11 anni in su pagano come adulti",
     
-    transportTitle: "Importante",
-    transportText: "A causa delle normative locali, gli autobus non possono accedere directamente a Playa La Ropa. Si consiglia di considerare un taxi o un trasporto aggiuntivo per l'ultimo tratto.",
+    transportTitle: "Nota sui trasporti",
+    transportText: "A causa delle normative locali, gli autobus non possono accedere direttamente a Playa La Ropa. Si consiglia di utilizzare un taxi o un trasporto privato per l'ultimo tratto del tragitto.",
     
     scheduleTitle: "Orari",
     checkIn: "Check-in",
     checkOut: "Check-out",
     
-    recommendationText: "Si consiglia di prenotare il prima possibile, poiché la disponibilità è limitata a causa della stagione.",
+    recommendationText: "Si consiglia di prenotare il prima possibile, poiché la disponibilità è limitata data l'alta stagione.",
     back: "Indietro",
     print: "Stampa / PDF"
   }
