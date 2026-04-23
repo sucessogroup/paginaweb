@@ -5,14 +5,14 @@
 
 @layer base {
   :root {
-    /* Paleta SUCESSO Corporativo Re-ajustada para Luxury Minimal */
-    --background: 191 43% 10%; 
-    --foreground: 60 13% 95%;
+    /* Paleta SUCESSO Corporativo - Light Theme */
+    --background: 0 0% 96%; /* #F5F5F5 */
+    --foreground: 191 43% 10%; /* Petrol Profundo */
     --primary: 191 43% 17%;
-    --primary-foreground: 60 13% 95%;
-    --accent: 39 51% 56%;
+    --primary-foreground: 0 0% 96%;
+    --accent: 39 51% 56%; /* Gold */
     --accent-foreground: 191 43% 10%;
-    --brand-bg: #11282D; 
+    --brand-bg: #F5F5F5; 
 
     /* Wedding Palette tokens */
     --wedding-ocean: #6FA7C4;
@@ -44,18 +44,18 @@
 
   @media (max-width: 767px) {
     :root {
-      --brand-bg: #0D1E22;
+      --brand-bg: #EFEFEF;
     }
   }
 }
 
 @layer base {
   * {
-    @apply border-white/5;
+    @apply border-foreground/5;
   }
   body {
     background-color: var(--brand-bg) !important;
-    @apply text-foreground antialiased selection:bg-brand-gold/30 selection:text-white;
+    @apply text-foreground antialiased selection:bg-brand-gold/30 selection:text-foreground;
   }
 }
 
@@ -73,5 +73,9 @@ html {
 }
 
 .glass-panel {
-  @apply bg-white/[0.02] backdrop-blur-md border border-white/5;
+  @apply bg-white/40 backdrop-blur-md border border-black/5;
+}
+
+.video-mask {
+  mask-image: radial-gradient(circle, black 60%, transparent 100%);
 }

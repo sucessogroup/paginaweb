@@ -11,7 +11,7 @@ import Link from 'next/link'
 export const Hero = () => {
   return (
     <section className="relative h-screen min-h-[800px] flex flex-col items-center justify-center overflow-hidden" style={{ backgroundColor: 'var(--brand-bg)' }}>
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white flex flex-col items-center pt-24 pb-12">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-foreground flex flex-col items-center pt-24 pb-12">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1.1 }}
@@ -40,19 +40,19 @@ export const Hero = () => {
           </p>
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Button asChild className="rounded-full bg-brand-gold hover:bg-brand-gold/80 text-brand-petrol px-10 py-7 text-[11px] font-bold uppercase tracking-widest shadow-2xl shadow-brand-gold/10 group">
+            <Button asChild className="rounded-full bg-brand-gold hover:bg-brand-gold/80 text-white px-10 py-7 text-[11px] font-bold uppercase tracking-widest shadow-2xl shadow-brand-gold/10 group">
               <Link href="#contacto">
                 Agenda una llamada <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform" size={16} />
               </Link>
             </Button>
-            <Button asChild variant="ghost" className="text-white/60 hover:text-white text-[11px] uppercase tracking-widest transition-colors font-bold">
+            <Button asChild variant="ghost" className="text-foreground/60 hover:text-foreground text-[11px] uppercase tracking-widest transition-colors font-bold">
               <Link href="#servicios">Diseñemos tu evento</Link>
             </Button>
           </div>
         </motion.div>
       </div>
       
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/40 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/5 pointer-events-none" />
     </section>
   )
 }
