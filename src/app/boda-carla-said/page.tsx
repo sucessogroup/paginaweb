@@ -41,6 +41,7 @@ const translations = {
     tarifaPreferencial: "Contamos con una tarifa preferencial para nuestros invitados.",
     confirmar: "Confirmar asistencia",
     rsvpTexto: "Favor de confirmar antes del 1 de Noviembre",
+    alergias: "Favor de avisarnos si tienen alguna alergia alimentaria o restricción en su dieta.",
     fraseFinal: "El amor acorta las distancias y une mundos lejanos",
     zihua: "Zihuatanejo, Guerrero, México",
     domingo: "Domingo, 20 de diciembre de 2026",
@@ -61,7 +62,7 @@ const translations = {
     proximamente: "Información próximamente",
     wa: "WhatsApp",
     ig: "Instagram",
-    recomendaciones: "Recomendaciones",
+    recomendaciones: "Raccomandaciones",
     queHacer: "¿Qué puedo hacer durante el fin de semana o después de la fiesta?",
     verMas: "VER MÁS",
     cosasEn: "COSAS QUE HACER EN",
@@ -107,6 +108,7 @@ const translations = {
     tarifaPreferencial: "Abbiamo riservato una tariffa preferenziale per i nostri ospiti.",
     confirmar: "Conferma partecipazione",
     rsvpTexto: "Si prega di confermare entro il 1° novembre",
+    alergias: "Vi preghiamo di comunicarci eventuali allergie o restrizioni alimentari.",
     fraseFinal: "L'amore accorcia le distanze e unisce mondi lontani",
     zihua: "Zihuatanejo, Guerrero, Messico",
     domingo: "Domenica, 20 Dicembre 2026",
@@ -461,13 +463,16 @@ export default function WeddingPage() {
               “{t.fraseFinal}”
             </p>
             
-            <div className="pt-8">
+            <div className="pt-8 flex flex-col items-center gap-6">
               <Button 
                 onClick={handleWhatsAppConfirm}
                 className="rounded-full px-12 py-8 bg-wedding-palm hover:bg-wedding-jungle text-wedding-ivory transition-all duration-700 uppercase tracking-[0.2em] text-[10px] shadow-lg shadow-wedding-palm/20"
               >
                 {t.confirmar}
               </Button>
+              <p className="text-sm md:text-base italic text-wedding-jungle/60 font-light max-w-md mx-auto leading-relaxed">
+                {t.alergias}
+              </p>
             </div>
           </RevealSection>
         </div>
