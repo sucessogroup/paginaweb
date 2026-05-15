@@ -41,7 +41,11 @@ export const Process = () => {
   })
 
   return (
-    <section ref={containerRef} id="proceso" className="relative h-[450vh] bg-background">
+    <section 
+      ref={containerRef} 
+      id="brief-estrategico" 
+      className="relative h-[450vh] bg-background scroll-mt-24"
+    >
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden">
         
         {/* Barra de Progreso Lateral */}
@@ -84,36 +88,32 @@ export const Process = () => {
 }
 
 const StepScene = ({ step, index, total, progress }: { step: any, index: number, total: number, progress: any }) => {
-  // Ajuste de rangos para asegurar visibilidad inmediata del Step 01
   const start = index / total
   const end = (index + 1) / total
   
-  // El primer paso debe ser visible desde el inicio (0)
-  const opacityStart = index === 0 ? 0 : start
-  const opacityEnd = end
-
+  // El primer paso debe ser visible inmediatamente (opacidad 1 en progress 0)
   const opacity = useTransform(
     progress,
-    [opacityStart, start + 0.05, end - 0.05, end],
+    [start, start + 0.08, end - 0.08, end],
     [index === 0 ? 1 : 0, 1, 1, 0]
   )
   
   const scale = useTransform(
     progress,
     [start, (start + end) / 2, end],
-    [0.98, 1, 0.98]
+    [index === 0 ? 1 : 0.98, 1, 0.98]
   )
   
   const y = useTransform(
     progress,
     [start, (start + end) / 2, end],
-    [index === 0 ? 0 : 30, 0, -30]
+    [index === 0 ? 0 : 40, 0, -40]
   )
 
   const blur = useTransform(
     progress,
     [start, start + 0.1, end - 0.1, end],
-    [index === 0 ? "blur(0px)" : "blur(8px)", "blur(0px)", "blur(0px)", "blur(8px)"]
+    [index === 0 ? "blur(0px)" : "blur(10px)", "blur(0px)", "blur(0px)", "blur(10px)"]
   )
 
   return (

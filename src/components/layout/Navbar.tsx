@@ -25,7 +25,7 @@ export const Navbar = () => {
   const navLinks = [
     { name: 'Nosotros', href: '#nosotros' },
     { name: 'Servicios', href: '#servicios' },
-    { name: 'Proceso', href: '#proceso' },
+    { name: 'Proceso', href: '#brief-estrategico' },
     { name: 'Contacto', href: '#contacto' },
   ]
 
