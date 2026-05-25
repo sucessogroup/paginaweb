@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react'
@@ -25,7 +24,7 @@ const services = [
     title: "Offsites & Leadership Retreats",
     benefit: "Claridad & Visión",
     description: "Espacios de alta gama diseñados para el pensamiento estratégico, la desconexión creativa y la toma de decisiones.",
-    img: "service-offsites",
+    img: "/foto2.webp",
   },
   {
     title: "Lanzamientos de Marca",
