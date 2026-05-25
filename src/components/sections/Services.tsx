@@ -1,3 +1,4 @@
+
 "use client"
 
 import React from 'react'
@@ -30,7 +31,7 @@ const services = [
     title: "Lanzamientos de Marca",
     benefit: "Impacto & Mercado",
     description: "Producciones de clase mundial para presentar productos y servicios con una narrativa impecable.",
-    img: "service-launch", 
+    img: "/foto5.webp", 
   }
 ]
 
