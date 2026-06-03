@@ -131,7 +131,7 @@ export default function QuotationPage() {
   return (
     <div className="min-h-screen bg-wedding-ivory text-wedding-jungle p-4 md:p-8 lg:p-12 print:p-0 print:bg-white wedding-theme">
       {/* Controles */}
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center mb-12 gap-6 print:hidden">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center mb-12 print:hidden">
         <Button asChild variant="ghost" className="rounded-full text-wedding-palm uppercase tracking-[0.2em] text-[10px] gap-2">
           <Link href="/boda-carla-said#hotel">
             <ArrowLeft size={14} /> {t.back}

@@ -118,7 +118,7 @@ const translations = {
     waMessage: "Ciao Carla e Said! Sono felicissimo/a per il vostro matrimonio. Vorrei confermare la mia partecipazione per festeggiare con voi il 20 dicembre 2026 a Zihuatanejo. A presto!",
     venue: "Club de Playa Garrobo",
     mesaRegalos: "Lista Nozze",
-    regalosFrase: "Il regalo più grande sarà la nostra presenza. Tuttavia, per chi desiderasse farci un pensiero, vi saremmo grati se lo faceste tramite bonifico. Vivere in Italia rende difficile il trasporto di regali fisici, e questo gesto ci aiuterà molto a iniziare la nostra vita insieme.",
+    regalosFrase: "Il regalo più grande sarà la vostra presenza. Tuttavia, per chi desiderasse farci un pensiero, vi saremmo grati se lo faceste tramite bonifico. Vivere in Italia rende difficile il trasporto di regali fisici, e questo gesto ci aiuterà molto a iniziare la nostra vita insieme.",
     clabe: "CLABE (Messico)",
     iban: "IBAN (Italia)",
     copiar: "Copia",
@@ -145,12 +145,12 @@ const translations = {
     verCotizacion: "Vedi il preventivo",
     faqs: [
       { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per turismo. È necessario un passaporto valido, il biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
-      { q: "Quale aeroporto è consigliato?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), il più vicino all'hotel e al luogo dell'evento." },
+      { q: "Quale aeroporto è consigliato?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), el più vicino all'hotel e al luogo dell'evento." },
       { q: "Come posso raggiungere l'hotel dall'aeroporto?", a: "Dall'aeroporto potete prendere un taxi autorizzato, un trasporto privato o usufruire del servizio dell'hotel." },
       { q: "Dove si terrà il matrimonio?", a: "Presso il Club de Playa Garrobo, Zihuatanejo, Guerrero, Messico." },
       { q: "L'aeroporto, l'hotel e la location sono vicini?", a: "Sì. I trasferimenti durano solitamente tra i 15 e i 30 minuti." },
       { q: "Com'è il clima a dicembre?", a: "Il clima a dicembre è piacevole e caldo, con temperature comprese tra i 22°C e i 30°C." },
-      { q: "Quale valuta si utilizza in Messico?", a: "La valuta ufficiale è il Peso Messicano (MXN)." },
+      { q: "Quale valuta si utiliza in Messico?", a: "La valuta ufficiale è il Peso Messicano (MXN)." },
       { q: "Possono partecipare i bambini?", a: "Amiamo molto i vostri piccoli, ma l'evento è riservato esclusivamente agli adulti." }
     ]
   }
