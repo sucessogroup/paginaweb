@@ -27,15 +27,15 @@ export const Hero = () => {
           className="space-y-10 max-w-4xl"
         >
           <div className="space-y-4">
-            <p className="text-[10px] md:text-xs uppercase tracking-[0.5em] text-brand-gold font-bold">Experiencias de Impacto Global</p>
+            <p className="text-[10px] md:text-xs uppercase tracking-[0.5em] text-brand-gold font-bold">Planeación &nbsp; Diseño &nbsp; Producción</p>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold leading-[1.1] tracking-tight text-white">
-              Firma de diseño estratégico <br />
-              <span className="italic font-light text-brand-gold opacity-90">que eleva tu marca.</span>
+              Firma de diseño de <br />
+              <span className="italic font-light text-brand-gold opacity-90">experiencias corporativas.</span>
             </h1>
           </div>
           
           <p className="text-lg md:text-xl text-white/70 font-light max-w-2xl mx-auto leading-relaxed">
-            Diseñamos experiencias corporativas personalizadas que transforman la cultura organizacional y proyectan una imagen impecable ante el mundo.
+            En SUCESSO diseñamos y producimos eventos corporativos con alma. Creemos que los detalles transforman un evento en una experiencia que deja huella.
           </p>
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -43,9 +43,6 @@ export const Hero = () => {
               <Link href="#contacto">
                 Agenda una llamada <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform" size={16} />
               </Link>
-            </Button>
-            <Button asChild variant="ghost" className="text-white/60 hover:text-white text-[11px] uppercase tracking-widest transition-colors font-bold">
-              <Link href="#servicios">Diseñemos tu evento</Link>
             </Button>
           </div>
         </motion.div>

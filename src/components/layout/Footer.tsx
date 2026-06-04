@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react'
@@ -30,7 +29,7 @@ export const Footer = () => {
           )}
           
           <p className="text-brand-canary font-light text-2xl italic mb-12">
-            “Cada detalle, un suceso.”
+            “Cada detalle, un SUCESSO.”
           </p>
           
           <div className="w-full h-[1px] bg-white/10 mb-16" />

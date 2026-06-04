@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useRef } from 'react'
@@ -8,22 +7,22 @@ const steps = [
   {
     number: "01",
     title: "Brief Estratégico",
-    desc: "Construimos una base sólida alineada a los objetivos de negocio y la identidad de tu marca.",
+    desc: "Construimos una base sólida alineada a los objetivos del evento y de la identidad de tu marca.",
   },
   {
     number: "02",
     title: "Diseño Sensorial",
-    desc: "Traducimos la estrategia en una propuesta estética y emocional de alto impacto.",
+    desc: "Traducimos la estrategia en una propuesta clara, real y acorde al presupuesto.",
   },
   {
     number: "03",
     title: "Ingeniería Logística",
-    desc: "Ejecutamos con precisión absoluta, eliminando fricciones y asegurando la excelencia operativa.",
+    desc: "Ejecutamos con precisión, simplificamos procesos y aseguramos la eficiencia operativa.",
   },
   {
     number: "04",
     title: "Impacto & Valor",
-    desc: "Medimos el retorno y el impacto emocional para asegurar que cada evento sea un suceso memorable.",
+    desc: "Medimos el retorno y el impacto emocional para asegurar que cada evento sea un sucesso memorable.",
   }
 ]
 
@@ -91,7 +90,6 @@ const StepScene = ({ step, index, total, progress }: { step: any, index: number,
   const start = index / total
   const end = (index + 1) / total
   
-  // El primer paso debe ser visible inmediatamente (opacidad 1 en progress 0)
   const opacity = useTransform(
     progress,
     [start, start + 0.08, end - 0.08, end],

@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react'
@@ -7,6 +6,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
+import { cn } from '@/lib/utils'
 
 const services = [
   {
@@ -32,6 +32,13 @@ const services = [
     benefit: "Impacto & Mercado",
     description: "Producciones de clase mundial para presentar productos y servicios con una narrativa impecable.",
     img: "/foto5.webp", 
+  },
+  {
+    title: "Tu sueña nosotros lo hacemos real",
+    benefit: "Experiencia ilimitadas",
+    description: "Juntos hacemos realidad el sucesso que sueñas y lo hacemos memorable.",
+    img: "https://picsum.photos/seed/custom-exp/1200/800",
+    featured: true
   }
 ]
 
@@ -42,7 +49,7 @@ export const Services = () => {
         <div className="text-center mb-32 space-y-6">
           <h2 className="text-[10px] uppercase tracking-[0.5em] text-brand-gold font-bold">Soluciones a Medida</h2>
           <h3 className="text-4xl md:text-6xl font-headline font-bold text-foreground">
-            Diseñamos <span className="italic font-light text-brand-gold opacity-90">el futuro de tu marca.</span>
+            Cada detalle <span className="italic font-light text-brand-gold opacity-90">un sucesso.</span>
           </h3>
           <p className="text-foreground/60 max-w-2xl mx-auto text-lg font-light leading-relaxed italic">
             No organizamos logística; creamos plataformas de comunicación en vivo que generan resultados de negocio reales.
@@ -52,11 +59,14 @@ export const Services = () => {
         <div className="grid md:grid-cols-2 gap-24 lg:gap-16">
           {services.map((service, idx) => {
             const imgData = PlaceHolderImages.find(p => p.id === service.img)
-            const imgSrc = service.img.startsWith('/') ? service.img : (imgData?.imageUrl || "https://picsum.photos/seed/service/1200/800")
+            const imgSrc = service.img.startsWith('/') ? service.img : (imgData?.imageUrl || service.img)
             
             return (
-              <div key={idx} className="group flex flex-col space-y-10">
-                <div className="relative aspect-[16/9] w-full rounded-[2.5rem] overflow-hidden bg-muted border border-white/5 shadow-2xl">
+              <div key={idx} className={cn("group flex flex-col space-y-10", service.featured && "md:col-span-2")}>
+                <div className={cn(
+                  "relative w-full rounded-[2.5rem] overflow-hidden bg-muted border border-white/5 shadow-2xl transition-all duration-700",
+                  service.featured ? "aspect-[21/9]" : "aspect-[16/9]"
+                )}>
                   <Image 
                     src={imgSrc} 
                     alt={service.title}
@@ -72,10 +82,16 @@ export const Services = () => {
                   </div>
                 </div>
                 <div className="space-y-6 px-4">
-                  <h4 className="text-2xl lg:text-3xl font-headline font-bold text-foreground group-hover:text-brand-gold transition-colors">
+                  <h4 className={cn(
+                    "font-headline font-bold text-foreground group-hover:text-brand-gold transition-colors",
+                    service.featured ? "text-3xl lg:text-5xl" : "text-2xl lg:text-3xl"
+                  )}>
                     {service.title}
                   </h4>
-                  <p className="text-base lg:text-lg text-foreground/50 font-light leading-relaxed italic">
+                  <p className={cn(
+                    "text-foreground/50 font-light leading-relaxed italic",
+                    service.featured ? "text-xl lg:text-2xl" : "text-base lg:text-lg"
+                  )}>
                     {service.description}
                   </p>
                   <Button variant="link" className="text-brand-gold p-0 h-auto uppercase tracking-widest text-[10px] gap-2 font-bold hover:no-underline opacity-60 group-hover:opacity-100 transition-opacity">
@@ -88,8 +104,8 @@ export const Services = () => {
         </div>
         
         <div className="mt-32 text-center">
-          <Button asChild className="rounded-full bg-transparent border border-white/20 hover:border-brand-gold hover:text-brand-gold px-12 py-8 text-[11px] font-bold uppercase tracking-widest transition-all">
-            <Link href="#contacto">Ver todas nuestras soluciones</Link>
+          <Button asChild className="rounded-full bg-brand-gold hover:bg-brand-gold/80 text-white px-12 py-8 text-[11px] font-bold uppercase tracking-widest transition-all shadow-xl shadow-brand-gold/10">
+            <Link href="#contacto">Agenda una llamada</Link>
           </Button>
         </div>
       </div>
