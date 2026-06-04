@@ -27,7 +27,9 @@ export const Hero = () => {
           className="space-y-10 max-w-4xl"
         >
           <div className="space-y-4">
-            <p className="text-[10px] md:text-xs uppercase tracking-[0.5em] text-brand-gold font-bold">Planeación &nbsp; Diseño &nbsp; Producción</p>
+            <p className="text-[10px] md:text-xs uppercase tracking-[0.5em] text-brand-gold font-bold">
+              Planeación &nbsp; • &nbsp; Diseño &nbsp; • &nbsp; Producción
+            </p>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold leading-[1.1] tracking-tight text-white">
               Firma de diseño de <br />
               <span className="italic font-light text-brand-gold opacity-90">experiencias corporativas.</span>
