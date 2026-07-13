@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react'
@@ -124,7 +125,7 @@ export const Navbar = () => {
           </div>
 
           <div className="mt-auto pb-12 space-y-4 border-t border-white/10 pt-8">
-            <p className="text-[10px] uppercase tracking-[0.4em] text-brand-gold font-bold">Cada detalle, un suceso.</p>
+            <p className="text-[10px] uppercase tracking-[0.4em] text-brand-gold font-bold">Cada detalle, un SUCESSO.</p>
             <div className="flex flex-col gap-2 text-white/50 text-sm font-light">
               <a href="tel:4423775646">(442) 377 5646</a>
               <a href="mailto:paola@sucessogroup.com">paola@sucessogroup.com</a>

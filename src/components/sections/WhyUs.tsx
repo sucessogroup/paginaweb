@@ -5,7 +5,7 @@ import { Sparkles, Target, Settings, Zap } from 'lucide-react'
 const differentiators = [
   {
     title: "Personalización Extrema",
-    desc: "Cada detalle es un reflejo fiel de tu ADN corporativo. No usamos plantillas, diseñamos sucesos.",
+    desc: "Cada detalle es un reflejo fiel de tu ADN corporativo. No usamos plantillas, diseñamos SUCESSOS.",
     icon: Sparkles
   },
   {

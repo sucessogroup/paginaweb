@@ -55,7 +55,7 @@ export const Services = () => {
         <div className="text-center mb-32 space-y-6">
           <h2 className="text-[10px] uppercase tracking-[0.5em] text-brand-gold font-bold">Soluciones a Medida</h2>
           <h3 className="text-4xl md:text-6xl font-headline font-bold text-foreground">
-            Cada detalle <span className="italic font-light text-brand-gold opacity-90">un suceso.</span>
+            Cada detalle <span className="italic font-light text-brand-gold opacity-90">un SUCESSO.</span>
           </h3>
           <p className="text-foreground/60 max-w-2xl mx-auto text-lg font-light leading-relaxed italic">
             No organizamos logística; creamos plataformas de comunicación en vivo que generan resultados de negocio reales.

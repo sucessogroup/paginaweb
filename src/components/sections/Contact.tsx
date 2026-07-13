@@ -1,3 +1,4 @@
+
 "use client"
 
 import React from 'react'
@@ -17,7 +18,7 @@ export const Contact = () => {
               <h2 className="text-[10px] uppercase tracking-[0.5em] text-brand-gold font-bold">Contacto</h2>
               <h3 className="text-4xl md:text-6xl font-headline font-bold text-foreground leading-tight">
                 Haz que tu próximo evento sea <br />
-                <span className="text-brand-gold italic font-light">un sucesso.</span>
+                <span className="text-brand-gold italic font-light">un SUCESSO.</span>
               </h3>
               <p className="text-lg text-foreground/50 font-light leading-relaxed italic max-w-md">
                 Estamos listos para transformar tu visión en una experiencia corporativa de clase mundial.
