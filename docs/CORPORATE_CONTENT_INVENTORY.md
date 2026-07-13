@@ -35,7 +35,7 @@
 
 ### Hero
 * **Headline:** Firma de diseño de experiencias corporativas.
-* **Subheadline:** Planeación  Diseño  Producción
+* **Subheadline:** Planeación • Diseño • Producción • Experiencias
 * **CTA primario:** Agenda una llamada
 * **Texto de apoyo:** En SUCESSO diseñamos y producimos eventos corporativos con alma. Creemos que los detalles transforman un evento en una experiencia que deja huella.
 
@@ -171,7 +171,7 @@
 
 
 ### SECCIÓN: HERO
-Experiencias de Impacto Global. Firma de diseño estratégico que eleva tu marca. Diseñamos experiencias corporativas personalizadas que transforman la cultura organizacional y proyectan una imagen impecable ante el mundo. Agenda una llamada. Diseñemos tu evento.
+Experiencias de Impacto Global. Firma de diseño estratégico que eleva tu marca. Planeación • Diseño • Producción • Experiencias. Diseñamos experiencias corporativas personalizadas que transforman la cultura organizacional y proyectan una imagen impecable ante el mundo. Agenda una llamada. Diseñemos tu evento.
 
 
 ### SECCIÓN: NOSOTROS
