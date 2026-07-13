@@ -12,6 +12,9 @@
     --accent: 39 51% 56%; /* Gold */
     --accent-foreground: 191 43% 10%;
     --brand-bg: #19373E; 
+    
+    /* Color de navegación activa en scroll (#E87402) */
+    --nav-scroll: 29 98% 46%;
 
     /* Wedding Palette tokens */
     --wedding-ocean: #6FA7C4;
