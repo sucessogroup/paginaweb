@@ -1,3 +1,4 @@
+
 "use client"
 
 import React from 'react'
@@ -9,13 +10,13 @@ import Link from 'next/link'
 
 export const Hero = () => {
   return (
-    <section className="relative h-screen min-h-[800px] flex flex-col items-center justify-center overflow-hidden" style={{ backgroundColor: '#19373E' }}>
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white flex flex-col items-center pt-24 pb-12">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-24 md:py-32" style={{ backgroundColor: '#19373E' }}>
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white flex flex-col items-center">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1.05 }}
           transition={{ duration: 1.8, ease: "easeOut" }}
-          className="mb-12 md:mb-16 mt-4"
+          className="mb-10 md:mb-14"
         >
           <LogoVideo />
         </motion.div>
@@ -26,9 +27,9 @@ export const Hero = () => {
           transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
           className="space-y-10 max-w-4xl"
         >
-          <div className="space-y-4">
+          <div className="space-y-6">
             <p className="text-[10px] md:text-xs uppercase tracking-[0.5em] text-brand-gold font-bold">
-              Planeación &nbsp; • &nbsp; Diseño &nbsp; • &nbsp; Producción &nbsp; • &nbsp; Experiencias
+              Planeación • Diseño • Producción • Experiencias
             </p>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold leading-[1.1] tracking-tight text-white">
               Firma de diseño de <br />
@@ -40,8 +41,8 @@ export const Hero = () => {
             En SUCESSO diseñamos y producimos eventos corporativos con alma. Creemos que los detalles transforman un evento en una experiencia que deja huella.
           </p>
 
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Button asChild className="rounded-full bg-brand-gold hover:bg-brand-gold/80 text-white px-10 py-7 text-[11px] font-bold uppercase tracking-widest shadow-2xl shadow-brand-gold/10 group">
+          <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Button asChild className="rounded-full bg-brand-gold hover:bg-brand-gold/80 text-white px-10 py-8 text-[11px] font-bold uppercase tracking-widest shadow-2xl shadow-brand-gold/10 group">
               <Link href="#contacto">
                 Agenda una llamada <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform" size={16} />
               </Link>
