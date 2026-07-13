@@ -37,7 +37,7 @@ const services = [
   {
     title: "Experiencias",
     benefit: "Emoción & Conexión",
-    description: "Creamos activaciones y momentos únicos que transforman la percepción de marca a través de los sentidos.",
+    description: "Tu escoges la experiencia y nosotros la adaptamos a ti.",
     img: "https://picsum.photos/seed/exp-mem/800/1000",
   },
   {
@@ -72,8 +72,8 @@ export const Services = () => {
                 <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden bg-muted border border-white/5 shadow-2xl transition-all duration-700">
                   <Image 
                     src={imgSrc} 
-                    alt={service.title}
                     fill
+                    alt={service.title}
                     className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                     data-ai-hint="premium corporate experience"
                   />
