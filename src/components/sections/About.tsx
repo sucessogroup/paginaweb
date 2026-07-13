@@ -14,7 +14,8 @@ export const About = () => {
               <h2 className="text-[10px] uppercase tracking-[0.5em] text-brand-gold font-bold">Nuestra Filosofía</h2>
               <h3 className="text-4xl md:text-6xl font-headline font-bold text-foreground leading-tight">
                 Eventos impecables, <br />
-                <span className="text-brand-gold italic font-light">cero estrés para ti.</span>
+                tus ideas, nuestro toque... <br />
+                <span className="text-brand-gold italic font-light">nosotros lo hacemos realidad.</span>
               </h3>
               <div className="w-20 h-[1px] bg-brand-gold/30" />
               <div className="text-lg md:text-xl font-light text-foreground/80 leading-relaxed italic space-y-6">

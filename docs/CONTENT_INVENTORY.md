@@ -37,21 +37,20 @@
 * **Texto:** "Contacto" | **URL:** #contacto | **Estado:** Activo
 
 ### Navegación Recomendaciones
-* **Texto:** "Zihuatanejo" | **URL:** /recomendaciones-zihuatanejo (o externo)
-* **Texto:** "Guerrero" | **URL:** /recomendaciones-guerrero (o externo)
+* **Texto:** "Zihuatanejo" | **URL:** /recomendaciones-zihuatanejo
+* **Texto:** "Guerrero" | **URL:** /recomendaciones-guerrero
 * **Texto:** "México" | **URL:** /recomendaciones-mexico
 
 ## 3. HOME
 
 ### Hero
-* **Headline:** Firma de diseño estratégico que eleva tu marca.
-* **Subheadline:** Experiencias de Impacto Global
+* **Headline:** Firma de diseño de experiencias corporativas.
+* **Subheadline:** Planeación • Diseño • Producción • Experiencias
 * **CTA primario:** Agenda una llamada
-* **CTA secundario:** Diseñemos tu evento
-* **Texto de apoyo:** Diseñamos experiencias corporativas personalizadas que transforman la cultura organizacional y proyectan una imagen impecable ante el mundo.
+* **Texto de apoyo:** En SUCESSO diseñamos y producimos eventos corporativos con alma. Creemos que los detalles transforman un evento en una experiencia que deja huella.
 
 ### Sección 2: Nosotros (About)
-* **Título:** Eventos impecables, cero estrés para ti.
+* **Título:** Eventos impecables, tus ideas, nuestro toque... nosotros lo hacemos realidad.
 * **Subtítulo:** Nuestra Filosofía
 * **Párrafos:**
     * “En SUCESSO creemos que un gran evento no solo debe ejecutarse bien, debe sentirse.”
@@ -63,7 +62,7 @@
 ## 4. SERVICIOS
 
 ### Estructura General
-* **Título:** Diseñamos el futuro de tu marca.
+* **Título:** Cada detalle un sucesso.
 * **Subtítulo:** Soluciones a Medida
 * **Descripción:** No organizamos logística; creamos plataformas de comunicación en vivo que generan resultados de negocio reales.
 
@@ -80,9 +79,12 @@
 4. **Lanzamientos de Marca**
     * **Beneficio:** Impacto & Mercado
     * **Descripción:** Producciones de clase mundial para presentar productos y servicios con una narrativa impecable.
+5. **Tu sueña nosotros lo hacemos real**
+    * **Beneficio:** Experiencia ilimitadas
+    * **Descripción:** Juntos hacemos realidad el sucesso que sueñas y lo hacemos memorable.
 
 * **CTA:** Hablemos de este proyecto
-* **CTA Final:** Ver todas nuestras soluciones
+* **CTA Final:** Agenda una llamada
 
 ## 5. PROCESO (Nuestro Método)
 
@@ -92,7 +94,7 @@
 1. **Paso 01: Brief Estratégico**
     * **Descripción:** Construimos una base sólida alineada a los objetivos de negocio y la identidad de tu marca.
 2. **Paso 02: Diseño Sensorial**
-    * **Descripción:** Traducimos la estrategia en una propuesta estética y emocional de alto impacto.
+    * **Descripción:** Traducimos la estrategia en una propuesta clara, real y acorde al presupuesto.
 3. **Paso 03: Ingeniería Logística**
     * **Descripción:** Ejecutamos con precisión absoluta, eliminando fricciones y asegurando la excelencia operativa.
 4. **Paso 04: Impacto & Valor**
@@ -113,13 +115,13 @@
 * **Texto:** "Elevaron nuestro congreso anual a una categoría superior. SUCESSO dota de alma a la identidad de nuestra organización."
 * **Autor:** (No especificado)
 * **Cargo:** Dirección de Relaciones Institucionales
-* **Empresa:** (Placeholder: BRAND A, BRAND B, BRAND C, BRAND D)
+* **Empresa:** BRAND A, BRAND B, BRAND C, BRAND D
 
 ## 7. FORMULARIOS (Contacto)
 
 * **Nombre:** Formulario de Contacto
 * **Título:** Haz que tu próximo evento sea un suceso.
-* **Subtítulo:** Cierre de Impacto
+* **Subtítulo:** Contacto
 * **Labels:**
     * Nombre completo
     * Empresa
@@ -136,7 +138,7 @@
 
 ## 8. FOOTER
 
-* **Frase:** “Cada detalle, un suceso.”
+* **Frase:** “Cada detalle, un SUCESSO.”
 * **Título 1:** SUCESSO Group
     * Querétaro, México
     * Experiencias de impacto global
@@ -173,42 +175,17 @@
 * **Itinerario:** Arrivo al beach club, Cerimonia, Ricevimento e cena, Fine dell'evento.
 * **Mesa de Regalos:** Il regalo più grande sarà la vostra presenza...
 * **Hotel:** Hotel Consigliato / Villa Mexicana Hotel.
-* **Allergie:** Vi preghiamo di comunicarci eventuali allergie o restrizioni alimentari.
+* **Allergie:** Vi preghiamo di comunicci eventuali allergie o restrizioni alimentari.
 
 ---
 
 # CONTENIDO PLANO COMPLETO
 
 ### PÁGINA: HOME (SUCESSO)
-- **Hero:** Experiencias de Impacto Global. Firma de diseño estratégico que eleva tu marca. Diseñamos experiencias corporativas personalizadas que transforman la cultura organizacional y proyectan una imagen impecable ante el mundo. Agenda una llamada. Diseñemos tu evento.
-- **Nosotros:** Nuestra Filosofía. Eventos impecables, cero estrés para ti. “En SUCESSO creemos que un gran evento no solo debe ejecutarse bien, debe sentirse.” Creamos experiencias donde cada persona se siente esperada, bienvenida y parte de algo especial. Diseñamos encuentros que generan conexión, significado y recuerdos que permanecen. Precisión. Cada detalle es pensado estratégicamente y ejecutado con sensibilidad estética para lograr un resultado impecable. Tranquilidad. Te acompañamos en todo momento con claridad y control, para que vivas el proceso con confianza y sin fricción.
-- **Servicios:** Soluciones a Medida. Diseñamos el futuro de tu marca. No organizamos logística; creamos plataformas de comunicación en vivo que generan resultados de negocio reales. Congresos y Convenciones. Cultura & Identidad. Eventos Protocolarios. Crecimiento & Lealtad. Offsites & Leadership Retreats. Claridad & Visión. Lanzamientos de Marca. Impacto & Mercado. Hablemos de este proyecto. Ver todas nuestras soluciones.
-- **Proceso:** Nuestro Método. Orden que genera confianza. Paso 01. Brief Estratégico. Construimos una base sólida alineada a los objetivos de negocio y la identidad de tu marca. Paso 02. Diseño Sensorial. Traducimos la estrategia en una propuesta estética y emocional de alto impacto. Paso 03. Ingeniería Logística. Ejecutamos con precisión absoluta, eliminando fricciones y asegurando la excelencia operativa. Paso 04. Impacto & Valor. Medimos el retorno y el impacto emocional para asegurar que cada evento sea un suceso memorable.
+- **Hero:** Firma de diseño de experiencias corporativas. Planeación • Diseño • Producción • Experiencias. En SUCESSO diseñamos y producimos eventos corporativos con alma. Creemos que los detalles transforman un evento en una experiencia que deja huella. Agenda una llamada.
+- **Nosotros:** Nuestra Filosofía. Eventos impecables, tus ideas, nuestro toque... nosotros lo hacemos realidad. “En SUCESSO creemos que un gran evento no solo debe ejecutarse bien, debe sentirse.” Creamos experiencias donde cada persona se siente esperada, bienvenida y parte de algo especial. Diseñamos encuentros que generan conexión, significado y recuerdos que permanecen. Precisión. Cada detalle es pensado estratégicamente y ejecutado con sensibilidad estética para lograr un resultado impecable. Tranquilidad. Te acompañamos en todo momento con claridad y control, para que vivas el proceso con confianza y sin fricción.
+- **Servicios:** Cada detalle un sucesso. Soluciones a Medida. No organizamos logística; creamos plataformas de comunicación en vivo que generan resultados de negocio reales. Congresos y Convenciones. Cultura & Identidad. Eventos Protocolarios. Crecimiento & Lealtad. Offsites & Leadership Retreats. Claridad & Visión. Lanzamientos de Marca. Impacto & Mercado. Tu sueña nosotros lo hacemos real. Experiencia ilimitadas. Hablemos de este proyecto. Agenda una llamada.
+- **Proceso:** Nuestro Método. Orden que genera confianza. Paso 01. Brief Estratégico. Construimos una base sólida alineada a los objetivos de negocio y la identidad de tu marca. Paso 02. Diseño Sensorial. Traducimos la estrategia en una propuesta clara, real y acorde al presupuesto. Paso 03. Ingeniería Logística. Ejecutamos con precisión absoluta, eliminando fricciones y asegurando la excelencia operativa. Paso 04. Impacto & Valor. Medimos el retorno y el impacto emocional para asegurar que cada evento sea un suceso memorable.
 - **Diferenciadores:** ¿Qué hace único a un SUCESSO? Detalles que no cuestan más, pero lo valen todo. “En SUCESSO no solo organizamos eventos, diseñamos experiencias empresariales estratégicas que generan conexiones reales y resultados tangibles.” Personalización Extrema. Impacto Estratégico. Atención al Detalle. Ejecución Impecable. Sello de Calidad SUCESSO. Garantía de Excelencia Corporativa. Confianza de Líderes. "Elevaron nuestro congreso anual a una categoría superior. SUCESSO dota de alma a la identidad de nuestra organización." — Dirección de Relaciones Institucionales.
 - **Contacto:** Cierre de Impacto. Haz que tu próximo evento sea un suceso. Estamos listos para transformar tu visión en una experiencia corporativa de clase mundial. Llámanos. (442) 377 5646. Escríbenos. paola@sucessogroup.com. Síguenos. @sucesso_group. Nombre completo. Empresa. ¿En qué podemos ayudarte? Tu nombre. Nombre de tu empresa. Cuéntanos sobre tu próximo proyecto... Enviar mensaje.
-- **Footer:** “Cada detalle, un suceso.” SUCESSO Group. Querétaro, México. Experiencias de impacto global. Contacto Directo. paola@sucessogroup.com. (442) 377 5646. Legal. Aviso de Privacidad. Términos de Servicio. © 2025 SUCESSO GROUP. TODOS LOS DERECHOS RESERVADOS.
-
-### PÁGINA: BODA CARLA & SAID (ESPAÑOL)
-- **Hero:** Carla & Said. Domingo, 20 de diciembre de 2026. Zihuatanejo, Guerrero, México.
-- **Countdown:** Falta poco para nuestro para siempre. Acompáñanos en este momento. Días. Horas. Minutos. Segundos. Añadir al calendario.
-- **Confirmación:** RSVP. “El amor acorta las distancias y une mundos lejanos”. Confirmar asistencia. Favor de avisarnos si tienen alguna alergia alimentaria o restricción en su dieta.
-- **Itinerario:** Itinerario. Club de Playa Garrobo. Ver ubicación en mapa. 17:00 Llegada al club de playa. 17:30 Ceremonia. 19:30 Recepción y cena. 01:00 Fin del evento.
-- **Hotel:** Hotel Sugerido. Villa Mexicana Hotel. Contamos con una tarifa preferencial para nuestros invitados. Información Importante de Reserva. Al tratarse de temporada alta en Zihuatanejo, el hotel no cuenta con habitaciones bloqueadas para el evento. Sin embargo, contamos con una tarifa preferencial para nuestros invitados. También existe la opción de paquete solo hotel, al cual se le pueden añadir alimentos de manera opcional según las preferencias de cada huésped. En la cotización compartida se encuentran todos los detalles sobre las tarifas, tipos de habitación y opciones disponibles. Les recomendamos reservar su habitación lo antes posible para asegurar disponibilidad. Para realizar su reserva, favor de indicar la clave del evento: "Boda Carla y Said". Ver Cotización. Reservar en el sitio web.
-- **Mesa de Regalos:** Mesa de Regalos. “El mejor regalo es su presencia, pero si desean tener un detalle con nosotros, les agradeceríamos que fuera a través de transferencia. Vivir en Italia dificulta llevar regalos físicos, por lo que este gesto nos facilitará mucho comenzar nuestro hogar allá.” CLABE (México). IBAN (Italia). Copiar. Copiado.
-- **Recomendaciones:** Recomendaciones. ¿Qué puedo hacer durante el fin de semana o después de la fiesta? COSAS QUE HACER EN ZIHUATANEJO. COSAS QUE HACER EN GUERRERO. COSAS QUE HACER EN MÉXICO. VER MÁS.
-- **FAQs:** Preguntas Frecuentes. ¿Qué requisitos necesito para viajar a México desde Italia? ¿A qué aeropuerto debo llegar? ¿Cómo llego del aeropuerto al hotel o al evento? ¿Dónde se llevará a cabo la boda? ¿El aeropuerto, el hotel y el lugar del evento están cerca? ¿Cómo es el clima en diciembre? ¿Qué moneda se usa? ¿Pueden asistir niños?
-
-### PÁGINA: COTIZACIÓN (ESPAÑOL)
-- **Header:** Hotel Villa Mexicana. Zihuatanejo, Guerrero. Ubicado frente al mar en Playa La Ropa, Zihuatanejo, a solo 15 minutos del centro. Estancia para la celebración de Carla & Said.
-- **Tarifas:** Tarifas por noche. 17 al 25 de diciembre de 2026. Habitación Sencilla / Doble. Habitación Triple. Habitación Cuádruple. Vista al mar disponible: +$500 MXN por noche (sujeto a disponibilidad). Plan: Solo hospedaje.
-- **Servicios Opcionales:** Desayuno Americano. Precio por persona, al día. Bebidas & Snacks Ilimitados. Por persona, por noche.
-- **Importante:** Resumen importante. Estancia mínima: 3 noches. Anticipo: 2 noches. Cancelación: 30 días antes. Tarifas sujetas a disponibilidad. Mayores de 11 años pagan como adulto. Nota sobre los transportes: Debido a regulaciones locales, los autobuses no pueden acceder directamente a Playa La Ropa. Se recomienda considerar taxi o transporte adicional para el último tramo.
-- **Cómo Reservar:** Clave del evento: Boda Carla & Said. 1. Contactar directamente al hotel. 2. Mencionar la clave del evento: "Boda Carla & Said". 3. Reservar lo antes posible debido a disponibilidad limitada.
-- **Contacto:** Contacto Reservaciones. Teléfono (55) 9000 1300. Email reservaciones1@villamexicana.mx.
-
-### PÁGINA: RECOMENDACIONES (COMÚN)
-- **Header:** Zihuatanejo. Guerrero. México. Volver.
-- **Zihuatanejo:** Explora la magia de la costa.
-- **Guerrero:** Tradición y belleza natural.
-- **México:** Cultura sin fronteras.
-- **Grid:** Información en proceso. Estamos sincronizando las mejores experiencias para ti. Actualizar datos. (Dinámico desde Amadeus: Nombre de la actividad, descripción corta, precio, moneda, rating, Reservar).
+- **Footer:** “Cada detalle, un SUCESSO.” SUCESSO Group. Querétaro, México. Experiencias de impacto global. Contacto Directo. paola@sucessogroup.com. (442) 377 5646. Legal. Aviso de Privacidad. Términos de Servicio. © 2025 SUCESSO GROUP. TODOS LOS DERECHOS RESERVADOS.

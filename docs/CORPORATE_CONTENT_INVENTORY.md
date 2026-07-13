@@ -41,7 +41,7 @@
 
 
 ### Sección 2: Nosotros (About)
-* **Título:** Eventos impecables, cero estrés para ti.
+* **Título:** Eventos impecables, tus ideas, nuestro toque... nosotros lo hacemos realidad.
 * **Subtítulo:** Nuestra Filosofía
 * **Párrafos:**
    * “En SUCESSO creemos que un gran evento no solo debe ejecutarse bien, debe sentirse.”
@@ -175,15 +175,15 @@ Experiencias de Impacto Global. Firma de diseño estratégico que eleva tu marca
 
 
 ### SECCIÓN: NOSOTROS
-Nuestra Filosofía. Eventos impecables, cero estrés para ti. “En SUCESSO creemos que un gran evento no solo debe ejecutarse bien, debe sentirse.” Creamos experiencias donde cada persona se siente esperada, bienvenida y parte de algo especial. Diseñamos encuentros que generan conexión, significado y recuerdos que permanecen. Precisión. Cada detalle es pensado estratégicamente y ejecutado con sensibilidad estética para lograr un resultado impecable. Tranquilidad. Te acompañamos en todo momento con claridad y control, para que vivas el proceso con confianza y sin fricción.
+Nuestra Filosofía. Eventos impecables, tus ideas, nuestro toque... nosotros lo hacemos realidad. “En SUCESSO creemos que un gran evento no solo debe ejecutarse bien, debe sentirse.” Creamos experiencias donde cada persona se siente esperada, bienvenida y parte de algo especial. Diseñamos encuentros que generan conexión, significado y recuerdos que permanecen. Precisión. Cada detalle es pensado estratégicamente y ejecutado con sensibilidad estética para lograr un resultado impecable. Tranquilidad. Te acompañamos en todo momento con claridad y control, para que vivas el proceso con confianza y sin fricción.
 
 
 ### SECCIÓN: SERVICIOS
-Soluciones a Medida. Diseñamos el futuro de tu marca. No organizamos logística; creamos plataformas de comunicación en vivo que generan resultados de negocio reales. Congresos y Convenciones. Cultura & Identidad. Eventos Protocolarios. Crecimiento & Lealtad. Offsites & Leadership Retreats. Claridad & Visión. Lanzamientos de Marca. Impacto & Mercado. Hablemos de este proyecto. Ver todas nuestras soluciones.
+Soluciones a Medida. Cada detalle un sucesso. Diseñamos el futuro de tu marca. No organizamos logística; creamos plataformas de comunicación en vivo que generan resultados de negocio reales. Congresos y Convenciones. Cultura & Identidad. Eventos Protocolarios. Crecimiento & Lealtad. Offsites & Leadership Retreats. Claridad & Vision. Lanzamientos de Marca. Impacto & Mercado. Tu sueña nosotros lo hacemos real. Experiencia ilimitadas. Hablemos de este proyecto. Agenda una llamada.
 
 
 ### SECCIÓN: PROCESO
-Nuestro Método. Orden que genera confianza. Paso 01. Brief Estratégico. Construimos una base sólida alineada a los objetivos de negocio y la identidad de tu marca. Paso 02. Diseño Sensorial. Traducimos la estrategia en una propuesta estética y emocional de alto impacto. Paso 03. Ingeniería Logística. Ejecutamos con precisión absoluta, eliminando fricciones y asegurando la excelencia operativa. Paso 04. Impacto & Valor. Medimos el retorno y el impacto emocional para asegurar que cada evento sea un suceso memorable.
+Nuestro Método. Orden que genera confianza. Paso 01. Brief Estratégico. Construimos una base sólida alineada a los objetivos de negocio y la identidad de tu marca. Paso 02. Diseño Sensorial. Traducimos la estrategia en una propuesta clara, real y acorde al presupuesto. Paso 03. Ingeniería Logística. Ejecutamos con precisión absoluta, eliminando fricciones y asegurando la eficiencia operativa. Paso 04. Impacto & Valor. Medimos el retorno y el impacto emocional para asegurar que cada evento sea un suceso memorable.
 
 
 ### SECCIÓN: DIFERENCIADORES
