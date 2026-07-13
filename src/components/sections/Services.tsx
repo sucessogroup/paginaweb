@@ -1,3 +1,4 @@
+
 "use client"
 
 import React from 'react'
@@ -10,9 +11,9 @@ import { cn } from '@/lib/utils'
 
 const services = [
   {
-    title: "Congresos y Convenciones",
-    benefit: "Cultura & Identidad",
-    description: "Diseñamos encuentros que fortalecen el sentido de pertenencia y alinean a tu equipo con los valores de la organización.",
+    title: "Congresos",
+    benefit: "Networking & Autoridad",
+    description: "Diseñamos foros de alto nivel para el intercambio de conocimiento y posicionamiento estratégico ante audiencias especializadas.",
     img: "/foto3.webp",
   },
   {
@@ -28,9 +29,9 @@ const services = [
     img: "/foto2.webp",
   },
   {
-    title: "Lanzamientos de Marca",
-    benefit: "Impacto & Mercado",
-    description: "Producciones de clase mundial para presentar productos y servicios con una narrativa impecable.",
+    title: "Convenciones",
+    benefit: "Cultura & Alineación",
+    description: "Creamos encuentros masivos que fortalecen el sentido de pertenencia y alinean a los equipos con los objetivos de la organización.",
     img: "/foto5.webp", 
   },
   {
