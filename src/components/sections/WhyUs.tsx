@@ -1,27 +1,21 @@
-
 import React from 'react'
-import { Sparkles, Target, Settings, Zap } from 'lucide-react'
 
 const differentiators = [
   {
     title: "Personalización Extrema",
-    desc: "Cada detalle es un reflejo fiel de tu ADN corporativo. No usamos plantillas, diseñamos SUCESSOS.",
-    icon: Sparkles
+    desc: "Cada detalle es un reflejo fiel de tu ADN corporativo. No usamos plantillas, diseñamos SUCESSOS."
   },
   {
     title: "Impacto Estratégico",
-    desc: "Alineamos cada momento del evento con tus objetivos de KPI, ROI y comunicación de marca.",
-    icon: Target
+    desc: "Alineamos cada momento del evento con tus objetivos de KPI, ROI y comunicación de marca."
   },
   {
     title: "Atención al Detalle",
-    desc: "Nuestra obsesión es la perfección. Desde la acústica hasta la temperatura, nada queda al azar.",
-    icon: Settings
+    desc: "Nuestra obsesión es la perfección. Desde la acústica hasta la temperatura, nada queda al azar."
   },
   {
     title: "Ejecución Impecable",
-    desc: "Logística invisible que permite que tu única preocupación sea disfrutar del éxito con tus invitados.",
-    icon: Zap
+    desc: "Logística invisible que permite que tu única preocupación sea disfrutar del éxito con tus invitados."
   }
 ]
 
@@ -54,10 +48,7 @@ export const WhyUs = () => {
           <div className="grid gap-8">
             {differentiators.map((d, i) => (
               <div key={i} className="group bg-white/[0.01] p-10 rounded-[2.5rem] border border-white/5 hover:border-brand-gold/30 hover:bg-white/[0.03] transition-all duration-700">
-                <div className="w-14 h-14 rounded-2xl bg-brand-gold/5 flex items-center justify-center text-brand-gold mb-8 group-hover:scale-110 transition-transform">
-                  <d.icon size={28} />
-                </div>
-                <h4 className="text-2xl font-headline font-bold mb-4 text-foreground">{d.title}</h4>
+                <h4 className="text-2xl font-headline font-bold mb-4 text-foreground group-hover:text-brand-gold transition-colors">{d.title}</h4>
                 <p className="text-foreground/50 font-light text-lg leading-relaxed italic">{d.desc}</p>
               </div>
             ))}
@@ -67,7 +58,6 @@ export const WhyUs = () => {
         <div className="mt-40 max-w-5xl mx-auto text-center border-t border-white/5 pt-24 space-y-16">
           <p className="text-[10px] uppercase tracking-[0.5em] text-brand-gold font-bold">Confianza de Líderes</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 opacity-30 grayscale transition-all hover:grayscale-0">
-             {/* Placeholders para logos de clientes */}
              <div className="h-12 flex items-center justify-center font-bold text-2xl">BRAND A</div>
              <div className="h-12 flex items-center justify-center font-bold text-2xl">BRAND B</div>
              <div className="h-12 flex items-center justify-center font-bold text-2xl">BRAND C</div>
