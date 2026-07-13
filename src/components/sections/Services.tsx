@@ -35,7 +35,7 @@ const services = [
     img: "/foto5.webp", 
   },
   {
-    title: "Tu sueña nosotros lo hacemos real",
+    title: "Tu sueña nosotros lo hacemos realidad",
     benefit: "Experiencia ilimitadas",
     description: "Juntos hacemos realidad el sucesso que sueñas y lo hacemos memorable.",
     img: "https://picsum.photos/seed/custom-exp/1200/800",
