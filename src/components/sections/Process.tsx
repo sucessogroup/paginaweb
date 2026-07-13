@@ -22,7 +22,7 @@ const steps = [
   {
     number: "04",
     title: "Impacto & Valor",
-    desc: "Medimos el retorno y el impacto emocional para asegurar que cada evento sea un sucesso memorable.",
+    desc: "Medimos el retorno y el impacto emocional para asegurar que cada evento sea un SUCESSO memorable.",
   }
 ]
 
