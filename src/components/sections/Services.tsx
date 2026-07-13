@@ -30,16 +30,21 @@ const services = [
   },
   {
     title: "Convenciones",
-    benefit: "Cultura & Alineación",
+    benefit: "Cultura & Identidad",
     description: "Creamos encuentros masivos que fortalecen el sentido de pertenencia y alinean a los equipos con los objetivos de la organización.",
     img: "/foto5.webp", 
   },
   {
+    title: "Experiencias",
+    benefit: "Emoción & Conexión",
+    description: "Creamos activaciones y momentos únicos que transforman la percepción de marca a través de los sentidos.",
+    img: "https://picsum.photos/seed/exp-mem/800/1000",
+  },
+  {
     title: "Tu sueña nosotros lo hacemos realidad",
-    benefit: "Experiencia ilimitadas",
+    benefit: "Experiencias ilimitadas",
     description: "Juntos hacemos realidad tu sueño convirtiéndolo en un SUCESSO",
-    img: "https://picsum.photos/seed/custom-exp/1200/800",
-    featured: true
+    img: "https://picsum.photos/seed/custom-exp/800/1000",
   }
 ]
 
@@ -50,24 +55,21 @@ export const Services = () => {
         <div className="text-center mb-32 space-y-6">
           <h2 className="text-[10px] uppercase tracking-[0.5em] text-brand-gold font-bold">Soluciones a Medida</h2>
           <h3 className="text-4xl md:text-6xl font-headline font-bold text-foreground">
-            Cada detalle <span className="italic font-light text-brand-gold opacity-90">un sucesso.</span>
+            Cada detalle <span className="italic font-light text-brand-gold opacity-90">un suceso.</span>
           </h3>
           <p className="text-foreground/60 max-w-2xl mx-auto text-lg font-light leading-relaxed italic">
             No organizamos logística; creamos plataformas de comunicación en vivo que generan resultados de negocio reales.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-24 lg:gap-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {services.map((service, idx) => {
             const imgData = PlaceHolderImages.find(p => p.id === service.img)
             const imgSrc = service.img.startsWith('/') ? service.img : (imgData?.imageUrl || service.img)
             
             return (
-              <div key={idx} className={cn("group flex flex-col space-y-10", service.featured && "md:col-span-2")}>
-                <div className={cn(
-                  "relative w-full rounded-[2.5rem] overflow-hidden bg-muted border border-white/5 shadow-2xl transition-all duration-700",
-                  service.featured ? "aspect-[21/9]" : "aspect-[16/9]"
-                )}>
+              <div key={idx} className="group flex flex-col space-y-8">
+                <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden bg-muted border border-white/5 shadow-2xl transition-all duration-700">
                   <Image 
                     src={imgSrc} 
                     alt={service.title}
@@ -76,27 +78,21 @@ export const Services = () => {
                     data-ai-hint="premium corporate experience"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-                  <div className="absolute bottom-8 left-8">
-                    <span className="bg-brand-gold/10 backdrop-blur-md border border-brand-gold/20 text-brand-gold text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full">
+                  <div className="absolute bottom-6 left-6">
+                    <span className="bg-brand-gold/10 backdrop-blur-md border border-brand-gold/20 text-brand-gold text-[9px] font-bold uppercase tracking-widest px-4 py-2 rounded-full">
                       {service.benefit}
                     </span>
                   </div>
                 </div>
-                <div className="space-y-6 px-4">
-                  <h4 className={cn(
-                    "font-headline font-bold text-foreground group-hover:text-brand-gold transition-colors",
-                    service.featured ? "text-3xl lg:text-5xl" : "text-2xl lg:text-3xl"
-                  )}>
+                <div className="space-y-4 px-2">
+                  <h4 className="text-2xl font-headline font-bold text-foreground group-hover:text-brand-gold transition-colors">
                     {service.title}
                   </h4>
-                  <p className={cn(
-                    "text-foreground/50 font-light leading-relaxed italic",
-                    service.featured ? "text-xl lg:text-2xl" : "text-base lg:text-lg"
-                  )}>
+                  <p className="text-foreground/50 font-light leading-relaxed italic text-base">
                     {service.description}
                   </p>
-                  <Button variant="link" className="text-brand-gold p-0 h-auto uppercase tracking-widest text-[10px] gap-2 font-bold hover:no-underline opacity-60 group-hover:opacity-100 transition-opacity">
-                    Hablemos de este proyecto <ArrowRight size={14} />
+                  <Button variant="link" className="text-brand-gold p-0 h-auto uppercase tracking-widest text-[9px] gap-2 font-bold hover:no-underline opacity-60 group-hover:opacity-100 transition-opacity">
+                    Hablemos de este proyecto <ArrowRight size={12} />
                   </Button>
                 </div>
               </div>

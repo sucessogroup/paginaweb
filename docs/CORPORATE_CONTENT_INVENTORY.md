@@ -1,5 +1,4 @@
 
-
 # INVENTARIO COMPLETO DE CONTENIDO - SUCESSO GROUP (PLATAFORMA CORPORATIVA)
 
 
@@ -19,6 +18,7 @@
    * "Eventos Protocolarios"
    * "Offsites & Leadership Retreats"
    * "Convenciones"
+   * "Experiencias"
    * "Gallery image" (varias instancias)
 
 
@@ -57,7 +57,7 @@
 
 
 ### Estructura General
-* **Título:** Cada detalle un sucesso.
+* **Título:** Cada detalle un suceso.
 * **Subtítulo:** Soluciones a Medida
 * **Descripción:** No organizamos logística; creamos plataformas de comunicación en vivo que generan resultados de negocio reales.
 
@@ -75,8 +75,11 @@
 4. **Convenciones**
    * **Beneficio:** Cultura & Identidad
    * **Descripción:** Creamos encuentros masivos que fortalecen el sentido de pertenencia y alinean a los equipos con los objetivos de la organización.
-5. **Tu sueña nosotros lo hacemos realidad**
-   * **Beneficio:** Experiencia ilimitadas
+5. **Experiencias**
+   * **Beneficio:** Emoción & Conexión
+   * **Descripción:** Creamos activaciones y momentos únicos que transforman la percepción de marca a través de los sentidos.
+6. **Tu sueña nosotros lo hacemos realidad**
+   * **Beneficio:** Experiencias ilimitadas
    * **Descripción:** Juntos hacemos realidad tu sueño convirtiéndolo en un SUCESSO
 
 
@@ -98,7 +101,7 @@
 3. **Paso 03: Ingeniería Logística**
    * **Descripción:** Ejecutamos con precisión, simplificamos procesos y aseguramos la eficiencia operativa.
 4. **Paso 04: Impacto & Valor**
-   * **Descripción:** Medimos el retorno y el impacto emocional para asegurar que cada evento sea un sucesso memorable.
+   * **Descripción:** Medimos el retorno y el impacto emocional para asegurar que cada evento sea un suceso memorable.
 
 
 ## 6. DIFERENCIADORES (Why Us)
@@ -126,7 +129,7 @@
 
 
 * **Nombre:** Formulario de Contacto
-* **Título:** Haz que tu próximo evento sea un sucesso.
+* **Título:** Haz que tu próximo evento sea un suceso.
 * **Subtítulo:** Contacto
 * **Texto de apoyo:** Estamos listos para transformar tu visión en una experiencia corporativa de clase mundial.
 * **Labels:**
@@ -181,7 +184,7 @@ Nuestra Filosofía. Eventos impecables, tus ideas, nuestro toque... nosotros lo 
 
 
 ### SECCIÓN: SERVICIOS
-Soluciones a Medida. Cada detalle un suceso. Diseñamos el futuro de tu marca. No organizamos logística; creamos plataformas de comunicación en vivo que generan resultados de negocio reales. Congresos. Networking & Autoridad. Eventos Protocolarios. Crecimiento & Lealtad. Offsites & Leadership Retreats. Claridad & Visión. Convenciones. Cultura & Alineación. Tu sueña nosotros lo hacemos realidad. Experiencia ilimitadas. Juntos hacemos realidad tu sueño convirtiéndolo en un SUCESSO. Hablemos de este proyecto. Agenda una llamada.
+Soluciones a Medida. Cada detalle un suceso. Diseñamos el futuro de tu marca. No organizamos logística; creamos plataformas de comunicación en vivo que generan resultados de negocio reales. Congresos. Networking & Autoridad. Eventos Protocolarios. Crecimiento & Lealtad. Offsites & Leadership Retreats. Claridad & Visión. Convenciones. Cultura & Alineación. Experiencias. Emoción & Conexión. Tu sueña nosotros lo hacemos realidad. Experiencia ilimitadas. Juntos hacemos realidad tu sueño convirtiéndolo en un SUCESSO. Hablemos de este proyecto. Agenda una llamada.
 
 
 ### SECCIÓN: PROCESO
