@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const differentiators = [
   {
@@ -17,6 +18,14 @@ const differentiators = [
     title: "Ejecución Impecable",
     desc: "Logística invisible que permite que tu única preocupación sea disfrutar del éxito con tus invitados."
   }
+]
+
+const brandLogos = [
+  { id: 1, src: '/MARCAS/1.png', alt: 'Marca Aliada 1' },
+  { id: 2, src: '/MARCAS/2.png', alt: 'Marca Aliada 2' },
+  { id: 3, src: '/MARCAS/3.png', alt: 'Marca Aliada 3' },
+  { id: 4, src: '/MARCAS/4.png', alt: 'Marca Aliada 4' },
+  { id: 5, src: '/MARCAS/5.png', alt: 'Marca Aliada 5' },
 ]
 
 export const WhyUs = () => {
@@ -55,13 +64,20 @@ export const WhyUs = () => {
           </div>
         </div>
 
-        <div className="mt-40 max-w-5xl mx-auto text-center border-t border-white/5 pt-24 space-y-16">
+        <div className="mt-40 max-w-6xl mx-auto text-center border-t border-white/5 pt-24 space-y-16">
           <p className="text-[10px] uppercase tracking-[0.5em] text-brand-gold font-bold">Confianza de Líderes</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 opacity-30 grayscale transition-all hover:grayscale-0">
-             <div className="h-12 flex items-center justify-center font-bold text-2xl">BRAND A</div>
-             <div className="h-12 flex items-center justify-center font-bold text-2xl">BRAND B</div>
-             <div className="h-12 flex items-center justify-center font-bold text-2xl">BRAND C</div>
-             <div className="h-12 flex items-center justify-center font-bold text-2xl">BRAND D</div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-12 items-center opacity-40 grayscale transition-all duration-700 hover:grayscale-0 hover:opacity-100">
+             {brandLogos.map((logo) => (
+               <div key={logo.id} className="relative h-12 md:h-16 w-full flex items-center justify-center p-2">
+                 <Image 
+                   src={logo.src} 
+                   alt={logo.alt} 
+                   fill 
+                   className="object-contain"
+                   sizes="(max-width: 768px) 100px, 150px"
+                 />
+               </div>
+             ))}
           </div>
           
           <blockquote className="space-y-10 pt-16">
