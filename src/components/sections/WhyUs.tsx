@@ -1,5 +1,9 @@
+
+"use client"
+
 import React from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const differentiators = [
   {
@@ -66,9 +70,16 @@ export const WhyUs = () => {
 
         <div className="mt-40 max-w-6xl mx-auto text-center border-t border-white/5 pt-24 space-y-16">
           <p className="text-[10px] uppercase tracking-[0.5em] text-brand-gold font-bold">Confianza de Líderes</p>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-12 items-center opacity-40 grayscale transition-all duration-700 hover:grayscale-0 hover:opacity-100">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-12 items-center">
              {brandLogos.map((logo) => (
-               <div key={logo.id} className="relative h-12 md:h-16 w-full flex items-center justify-center p-2">
+               <motion.div 
+                 key={logo.id} 
+                 initial={{ filter: "grayscale(100%)", opacity: 0.3 }}
+                 whileInView={{ filter: "grayscale(0%)", opacity: 1 }}
+                 transition={{ duration: 1.8, ease: "easeOut", delay: logo.id * 0.1 }}
+                 viewport={{ once: true, margin: "-100px" }}
+                 className="relative h-12 md:h-16 w-full flex items-center justify-center p-2"
+               >
                  <Image 
                    src={logo.src} 
                    alt={logo.alt} 
@@ -76,7 +87,7 @@ export const WhyUs = () => {
                    className="object-contain"
                    sizes="(max-width: 768px) 100px, 150px"
                  />
-               </div>
+               </motion.div>
              ))}
           </div>
           
