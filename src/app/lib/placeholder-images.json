@@ -56,34 +56,40 @@
       "imageHint": "luxury catering detail"
     },
     {
-      "id": "wedding-hero",
-      "description": "Boda Carla & Said",
-      "imageUrl": "/foto1.png",
-      "imageHint": "wedding couple beach"
+      "id": "gallery-1",
+      "description": "Experiencia Premium SUCESSO",
+      "imageUrl": "https://picsum.photos/seed/gal1/800/1000",
+      "imageHint": "luxury event"
     },
     {
-      "id": "wedding-bg-quote",
-      "description": "RSVP Background",
-      "imageUrl": "/foto2.png",
-      "imageHint": "elegant beach texture"
+      "id": "gallery-2",
+      "description": "Detalle Estratégico",
+      "imageUrl": "https://picsum.photos/seed/gal2/800/1000",
+      "imageHint": "corporate meeting"
     },
     {
-      "id": "wedding-bg-itinerary",
-      "description": "Itinerary Detail",
-      "imageUrl": "/foto3.png",
-      "imageHint": "wedding decoration detail"
+      "id": "gallery-3",
+      "description": "Producción de Alto Impacto",
+      "imageUrl": "https://picsum.photos/seed/gal3/800/1000",
+      "imageHint": "stage design"
     },
     {
-      "id": "hotel-villa-mexicana",
-      "description": "Villa Mexicana",
-      "imageUrl": "/foto4.png",
-      "imageHint": "hotel architecture"
+      "id": "gallery-4",
+      "description": "Momentos SUCESSO",
+      "imageUrl": "https://picsum.photos/seed/gal4/800/1000",
+      "imageHint": "happy guests"
     },
     {
-      "id": "wedding-footer",
-      "description": "Wedding Sunset",
-      "imageUrl": "/foto5.jpg",
-      "imageHint": "sunset beach wedding"
+      "id": "gallery-5",
+      "description": "Excelencia Logística",
+      "imageUrl": "https://picsum.photos/seed/gal5/800/1000",
+      "imageHint": "event setup"
+    },
+    {
+      "id": "gallery-6",
+      "description": "Atmósferas Únicas",
+      "imageUrl": "https://picsum.photos/seed/gal6/800/1000",
+      "imageHint": "mood lighting"
     }
   ]
 }
