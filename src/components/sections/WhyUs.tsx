@@ -70,7 +70,7 @@ export const WhyUs = () => {
 
         <div className="mt-40 max-w-6xl mx-auto text-center border-t border-white/5 pt-24 space-y-16">
           <p className="text-[10px] uppercase tracking-[0.5em] text-brand-gold font-bold">Confianza de Líderes</p>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-12 items-center">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-16 items-center">
              {brandLogos.map((logo) => (
                <motion.div 
                  key={logo.id} 
@@ -78,14 +78,14 @@ export const WhyUs = () => {
                  whileInView={{ filter: "grayscale(0%)", opacity: 1 }}
                  transition={{ duration: 1.8, ease: "easeOut", delay: logo.id * 0.1 }}
                  viewport={{ once: true, margin: "-100px" }}
-                 className="relative h-12 md:h-16 w-full flex items-center justify-center p-2"
+                 className="relative h-24 md:h-32 w-full flex items-center justify-center p-2"
                >
                  <Image 
                    src={logo.src} 
                    alt={logo.alt} 
                    fill 
                    className="object-contain"
-                   sizes="(max-width: 768px) 100px, 150px"
+                   sizes="(max-width: 768px) 200px, 300px"
                  />
                </motion.div>
              ))}
