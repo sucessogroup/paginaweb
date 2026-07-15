@@ -1,5 +1,3 @@
-
-
 # INVENTARIO COMPLETO DE CONTENIDO - SUCESSO GROUP (PLATAFORMA CORPORATIVA)
 
 
@@ -151,7 +149,6 @@
 
 * **Frase:** “Cada detalle, un SUCESSO.”
 * **Columna 1: SUCESSO Group**
-   * Querétaro, México
    * Experiencias de impacto global
 * **Columna 2: Contacto Directo**
    * paola@sucessogroup.com
@@ -199,4 +196,4 @@ Cierre de Impacto. Haz que tu próximo evento sea un SUCESSO. Estamos listos par
 
 
 ### SECCIÓN: FOOTER
-“Cada detalle, un SUCESSO.” SUCESSO Group. Querétaro, México. Experiencias de impacto global. Contacto Directo. paola@sucessogroup.com. (442) 377 5646. Legal. Aviso de Privacidad. Términos de Servicio. © 2025 SUCESSO GROUP. TODOS LOS DERECHOS RESERVADOS.
+“Cada detalle, un SUCESSO.” SUCESSO Group. Experiencias de impacto global. Contacto Directo. paola@sucessogroup.com. (442) 377 5646. Legal. Aviso de Privacidad. Términos de Servicio. © 2025 SUCESSO GROUP. TODOS LOS DERECHOS RESERVADOS.

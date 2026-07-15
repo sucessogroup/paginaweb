@@ -37,7 +37,6 @@ export const Footer = () => {
           <div className="grid md:grid-cols-3 gap-16 w-full text-base font-light opacity-60 mb-20 text-center md:text-left">
             <div className="flex flex-col items-center md:items-start">
               <h5 className="font-bold text-white mb-6 uppercase tracking-widest text-sm">SUCESSO Group</h5>
-              <p>Querétaro, México</p>
               <p>Experiencias de impacto global</p>
             </div>
             <div className="flex flex-col items-center md:items-start">
