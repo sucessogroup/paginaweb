@@ -92,12 +92,12 @@ export const WhyUs = () => {
           </div>
           
           <blockquote className="space-y-10 pt-16">
-            <p className="text-2xl md:text-4xl font-light italic leading-relaxed text-foreground/70">
-              "Elevaron nuestro congreso anual a una categoría superior. SUCESSO dota de alma a la identidad de nuestra organización."
+            <p className="text-xl md:text-3xl font-light italic leading-relaxed text-foreground/70 max-w-4xl mx-auto">
+              "Durante el viaje visitamos Madrid, Baeza y Toledo, y en todo momento la coordinación de hospedaje, traslados y experiencias se llevó a cabo de manera impecable, sin contratiempos y superando nuestras expectativas. Su profesionalismo, atención al detalle y capacidad de respuesta fueron clave para el éxito de este evento."
             </p>
             <footer className="space-y-4">
               <div className="w-12 h-[1px] bg-brand-gold/30 mx-auto" />
-              <cite className="block font-bold text-brand-gold not-italic text-sm tracking-[0.3em] uppercase opacity-80">— Dirección de Relaciones Institucionales</cite>
+              <cite className="block font-bold text-brand-gold not-italic text-sm tracking-[0.3em] uppercase opacity-80">— Jesús Jiménez de Momento Seguros</cite>
             </footer>
           </blockquote>
         </div>
