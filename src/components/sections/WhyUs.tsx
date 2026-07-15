@@ -97,7 +97,10 @@ export const WhyUs = () => {
             </p>
             <footer className="space-y-4">
               <div className="w-12 h-[1px] bg-brand-gold/30 mx-auto" />
-              <cite className="block font-bold text-brand-gold not-italic text-sm tracking-[0.3em] uppercase opacity-80">— Jesús Jiménez de Momento Seguros</cite>
+              <div className="space-y-1">
+                <cite className="block font-bold text-brand-gold not-italic text-sm tracking-[0.3em] uppercase opacity-80">— Jesús Jiménez</cite>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-foreground/40 font-bold">Director de Nuevos Mercados, Momento Seguros</p>
+              </div>
             </footer>
           </blockquote>
         </div>

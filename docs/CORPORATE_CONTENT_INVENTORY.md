@@ -78,7 +78,7 @@
 5. **Experiencias**
    * **Beneficio:** Emoción & Conexión
    * **Descripción:** Tu escoges la experiencia y nosotros la adaptamos a ti.
-6. **Tu sueña nosotros lo hacemos realidad**
+6. **Juntos hacemos realidad tu sueño convirtiéndolo en un SUCESSO**
    * **Beneficio:** Experiencias ilimitadas
    * **Descripción:** Juntos hacemos realidad tu sueño convirtiéndolo en un SUCESSO.
 
@@ -121,7 +121,7 @@
 ### Testimonios / Evidencia
 * **Texto:** "Durante el viaje visitamos Madrid, Baeza y Toledo, y en todo momento la coordinación de hospedaje, traslados y experiencias se llevó a cabo de manera impecable..."
 * **Autor:** Jesús Jiménez
-* **Empresa:** Momento Seguros
+* **Cargo:** Director de Nuevos Mercados, Momento Seguros
 
 
 ## 7. FORMULARIOS (Contacto)
@@ -183,7 +183,7 @@ Nuestra Filosofía. Eventos impecables, tus ideas, nuestro toque... nosotros lo 
 
 
 ### SECCIÓN: SERVICIOS
-Soluciones a Medida. Cada detalle un SUCESSO. Diseñamos el futuro de tu marca. No organizamos logística; creamos plataformas de comunicación en vivo que generan resultados de negocio reales. Congresos. Networking & Autoridad. Eventos Protocolarios. Crecimiento & Lealtad. Offsites & Leadership Retreats. Claridad & Vision. Convenciones. Cultura & Alineación. Experiencias. Tu escoges la experiencia y nosotros la adaptamos a ti. Tu sueña nosotros lo hacemos realidad. Experiencia ilimitadas. Juntos hacemos realidad tu sueño convirtiéndolo en un SUCESSO. Hablemos de este proyecto. Agenda una llamada.
+Soluciones a Medida. Cada detalle un SUCESSO. Diseñamos el futuro de tu marca. No organizamos logística; creamos plataformas de comunicación en vivo que generan resultados de negocio reales. Congresos. Networking & Autoridad. Eventos Protocolarios. Crecimiento & Lealtad. Offsites & Leadership Retreats. Claridad & Vision. Convenciones. Cultura & Alineación. Experiencias. Tu escoges la experiencia y nosotros la adaptamos a ti. Juntos hacemos realidad tu sueño convirtiéndolo en un SUCESSO. Experiencia ilimitadas. Juntos hacemos realidad tu sueño convirtiéndolo en un SUCESSO. Hablemos de este proyecto. Agenda una llamada.
 
 
 ### SECCIÓN: PROCESO
@@ -191,7 +191,7 @@ Nuestro Método. Orden que genera confianza. Paso 01. Brief Estratégico. Constr
 
 
 ### SECCIÓN: DIFERENCIADORES
-¿Qué hace único a un SUCESSO? Detalles que no cuestan más, pero lo valen todo. “En SUCESSO no solo organizamos eventos, diseñamos experiencias empresariales estratégicas que generan conexiones reales y resultados tangibles.” Personalización Extrema. Cada detalle es un reflejo fiel de tu ADN corporativo. No usamos plantillas, diseñamos SUCESSOS. Impacto Estratégico. Alineamos cada momento del evento con tus objetivos de KPI, ROI y comunicación de marca. Atención al Detalle. Nuestra obsesión es la perfección. Desde la acústica hasta la temperatura, nada queda al azar. Ejecución Impecable. Logística invisible que permite que tu única preocupación sea disfrutar del éxito con tus invitados. Sello de Calidad SUCESSO. Garantía de Excelencia Corporativa. Confianza de Líderes. "Durante el viaje visitamos Madrid, Baeza y Toledo..." — Jesús Jiménez de Momento Seguros.
+¿Qué hace único a un SUCESSO? Detalles que no cuestan más, pero lo valen todo. “En SUCESSO no solo organizamos eventos, diseñamos experiencias empresariales estratégicas que generan conexiones reales y resultados tangibles.” Personalización Extrema. Cada detalle es un reflejo fiel de tu ADN corporativo. No usamos plantillas, diseñamos SUCESSOS. Impacto Estratégico. Alineamos cada momento del evento con tus objetivos de KPI, ROI y comunicación de marca. Atención al Detalle. Nuestra obsesión es la perfección. Desde la acústica hasta la temperatura, nada queda al azar. Ejecución Impecable. Logística invisible que permite que tu única preocupación sea disfrutar del éxito con tus invitados. Sello de Calidad SUCESSO. Garantía de Excelencia Corporativa. Confianza de Líderes. "Durante el viaje visitamos Madrid, Baeza y Toledo..." — Jesús Jiménez, Director de Nuevos Mercados, Momento Seguros.
 
 
 ### SECCIÓN: CONTACTO
