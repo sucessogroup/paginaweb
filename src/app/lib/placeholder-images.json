@@ -58,37 +58,37 @@
     {
       "id": "gallery-1",
       "description": "Experiencia Premium SUCESSO",
-      "imageUrl": "https://picsum.photos/seed/gal1/800/1000",
+      "imageUrl": "/GALERIA/1.png",
       "imageHint": "luxury event"
     },
     {
       "id": "gallery-2",
       "description": "Detalle Estratégico",
-      "imageUrl": "https://picsum.photos/seed/gal2/800/1000",
+      "imageUrl": "/GALERIA/2.png",
       "imageHint": "corporate meeting"
     },
     {
       "id": "gallery-3",
       "description": "Producción de Alto Impacto",
-      "imageUrl": "https://picsum.photos/seed/gal3/800/1000",
+      "imageUrl": "/GALERIA/3.png",
       "imageHint": "stage design"
     },
     {
       "id": "gallery-4",
       "description": "Momentos SUCESSO",
-      "imageUrl": "https://picsum.photos/seed/gal4/800/1000",
+      "imageUrl": "/GALERIA/4.png",
       "imageHint": "happy guests"
     },
     {
       "id": "gallery-5",
       "description": "Excelencia Logística",
-      "imageUrl": "https://picsum.photos/seed/gal5/800/1000",
+      "imageUrl": "/GALERIA/5.png",
       "imageHint": "event setup"
     },
     {
       "id": "gallery-6",
       "description": "Atmósferas Únicas",
-      "imageUrl": "https://picsum.photos/seed/gal6/800/1000",
+      "imageUrl": "/GALERIA/6.png",
       "imageHint": "mood lighting"
     }
   ]
