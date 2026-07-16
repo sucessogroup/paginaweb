@@ -91,28 +91,30 @@ const StepScene = ({ step, index, total, progress }: { step: any, index: number,
   const start = index / total
   const end = (index + 1) / total
   
+  // Transiciones mucho más agresivas (0.02 vs 0.08 anterior) para reducir el tiempo de fade
   const opacity = useTransform(
     progress,
-    [start, start + 0.08, end - 0.08, end],
+    [start, start + 0.02, end - 0.02, end],
     [index === 0 ? 1 : 0, 1, 1, 0]
   )
   
   const scale = useTransform(
     progress,
-    [start, (start + end) / 2, end],
-    [index === 0 ? 1 : 0.98, 1, 0.98]
+    [start, start + 0.02, end - 0.02, end],
+    [index === 0 ? 1 : 0.95, 1, 1, 0.95]
   )
   
   const y = useTransform(
     progress,
-    [start, (start + end) / 2, end],
-    [index === 0 ? 0 : 40, 0, -40]
+    [start, start + 0.02, end - 0.02, end],
+    [index === 0 ? 0 : 20, 0, 0, -20]
   )
 
+  // Blur reducido y con ventana de enfoque mucho más amplia
   const blur = useTransform(
     progress,
-    [start, start + 0.1, end - 0.1, end],
-    [index === 0 ? "blur(0px)" : "blur(10px)", "blur(0px)", "blur(0px)", "blur(10px)"]
+    [start, start + 0.03, end - 0.03, end],
+    [index === 0 ? "blur(0px)" : "blur(4px)", "blur(0px)", "blur(0px)", "blur(4px)"]
   )
 
   return (
