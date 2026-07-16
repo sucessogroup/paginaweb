@@ -1,3 +1,4 @@
+
 "use client"
 
 import React from 'react'
@@ -46,8 +47,8 @@ export const Footer = () => {
             </div>
             <div className="flex flex-col items-center md:items-start">
               <h5 className="font-bold text-white mb-6 uppercase tracking-widest text-sm">Legal</h5>
-              <Link href="#" className="hover:text-brand-canary block mb-2 transition-colors">Aviso de Privacidad</Link>
-              <Link href="#" className="hover:text-brand-canary block transition-colors">Términos de Servicio</Link>
+              <Link href="/aviso-de-privacidad" className="hover:text-brand-canary block mb-2 transition-colors">Aviso de Privacidad</Link>
+              <Link href="/terminos-de-servicio" className="hover:text-brand-canary block transition-colors">Términos de Servicio</Link>
             </div>
           </div>
           
