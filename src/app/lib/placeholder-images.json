@@ -22,74 +22,110 @@
     {
       "id": "service-corp",
       "description": "Eventos Corporativos Estratégicos",
-      "imageUrl": "https://picsum.photos/seed/corporate-ux/800/1000",
+      "imageUrl": "/EVENTOS/congresos.jpg",
       "imageHint": "modern conference hall"
     },
     {
       "id": "service-clients",
-      "description": "Experiencias de Cliente",
-      "imageUrl": "https://picsum.photos/seed/clients-ux/800/1000",
+      "description": "Eventos Protocolarios",
+      "imageUrl": "/EVENTOS/protocolarios.jpg",
       "imageHint": "luxury brand activation"
     },
     {
       "id": "service-offsites",
       "description": "Offsites & Retreats",
-      "imageUrl": "https://picsum.photos/seed/retreat/800/1000",
+      "imageUrl": "/EVENTOS/offsite.jpg",
       "imageHint": "premium team retreat"
     },
     {
-      "id": "service-launch",
-      "description": "Lanzamientos de Marca",
-      "imageUrl": "https://picsum.photos/seed/launch/800/1000",
-      "imageHint": "minimalist product reveal"
-    },
-    {
-      "id": "trust-1",
-      "description": "Impacto Visual",
-      "imageUrl": "https://picsum.photos/seed/impact1/800/600",
-      "imageHint": "elegant event detail"
-    },
-    {
-      "id": "trust-2",
-      "description": "Atención al Detalle",
-      "imageUrl": "https://picsum.photos/seed/impact2/800/600",
-      "imageHint": "luxury catering detail"
-    },
-    {
-      "id": "gallery-1",
-      "description": "Experiencia Premium SUCESSO",
-      "imageUrl": "/GALERIA/1.png",
-      "imageHint": "luxury event"
-    },
-    {
-      "id": "gallery-2",
-      "description": "Detalle Estratégico",
-      "imageUrl": "/GALERIA/2.png",
+      "id": "service-convenciones",
+      "description": "Convenciones",
+      "imageUrl": "/EVENTOS/convenciones.jpg",
       "imageHint": "corporate meeting"
     },
     {
+      "id": "service-experiencias",
+      "description": "Experiencias",
+      "imageUrl": "/EVENTOS/experiencia.jpg",
+      "imageHint": "unique brand experiences"
+    },
+    {
+      "id": "service-sueña",
+      "description": "Tu sueña nosotros lo hacemos realidad",
+      "imageUrl": "/EVENTOS/sueña.jpg",
+      "imageHint": "dream event production"
+    },
+    {
+      "id": "gallery-1",
+      "description": "Suceddo Event Detail 01",
+      "imageUrl": "/GALERIA/1.jpeg",
+      "imageHint": "event landscape"
+    },
+    {
+      "id": "gallery-2",
+      "description": "SUCESSO Event Detail 02",
+      "imageUrl": "/GALERIA/2.jpeg",
+      "imageHint": "event vertical"
+    },
+    {
       "id": "gallery-3",
-      "description": "Producción de Alto Impacto",
-      "imageUrl": "/GALERIA/3.png",
-      "imageHint": "stage design"
+      "description": "SUCESSO Event Detail 03",
+      "imageUrl": "/GALERIA/3.jpeg",
+      "imageHint": "event landscape"
     },
     {
       "id": "gallery-4",
-      "description": "Momentos SUCESSO",
-      "imageUrl": "/GALERIA/4.png",
-      "imageHint": "happy guests"
+      "description": "SUCESSO Event Detail 04",
+      "imageUrl": "/GALERIA/4.jpeg",
+      "imageHint": "event landscape"
     },
     {
       "id": "gallery-5",
-      "description": "Excelencia Logística",
-      "imageUrl": "/GALERIA/5.png",
-      "imageHint": "event setup"
+      "description": "SUCESSO Event Detail 05",
+      "imageUrl": "/GALERIA/5.jpeg",
+      "imageHint": "event landscape"
     },
     {
       "id": "gallery-6",
-      "description": "Atmósferas Únicas",
-      "imageUrl": "/GALERIA/6.png",
-      "imageHint": "mood lighting"
+      "description": "SUCESSO Event Detail 06",
+      "imageUrl": "/GALERIA/6.jpeg",
+      "imageHint": "event landscape"
+    },
+    {
+      "id": "gallery-7",
+      "description": "SUCESSO Event Detail 07",
+      "imageUrl": "/GALERIA/7.jpeg",
+      "imageHint": "event landscape"
+    },
+    {
+      "id": "gallery-8",
+      "description": "SUCESSO Event Detail 08",
+      "imageUrl": "/GALERIA/8.jpeg",
+      "imageHint": "event landscape"
+    },
+    {
+      "id": "gallery-9",
+      "description": "SUCESSO Event Detail 09",
+      "imageUrl": "/GALERIA/9.jpeg",
+      "imageHint": "event landscape"
+    },
+    {
+      "id": "gallery-10",
+      "description": "SUCESSO Event Detail 10",
+      "imageUrl": "/GALERIA/10.jpeg",
+      "imageHint": "event landscape"
+    },
+    {
+      "id": "gallery-11",
+      "description": "SUCESSO Event Detail 11",
+      "imageUrl": "/GALERIA/11.jpeg",
+      "imageHint": "event landscape"
+    },
+    {
+      "id": "gallery-12",
+      "description": "SUCESSO Event Detail 12",
+      "imageUrl": "/GALERIA/12.jpeg",
+      "imageHint": "event landscape"
     }
   ]
 }
