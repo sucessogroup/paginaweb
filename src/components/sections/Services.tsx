@@ -44,7 +44,7 @@ const services = [
     title: "Tu sueña nosotros lo hacemos realidad",
     benefit: "Experiencias ilimitadas",
     description: "Juntos hacemos realidad tu sueño convirtiéndolo en un SUCESSO",
-    img: "https://picsum.photos/seed/custom-exp/800/1000",
+    img: "/EVENTOS/sueña.jpg",
   }
 ]
 
