@@ -5,7 +5,6 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react'
-import { PlaceHolderImages } from '@/lib/placeholder-images'
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
 
@@ -45,13 +44,13 @@ export const Gallery = () => {
         <div className="w-16 h-[1px] bg-brand-gold/30 mx-auto" />
       </div>
 
-      {/* Cinturón de fotos moviéndose a la derecha - Ralentizado a 50s */}
+      {/* Cinturón de fotos moviéndose a la derecha - 80s para un movimiento elegante */}
       <div className="relative flex">
         <motion.div 
           className="flex gap-6 pointer-events-auto"
           animate={{ x: [0, -100 * galleryImages.length + "%"] }}
           transition={{
-            duration: 60, // Aumentado para ir más lento (antes 20)
+            duration: 80, 
             ease: "linear",
             repeat: Infinity,
           }}
@@ -83,58 +82,71 @@ export const Gallery = () => {
 
       {/* Lightbox / Dialog */}
       <Dialog open={selectedIdx !== null} onOpenChange={(open) => !open && closeLightbox()}>
-        <DialogContent className="max-w-[95vw] h-[90vh] p-0 bg-transparent border-none shadow-none flex items-center justify-center overflow-visible">
+        <DialogContent className="max-w-[100vw] h-[100vh] p-0 bg-black/95 border-none shadow-none flex items-center justify-center overflow-hidden z-[100]">
           <DialogTitle>
             <VisuallyHidden>Galería de imágenes SUCESSO</VisuallyHidden>
           </DialogTitle>
           
-          <div className="relative w-full h-full flex items-center justify-center">
-            {/* Controles de Cierre */}
+          <div className="relative w-full h-full flex flex-col items-center justify-center">
+            
+            {/* Botón de Cierre (Tache) - Mejorado */}
             <button 
               onClick={closeLightbox}
-              className="absolute top-0 right-0 md:-top-12 md:-right-12 z-[100] p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white transition-all"
+              className="absolute top-8 right-8 z-[110] p-3 rounded-full bg-white/5 hover:bg-white/10 backdrop-blur-md text-white/70 hover:text-white transition-all border border-white/10 shadow-xl"
+              aria-label="Cerrar galería"
             >
-              <X size={24} />
+              <X size={28} />
             </button>
 
-            {/* Flecha Anterior */}
+            {/* Flecha Anterior - Mejorada */}
             <button 
-              onClick={showPrev}
-              className="absolute left-2 md:-left-20 top-1/2 -translate-y-1/2 z-[100] p-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white transition-all"
+              onClick={(e) => { e.stopPropagation(); showPrev(); }}
+              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-[110] p-5 rounded-full bg-white/5 hover:bg-brand-gold backdrop-blur-md text-white/70 hover:text-background transition-all border border-white/10 shadow-xl group"
+              aria-label="Imagen anterior"
             >
-              <ChevronLeft size={32} />
+              <ChevronLeft size={36} className="transition-transform group-hover:-translate-x-1" />
             </button>
 
-            {/* Flecha Siguiente */}
+            {/* Flecha Siguiente - Mejorada */}
             <button 
-              onClick={showNext}
-              className="absolute right-2 md:-right-20 top-1/2 -translate-y-1/2 z-[100] p-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white transition-all"
+              onClick={(e) => { e.stopPropagation(); showNext(); }}
+              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-[110] p-5 rounded-full bg-white/5 hover:bg-brand-gold backdrop-blur-md text-white/70 hover:text-background transition-all border border-white/10 shadow-xl group"
+              aria-label="Siguiente imagen"
             >
-              <ChevronRight size={32} />
+              <ChevronRight size={36} className="transition-transform group-hover:translate-x-1" />
             </button>
 
+            {/* Contenido de la imagen */}
             <AnimatePresence mode="wait">
               {selectedIdx !== null && (
                 <motion.div 
                   key={selectedIdx}
-                  initial={{ opacity: 0, scale: 0.95 }}
+                  initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.3 }}
-                  className="relative w-full h-full flex flex-col items-center justify-center px-4"
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  className="relative w-full h-full flex flex-col items-center justify-center p-6 md:p-12 lg:p-24"
                 >
-                  <div className="relative w-full h-full max-h-[80vh] flex items-center justify-center">
+                  <div className="relative w-full h-full flex items-center justify-center">
                     <img 
                       src={galleryImages[selectedIdx].imageUrl} 
                       alt={galleryImages[selectedIdx].description} 
-                      className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg md:rounded-3xl shadow-2xl"
+                      className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,0.6)]"
                     />
                   </div>
-                  <div className="mt-6 md:mt-10 text-center text-white space-y-2 max-w-lg">
-                    <h4 className="text-xl md:text-2xl font-headline italic font-light tracking-wide">{galleryImages[selectedIdx].description}</h4>
-                    <p className="text-[10px] uppercase tracking-[0.5em] text-brand-gold font-bold opacity-80">
-                      {selectedIdx + 1} / {galleryImages.length}
-                    </p>
+                  
+                  {/* Pie de foto en el lightbox */}
+                  <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center text-white space-y-3 z-[110] px-6 w-full">
+                    <h4 className="text-xl md:text-2xl font-headline italic font-light tracking-wide drop-shadow-lg">
+                      {galleryImages[selectedIdx].description}
+                    </h4>
+                    <div className="flex items-center justify-center gap-4">
+                      <div className="h-[1px] w-8 bg-brand-gold/30" />
+                      <p className="text-[10px] uppercase tracking-[0.5em] text-brand-gold font-bold opacity-80">
+                        {selectedIdx + 1} de {galleryImages.length}
+                      </p>
+                      <div className="h-[1px] w-8 bg-brand-gold/30" />
+                    </div>
                   </div>
                 </motion.div>
               )}
