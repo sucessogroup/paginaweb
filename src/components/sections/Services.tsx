@@ -12,37 +12,31 @@ import { cn } from '@/lib/utils'
 const services = [
   {
     title: "CONGRESOS",
-    benefit: "Networking & Autoridad",
     description: "Diseñamos foros de alto nivel para el intercambio de conocimiento y posicionamiento estratégico ante audiencias especializadas.",
     img: "/EVENTOS/congresos.jpg",
   },
   {
     title: "EVENTOS PROTOCOLARIOS",
-    benefit: "Crecimiento & Lealtad",
     description: "Activaciones de marca y cenas exclusivas diseñadas para convertir invitados en embajadores apasionados.",
     img: "/EVENTOS/protocolarios.jpg",
   },
   {
     title: "OFFSITES & LEADERSHIP RETREATS",
-    benefit: "Claridad & Visión",
     description: "Espacios de alta gama diseñados para el pensamiento estratégico, la desconexión creativa y la toma de decisiones.",
     img: "/EVENTOS/offsite.jpg",
   },
   {
     title: "CONVENCIONES",
-    benefit: "Cultura & Identidad",
     description: "Creamos encuentros masivos que fortalecen el sentido de pertenencia y alinean a los equipos con los objetivos de la organización.",
     img: "/EVENTOS/convenciones.jpg",
   },
   {
     title: "EXPERIENCIAS",
-    benefit: "Emoción & Conexión",
     description: "Tu escoges la experiencia y nosotros la adaptamos a ti.",
     img: "/EVENTOS/experiencia.jpg",
   },
   {
     title: "TU SUEÑA NOSOTROS LO HACEMOS REALIDAD",
-    benefit: "Experiencias ilimitadas",
     description: "Juntos hacemos realidad tu sueño convirtiéndolo en un SUCESSO",
     img: "/EVENTOS/sueña.jpg",
   }
@@ -78,11 +72,6 @@ export const Services = () => {
                     data-ai-hint="premium corporate experience"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-                  <div className="absolute bottom-6 left-6">
-                    <span className="bg-brand-gold/10 backdrop-blur-md border border-brand-gold/20 text-brand-gold text-[9px] font-bold uppercase tracking-widest px-4 py-2 rounded-full">
-                      {service.benefit}
-                    </span>
-                  </div>
                 </div>
                 <div className="space-y-4 px-2">
                   <h4 className="text-2xl font-headline font-bold text-foreground group-hover:text-brand-gold transition-colors">
