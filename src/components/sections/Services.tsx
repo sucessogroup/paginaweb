@@ -11,37 +11,37 @@ import { cn } from '@/lib/utils'
 
 const services = [
   {
-    title: "Congresos",
+    title: "CONGRESOS",
     benefit: "Networking & Autoridad",
     description: "Diseñamos foros de alto nivel para el intercambio de conocimiento y posicionamiento estratégico ante audiencias especializadas.",
     img: "/EVENTOS/congresos.jpg",
   },
   {
-    title: "Eventos Protocolarios",
+    title: "EVENTOS PROTOCOLARIOS",
     benefit: "Crecimiento & Lealtad",
     description: "Activaciones de marca y cenas exclusivas diseñadas para convertir invitados en embajadores apasionados.",
     img: "/EVENTOS/protocolarios.jpg",
   },
   {
-    title: "Offsites & Leadership Retreats",
+    title: "OFFSITES & LEADERSHIP RETREATS",
     benefit: "Claridad & Visión",
     description: "Espacios de alta gama diseñados para el pensamiento estratégico, la desconexión creativa y la toma de decisiones.",
     img: "/EVENTOS/offsite.jpg",
   },
   {
-    title: "Convenciones",
+    title: "CONVENCIONES",
     benefit: "Cultura & Identidad",
     description: "Creamos encuentros masivos que fortalecen el sentido de pertenencia y alinean a los equipos con los objetivos de la organización.",
     img: "/EVENTOS/convenciones.jpg",
   },
   {
-    title: "Experiencias",
+    title: "EXPERIENCIAS",
     benefit: "Emoción & Conexión",
     description: "Tu escoges la experiencia y nosotros la adaptamos a ti.",
-    img: "https://picsum.photos/seed/exp-mem/800/1000",
+    img: "/EVENTOS/experiencia.jpg",
   },
   {
-    title: "Tu sueña nosotros lo hacemos realidad",
+    title: "TU SUEÑA NOSOTROS LO HACEMOS REALIDAD",
     benefit: "Experiencias ilimitadas",
     description: "Juntos hacemos realidad tu sueño convirtiéndolo en un SUCESSO",
     img: "/EVENTOS/sueña.jpg",
