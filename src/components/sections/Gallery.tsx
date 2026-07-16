@@ -9,7 +9,20 @@ import { PlaceHolderImages } from '@/lib/placeholder-images'
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
 
-const galleryImages = PlaceHolderImages.filter(img => img.id.startsWith('gallery-'))
+const galleryImages = [
+  { imageUrl: '/GALERIA/1.jpeg', description: 'SUCESSO Event Detail 01' },
+  { imageUrl: '/GALERIA/2.jpeg', description: 'SUCESSO Event Detail 02' },
+  { imageUrl: '/GALERIA/3.jpeg', description: 'SUCESSO Event Detail 03' },
+  { imageUrl: '/GALERIA/4.jpeg', description: 'SUCESSO Event Detail 04' },
+  { imageUrl: '/GALERIA/5.jpeg', description: 'SUCESSO Event Detail 05' },
+  { imageUrl: '/GALERIA/6.jpeg', description: 'SUCESSO Event Detail 06' },
+  { imageUrl: '/GALERIA/7.jpeg', description: 'SUCESSO Event Detail 07' },
+  { imageUrl: '/GALERIA/8.jpeg', description: 'SUCESSO Event Detail 08' },
+  { imageUrl: '/GALERIA/9.jpeg', description: 'SUCESSO Event Detail 09' },
+  { imageUrl: '/GALERIA/10.jpeg', description: 'SUCESSO Event Detail 10' },
+  { imageUrl: '/GALERIA/11.jpeg', description: 'SUCESSO Event Detail 11' },
+  { imageUrl: '/GALERIA/12.jpeg', description: 'SUCESSO Event Detail 12' },
+]
 
 export const Gallery = () => {
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null)
@@ -32,13 +45,13 @@ export const Gallery = () => {
         <div className="w-16 h-[1px] bg-brand-gold/30 mx-auto" />
       </div>
 
-      {/* Cinturón de fotos moviéndose a la derecha */}
+      {/* Cinturón de fotos moviéndose a la derecha - Ralentizado a 50s */}
       <div className="relative flex">
         <motion.div 
           className="flex gap-6 pointer-events-auto"
           animate={{ x: [0, -100 * galleryImages.length + "%"] }}
           transition={{
-            duration: 50,
+            duration: 60, // Aumentado para ir más lento (antes 20)
             ease: "linear",
             repeat: Infinity,
           }}
@@ -47,13 +60,13 @@ export const Gallery = () => {
           {infiniteImages.map((img, idx) => (
             <div 
               key={idx} 
-              className="relative h-[300px] md:h-[450px] w-auto min-w-[200px] flex-shrink-0 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden group cursor-pointer border border-white/5 shadow-2xl"
+              className="relative h-[300px] md:h-[500px] w-auto flex-shrink-0 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden group cursor-pointer border border-white/5 shadow-2xl bg-white/5"
               onClick={() => openLightbox(idx % galleryImages.length)}
             >
               <img 
                 src={img.imageUrl} 
                 alt={img.description} 
-                className="h-full w-auto object-cover transition-transform duration-[2000ms] group-hover:scale-110"
+                className="h-full w-auto object-contain transition-transform duration-[2000ms] group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-brand-petrol/40 opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col justify-end p-8 backdrop-blur-[2px]">
                 <div className="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
