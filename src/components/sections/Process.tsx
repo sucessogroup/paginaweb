@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useRef } from 'react'
@@ -48,7 +49,7 @@ export const Process = () => {
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden">
         
         {/* Barra de Progreso Lateral */}
-        <div className="absolute right-8 md:right-16 top-1/2 -translate-y-1/2 h-48 w-[1px] bg-white/5 hidden md:block rounded-full overflow-hidden">
+        <div className="absolute right-4 md:right-16 top-1/2 -translate-y-1/2 h-32 md:h-48 w-[1px] bg-white/5 rounded-full overflow-hidden">
            <motion.div 
              className="w-full bg-brand-gold origin-top"
              style={{ scaleY: smoothProgress, height: '100%' }}
@@ -56,15 +57,15 @@ export const Process = () => {
         </div>
 
         {/* Título de Sección */}
-        <div className="absolute top-12 md:top-24 text-center z-20 px-6">
+        <div className="absolute top-12 md:top-24 text-center z-20 px-6 w-full">
            <motion.p 
              initial={{ opacity: 0 }}
              whileInView={{ opacity: 1 }}
-             className="text-[10px] uppercase tracking-[0.5em] text-brand-gold font-bold mb-4"
+             className="text-[9px] md:text-[10px] uppercase tracking-[0.4em] md:tracking-[0.5em] text-brand-gold font-bold mb-3 md:mb-4"
            >
              Nuestro Método
            </motion.p>
-           <h3 className="text-3xl md:text-5xl font-headline font-bold text-foreground">
+           <h3 className="text-3xl md:text-5xl font-headline font-bold text-foreground px-4">
              Orden que genera <span className="italic font-light text-brand-gold opacity-90">confianza.</span>
            </h3>
         </div>
@@ -117,20 +118,20 @@ const StepScene = ({ step, index, total, progress }: { step: any, index: number,
   return (
     <motion.div
       style={{ opacity, scale, y, filter: blur }}
-      className="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
+      className="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none px-4"
     >
-      <span className="absolute text-[16rem] md:text-[28rem] font-headline font-bold text-foreground/5 select-none -z-10 leading-none">
+      <span className="absolute text-[12rem] md:text-[28rem] font-headline font-bold text-foreground/5 select-none -z-10 leading-none">
         {step.number}
       </span>
 
-      <div className="space-y-8 max-w-3xl pointer-events-auto px-4">
-        <div className="space-y-3">
-           <span className="text-brand-gold/60 font-headline font-bold text-lg md:text-xl tracking-widest uppercase">Paso {step.number}</span>
-           <h4 className="text-4xl md:text-7xl font-headline font-bold text-foreground tracking-tight">
+      <div className="space-y-6 md:space-y-8 max-w-3xl pointer-events-auto w-full">
+        <div className="space-y-2 md:space-y-3">
+           <span className="text-brand-gold/60 font-headline font-bold text-base md:text-xl tracking-widest uppercase">Paso {step.number}</span>
+           <h4 className="text-3xl md:text-7xl font-headline font-bold text-foreground tracking-tight leading-tight">
              {step.title}
            </h4>
         </div>
-        <p className="text-lg md:text-2xl text-foreground/60 font-light leading-relaxed italic max-w-2xl mx-auto">
+        <p className="text-base md:text-2xl text-foreground/60 font-light leading-relaxed italic max-w-2xl mx-auto px-2">
           {step.desc}
         </p>
       </div>
