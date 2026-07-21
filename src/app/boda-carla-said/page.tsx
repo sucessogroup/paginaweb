@@ -122,7 +122,7 @@ const translations = {
     clabe: "CLABE (Messico)",
     iban: "IBAN (Italia)",
     copiar: "Copia",
-    copiado: "Copiato",
+    copiado: "Copia effettuata",
     faqsTitle: "Domande Frequenti",
     maquillajeTitle: "Trucco e Acconciatura",
     proveedorMaquillaje: "Servizio trucco e acconciatura",
@@ -535,7 +535,7 @@ export default function WeddingPage() {
               </h3>
             </div>
             
-            {/* Imagen de Dress Code (30% más pequeña y centrada) */}
+            {/* Imagen de Dress Code (Rectángulo vertical, 30% más pequeño) */}
             <div className="relative w-full max-w-[260px] aspect-[3/4] mx-auto rounded-[2rem] overflow-hidden shadow-sm border border-wedding-sage/10">
               <Image 
                 src={dressCodeImg?.imageUrl || "/dresscode.png"} 
