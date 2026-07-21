@@ -1,11 +1,10 @@
-
 "use client"
 
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Literata, Dancing_Script } from 'next/font/google'
-import { CalendarPlus, ExternalLink, MapPin, CreditCard, Heart, Copy, Check, MessageCircle, Instagram, ArrowRight, FileText, Hotel, Shirt } from 'lucide-react'
+import { CalendarPlus, ExternalLink, MapPin, CreditCard, Heart, Copy, Check, MessageCircle, Instagram, ArrowRight, FileText, Hotel } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
@@ -150,7 +149,7 @@ const translations = {
       { q: "Dove si terrà il matrimonio?", a: "Presso il Club de Playa Garrobo, Zihuatanejo, Guerrero, Messico." },
       { q: "L'aeroporto, l'hotel e la location son vicini?", a: "Sì. I trasferimenti durano solitamente tra i 15 e i 30 minuti." },
       { q: "Com'è el clima a dicembre?", a: "Il clima a dicembre è piacevole e caldo, con temperature comprese tra i 22°C e i 30°C." },
-      { q: "Quale valuta si utiliza in Messico?", a: "La valuta ufficiale è il Peso Messicano (MXN)." },
+      { q: "Quale valuta si utiliza in Messico?", a: "La valuta oficiale è il Peso Messicano (MXN)." },
       { q: "Possono partecipare i bambini?", a: "Amiamo molto i vostri piccoli, ma l'evento è riservato esclusivamente agli adulti." }
     ]
   }
@@ -532,8 +531,8 @@ export default function WeddingPage() {
               </h3>
             </div>
             
-            {/* Imagen de Dress Code (Rectángulo horizontal, 30% más pequeño) */}
-            <div className="relative w-full max-w-[420px] aspect-[16/9] mx-auto rounded-[2rem] overflow-hidden shadow-sm border border-wedding-sage/10">
+            {/* Imagen de Dress Code (Rectángulo horizontal, ampliada) */}
+            <div className="relative w-full max-w-[550px] aspect-[16/9] mx-auto rounded-[2rem] overflow-hidden shadow-sm border border-wedding-sage/10">
               <Image 
                 src={dressCodeImg?.imageUrl || "/dresscode.png"} 
                 alt="Dress Code Guide" 
