@@ -145,7 +145,7 @@ const translations = {
     verCotizacion: "Vedi il preventivo",
     faqs: [
       { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per turismo. È necessario un passaporto valido, il biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
-      { q: "Quale aeroporto è consigliato?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), el più vicino all'hotel e al luogo dell'evento." },
+      { q: "Quale aeroporto è consigliato?", a: "L'aeroporto consigliato es l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), el più vicino all'hotel e al luogo dell'evento." },
       { q: "Come posso raggiungere l'hotel dall'aeroporto?", a: "Dall'aeroporto potete prendere un taxi autorizzato, un transporte privado o usufruire del servicio dell'hotel." },
       { q: "Dove si terrà il matrimonio?", a: "Presso il Club de Playa Garrobo, Zihuatanejo, Guerrero, Messico." },
       { q: "L'aeroporto, l'hotel e la location son vicini?", a: "Sì. I trasferimenti durano solitamente tra i 15 e i 30 minuti." },
@@ -527,9 +527,6 @@ export default function WeddingPage() {
         <div className="max-w-4xl mx-auto px-6">
           <RevealSection className="text-center space-y-12">
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-full bg-wedding-palm/5 flex items-center justify-center mx-auto text-wedding-palm mb-4">
-                <Shirt size={24} />
-              </div>
               <h3 className={cn(serif.className, "text-4xl md:text-6xl italic text-wedding-palm")}>
                 {t.vestimenta}
               </h3>
