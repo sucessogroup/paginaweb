@@ -535,8 +535,8 @@ export default function WeddingPage() {
               </h3>
             </div>
             
-            {/* Imagen de Dress Code (Rectángulo vertical, 30% más pequeño) */}
-            <div className="relative w-full max-w-[260px] aspect-[3/4] mx-auto rounded-[2rem] overflow-hidden shadow-sm border border-wedding-sage/10">
+            {/* Imagen de Dress Code (Rectángulo horizontal, 30% más pequeño) */}
+            <div className="relative w-full max-w-[420px] aspect-[16/9] mx-auto rounded-[2rem] overflow-hidden shadow-sm border border-wedding-sage/10">
               <Image 
                 src={dressCodeImg?.imageUrl || "/dresscode.png"} 
                 alt="Dress Code Guide" 
