@@ -1,11 +1,10 @@
-
 "use client"
 
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Literata, Dancing_Script } from 'next/font/google'
-import { CalendarPlus, ExternalLink, MapPin, CreditCard, Heart, Copy, Check, MessageCircle, Instagram, ArrowRight, FileText, Hotel } from 'lucide-react'
+import { CalendarPlus, ExternalLink, MapPin, CreditCard, Heart, Copy, Check, MessageCircle, Instagram, ArrowRight, FileText, Hotel, Shirt } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
@@ -146,9 +145,9 @@ const translations = {
     faqs: [
       { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per turismo. È necessario un passaporto valido, il biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
       { q: "Quale aeroporto è consigliato?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), el più vicino all'hotel e al luogo dell'evento." },
-      { q: "Come posso raggiungere l'hotel dall'aeroporto?", a: "Dall'aeroporto potete prendere un taxi autorizzato, un trasporto privato o usufruire del servizio dell'hotel." },
+      { q: "Come posso raggiungere l'hotel dall'aeroporto?", a: "Dall'aeroporto potete prendere un taxi autorizzato, un transporte privato o usufruire del servizio dell'hotel." },
       { q: "Dove si terrà il matrimonio?", a: "Presso il Club de Playa Garrobo, Zihuatanejo, Guerrero, Messico." },
-      { q: "L'aeroporto, l'hotel e la location sono vicini?", a: "Sì. I trasferimenti durano solitamente tra i 15 e i 30 minuti." },
+      { q: "L'aeroporto, l'hotel e la location son vicini?", a: "Sì. I trasferimenti durano solitamente tra i 15 e i 30 minuti." },
       { q: "Com'è il clima a dicembre?", a: "Il clima a dicembre è piacevole e caldo, con temperature comprese tra i 22°C e i 30°C." },
       { q: "Quale valuta si utiliza in Messico?", a: "La valuta ufficiale è il Peso Messicano (MXN)." },
       { q: "Possono partecipare i bambini?", a: "Amiamo molto i vostri piccoli, ma l'evento è riservato esclusivamente agli adulti." }
@@ -518,6 +517,33 @@ export default function WeddingPage() {
               <ItineraryItem key={idx} step={step} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Dress Code Section */}
+      <section className="py-24 md:py-32 bg-wedding-ivory border-y border-wedding-sage/10">
+        <div className="max-w-4xl mx-auto px-6">
+          <RevealSection className="text-center space-y-12">
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-full bg-wedding-palm/5 flex items-center justify-center mx-auto text-wedding-palm mb-4">
+                <Shirt size={24} />
+              </div>
+              <h3 className={cn(serif.className, "text-4xl md:text-6xl italic text-wedding-palm")}>
+                {t.vestimenta}
+              </h3>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-12 max-w-2xl mx-auto">
+              <div className="p-8 rounded-3xl border border-wedding-sage/10 bg-wedding-sand/5 space-y-4">
+                <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-wedding-gold">Caballeros</p>
+                <p className="text-lg md:text-xl font-light italic text-wedding-jungle">{t.trajeSinCorbata}</p>
+              </div>
+              <div className="p-8 rounded-3xl border border-wedding-sage/10 bg-wedding-sand/5 space-y-4">
+                <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-wedding-gold">Damas</p>
+                <p className="text-lg md:text-xl font-light italic text-wedding-jungle">{t.vestidoLargo}</p>
+              </div>
+            </div>
+          </RevealSection>
         </div>
       </section>
 
