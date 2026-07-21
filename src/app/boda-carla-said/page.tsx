@@ -130,7 +130,7 @@ const translations = {
     wa: "WhatsApp",
     ig: "Instagram",
     recomendaciones: "Raccomandazioni",
-    queHacer: "Cosa fare durante il weekend o dopo la festa?",
+    queHacer: "Cosa fare durante il weekend o dopo la fiesta?",
     verMas: "SCOPRI DI PIÙ",
     cosasEn: "COSA FARE A",
     zihuaCap: "ZIHUATANEJO",
@@ -146,7 +146,7 @@ const translations = {
     faqs: [
       { q: "Quali sono i requisiti per viaggiare in Messico dall'Italia?", a: "I cittadini italiani non hanno bisogno di visto per turismo. È necessario un passaporto valido, il biglietto di ritorno e la compilazione del modulo migratorio all'arrivo." },
       { q: "Quale aeroporto è consigliato?", a: "L'aeroporto consigliato è l'Aeroporto Internazionale di Ixtapa-Zihuatanejo (ZIH), el più vicino all'hotel e al luogo dell'evento." },
-      { q: "Come posso raggiungere l'hotel dall'aeroporto?", a: "Dall'aeroporto potete prendere un taxi autorizzato, un transporte privato o usufruire del servicio dell'hotel." },
+      { q: "Come posso raggiungere l'hotel dall'aeroporto?", a: "Dall'aeroporto potete prendere un taxi autorizzato, un transporte privado o usufruire del servicio dell'hotel." },
       { q: "Dove si terrà il matrimonio?", a: "Presso il Club de Playa Garrobo, Zihuatanejo, Guerrero, Messico." },
       { q: "L'aeroporto, l'hotel e la location son vicini?", a: "Sì. I trasferimenti durano solitamente tra i 15 e i 30 minuti." },
       { q: "Com'è el clima a dicembre?", a: "Il clima a dicembre è piacevole e caldo, con temperature comprese tra i 22°C e i 30°C." },
@@ -527,16 +527,6 @@ export default function WeddingPage() {
         <div className="max-w-4xl mx-auto px-6">
           <RevealSection className="text-center space-y-12">
             <div className="space-y-4">
-              {/* Imagen de Dress Code */}
-              <div className="relative w-full max-w-sm aspect-[3/4] mx-auto rounded-[2.5rem] overflow-hidden mb-12 shadow-sm border border-wedding-sage/10">
-                <Image 
-                  src={dressCodeImg?.imageUrl || "/dresscode.png"} 
-                  alt="Dress Code Guide" 
-                  fill 
-                  className="object-cover"
-                />
-              </div>
-
               <div className="w-12 h-12 rounded-full bg-wedding-palm/5 flex items-center justify-center mx-auto text-wedding-palm mb-4">
                 <Shirt size={24} />
               </div>
@@ -545,6 +535,16 @@ export default function WeddingPage() {
               </h3>
             </div>
             
+            {/* Imagen de Dress Code (30% más pequeña y centrada) */}
+            <div className="relative w-full max-w-[260px] aspect-[3/4] mx-auto rounded-[2rem] overflow-hidden shadow-sm border border-wedding-sage/10">
+              <Image 
+                src={dressCodeImg?.imageUrl || "/dresscode.png"} 
+                alt="Dress Code Guide" 
+                fill 
+                className="object-cover"
+              />
+            </div>
+
             <div className="grid md:grid-cols-2 gap-12 max-w-2xl mx-auto">
               <div className="p-8 rounded-3xl border border-wedding-sage/10 bg-wedding-sand/5 space-y-4">
                 <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-wedding-gold">Caballeros</p>
