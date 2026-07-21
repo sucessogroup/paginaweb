@@ -56,6 +56,12 @@
       "imageHint": "dream event production"
     },
     {
+      "id": "wedding-dresscode",
+      "description": "Boda Dress Code Guide",
+      "imageUrl": "/dresscode.png",
+      "imageHint": "wedding dress code"
+    },
+    {
       "id": "gallery-1",
       "description": "Suceddo Event Detail 01",
       "imageUrl": "/GALERIA/1.jpeg",
